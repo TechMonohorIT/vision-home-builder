@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Awaiken">
+	<!-- Page Title -->
+    <title>Vision Smart Homes - Modern Custom Homes Builder | Sydney Australia</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.min.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="css/custom_user.css" rel="stylesheet">
+
+  <style>
+
+.header-sidemenu {
+      position: fixed;
+      top: 8%;
+      transform: translate(0px, -8%);
+      left: 0px;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 70px 20px 0px;
+      background: none !important;
+      backdrop-filter: none !important;
+    }
+
+    .header-sidemenu .logo img {
+      max-height: 50px;
+    }
+
+    /* Hamburger icon */
+    .hamburger span {
+      display: block;
+      height: 3px;
+      background: black;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* The side menu overlay (dark transparent background) */
+   
+
+    .side-menu-overlay.open {
+      width: 100%;
+      opacity: 1;
+    }
+
+    /* The side drawer itself */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      /* hidden offscreen initially */
+      width: 300px;
+      height: 100%;
+      background-color: #1F1F1F;
+      transition: left 0.3s ease-in-out;
+      padding: 2rem;
+      z-index: 999;
+    }
+
+    .side-menu.open {
+      left: 0;
+      /* slide in */
+    }
+
+    /* Close button (X) inside side menu */
+    .side-menu .close-btn {
+      font-size: 28px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    /* Menu items in side menu */
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .side-menu ul li {
+      margin-bottom: 1rem;
+    }
+
+    .side-menu ul li a {
+      color: #fff;
+      font-size: 18px;
+      text-transform: capitalize;
+      transition: color 0.3s;
+    }
+
+    .side-menu ul li a:hover {
+      color: #ffd900ab;
+      /* accent color on hover */
+    }
+
+    /* Remove margin-top so the hero sits at the very top behind the header */
+    .hero.hero-video {
+      margin-top: 0 !important;
+    }
+
+    /* Basic resets and fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      /* Ensure your chosen font is applied */
+      /* font-family: "Hanken Grotesk", sans-serif; */
+      /* This was old font family*/
+      font-family: var(--body-font);
+    }
+
+    /* A custom fixed top bar to hold logo + hamburger */
+    .header-sidemenu {
+      position: fixed;
+      top: 0%;
+      left: 0px;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 70px 20px 0px;
+      background: none !important;
+      backdrop-filter: none !important;
+    }
+
+    .header-sidemenu .logo img {
+      max-height: 50px;
+    }
+
+  
+
+    /* The side menu overlay (dark transparent background) */
+    .side-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      /* start closed */
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 998;
+    }
+
+    .side-menu-overlay.open {
+      width: 100%;
+      opacity: 1;
+    }
+
+    /* The side drawer itself */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      /* hidden offscreen initially */
+      width: 300px;
+      height: 100%;
+      background-color: #1F1F1F;
+      transition: left 0.3s ease-in-out;
+      padding: 2rem;
+      z-index: 999;
+    }
+
+    .side-menu.open {
+      left: 0;
+      /* slide in */
+    }
+
+    /* Close button (X) inside side menu */
+    .side-menu .close-btn {
+      font-size: 28px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    /* Menu items in side menu */
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .side-menu ul li {
+      margin-bottom: 1rem;
+    }
+
+    .side-menu ul li a {
+      color: #fff;
+      font-size: 18px;
+      text-transform: capitalize;
+      transition: color 0.3s;
+    }
+
+    .side-menu ul li a:hover {
+      color: #ffd900ab;
+      /* accent color on hover */
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #4a4a4a;
+      font-family: var(--body-font);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero-section {
+     
+      /* display: flex;
+      justify-content: space-between; */
+      /* align-items: center; */
+      margin: 90px 0;
+      position: relative;
+    }
+    .top-section{
+    
+      
+      background-image: url('../vision-site-main/images/contact-page/shadow.png');
+      background-size: contain;
+      background-position: top left;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+    }
+    .hero-text {
+      flex: 1;
+      text-align: right;
+    }
+    .hero-text h1 {
+      font-size: 80px;
+      color: #8b7355;
+      font-weight: 100 !important;
+    }
+    .hero-text h2 {
+      font-size: 40px;
+      color: #8b7355;
+      margin-top: -20px;
+    }
+    .hero-image {
+      flex: 1;
+      position: relative;
+    }
+    .img-for-main{
+      width: 100%;
+      max-width: 750px;
+      /* border-radius: 10px; */
+      position: relative;
+    z-index: 1000000;
+    }
+    .hero-image-ab{
+      position: absolute;
+    left: 0;
+    right: 0;
+    top: 331px;
+    z-index: 100000000;
+
+    }
+
+    /* Contact Section */
+    .contact-section {
+      margin: 100px 0;
+      padding: 0 80px;
+    }
+    .contact-section h2 {
+      font-size: 48px;
+      color: #8b7355;
+      margin-bottom: 10px;
+      max-width: 910px;
+      text-align: center;
+    }
+    .breadcrumb {
+      color: #8b7355;
+    margin-bottom: 50px;
+    display: block;
+    width: 910px;
+    text-align: center;
+    }
+
+    .contact-container {
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      gap: 50px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      height: 100%;
+      max-width: 910px ;
+  flex: 2;
+  position: relative;
+  padding: 40px;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  
+}
+.contact-form::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #745540;
+    border-radius: 20px !important;
+    opacity: 0.9;
+    z-index: -1;
+    inset: 0;
+}
+
+
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px !important;
+    background-image: url('/vision-site-main/images/empty-modern-apartment-illuminated-by-sunlight-shadows-generated-by-ai.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(1px);
+    /* transform: scale(1.1); */
+    z-index: -1;
+}
+    .contact-form h3 {
+      color: #ffffff;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .contact-form p {
+      color: #ffffff;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .form-row input {
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      background: #ffffff;
+    }
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    button {
+      background: #ffffff;
+      color: #8b7355;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #8b7355;
+      color: #ffffff;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      /* flex: 1; */
+
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+    .icon {
+      margin-right: 20px;
+      width: 64px;
+      height: 64px;
+      background: #ab8c78;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .info h4 {
+      color: #8b7355;
+      margin-bottom: 5px;
+    }
+    .info p {
+      color: #4a4a4a;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 60px;
+      }
+      .hero-text h2 {
+
+        font-size: 30px;
+      }
+      .contact-container {
+        flex-direction: column;
+      }
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+    #siteLogo {
+  transition: all 0.5s ease-in-out;
+}
+
+#siteLogo.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+  </style>
+
+</head>
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+      <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-icon">
+          <img src="images/loader.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End -->
+  
+    <!-- SIMPLE FIXED HEADER with HAMBURGER -->
+    <header class="header-sidemenu">
+      <div class="logo" id="siteLogo">
+        <a href="./">
+          <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleSideMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+  
+    <!-- The dark overlay for the side menu -->
+    <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
+  
+    <!-- The side drawer menu -->
+    <div class="side-menu" id="sideMenu">
+      <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+
+
+
+  <div class="">
+    <div style="max-width: 1400px; margin: 0 auto; overflow: hidden;">
+
+
+  <!-- Hero Section -->
+  <div class="hero-section row justify-content-center">
+
+    <div class="hero-text col-lg-6 text-right">
+      <h1 style="padding-right: 111px;">WE'RE</h1>
+      <h2 style="font-size: 20px; font-weight: 600; padding-right: 111px;">ALWAYS UP FOR TALK!</h2>
+    </div>
+    <div class="hero-image col-lg-6 position-relative">
+
+      <!-- Replace this with any dummy image URL you want -->
+     <div class=" position-relative">
+      <img src="../vision-site-main/images/contact-page/chair.png" class="hero-image-ab"/>
+      <img   class="img-for-main"
+      src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=750" 
+      alt="Cozy interior" 
+    />
+    <div class="position-absolute " style="height: 100%; width:100%; background-color: #dfc0ac; top: 30px; left: -30px; max-width: 750px;"></div>
+     </div>
+
+
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-section mx-auto position-relative">
+    <div class="position-absolute" style="bottom: -195px;right: -445px;">
+      <img style="height:500px; " src="../vision-site-main/images/contact-page/plant_blur.png" class="" />
+    </div>
+
+    <h2>CONTACT US</h2>
+    <div class="breadcrumb">Home / Contact us</div>
+
+    <div class="contact-container">
+      <!-- Left side: Contact Form -->
+      <div class="contact-form position-relative">
+        <div class="position-absolute" style="top: -409px; left: -446px;">
+          <img style="height:500px;; " src="../vision-site-main/images/contact-page/plant.png" class="" />
+        </div>
+        <h5 style="color:white; margin-bottom: 14px;">Contact Form</h5>
+        <h3>WE WOULD LOVE TO HEAR FROM YOU</h3>
+        <p>Your email address will not be published. Required fields are marked *</p>
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="Name *" />
+            <input type="email" placeholder="Email *" />
+          </div>
+          <input type="text" placeholder="Subject *" />
+          <textarea placeholder="Your Message *"></textarea>
+          <button type="submit">Submit →</button>
+        </form>
+      </div>
+
+      <!-- Right side: Contact Info -->
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="icon"><img style="height: 32px; width: 32px;" src="../vision-site-main/images/contact-page/user-solid.svg" alt="User" /></div>
+          <div class="info">
+            <h4 style="color:#b39887; font-weight: 500;">Phone Number</h4>
+            <p style="font-size: 20px; color: #67564a;">1300 56 55 56</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <img style="height: 32px; width: 32px;" src="../vision-site-main/images/contact-page/envelope-solid.svg" alt="Envelope" />
+          </div>
+          <div class="info">
+            <h4 style="color:#b39887; font-weight: 500;">E-Mail Support</h4>
+            <p style="font-size: 20px; color: #67564a;">info@visionsmarthomes.com.au</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <img style="height: 32px; width: 32px;" src="../vision-site-main/images/contact-page/building-solid.svg" alt="Building" />
+          </div>
+          <div class="info">
+            <h4 style="color:#b39887; font-weight: 500;">Headquarter</h4>
+            <p style="font-size: 20px; color: #67564a;">Unit 30/275 Annangrove Rd<br/>NSW 2155</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+  </div>
+
+
+
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+	<script src="js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+    <script>
+        function toggleSideMenu() {
+          const sideMenu = document.getElementById('sideMenu');
+          const overlay = document.getElementById('overlay');
+          sideMenu.classList.toggle('open');
+          overlay.classList.toggle('open');
+        }
+      </script>
+
+<script>
+  const logo = document.getElementById('siteLogo');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    // If scrolled beyond the first section (adjust threshold if needed)
+    if (scrollY > window.innerHeight - 50) {
+      logo.classList.add('hide');
+    } else {
+      logo.classList.remove('hide');
+    }
+  });
+</script>
+
+</body>
+</html>

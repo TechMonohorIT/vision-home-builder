@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Awaiken">
+	<!-- Page Title -->
+    <title>Vision Smart Homes - Modern Custom Homes Builder | Sydney Australia</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts Css-->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.min.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <style>
+        /****************************************************
+      * SIDEMENU STYLES
+      ****************************************************/
+     
+     body {
+       /* Ensure your chosen font is applied */
+       /* font-family: "Hanken Grotesk", sans-serif; */ /* This was old font family*/
+     
+      
+       font-family: var(--body-font);
+     
+     
+     }
+     
+     /* A custom fixed top bar to hold logo + hamburger */
+     .header-sidemenu {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       z-index: 999;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 20px 30px;
+     
+       /* Fully transparent, no blur */
+       background: none !important;
+       backdrop-filter: none !important;
+     }
+     
+     .header-sidemenu .logo img {
+       max-height: 50px;
+     }
+     
+     /* Hamburger icon */
+     .hamburger {
+       width: 30px;
+       height: 20px;
+       cursor: pointer;
+       position: relative;
+     }
+     .hamburger span {
+       display: block;
+       height: 3px;
+       background: #fff;
+       margin: 4px 0;
+       transition: 0.3s;
+     }
+     
+     /* The side menu overlay (dark transparent background) */
+     .side-menu-overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 0; /* start closed */
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.6);
+       backdrop-filter: blur(4px);
+       opacity: 0;
+       transition: all 0.3s ease-in-out;
+       z-index: 998;
+     }
+     .side-menu-overlay.open {
+       width: 100%;
+       opacity: 1;
+     }
+     
+     /* The side drawer itself */
+     .side-menu {
+       position: fixed;
+       top: 0;
+       left: -300px; /* hidden offscreen initially */
+       width: 300px;
+       height: 100%;
+       background-color: #1F1F1F;
+       transition: left 0.3s ease-in-out;
+       padding: 2rem;
+       z-index: 999;
+     }
+     .side-menu.open {
+       left: 0; /* slide in */
+     }
+     
+     /* Close button (X) inside side menu */
+     .side-menu .close-btn {
+       font-size: 28px;
+       color: #fff;
+       background: none;
+       border: none;
+       cursor: pointer;
+       margin-bottom: 1rem;
+     }
+     
+     /* Menu items in side menu */
+     .side-menu ul {
+       list-style: none;
+       padding: 0;
+       margin-top: 2rem;
+     }
+     .side-menu ul li {
+       margin-bottom: 1rem;
+     }
+     .side-menu ul li a {
+       color: #fff;
+       font-size: 18px;
+       text-transform: capitalize;
+       transition: color 0.3s;
+     }
+     .side-menu ul li a:hover {
+       color: #ffd900ab; /* accent color on hover */
+     }
+     
+     /* Remove margin-top so the hero sits at the very top behind the header */
+     .hero.hero-video {
+       margin-top: 0 !important;
+     }
+     
+     .header-sidemenu .logo img {
+       width: 150px;
+       height: auto; /* for instance, if you know the height you want */
+       object-fit: cover; /* ensures the image doesn't distort, 
+                             though it may crop if aspect ratio is different */
+     }
+     
+     
+     /* 
+       OPTIONAL: If your hero text gets hidden under the header, 
+       you can add top padding to .hero-content or .hero .container instead:
+         .hero-content {
+           padding-top: 80px;
+         }
+     */
+     
+       </style>
+</head>
+<body>
+
+    <!-- Preloader Start -->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon">
+        <img src="images/loader.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- SIMPLE FIXED HEADER with HAMBURGER -->
+  <header class="header-sidemenu">
+    <div class="logo">
+      <a href="./">
+        <img src="images/transparent_logo.png" alt="Vision Smart Homes Logo">
+      </a>
+    </div>
+    <div class="hamburger" onclick="toggleSideMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- The dark overlay for the side menu -->
+  <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
+
+  <!-- The side drawer menu -->
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
+    <ul>
+      <li><a href="./">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+	<!-- Header End -->
+
+    <!-- Page Header Start -->
+	<div class="page-header parallaxie">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- Page Header Box Start -->
+					<div class="page-header-box">
+						<h1 class="text-anime-style-2" data-cursor="-opaque">Urban retreat</h1>
+						<nav class="wow fadeInUp">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="./">home</a></li>
+								<li class="breadcrumb-item"><a href="projects.html">projects</a></li>
+								<li class="breadcrumb-item active" aria-current="page">urban retreat</li>
+							</ol>
+						</nav>
+					</div>
+					<!-- Page Header Box End -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page Header End -->
+
+    <!-- Page Project Single Start -->
+    <div class="page-project-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Project Sidebar Start -->
+                    <div class="project-single-sidebar">
+                        <!-- Project Detail List Start -->
+                        <div class="project-detail-list wow fadeInUp">
+                            <!-- Project Detail Item Start -->
+                            <div class="project-detail-item">
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-calendar"></i>
+                                </div>
+                                <div class="project-detail-content">
+                                    <h3>project date:</h3>
+                                    <p>15 november, 2024</p>
+                                </div>
+                            </div>
+                            <!-- Project Detail Item End -->
+
+                            <!-- Project Detail Item Start -->
+                            <div class="project-detail-item">
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div class="project-detail-content">
+                                    <h3>project duration:</h3>
+                                    <p>12 hours / week</p>
+                                </div>
+                            </div>
+                            <!-- Project Detail Item End -->
+
+                            <!-- Project Detail Item Start -->
+                            <div class="project-detail-item">
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                                <div class="project-detail-content">
+                                    <h3>category:</h3>
+                                    <p>residential interior renovation</p>
+                                </div>
+                            </div>
+                            <!-- Project Detail Item End -->
+
+                            <!-- Project Detail Item Start -->
+                            <div class="project-detail-item">
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                                <div class="project-detail-content">
+                                    <h3>client / company:</h3>
+                                    <p>luxe interiors</p>
+                                </div>
+                            </div>
+                            <!-- Project Detail Item End -->
+
+                            <!-- Project Detail Item Start -->
+                            <div class="project-detail-item">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="project-detail-content">
+                                    <h3>project location:</h3>
+                                    <p>789 maple avenue, design city</p>
+                                </div>
+                            </div>
+                            <!-- Project Detail Item End -->
+                        </div>
+                        <!-- Project Detail List End -->
+
+                        <!-- Sidebar CTA Box Start -->
+                        <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Sidebar CTA Image Start -->
+                            <div class="sidebar-cta-image">
+                                <div class="image-anime">
+                                    <img src="images/sidebar-cta-img.jpg" alt="">
+                                </div>
+                            </div>
+                            <!-- Sidebar CTA Image End -->
+
+                            <!-- Sidebar CTA Body Start -->
+                            <div class="sidebar-cta-Body">
+                                <!-- Sidebar CTA Content Start -->
+                                <div class="sidebar-cta-content">
+                                    <h3>how can we help</h3>
+                                    <p>If you need any helps, please feel free to contact us.</p>
+                                </div>
+                                <!-- Sidebar CTA Content End -->
+
+                                <!-- Sidebar CTA Contact Start -->
+                                <div class="sidebar-cta-contact">
+                                    <!-- Sidebar CTA Contact Item Start -->
+                                    <div class="sidebar-cta-contact-item">
+                                        <div class="icon-box">
+                                            <img src="images/icon-phone.svg" alt="">
+                                        </div>
+                                        <div class="cta-contact-item-content">
+                                            <p>+91 1234567890</p>
+                                        </div>
+                                    </div>
+                                    <!-- Sidebar CTA Contact Item Start -->
+
+                                    <!-- Sidebar CTA Contact Item Start -->
+                                    <div class="sidebar-cta-contact-item">
+                                        <div class="icon-box">
+                                            <img src="images/icon-mail.svg" alt="">
+                                        </div>
+                                        <div class="cta-contact-item-content">
+                                            <p>info@domain.com</p>
+                                        </div>
+                                    </div>
+                                    <!-- Sidebar CTA Contact Item Start -->
+                                </div>
+                                <!-- Sidebar CTA Contact End -->
+                            </div>
+                            <!-- Sidebar CTA Body End -->
+                        </div>
+                        <!-- Sidebar CTA Box End -->
+                    </div>
+                    <!-- Project Sidebar End -->
+                </div>
+
+                <div class="col-lg-8">
+                    <!-- Project Single Content Start -->
+                    <div class="project-single-content">
+                        <!-- Project Single Image Start -->
+                        <div class="project-single-image">
+                            <figure class="image-anime reveal">
+                                <img src="images/project-1.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Project Single Image End -->
+
+                        <!-- Project Entry Start -->
+                        <div class="project-entry">
+                            <!-- Project Information Start -->
+                            <div class="project-info">
+                                <h2 class="text-anime-style-2">Project information</h2>
+                                <p class="wow fadeInUp">This project involved a complete transformation of the space to align with the client's vision for a modern, functional, and aesthetically pleasing interior. Our team focused on integrating custom elements, maximizing space, and ensuring every detail enhanced both style and practicality. The result is a beautifully designed area that reflects the client's unique taste and lifestyle.</p>
+                                <p class="wow fadeInUp" data-wow-delay="0.2s">In this project, we aimed to create a harmonious blend of elegance and functionality, tailored specifically to the client's preferences. Every aspect, from material selection to color schemes, was carefully curated to enhance the space's ambiance and utility. Our goal was to craft a warm, inviting environment that reflects a sophisticated design philosophy while catering to everyday needs. The project stands as a testament to our commitment to delivering high-quality, personalized interior solutions.</p>
+                            </div>
+                            <!-- Project Information End -->
+
+                            <!-- Project Design Information Start -->
+                            <div class="project-design-info">
+                                <h2 class="text-anime-style-2">Design highlights</h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.2s">This section showcases the standout elements of the project, featuring unique design choices, custom-made pieces, and innovative solutions tailored to enhance both style and functionality. From carefully selected finishes to lighting arrangements, each detail has been meticulously crafted to bring out the best in the space and align with the client's vision.</p>
+                                <ul class="wow fadeInUp" data-wow-delay="0.4s">
+                                    <li>Custom cabinetry was designed to maximize storage while maintaining a sleek, modern look.</li>
+                                    <li>Ambient lighting was strategically placed to enhance the mood and highlight key areas.</li>
+                                    <li>Textures and finishes were carefully chosen to add depth and warmth to each room.</li>
+                                    <li>A neutral color palette was accented with bold elements for a balanced, timeless feel.</li>
+                                    <li>High-quality materials were used throughout to ensure durability and elegance in every detail.</li>
+                                </ul>
+                            </div>
+                            <!-- Project Design Information End -->
+
+                            <!-- Project Gallery Images Start -->
+                            <div class="project-gallery gallery-items">
+                                <h2 class="text-anime-style-2">Project gallery</h2>
+
+                                <div class="project-gallery-images">
+                                    <!-- Project Gallery img Start -->
+                                    <div class="project-gallery-img wow fadeInUp" data-cursor-text="View">
+                                        <a href="images/gallery-7.jpg">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/gallery-7.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <!-- Project Gallery img End -->
+
+                                    <!-- Project Gallery img Start -->
+                                    <div class="project-gallery-img wow fadeInUp" data-cursor-text="View">
+                                        <a href="images/gallery-1.jpg">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/gallery-1.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <!-- Project Gallery img End -->
+
+                                    <!-- Project Gallery img Start -->
+                                    <div class="project-gallery-img wow fadeInUp" data-cursor-text="View">
+                                        <a href="images/gallery-3.jpg">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/gallery-3.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <!-- Project Gallery img End -->
+
+                                    <!-- Project Gallery img Start -->
+                                    <div class="project-gallery-img wow fadeInUp" data-cursor-text="View">
+                                        <a href="images/gallery-5.jpg">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/gallery-5.jpg" alt="">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <!-- Project Gallery img End -->
+                                </div>
+                            </div>
+                            <!-- Project Gallery Images End -->
+                        </div>
+                        <!-- Project Entry End -->
+                    </div>
+                    <!-- Project Single Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Project Single End -->
+  <!-- Footer Start -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-header">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="footer-logo">
+                  <img src="images/transparent_logo.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="footer-social-links">
+                  <div class="footer-social-link-title">
+                    <h3>follow our socials</h3>
+                  </div>
+                  <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h3>information</h3>
+            <ul>
+              <li><a href="about.html">about our company</a></li>
+              <li><a href="services.html">view our service</a></li>
+              <li><a href="#">careers at company</a></li>
+              <li><a href="blog.html">read our blog</a></li>
+              <li><a href="projects.html">our latest projects</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h3>portfolio</h3>
+            <ul>
+              <li><a href="project-single.html">luxury home design</a></li>
+              <li><a href="project-single.html">residential interior design</a></li>
+              <li><a href="project-single.html">commercial space design</a></li>
+              <li><a href="project-single.html">residential interior design</a></li>
+              <li><a href="project-single.html">renovation and restoration design</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-contact-box footer-links">
+            <h3>contact us</h3>
+            <div class="footer-contact-item">
+              <div class="icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="footer-contact-content">
+                <p>1300 56 55 56</p>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="footer-contact-content">
+                <p>info@visionsmarthomes.com.au</p>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="footer-contact-content">
+                <p>Unit 30/275 Annangrove Rd Rouse Hill NSW 2155</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-latest-news footer-links">
+            <h3>get the latest trending news</h3>
+            <div class="footer-newsletter-form">
+              <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+              <form id="newslettersForm" action="#" method="POST">
+                <div class="form-group">
+                  <input 
+                    type="email" 
+                    name="email" 
+                    class="form-control" 
+                    id="mail" 
+                    placeholder="Enter your email" 
+                    required
+                  >
+                  <button type="submit">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-copyright-text">
+              <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+	<script src="js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+
+    <!-- Toggle side menu script -->
+  <script>
+    function toggleSideMenu() {
+      const sideMenu = document.getElementById('sideMenu');
+      const overlay = document.getElementById('overlay');
+      sideMenu.classList.toggle('open');
+      overlay.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
