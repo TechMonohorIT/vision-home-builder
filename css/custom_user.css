@@ -1351,7 +1351,18 @@
 }
 
 .copyright-home-footer p {
-  color: var(--white-color);
+  color: var(--color-text-bw-white, #FFF);
+  text-align: center;
+  /* Typography/Body/body-md-ff2 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23.8px;
+  /* 148.75% */
+  margin-top: 18px;
+  margin-bottom: 0px;
+  opacity: 0.9;
 }
 
 /* .main-footer .row {
@@ -1427,6 +1438,12 @@
   .sm-container {
     margin-left: 5%;
     margin-right: 5%;
+  }
+
+  .main-contianer {
+    width: 100%;
+    max-width: calc(100% - 20px) !important;
+    margin: 0 auto !important;
   }
 
   /* header-section-css-767 */

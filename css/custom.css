@@ -2101,6 +2101,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .footer-newsletter-form p {
+	opacity: var(--opacity-80, 0.8);
 	color: var(--color-text-bw-white, #FFF);
 	/* Typography/Body/body-lg-ff2 */
 	font-family: Inter;
