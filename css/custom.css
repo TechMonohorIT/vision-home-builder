@@ -817,16 +817,6 @@ header.main-header .header-sticky.active .navbar {
 /***        04. Hero css	      ***/
 /************************************/
 
-/* .hero {
-	position: relative;
-	background: url('../images/hero-bg.jpg');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	padding: 450px 0 120px;
-	min-height: auto;
-	margin-top: -118px;
-} */
 
 .hero::before {
 	content: '';
@@ -4476,7 +4466,9 @@ header.main-header .header-sticky.active .navbar {
 	}
 
 	.footer-social-links {
+		flex-direction: column;
 		justify-content: start;
+		align-items: start;
 		gap: 20px;
 	}
 
