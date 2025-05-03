@@ -451,7 +451,8 @@ body {
 }
 
 .section-row {
-	margin-bottom: 80px;
+	/* margin-bottom: 80px; */
+	margin-bottom: 88px;
 }
 
 .section-row .section-title {
@@ -468,6 +469,12 @@ body {
 }
 
 .section-title-content p {
+	color: var(--Color-Primary-primary---200, #807064);
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28.8px;
 	margin: 0;
 }
 
@@ -478,13 +485,15 @@ body {
 .section-title h3 {
 	display: inline-block;
 	position: relative;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1.6em;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25.6px;
 	text-transform: capitalize;
-	color: var(--accent-color);
-	padding-left: 35px;
-	margin-bottom: 20px;
+	color: var(--Color-Primary-primary---200, #807064);
+	padding-left: 0px;
+	margin-bottom: 16px;
 }
 
 .section-title h3::before {
@@ -510,11 +519,19 @@ body {
 }
 
 .section-title h2 {
-	font-size: 22px;
+	/* font-size: 22px;
 	font-weight: 500;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
+	cursor: none; */
+	color: var(--Color-Primary-primary---500, #756458);
+	font-family: Montserrat;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 52px;
+	letter-spacing: -0.72px;
+	text-transform: uppercase;
 }
 
 /* .section-title h1 span,
@@ -1810,19 +1827,17 @@ header.main-header .header-sticky.active .navbar {
 /************************************/
 
 .our-blog {
-	padding-top: 100px;
-	padding-bottom: 50px;
-	padding-left: 50px;
-	padding-right: 50px;
-	background: url('../images/SECTION\ 10\ LIGHT\ SHADE.png');
+	padding-top: 240px;
+	padding-bottom: 100px;
+	/* background: url('../images/SECTION\ 10\ LIGHT\ SHADE.png');
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover;
+	background-size: cover; */
 }
 
 .post-item {
-	height: calc(100% - 30px);
-	margin-bottom: 30px;
+	/* height: calc(100% - 30px);
+	margin-bottom: 30px; */
 }
 
 .post-featured-image {
@@ -1850,7 +1865,8 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .post-item-content {
-	margin-bottom: 15px;
+	margin-top: 20px;
+	margin-bottom: 12px;
 }
 
 .post-item-content h3 {
@@ -1860,7 +1876,12 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .post-item-content h3 a {
-	color: #382213;
+	color: var(--Color-Primary-primary---800, #382213);
+	font-family: Helvetica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 28px;
 }
 
 .post-item-btn a {
@@ -1892,7 +1913,7 @@ header.main-header .header-sticky.active .navbar {
 } */
 
 .our-blog-footer {
-	margin-top: 20px;
+	margin-top: 50px;
 	text-align: center;
 }
 
@@ -3640,7 +3661,7 @@ header.main-header .header-sticky.active .navbar {
 	}
 
 	.our-testimonial-content {
-		padding: 50px 20px;
+		padding: 50px 0px;
 	}
 }
 
@@ -3842,10 +3863,6 @@ header.main-header .header-sticky.active .navbar {
 
 	.skills-progress-bar {
 		margin-bottom: 30px;
-	}
-
-	.our-blog {
-		padding: 50px;
 	}
 
 	.our-blog .section-title {
