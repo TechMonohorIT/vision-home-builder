@@ -1727,9 +1727,6 @@ header.main-header .header-sticky.active .navbar {
 	cursor: none;
 }
 
-.testimonial-rating {
-	margin-bottom: 20px;
-}
 
 .testimonial-rating i {
 	font-size: 18px;
@@ -1742,7 +1739,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .testimonial-content {
-	margin-bottom: 40px;
+	margin-bottom: 0px;
 }
 
 .testimonial-content p {
