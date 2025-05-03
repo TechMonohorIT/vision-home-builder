@@ -3695,7 +3695,7 @@ header.main-header .header-sticky.active .navbar {
 	}
 
 	.section-title h1 {
-		font-size: 50px;
+		font-size: 24px !important;
 	}
 
 	.section-title h2 {
