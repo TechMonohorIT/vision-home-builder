@@ -1496,7 +1496,7 @@ span.counter {
 /*************************************/
 @media only screen and (max-width: 767px) {
   .main-container {
-    max-width: calc(100% - 30px) !important;
+    max-width: calc(100% - 30px);
   }
 
   .footer-logo img {
@@ -1747,13 +1747,6 @@ span.counter {
 }
 
 @media only screen and (max-width: 1024px) {
-  .main-container {
-    max-width: calc(100% - 100px);
-  }
-
-  /* .hero {
-    padding: 0px 0 151px;
-  } */
   .hamburger {
     max-width: 26px;
     max-height: 26px;
@@ -1796,4 +1789,11 @@ span.counter {
     height: 100% !important;
   }
 
+}
+
+/*maint-conatainer desing separately: not will be overwritten */
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+  .main-container {
+    max-width: calc(100% - 100px);
+  }
 }

@@ -162,11 +162,11 @@ body {
 	color: #8B5E3B;
 }
 
-
+/* container for above 1366px-screen */
 .main-container {
 	width: 100%;
 	max-width: calc(100% - 320px);
-	margin: 0 auto !important;
+	margin: 0 auto;
 }
 
 /* our custom csss */
