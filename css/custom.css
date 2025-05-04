@@ -128,26 +128,6 @@
 	font-style: normal;
 }
 
-
-
-:root {
-	--primary-color: #192324;
-	--secondery-color: #F8F8F8;
-	--text-color: #283132;
-	--accent-color: #7C877F;
-	--white-color: #FFFFFF;
-	--divider-color: #EAF0EC;
-	--dark-divider-color: #FFFFFF1A;
-	--error-color: rgb(230, 87, 87);
-	--default-font: 'CarmenSans-UltraLight', sans-serif;
-	;
-	/* New Font Updated */
-	--body-font: 'Carmen Sans', sans-serif;
-	/* New For BODY/PARAGRAPHS */
-
-}
-
-
 /************************************/
 /*** 	   02. General css		  ***/
 /************************************/
@@ -470,7 +450,7 @@ body {
 
 .section-title-content p {
 	color: var(--Color-Primary-primary---200, #807064);
-	font-family: Montserrat;
+	font-family: var(--montserrat);
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 500;
@@ -485,7 +465,7 @@ body {
 .section-title h3 {
 	display: inline-block;
 	position: relative;
-	font-family: Montserrat;
+	font-family: var(--montserrat);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -525,7 +505,7 @@ body {
 	margin-bottom: 0;
 	cursor: none; */
 	color: var(--Color-Primary-primary---500, #756458);
-	font-family: Montserrat;
+	font-family: var(--montserrat);
 	font-size: 36px;
 	font-style: normal;
 	font-weight: 600;
@@ -1887,7 +1867,7 @@ header.main-header .header-sticky.active .navbar {
 .post-item-btn a {
 	position: relative;
 	color: var(--Color-Primary-primary---500, #756458);
-	font-family: Montserrat;
+	font-family: var(--montserrat);
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 600;

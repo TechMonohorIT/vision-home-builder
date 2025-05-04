@@ -11,14 +11,8 @@
 
 .header-sidemenu .logo img {
   object-fit: cover;
-  width: 229px;
+  max-width: 229px;
   height: 64px;
-}
-
-
-.logo {
-  /* position: absolute; */
-  /* left: 42%; */
 }
 
 .hamburger {
@@ -50,8 +44,7 @@
 .hero-content .section-title h3,
 .hero-content .section-title h1 {
   color: var(--color-text-bw-white, #FFF);
-  /* Typography/Heading/Heading 1 */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -60,25 +53,18 @@
   text-transform: uppercase;
   text-transform: capitalize !important;
   margin-bottom: 24px;
-  /* font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.5em;
-  margin-bottom: 0px; */
-  /* padding: 20px 81px 20px 15px; */
 }
 
 .hero-content .section-title p {
   color: var(--color-text-bw-white, #FFF);
   /* opacity: 0.9; */
-  /* Typography/Body/body-lg */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 28.8px;
   margin-top: 0px;
   margin-bottom: 40px;
-  /* 160% */
 }
 
 .hero-btn .btn-default {
@@ -122,13 +108,6 @@
 /************************************/
 /********02.About-us-css ************/
 /************************************/
-
-
-
-
-/* .about-content-cotainer {
-  padding: 10px 20px 20px 20px;
-} */
 .about-us-content {
   margin-left: 0px;
   margin-right: 20px;
@@ -246,10 +225,6 @@
   box-shadow: rgba(0, 0, 0, 0.2) 1px 3px 6px;
 }
 
-
-
-
-
 /************************************/
 /*******03.Why-choose-us-css ********/
 /************************************/
@@ -278,11 +253,9 @@
 }
 
 .custom-why-choose-us {
-
   position: relative;
   height: 100%;
   /* height: 100vh; */
-
 }
 
 @media only screen and (min-width: 0px) and (max-width: 660px) {
@@ -332,7 +305,6 @@
   gap: 10%;
 }
 
-
 .custom-why-choose-us::before {
   content: "";
   position: absolute;
@@ -347,11 +319,8 @@
   background-position: left, center, right, center;
   background-attachment: fixed;
   /* background-position: left top, right top; */
-  /* Prevent the images from repeating */
   background-repeat: no-repeat, no-repeat;
   filter: blur(1px);
-  /* Adjust the blur radius as needed */
-  /* Prevents visible edges from the blur */
   z-index: -2;
 }
 
@@ -364,7 +333,6 @@
   height: 100%;
   background-color: #000000;
   opacity: 0.1;
-  /* Adjust opacity to control color intensity */
   z-index: -1;
   inset: 0;
 }
@@ -478,7 +446,6 @@
 /************************************
 /***03.Why-choose-us-css************/
 /************************************/
-
 
 /* .why-choose-img-side {
   position: relative;
@@ -660,13 +627,12 @@
   font-weight: 600;
 }
 
-/* .why-choose-item-content p:not(:last-of-type) {
-  margin-bottom: 20px;
-} */
+.why-choose-item-content p:not(:last-of-type) {
+  /* margin-bottom: 20px; */
+}
 
 .why-choose-content .section-title h2 {
   color: #7d7062 !important;
-  color: #5a4031;
   font-size: 28px;
   line-height: 1.4;
 }
@@ -686,7 +652,6 @@
 .service-head-container {
   display: flex;
   justify-content: space-between;
-  /* border: 2px dotted #896b6b; */
   max-width: 100%;
   margin: 0px 50px;
   padding: 10px;
@@ -696,7 +661,6 @@
 .our-services .section-title-content {
   max-width: 500px;
   line-height: 1.7;
-  /* margin-left: 110px; */
 }
 
 .our-services .section-title {
@@ -825,7 +789,6 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--white-color);
-  /* margin-bottom: 0px; */
   line-height: 1.6em;
   max-width: clamp(250px, 25vw, 400px);
 }
@@ -1003,7 +966,6 @@
   height: 100%;
   background-color: #53473d;
   opacity: 0.9;
-  /* Adjust opacity to control color intensity */
   z-index: -1;
   inset: 0;
 }
@@ -1020,7 +982,6 @@
 }
 
 .project-user-container .section-row {
-  /* border: 1px dashed #605245; */
   padding: 5px 10px 5px 10px;
   margin: 0px 0px 80px 0px;
 }
@@ -1072,13 +1033,11 @@
 
 .our-skill .section-title h3 {
   color: var(--Color-Neutral-neutral---300, #86796F);
-  /* Typography/Body/Overtext */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 25.6px;
-  /* 160% */
   text-transform: capitalize;
   padding-left: 0px;
   margin-bottom: 16px;
@@ -1086,13 +1045,11 @@
 
 .our-skill .section-title h2 {
   color: var(--Color-Primary-primary---500, #756458);
-  /* Typography/Heading/Heading 2 */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
   line-height: 52px;
-  /* 144.444% */
   letter-spacing: -0.72px;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -1101,7 +1058,7 @@
 .our-skill .section-title p {
   color: var(--Color-Primary-primary---300, #7A695F);
   /* Typography/Body/body-lg */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1114,7 +1071,7 @@
 .skill-data .skill-title {
   color: var(--Color-Primary-primary---100, #837168);
   /* Typography/Body/body-lg */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1125,7 +1082,7 @@
 .skill-data .skill-no {
   color: var(--Color-Primary-primary---100, #837168);
   /* Typography/Body/body-lg */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1155,7 +1112,7 @@
 }
 
 .left-box-2 {
-  background: var(--Color-BG-bg-1, #FAFAFA);
+  background: white;
 }
 
 .testimonial-left-box::before {
@@ -1210,7 +1167,7 @@
 .testimonial-title h2 {
   color: var(--Color-Primary-primary---600, #6A5C4E);
   /* Typography/Heading/Heading 2 */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -1224,7 +1181,7 @@
 .testimonial-title h3 {
   color: var(--Color-Neutral-neutral---300, #86796F);
   /* Typography/Body/Overtext */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -1237,7 +1194,7 @@
 .testimonial-title p {
   color: var(--Color-Primary-primary---300, #7A695F);
   /* Typography/Body/body-lg */
-  font-family: Montserrat;
+  font-family: var(--montserrat);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1352,7 +1309,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: 23.8px;
-  /* 148.75% */
   /* margin-bottom: 10px; */
 }
 
@@ -1454,9 +1410,7 @@ span.counter {
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(1px);
-  /* Adjust the blur radius as needed */
   transform: scale(1.1);
-  /* Prevents visible edges from the blur */
   z-index: -2;
 }
 
@@ -1469,7 +1423,6 @@ span.counter {
   height: 100%;
   opacity: var(--opacity-90, 0.9);
   background: var(--Color-Primary-Opac-primary---300, #53473D);
-  /* Adjust opacity to control color intensity */
   z-index: -1;
   inset: 0;
 }
@@ -1488,12 +1441,6 @@ span.counter {
   margin-bottom: 0px;
   opacity: 0.9;
 }
-
-/* .main-footer .row {
-  margin-right: 50px;
-  margin-left: 50px;
-  padding-bottom: 80px;
-} */
 
 .main-footer .row {
   position: relative;
@@ -1548,9 +1495,9 @@ span.counter {
 /*************************************/
 /***11.MOBILE-RESPONSIVE-WEB-DESIGN****/
 /*************************************/
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .main-container {
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 32px);
   }
 
   .footer-logo img {
@@ -1562,12 +1509,6 @@ span.counter {
   /* header-section-css-767 */
   .header-sidemenu {
     padding: 15px 0px;
-  }
-
-  .header-sidemenu .logo img {
-    object-fit: cover;
-    width: 150px;
-    height: 64px;
   }
 
   .hero {
@@ -1711,10 +1652,6 @@ span.counter {
     height: 300px;
   }
 
-  .left-box-2 {
-    background-color: #b8b0ac;
-  }
-
   .testimonial-left-box::before {
     width: 100px !important;
     height: 100px !important;
@@ -1736,7 +1673,7 @@ span.counter {
 /*************************************/
 /***Tablet-Laptop RESPONSIVE WEB DESIGN ***/
 /*************************************/
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
 
   /*about-us-css-991*/
   .about-img-1 img {
@@ -1808,8 +1745,6 @@ span.counter {
     display: grid;
     grid-template-columns: 100% !important;
     grid-gap: 50px;
-    /* margin-left: 15px;
-    margin-right: 15px; */
   }
 
   /* our-testimonial-css-991 */
@@ -1832,17 +1767,13 @@ span.counter {
     border-radius: 50%;
   }
 
-  .left-box-2 {
-    background-color: #b8b0ac;
-  }
-
   /* blog */
   .post-item-btn {
     margin-bottom: 30px;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .hamburger {
     width: 26px;
     height: 26px;
@@ -1853,7 +1784,6 @@ span.counter {
     margin-bottom: 5px;
   }
 
-  /*about-us-css-1024 */
   .about-img-1 img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -1865,30 +1795,21 @@ span.counter {
   }
 }
 
-@media only screen and (max-width: 1366px) {
-  .footer-logo img {
-    max-width: 80%;
-    height: auto;
-  }
-
-  .our-testimonial-content {
-    /* max-width: 746px;
-    margin-top: 50px;
-    margin-right: 40px;
-    margin-bottom: 50px;
-    margin-left: 40px; */
-  }
-}
-
-@media only screen and (max-width: 1440px) {
+/*MAX-WIDTH-1440PX RESPONSIVE */
+@media (max-width: 1440px) {
   .service-box {
     height: 100% !important;
   }
 
 }
 
-/*maint-conatainer desing separately: not will be overwritten */
-@media only screen and (min-width: 768px) and (max-width: 1366px) {
+/**********MAX-WIDTH-TYPE********/
+/************* END *************/
+/* @media (min-width: 768px) and (max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/*@media (min-width: 768px) and (max-width: 1366px)*/
+@media (min-width: 768px) and (max-width: 1366px) {
   .main-container {
     max-width: calc(100% - 100px);
   }

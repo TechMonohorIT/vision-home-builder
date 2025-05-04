@@ -14,11 +14,19 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
   <!-- Google Fonts Css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet"> -->
+
+  <!--Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
+  <!--I could import Helvetica Font in google> It is paid font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -45,10 +53,28 @@
     /****************************************************
  * SIDEMENU STYLES
  ****************************************************/
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      /* New Font Updated */
+      --body-font: 'Carmen Sans', sans-serif;
+      /*New Google Font */
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
     }
 
     body {
@@ -631,7 +657,6 @@
     </div>
   </div>
   <!-- hero-section-end -->
-
   <!--about-us-start-2---->
   <div class="about-us">
     <div class="container">
