@@ -17,6 +17,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
 	<!-- Bootstrap Css -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<!-- SlickNav Css -->
 	<link href="css/slicknav.min.css" rel="stylesheet">
@@ -35,6 +41,9 @@
   <link href="css/custom_user.css" rel="stylesheet">
 
   <style>
+    body {
+      font-family: 'Montserrat', 'Inter' !important;
+    }
 
 .header-sidemenu {
       position: fixed;
@@ -150,7 +159,7 @@
       top: 0%;
       left: 0px;
       right: 0;
-      z-index: 999;
+      z-index: 9999999;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -277,7 +286,7 @@
     .top-section{
     
       
-      background-image: url('../vision-site-main/images/contact-page/shadow.png');
+      background-image: url('/images/contact-page/shadow.png');
       background-size: contain;
       background-position: top left;
       background-repeat: no-repeat;
@@ -320,29 +329,35 @@
 
     /* Contact Section */
     .contact-section {
-      margin: 100px 0;
-      padding: 0 80px;
+  
+      
     }
     .contact-section h2 {
-      font-size: 48px;
-      color: #8b7355;
-      margin-bottom: 10px;
-      max-width: 910px;
-      text-align: center;
+      color: #8B7355;
+      font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 62.4px; /* 130% */
+text-transform: uppercase;
+text-align: center;
+width: 831px;
+margin:0 ;
     }
     .breadcrumb {
       color: #8b7355;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: block;
-    width: 910px;
+    width: 831px;
     text-align: center;
+    margin-top: 10px;
     }
 
     .contact-container {
       display: flex;
       align-items: center;
       /* justify-content: center; */
-      gap: 50px;
+      gap: 120px;
     }
 
     /* Contact Form */
@@ -353,6 +368,7 @@
   position: relative;
   padding: 40px;
   border-radius: 10px;
+  z-index: 10;
   /* overflow: hidden; */
   
 }
@@ -379,7 +395,7 @@
     width: 100%;
     height: 100%;
     border-radius: 20px !important;
-    background-image: url('/vision-site-main/images/empty-modern-apartment-illuminated-by-sunlight-shadows-generated-by-ai.jpg');
+    background-image: url('images/empty-modern-apartment-illuminated-by-sunlight-shadows-generated-by-ai.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -388,14 +404,22 @@
     z-index: -1;
 }
     .contact-form h3 {
-      color: #ffffff;
-      font-size: 24px;
-      margin-bottom: 20px;
+
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 28.8px; /* 120% */
+color: white;
+margin-bottom: 18px;
     }
     .contact-form p {
-      color: #ffffff;
-      margin-bottom: 30px;
-      font-size: 14px;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 23.8px;
+color: white;
+margin-bottom: 40px;
+
     }
 
     .form-row {
@@ -438,13 +462,26 @@
 
     /* Contact Info */
     .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      
+      gap: 64px;
       /* flex: 1; */
 
     }
     .info-item {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 40px;
+      /* margin-bottom: 64px; */
+    }
+    .icon-head {
+      margin-right: 20px;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .icon {
       margin-right: 20px;
@@ -457,12 +494,17 @@
       justify-content: center;
     }
     .info h4 {
-      color: #8b7355;
+      font-family: 'Montserrat', 'Inter' !important;
+      color: #7A695F;
       margin-bottom: 5px;
+      font-size: 17px !important;
+      font-weight: 600;
     }
     .info p {
-      color: #4a4a4a;
-      line-height: 1.5;
+      color: #6A5C4E;
+      line-height: 28.8px;
+      font-weight: 500;
+
     }
 
     /* Responsive */
@@ -491,6 +533,186 @@
   transform: translateY(-20px);
   pointer-events: none;
 }
+
+
+
+.main-container {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+  padding-left: 160px;
+  padding-right: 160px;
+
+}
+.header-section {
+  background-image: url('/images/contact-page/shadow.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 1080px;
+}
+.header-container {
+  margin-top: 100px;
+  display: flex;
+  align-items:start;
+  justify-content: center;
+  column-gap: 210px;
+  padding-top: 120px;
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+.header-left h1 {
+  font-size: 129px;
+font-style: normal;
+font-weight: 300 !important;
+line-height: normal;
+letter-spacing: 2.58px;
+text-transform: uppercase;
+color: #6A5C4E;
+margin: 0 !important;
+}
+.header-left h6 {
+  font-size: 34px;
+font-style: normal;
+font-weight: 500;
+line-height: 64px;
+letter-spacing: 2.28px;
+text-transform: uppercase;
+color: #6A5C4E;
+}
+
+@media (max-width: 1440px) {
+  .main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header-section {
+    background-size: cover;
+    background-position: left;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+}
+/* header  */
+@media (max-width: 1440px) {
+  .header-section {
+    max-height: 600px;
+    min-height: 600px;
+  }
+}
+
+
+/* ————————————————  
+   Responsive overrides for <1920px 
+   ———————————————— */
+
+/* Up to 1440px */
+@media (max-width: 1440px) {
+  .main-container {
+    padding: 0 40px;
+  }
+  .header-container {
+    padding-top: 80px;
+    column-gap: 10px;
+    gap: 100px;
+  }
+  .header-left h1 {
+    font-size: 80px;
+  }
+  .header-left h6 {
+    font-size: 28px;
+  }
+  .header-right img {
+    max-width: 600px;
+    width: 100%;
+  }
+  .decorative-plant-top-left,
+  .decorative-plant-bottom-right,
+  .decorative-chair-image {
+    display: none;
+  }
+}
+
+/* Up to 1024px */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 20px;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+  .header-left {
+    text-align: center;
+  }
+  .header-left h1 {
+    font-size: 60px;
+  }
+  .header-left h6 {
+    font-size: 24px;
+  }
+  .header-right {
+    display: none;
+  }
+  .contact-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+/* Up to 768px */
+@media (max-width: 768px) {
+  .header-container {
+    padding-top: 40px;
+  }
+  .header-left h1 {
+    font-size: 40px;
+  }
+  .header-left h6 {
+    font-size: 20px;
+  }
+  .contact-section h2 {
+    font-size: 32px;
+  }
+  .contact-form h3 {
+    font-size: 20px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Up to 576px (mobile) */
+@media (max-width: 576px) {
+  .main-container {
+    padding: 0 10px;
+  }
+  .header-left h1 {
+    font-size: 32px;
+  }
+  .header-left h6 {
+    font-size: 18px;
+  }
+  .contact-section h2 {
+    font-size: 28px;
+  }
+  .contact-form {
+    padding: 15px;
+  }
+  button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
   </style>
 
 </head>
@@ -508,7 +730,7 @@
     <!-- Preloader End -->
   
     <!-- SIMPLE FIXED HEADER with HAMBURGER -->
-    <header class="header-sidemenu">
+    <header class="header-sidemenu main-container">
       <div class="logo" id="siteLogo">
         <a href="./">
           <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
@@ -541,92 +763,230 @@
 
 
   <div class="">
-    <div style="max-width: 1400px; margin: 0 auto; overflow: hidden;">
 
-
-  <!-- Hero Section -->
-  <div class="hero-section row justify-content-center">
-
-    <div class="hero-text col-lg-6 text-right">
-      <h1 style="padding-right: 111px;">WE'RE</h1>
-      <h2 style="font-size: 20px; font-weight: 600; padding-right: 111px;">ALWAYS UP FOR TALK!</h2>
+    <div style="position: relative;" class="  header-section" style="  overflow: hidden;   margin-top: 90px;">
+   <div  class="main-container header-container" >
+  <div class="header-left">
+    <h1 >We’re</h1>
+    <h6>ALWAYS UP FOR TALK!</h6>
+  </div>
+  <div class="header-right" style="position: relative;">
+    <img height="100%" width="820px"  src="images/contact-page/Cozy_interior.png" alt="">
+    <div style="height: 100%; background-color: #DFC0AC; width: 100%; position: absolute; left: -76px; top: 66px; z-index: -10;" ></div>
+    <div>
+      <img src="images/contact-page/chair 1.png" style="position: absolute;
+      bottom: -296px;
+      right: 229px;
+      z-index: 10;" alt="">
     </div>
-    <div class="hero-image col-lg-6 position-relative">
-
-      <!-- Replace this with any dummy image URL you want -->
-     <div class=" position-relative">
-      <img src="../vision-site-main/images/contact-page/chair.png" class="hero-image-ab"/>
-      <img   class="img-for-main"
-      src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=750" 
-      alt="Cozy interior" 
-    />
-    <div class="position-absolute " style="height: 100%; width:100%; background-color: #dfc0ac; top: 30px; left: -30px; max-width: 750px;"></div>
-     </div>
-
-
-    </div>
+   
   </div>
 
-  <!-- Contact Section -->
-  <div class="contact-section mx-auto position-relative">
-    <div class="position-absolute" style="bottom: -195px;right: -445px;">
-      <img style="height:500px; " src="../vision-site-main/images/contact-page/plant_blur.png" class="" />
-    </div>
 
-    <h2>CONTACT US</h2>
-    <div class="breadcrumb">Home / Contact us</div>
+   </div>
 
-    <div class="contact-container">
-      <!-- Left side: Contact Form -->
-      <div class="contact-form position-relative">
-        <div class="position-absolute" style="top: -409px; left: -446px;">
-          <img style="height:500px;; " src="../vision-site-main/images/contact-page/plant.png" class="" />
-        </div>
-        <h5 style="color:white; margin-bottom: 14px;">Contact Form</h5>
-        <h3>WE WOULD LOVE TO HEAR FROM YOU</h3>
-        <p>Your email address will not be published. Required fields are marked *</p>
-        <form>
-          <div class="form-row">
-            <input type="text" placeholder="Name *" />
-            <input type="email" placeholder="Email *" />
-          </div>
-          <input type="text" placeholder="Subject *" />
-          <textarea placeholder="Your Message *"></textarea>
-          <button type="submit">Submit →</button>
-        </form>
-      </div>
 
-      <!-- Right side: Contact Info -->
-      <div class="contact-info">
-        <div class="info-item">
-          <div class="icon"><img style="height: 32px; width: 32px;" src="../vision-site-main/images/contact-page/user-solid.svg" alt="User" /></div>
-          <div class="info">
-            <h4 style="color:#b39887; font-weight: 500;">Phone Number</h4>
-            <p style="font-size: 20px; color: #67564a;">1300 56 55 56</p>
+     <!-- Contact Section -->
+  <div style="position: absolute; top: 81%; width: 100%;">
+    <div class="contact-section main-container position-relative">
+     
+  
+      <h2>CONTACT US</h2>
+      <div class="breadcrumb">Home / Contact us</div>
+  
+      <div class="contact-container">
+        <!-- Left side: Contact Form -->
+        <div class="contact-form position-relative">
+          <div class="position-absolute" style="top: -409px; left: -446px;">
+            <img style="height:500px;; " src="images/contact-page/plant.png" class="" />
           </div>
+          <h5 style="color:white; margin-bottom: 14px; font-size: 20px;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;">Contact Form</h5>
+          <h3>WE WOULD LOVE TO HEAR FROM YOU</h3>
+          <p>Your email address will not be published. Required fields are marked *</p>
+          <form>
+            <div class="form-row">
+              <input type="text" placeholder="Name *" />
+              <input type="email" placeholder="Email *" />
+            </div>
+            <input style="margin-bottom: 40px;" type="text" placeholder="Subject *" />
+            <textarea placeholder="Your Message *"></textarea>
+            <button type="submit">Submit →</button>
+          </form>
         </div>
-        <div class="info-item">
-          <div class="icon">
-            <img style="height: 32px; width: 32px;" src="../vision-site-main/images/contact-page/envelope-solid.svg" alt="Envelope" />
+  
+        <!-- Right side: Contact Info -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="33" viewBox="0 0 28 33" fill="none">
+                <g clip-path="url(#clip0_134_275)">
+                <path d="M14 16.5C16.1217 16.5 18.1566 15.6571 19.6569 14.1569C21.1571 12.6566 22 10.6217 22 8.5C22 6.37827 21.1571 4.34344 19.6569 2.84315C18.1566 1.34285 16.1217 0.5 14 0.5C11.8783 0.5 9.84344 1.34285 8.34315 2.84315C6.84285 4.34344 6 6.37827 6 8.5C6 10.6217 6.84285 12.6566 8.34315 14.1569C9.84344 15.6571 11.8783 16.5 14 16.5ZM11.1438 19.5C4.9875 19.5 0 24.4875 0 30.6437C0 31.6687 0.83125 32.5 1.85625 32.5H26.1437C27.1687 32.5 28 31.6687 28 30.6437C28 24.4875 23.0125 19.5 16.8563 19.5H11.1438Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_134_275">
+                <rect width="28" height="32" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </div>
+            <div class="info">
+              <h4 style="color:#b39887; font-weight: 500;">Phone Number</h4>
+              <p style="font-size: 20px; color: #67564a;">1300 56 55 56</p>
+            </div>
           </div>
-          <div class="info">
-            <h4 style="color:#b39887; font-weight: 500;">E-Mail Support</h4>
-            <p style="font-size: 20px; color: #67564a;">info@visionsmarthomes.com.au</p>
+          <div class="info-item">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                <path d="M3 4.5C1.34375 4.5 0 5.84375 0 7.5C0 8.44375 0.44375 9.33125 1.2 9.9L14.8 20.1C15.5125 20.6313 16.4875 20.6313 17.2 20.1L30.8 9.9C31.5562 9.33125 32 8.44375 32 7.5C32 5.84375 30.6562 4.5 29 4.5H3ZM0 11.5V24.5C0 26.7062 1.79375 28.5 4 28.5H28C30.2062 28.5 32 26.7062 32 24.5V11.5L18.4 21.7C16.975 22.7688 15.025 22.7688 13.6 21.7L0 11.5Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="info">
+              <h4 style="color:#b39887; font-weight: 500;">E-Mail Support</h4>
+              <p style="font-size: 20px; color: #67564a;">info@visionsmarthomes.com.au</p>
+            </div>
           </div>
-        </div>
-        <div class="info-item">
-          <div class="icon">
-            <img style="height: 32px; width: 32px;" src="../vision-site-main/images/contact-page/building-solid.svg" alt="Building" />
-          </div>
-          <div class="info">
-            <h4 style="color:#b39887; font-weight: 500;">Headquarter</h4>
-            <p style="font-size: 20px; color: #67564a;">Unit 30/275 Annangrove Rd<br/>NSW 2155</p>
+          <div class="info-item">
+            <div class="icon-head">
+              <img style="height: 64px; width: 64px;" src="images/contact-page/headquaters icon.svg" alt="Building" />
+            </div>
+            <div class="info">
+              <h4 style="color:#b39887; font-weight: 500;">Headquarter</h4>
+              <p style="font-size: 20px; color: #67564a;">Unit 30/275 Annangrove Rd<br/>NSW 2155</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+ 
+
+
     </div>
+    <div style="height: 656.48px; width: 100%; background-color: transparent; position: relative; ;">
+      <div class="position-absolute" style="bottom: -142px;right: -445px;">
+        <img style="height:500px; " src="images/contact-page/plant_blur.png" class="" />
+      </div>
+    </div>
+
+
+
+
+    <!--footer-start-10-->
+    <footer  class="main-footer">
+
+     
+      <div>
+          <div class="main-container footer-container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="footer-header">
+                          <div class="row align-items-center">
+                              <div class="col-md-6">
+                                  <div class="footer-logo">
+                                      <img height="120px" src="images/vision_logo_main.svg" alt="">
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="footer-social-links">
+                                      <div class="footer-social-link-title">
+                                          <h3>follow our socials</h3>
+                                      </div>
+                                      <ul>
+                                          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                          <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                                          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row footer-main-links">
+                  <div class="col-lg-3 col-md-6">
+                      <div class="footer-links">
+                          <h3>information</h3>
+                          <ul>
+                              <li><a href="about.html">about our company</a></li>
+                              <li><a href="services.html">view our service</a></li>
+                              <li><a href="#">careers at company</a></li>
+                              <li><a href="blog.html">read our blog</a></li>
+                              <li><a href="projects.html">our latest projects</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="footer-links">
+                          <h3>portfolio</h3>
+                          <ul>
+                              <li><a href="project-single.html">luxury home design</a></li>
+                              <li><a href="project-single.html">residential interior design</a></li>
+                              <li><a href="project-single.html">commercial space design</a></li>
+                              <li><a href="project-single.html">residential interior design</a></li>
+                              <li><a href="project-single.html">renovation and restoration design</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="footer-contact-box footer-links">
+                          <h3>contact us</h3>
+                          <div class="footer-contact-item">
+                              <div class="icon-box">
+                                  <i class="fa-solid fa-phone"></i>
+                              </div>
+                              <div class="footer-contact-content">
+                                  <p>1300 56 55 56</p>
+                              </div>
+                          </div>
+                          <div class="footer-contact-item">
+                              <div class="icon-box">
+                                  <i class="fa-solid fa-envelope"></i>
+                              </div>
+                              <div class="footer-contact-content">
+                                  <p>info@visionsmarthomes.com.au</p>
+                              </div>
+                          </div>
+                          <div class="footer-contact-item">
+                              <div class="icon-box">
+                                  <i class="fa-solid fa-location-dot"></i>
+                              </div>
+                              <div class="footer-contact-content">
+                                  <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="footer-latest-news footer-links">
+                          <h3>get the latest trending news</h3>
+                          <div class="footer-newsletter-form">
+                              <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+                              <form id="newslettersForm" action="#" method="POST">
+                                  <div class="form-group">
+                                      <input type="email" name="email" class="form-control" id="mail"
+                                          placeholder="Enter your email" required>
+                                      <button type="submit">
+                                          <i class="fa-solid fa-chevron-right"></i>
+                                      </button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="copyright-home-footer">
+              <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+          </div>
+      </div>
+  </footer>
+    
+  
+    
   
   </div>
 
@@ -692,3 +1052,7 @@
 
 </body>
 </html>
+
+
+
+

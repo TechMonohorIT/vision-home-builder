@@ -1382,6 +1382,7 @@ span.counter {
   position: relative;
   overflow: hidden;
   /* display: flex; */
+  max-height: 859px;
   /* justify-content: center;
   align-items: center; */
   /* gap: 8px;
