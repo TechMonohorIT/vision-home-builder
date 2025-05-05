@@ -3679,6 +3679,14 @@ header.main-header .header-sticky.active .navbar {
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	.hero{
+		padding: 472px 0px 70px !important;
+	}
+}
+  
+
+
 @media only screen and (max-width: 991px) {
 	.navbar {
 		padding: 20px 0;
@@ -4686,4 +4694,6 @@ header.main-header .header-sticky.active .navbar {
 	.error-page-image img {
 		max-width: 100%;
 	}
+
+	
 }
