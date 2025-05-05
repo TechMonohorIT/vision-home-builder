@@ -646,21 +646,20 @@
 /*******04.our-services-css**********/
 /************************************/
 .our-services {
-  padding: 100px 0;
+  /* padding: 100px 0; */
 }
 
 .service-head-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  margin: 0px 50px;
-  padding: 10px;
-  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-top: 96px;
+  padding-bottom: 64px;
 }
 
 .our-services .section-title-content {
-  max-width: 500px;
-  line-height: 1.7;
+  max-width: 760px;
+  margin-left: 0px;
 }
 
 .our-services .section-title {
@@ -671,44 +670,26 @@
   content: none;
 }
 
-.our-services .section-title h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 15px;
-  line-height: 1.6em;
-  text-transform: capitalize;
-  color: #887c6e !important;
-  padding-left: 0px;
-}
-
 .our-services .section-title h2 {
-  font-size: 28px;
-  font-weight: 600;
-  white-space: normal;
-  line-height: 1.2em;
-  text-transform: capitalize;
-  color: #8b5e3b !important;
-  max-width: 500px;
+  color: var(--Color-Primary-primary---600, #6A5C4E);
+  max-width: 760px;
+  margin-bottom: 0px;
 }
 
-.our-services .section-title-content p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-top: 10px;
-}
+/* .our-services .section-title-content p {
 
-.service-item {
+} */
+
+/* .service-item {
   position: relative;
   height: calc(100% - 30px);
   margin-bottom: 30px;
-}
+} */
 
-.service-image a {
+/* .service-image a {
   display: block;
   cursor: none;
-}
+} */
 
 .service-btn {
   position: absolute;
@@ -728,37 +709,29 @@
   transition: all 0.4s ease-in-out;
 }
 
-.service-btn a:hover {
+/* .service-btn a:hover {
   background-color: var(--primary-color);
-}
+} */
 
-.service-btn a img {
+/* .service-btn a img {
   max-width: 20px;
   transform: rotate(-45deg);
   transition: all 0.4s ease-in-out;
-}
+} */
 
-.service-btn a:hover img {
+/* .service-btn a:hover img {
   transform: rotate(0);
-}
-
-.all-services-btn {
-  text-align: center;
-  margin-top: 20px;
-}
+} */
 
 .services-image-section {
   background: url("../images/photorealistic-timber-house-interior-with-wooden-decor-furnishings.jpg") no-repeat;
-  background-position: left bottom 1px;
+  background-position: left bottom;
   background-size: cover;
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 50px;
-  margin-top: 2rem;
   position: relative;
   z-index: 1;
+  margin-bottom: 48px;
 }
 
 .services-image-section::before {
@@ -768,46 +741,77 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(103, 61, 36, 0.7);
+  background-color: rgba(58, 33, 19, 0.70);
+}
+
+.service-box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .service-box {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: 100%;
   min-height: 600px;
   z-index: 300;
-  padding: 0px 50px;
+  flex-direction: column;
+  align-items: start;
+  gap: 41px;
+  /* flex: 1 0 0; */
+}
+
+.service-box-container>.service-box:first-child {
+  padding-right: 50px;
+}
+
+.service-box-container>.service-box:first-child::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-text-bw-white, #FFF);
+}
+
+.service-box-container>.service-box:nth-child(2),
+.service-box-container>.service-box:nth-child(3) {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.service-box-container>.service-box:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-text-bw-white, #FFF);
 }
 
 .service-box p {
-  position: absolute;
-  top: 40%;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--white-color);
-  line-height: 1.6em;
-  max-width: clamp(250px, 25vw, 400px);
-}
-
-.service-box:not(:last-child) {
-  border-right: 5px solid var(--divider-color);
+  color: var(--color-text-bw-white, #FFF);
+  font-family: var(--montserrat);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.8px;
+  opacity: 0.9;
 }
 
 .service-box h3 {
-  position: absolute;
-  top: 25%;
-  /* margin-bottom: 20px; */
+  margin-top: 140px;
+  margin-bottom: 0px;
 }
 
 .service-box a {
-  color: var(--white-color);
-  font-family: var(--default-font);
-  font-size: 2.5rem;
-  font-weight: 600;
+  color: var(--color-text-bw-white, #FFF);
+  font-family: var(--montserrat);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
 }
 
 /* Our project section start to here */
@@ -1501,6 +1505,34 @@ span.counter {
     max-width: calc(100% - 32px);
   }
 
+  /* H1,H2,H3,H4,P--rlated elements design(section-title) */
+  .section-title h3 {
+    line-height: 20.709px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+    line-height: 38.048px;
+    letter-spacing: -0.527px;
+  }
+
+  .section-title-content p {
+    margin-top: 0px !important;
+  }
+
+  /* H1,H2,H3,H4,P--rlated elements design(section-title) */
+  /*COMMON BTN FOR ALL */
+  .btn-common-block {
+    margin: 0 16px;
+  }
+
+  .btn-common {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+
+  /*COMMON BTN FOR ALL */
   .footer-logo img {
     max-width: 80%;
     height: auto;
@@ -1582,21 +1614,14 @@ span.counter {
 
   /* our-services-css-767 */
   .service-head-container {
-    /* border: 2px dotted #896b6b; */
-    max-width: 100%;
-    margin: 0px 15px !important;
-    padding: 10px;
-  }
-
-  .our-services .section-title-content {
-    max-width: 100%;
-    line-height: 1.7;
-    margin-top: 20px;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   .service-box p {
-    font-size: 14px;
-    /* max-width: clamp(400px, 20vw, 500px) !important; */
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 0px;
   }
 
   .services-image-section {
@@ -1607,20 +1632,54 @@ span.counter {
     align-items: center;
     height: auto !important;
     background-position: bottom 1px left 1px;
+    margin-bottom: 40px;
+  }
+
+  .service-box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .service-box-container>.service-box:first-child::after {
+    left: -10%;
+    top: 100%;
+    width: 120%;
+    height: 3px;
+  }
+
+  .service-box-container>.service-box:nth-child(2)::after {
+    left: -10%;
+    top: 100%;
+    width: 120%;
+    height: 3px;
+  }
+
+  .service-box-container>.service-box:first-child {
+    padding: 80px 20px 56px 20px;
+  }
+
+  .service-box-container>.service-box:nth-child(2) {
+    padding: 56px 20px;
+  }
+
+  .service-box-container>.service-box:nth-child(3) {
+    padding: 56px 20px 96px 20px;
   }
 
   .service-box {
-    /* height: 400px !important; */
+    min-height: min-content;
+    gap: 16px;
   }
 
-  .service-box:not(:last-child) {
-    border-bottom: 5px solid var(--divider-color) !important;
+  .service-box a {
+    font-size: 28px;
   }
 
-  .service-box:not(:last-child) {
-    border-right: none;
+  .service-box h3 {
+    margin-top: 0px;
   }
 
+  /* our-project-css-767 */
   .our-project-heading h2 {
     font-size: 1.5rem;
   }
@@ -1669,6 +1728,7 @@ span.counter {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
 }
 
 /*************************************/
@@ -1696,33 +1756,9 @@ span.counter {
 
   /* our-services-991 */
   .service-head-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    /* border: 2px dotted #896b6b; */
-    max-width: 100%;
-    margin: 0px 50px;
-    padding: 10px;
-    height: auto;
-  }
-
-  .our-services .section-title-content {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .services-image-section {
-    height: 100%;
-    background-position: bottom 1px left 1px;
-  }
-
-  .service-box {
-    font-size: 1rem;
-  }
-
-  .service-box a {
-    font-size: 2rem;
-    font-weight: 600;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
   }
 
   .our-project-hero {
@@ -1797,12 +1833,7 @@ span.counter {
 }
 
 /*MAX-WIDTH-1440PX RESPONSIVE */
-@media (max-width: 1440px) {
-  .service-box {
-    height: 100% !important;
-  }
-
-}
+@media (max-width: 1440px) {}
 
 /**********MAX-WIDTH-TYPE********/
 /************* END *************/
@@ -1815,6 +1846,22 @@ span.counter {
     max-width: calc(100% - 100px);
   }
 
+  /*section-title-realted element*/
+  .section-title h2 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .section-title h3 {
+    line-height: 21px;
+    /* margin-bottom: 16px; */
+  }
+
+  .section-title-content p {
+    font-size: 16px;
+  }
+
+  /*section-title-realted element---ended*/
   .hero {
     padding: 400px 0 151px;
     height: auto;
@@ -1823,5 +1870,29 @@ span.counter {
   .our-blog {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+
+  .service-box-container>.service-box:first-child {
+    padding-right: 20px;
+  }
+
+  .service-box-container>.service-box:nth-child(2),
+  .service-box-container>.service-box:nth-child(3) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .service-box h3 {
+    margin-top: 100px;
+  }
+
+  .service-box a {
+    font-size: 32px;
+  }
+
+  .service-box p {
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-all;
   }
 }
