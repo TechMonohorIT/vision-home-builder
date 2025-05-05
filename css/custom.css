@@ -1038,19 +1038,19 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .experience-counter p {
-	width: 80%;
-	font-size: 18px;
-	font-weight: 300;
-	line-height: 1.4em;
-	text-transform: capitalize;
-	color: var(--white-color);
+	color: var(--color-text-bw-white, #FFF);
 	text-align: center;
-	margin-bottom: 0;
+	font-family: var(--montserrat);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 25.2px;
+	text-transform: capitalize;
 }
 
 .feedback-counter {
 	position: absolute;
-	top: 3%;
+	top: -1%;
 	right: 4%;
 	transform: rotate(-180deg) translate(20px, -20px);
 	writing-mode: vertical-rl;
@@ -1067,7 +1067,7 @@ header.main-header .header-sticky.active .navbar {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #6a5c4e;
+	background: var(--Color-Primary-primary---500, #756458);
 	border-radius: 50%;
 	margin: 0 0 15px 0;
 	transition: all 0.3s ease-in-out;
@@ -1078,11 +1078,15 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .feedback-counter h3 {
-	font-size: 18px;
-	font-weight: 400;
-	text-transform: capitalize;
 	width: calc(100% - 75px);
-	color: #aa8770;
+	color: var(--orange-1670, rgba(52, 38, 29, 0.70));
+	text-align: center;
+	font-family: var(--montserrat);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 28.8px;
+	letter-spacing: 1px;
 }
 
 .about-us-content-body {
@@ -1105,12 +1109,8 @@ header.main-header .header-sticky.active .navbar {
 	height: 100%;
 }
 
-/* .about-us-content-info {
-	width: calc(50% - 40px);
-} */
-
 .about-us-content-list {
-	margin-bottom: 40px;
+	margin-bottom: 36px;
 }
 
 .about-us-content-list ul {
@@ -1120,8 +1120,34 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .about-us-content-list ul li {
-	position: relative;
+	display: flex;
+	gap: 8px;
+}
+
+.about-us-content-list ul li:not(:last-child) {
+	margin-top: 0px;
 	margin-bottom: 15px;
+}
+
+.about-us-content-list ul li span {
+	color: var(--Color-Neutral-neutral---900, #5E5E5E);
+	font-family: var(--montserrat);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20.8px;
+}
+
+.about-us-content-list ul li svg {
+	display: flex;
+	width: 24px;
+	height: 24px;
+	padding: 4px 5px 4px 7px;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1/1;
+	border-radius: 9999px;
+	background: var(--Color-Primary-primary---500, #756458);
 }
 
 .about-us-content-list ul li:last-child {
