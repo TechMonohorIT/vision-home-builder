@@ -723,11 +723,6 @@
   transform: rotate(0);
 } */
 
-.all-services-btn {
-  text-align: center;
-  margin-top: 20px;
-}
-
 .services-image-section {
   background: url("../images/photorealistic-timber-house-interior-with-wooden-decor-furnishings.jpg") no-repeat;
   background-position: left bottom;
@@ -1526,6 +1521,18 @@ span.counter {
   }
 
   /* H1,H2,H3,H4,P--rlated elements design(section-title) */
+  /*COMMON BTN FOR ALL */
+  .btn-common-block {
+    margin: 0 16px;
+  }
+
+  .btn-common {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+
+  /*COMMON BTN FOR ALL */
   .footer-logo img {
     max-width: 80%;
     height: auto;
@@ -1752,17 +1759,6 @@ span.counter {
     display: grid;
     grid-template-columns: 100%;
     gap: 20px;
-  }
-
-
-  .our-services .section-title-content {
-    /* max-width: 100%;
-    margin-top: 20px; */
-  }
-
-  .services-image-section {
-    height: 100%;
-    background-position: bottom 1px left 1px;
   }
 
   .our-project-hero {
