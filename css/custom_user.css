@@ -888,20 +888,26 @@
 }
 
 .vision h3 {
-  color: #786356;
-  font-size: 24px;
-  margin-bottom: 30px;
+  color: var(--Color-Primary-primary---600, #6A5C4E);
+  text-align: center;
+  /* Here Font need - Helvatica */
+  font-family: var(--inter);
+  font-size: 28px;
+  font-style: normal;
   font-weight: 700;
-  /* text-align: left !important; */
+  line-height: 28.8px;
+  margin-bottom: 24px;
 }
 
 .vision p {
-  color: #87786f;
-  line-height: 1.4em;
-  word-spacing: 0.3em;
-  /* text-align: left !important; */
-  font-size: 14px;
-  margin-bottom: 80px;
+  color: var(--Color-Neutral-neutral---300, #86796F);
+  text-align: center;
+  font-family: var(--montserrat);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.8px;
+  margin-bottom: 0px;
 }
 
 .vision-1,
@@ -1609,6 +1615,8 @@ span.counter {
 
   .section-title-content p {
     margin-top: 0px !important;
+    font-size: 14px;
+    line-height: 21.073px;
   }
 
   /* H1,H2,H3,H4,P--rlated elements design(section-title) */
@@ -1774,18 +1782,27 @@ span.counter {
   }
 
   /* our-project-css-767 */
-  .our-project-heading h2 {
-    font-size: 1.5rem;
-  }
-
-  .our-project-hero {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
   .vision {
     grid-template-columns: 1fr !important;
-    padding: 0px 16px;
+    padding: 40px 16px;
+    gap: 64px;
+  }
+
+  .vision h3 {
+    /* Here font will Helvetica */
+    font-family: var(--inter);
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .vision p {
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  .vision-img-wrapper {
+    padding: 5px 0px;
+    margin: 0 auto 16px;
   }
 
   /*our-skil-css-767*/
@@ -2001,7 +2018,6 @@ span.counter {
 /* @media (min-width: 768px) and (max-width: 991px) */
 @media (min-width: 768px) and (max-width: 991px) {}
 
-/*@media (min-width: 768px) and (max-width: 1366px)*/
 @media (min-width: 768px) and (max-width: 1366px) {
 
   /* common-container */
@@ -2065,5 +2081,16 @@ span.counter {
     font-size: 16px;
     line-height: 24px;
     word-break: break-all;
+  }
+
+  /*our-latest-project */
+  .vision {
+    gap: 30px;
+    padding: 80px 35px;
+  }
+
+  .vision h3 {
+    font-size: 22px;
+    line-height: 21px;
   }
 }
