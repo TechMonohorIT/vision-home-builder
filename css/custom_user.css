@@ -873,52 +873,11 @@
   opacity: 1.5;
 }
 
-.our-project-hero {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  grid-gap: 20px;
-  padding: 0px 50px;
-}
-
-.our-project-heading h3 {
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 1.6em;
-  color: #bbb9b2;
-}
-
-.our-project-heading h2 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  margin-bottom: 0;
-  color: white;
-}
-
-.our-project-content p {
-  color: #f3f1f1;
-  font-size: clamp(6px, 5vw, 14px);
-  margin-top: 2rem;
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
-  z-index: 200;
-}
-
-.vision {
-  background: var(--white-color);
-  color: #8b5e3b !important;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  max-height: 100%;
-  padding: 48px 70px 0px 70px;
-  margin-top: 150px;
-  gap: 15px;
-}
 
 .vision-img-wrapper {
   width: 50px;
   height: 50px;
+  padding: 0px 6.25px;
   margin: 0 auto 20px;
 }
 
@@ -1013,7 +972,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #53473d;
+  background-color: #53473D;
   opacity: 0.9;
   z-index: -1;
   inset: 0;
@@ -1061,6 +1020,49 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.188px;
+}
+
+/*************************************/
+/********06.our-latest-project-css*******/
+/*************************************/
+.our-latest-project {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 225px;
+  padding-bottom: 225px;
+  height: 100%;
+  min-height: 1070px;
+  opacity: 1.5;
+}
+
+.our-latest-project .heading-contents {
+  gap: 100px;
+  color: #FFF;
+  margin-bottom: 128px;
+}
+
+.our-latest-project .heading-contents h2 {
+  color: #FFF;
+}
+
+.our-latest-project .heading-contents h3 {
+  color: #FFF;
+}
+
+.our-latest-project .heading-contents p {
+  color: #FFF;
+  margin-top: 32px;
+}
+
+.vision {
+  background: var(--white-color);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-height: 100%;
+  gap: 48px;
+  padding: 80px 160px;
 }
 
 /*************************************/
@@ -1783,6 +1785,7 @@ span.counter {
 
   .vision {
     grid-template-columns: 1fr !important;
+    padding: 0px 16px;
   }
 
   /*our-skil-css-767*/
@@ -1794,6 +1797,11 @@ span.counter {
     margin-left: 15px;
     margin-right: 15px;
   } */
+  /* our-latest-project-css */
+  .our-latest-project {
+    padding-top: 120px;
+    padding-bottom: 184px;
+  }
 
   /*our-testimonial-css-767*/
   .testimonials-container {
@@ -1931,6 +1939,11 @@ span.counter {
     gap: 0px;
   }
 
+  .our-latest-project .heading-contents {
+    gap: 0px;
+    color: #FFF;
+    margin-bottom: 106px;
+  }
 
   /* our-testimonial-css-991 */
   .testimonials-container {

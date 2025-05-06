@@ -507,7 +507,7 @@ body {
 	margin-bottom: 16px;
 }
 
-.section-title h3::before {
+/* .section-title h3::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -519,7 +519,7 @@ body {
 	background-size: cover;
 	width: 24px;
 	height: 5px;
-}
+} */
 
 .section-title h1 {
 	font-size: 80px;
