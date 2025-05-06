@@ -116,6 +116,7 @@
       margin-bottom: 9px;
       transition: 0.3s;
     }
+
     @media (max-width: 767px) {
       .hamburger span {
         margin-bottom: 7px !important;
@@ -383,23 +384,8 @@
       background: var(--Color-Primary-primary---700, #79431D);
     }
 
-    .our-blog-title h3 {
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.6em;
-      color: #7e7065;
-      padding-left: 0px;
-      margin-bottom: 10px;
-      text-transform: lowercase;
-    }
-
     .our-blog-title h2 {
-      font-size: calc(2.5rem - 2px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
-      color: #766458;
+      color: #756458;
     }
 
     .post-featured-image-news img {
@@ -465,11 +451,6 @@
       transform: translateY(20px);
       transition: all 0.6s ease;
       font-weight: 700;
-    }
-
-    .inspiration-design .swiper-slide-active h3 {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .only-big-device {
@@ -554,18 +535,22 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-      color: #3b82f6;
+      display: flex;
+      width: 48px;
+      height: 48px;
+      padding: 4px 5px 4px 7px;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1/1;
+      border: 1px solid var(--Color-Border-border-1, #B18D73);
       background: transparent;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      border: 1px solid #8E5B3B;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
     .swiper-button-next:after,
     .swiper-button-prev:after {
       font-size: 20px;
+      color: #fff;
     }
   </style>
 </head>
@@ -885,25 +870,21 @@
   <!--our-project-user-start-5-->
   <div class="our-project-user">
     <div class="project-user-container">
-
-      <div class="row section-row align-items-center">
-        <div class="col-lg-6">
-          <div class="section-title">
-            <h3 class="wow fadeInUp">Latest Project</h3>
-            <h2 style="color: #fffefc; font-size: 42px; font-weight: 500;" class="text-anime-style-2"
-              data-cursor="-opaque">
-              Inspiring Designs That<span> Reflect Our Vision</span>
-            </h2>
-          </div>
+      <div class="heading-contents main-container">
+        <!-- class="col-lg-6" -->
+        <div class="section-title">
+          <h3 class="wow fadeInUp">Latest Project</h3>
+          <h2 class="text-anime-style-2" data-cursor="-opaque">
+            Inspiring Designs That<span> Reflect Our Vision</span>
+          </h2>
         </div>
-        <div class="col-lg-6">
-          <div class="section-title-content">
-            <p style="color:#e4dbd5;" class="wow fadeInUp" data-wow-delay="0.2s">
-              Our portfolio presents a refined selection of home designs, featuring stunning transformations that blend
-              architectural elegance with personalized comfort, creating spaces that inspire and elevate everyday
-              living.
-            </p>
-          </div>
+        <!-- class="col-lg-6" -->
+        <div class="section-title-content">
+          <p class="wow fadeInUp" data-wow-delay="0.2s">
+            Our portfolio presents a refined selection of home designs, featuring stunning transformations that blend
+            architectural elegance with personalized comfort, creating spaces that inspire and elevate everyday
+            living.
+          </p>
         </div>
       </div>
       <div class="row">
@@ -914,6 +895,8 @@
               <li><a href="#" data-filter=".architecture">architecture</a></li>
               <li><a href="#" class="active-btn" data-filter=".interior">interior</a></li>
               <li><a href="#" data-filter=".bedroom">bedroom</a></li>
+            </ul>
+            <ul>
               <li><a href="#" data-filter=".furniture">furniture</a></li>
               <li><a href="#" data-filter=".kitchen">kitchen</a></li>
             </ul>
@@ -927,17 +910,17 @@
                   <img src="images/modern-living-room-interior-design.jpg" alt="Luxurious Interior" />
                   <h3>LUXURIOUS LOFT: INDUSTRIAL CHIC FOR LIVING</h3>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide active">
                   <img src="images/ai-generated-modern-styled-entryway (1).jpg" alt="Modern Living Room" />
                   <h3>MODERN LIVING SPACE</h3>
-                </div>
-                <div class="swiper-slide active">
-                  <img src="images/modern-living-room-interior-design.jpg" alt="Luxurious Interior" />
-                  <h3>LUXURIOUS LOFT: INDUSTRIAL CHIC FOR LIVING</h3>
                 </div>
                 <div class="swiper-slide">
                   <img src="images/view-luxurious-hotel-interior-space (1).jpg" alt="Contemporary Design" />
                   <h3>CONTEMPORARY COMFORT</h3>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/modern-living-room-interior-design.jpg" alt="Luxurious Interior" />
+                  <h3>LUXURIOUS LOFT: INDUSTRIAL CHIC FOR LIVING</h3>
                 </div>
                 <div class="swiper-slide">
                   <img src="images/modern-living-room-interior-design.jpg" alt="Luxurious Interior" />
@@ -1273,22 +1256,18 @@
   <!--our-blog-start-9-->
   <div class="our-blog">
     <div class="main-container">
-      <div class="row section-row align-items-center">
-        <div class="col-lg-6">
-          <div class="section-title our-blog-title">
-            <h3 class="wow fadeInUp">latest news</h3>
-            <h2 class="text-anime-style-2" data-cursor="-opaque">
-              <span>Your guide to inspired interiors</span>
-            </h2>
-          </div>
+      <div class="headings-contents">
+        <div class="section-title our-blog-title">
+          <h3 class="wow fadeInUp">latest news</h3>
+          <h2 class="text-anime-style-2" data-cursor="-opaque">
+            <span>Your guide to inspired interiors</span>
+          </h2>
         </div>
-        <div class="col-lg-6">
-          <div class="section-title-content">
-            <p class="wow fadeInUp" data-wow-delay="0.2s">
-              Your journey to inspired interiors begins here. Our blog offers a wealth of resources, including design
-              tips, trend analyses.
-            </p>
-          </div>
+        <div class="section-title-content">
+          <p class="wow fadeInUp" data-wow-delay="0.2s">
+            Your journey to inspired interiors begins here. Our blog offers a wealth of resources, including design
+            tips, trend analyses.
+          </p>
         </div>
       </div>
     </div>
