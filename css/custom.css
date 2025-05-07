@@ -481,7 +481,7 @@ body {
 }
 
 .section-title-content p {
-	color: var(--Color-Neutral-neutral---1000, #565656);
+	color: #807064;
 	font-family: var(--montserrat);
 	font-size: 18px;
 	font-style: normal;
@@ -496,7 +496,7 @@ body {
 }
 
 .section-title h3 {
-	color: var(--Color-Primary-primary---200, #807064);
+	color: #807064;
 	display: inline-block;
 	font-family: var(--montserrat);
 	font-size: 16px;
@@ -530,7 +530,7 @@ body {
 }
 
 .section-title h2 {
-	color: var(--Color-Primary-primary---500, #756458);
+	color: #756458;
 	font-family: var(--montserrat);
 	font-size: 36px;
 	font-style: normal;
@@ -1917,7 +1917,8 @@ header.main-header .header-sticky.active .navbar {
 
 .post-item-content h3 a {
 	color: var(--Color-Primary-primary---800, #382213);
-	font-family: Helvetica;
+	/* here font Helvatica */
+	font-family: var(--inter);
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
@@ -4518,7 +4519,7 @@ header.main-header .header-sticky.active .navbar {
 	}
 
 	.post-item-content {
-		margin-bottom: 10px;
+		/* margin-bottom: 12px; */
 	}
 
 	.post-item-content h3 {
