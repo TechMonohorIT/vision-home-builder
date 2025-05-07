@@ -1465,6 +1465,14 @@ span.counter {
   margin: 0 auto;
 }
 
+.footer-main-links {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0px 37px;
+  padding: 48px 0px;
+}
+
 .footer-container .footer-main-links {
   padding: 48px 0px;
   /* display: flex;
@@ -1478,8 +1486,8 @@ span.counter {
   bottom: 0;
   width: 100%;
   height: 2px;
-  opacity: var(--opacity-80, 0.8);
-  background: var(--color-text-bw-white, #FFF);
+  opacity: 0.8;
+  background: #FFF;
 }
 
 .main-footer::before {
@@ -1546,7 +1554,6 @@ span.counter {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .footer-newsletter-form input::placeholder {
@@ -1575,6 +1582,9 @@ span.counter {
   background: var(--Color-Primary-primary---600, #6A5C4E);
 }
 
+.footer-social-links-small {
+  display: none;
+}
 
 /*************************************/
 /***11.MOBILE-RESPONSIVE-WEB-DESIGN****/
@@ -1800,7 +1810,7 @@ span.counter {
     margin: 0 auto 16px;
   }
 
-  /*our-skil-css-767*/
+  /*our-skil-767*/
   .our-skill {
     padding-top: 80px !important;
     padding-bottom: 80px !important;
@@ -1968,6 +1978,129 @@ span.counter {
     margin-left: 16px;
     margin-right: 16px;
   }
+
+  /*footer-767 */
+  .main-footer .main-container {
+    max-width: calc(100% - 64px);
+  }
+
+  .main-footer .footer-header {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .copyright-home-footer p {
+    display: none;
+  }
+
+  .footer-main-links {
+    grid-template-columns: 1fr;
+    gap: 44px 0px;
+    padding: 48px 0px;
+  }
+
+  .footer-links ul li {
+    opacity: 0.9;
+  }
+
+  .footer-contact-content p {
+    opacity: 0.9;
+  }
+
+  .footer-newsletter-form .form-group .form-control {
+    height: 36px;
+  }
+
+  .footer-newsletter-form .form-group {
+    display: flex;
+    max-width: 100%;
+    padding: 10px 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    background: var(--Color-Primary-Accent-primary---200, #EBAD42);
+  }
+
+  .footer-logo img {
+    width: 228.851px;
+    height: 63.775px;
+    aspect-ratio: 228.85/63.77;
+    margin-bottom: 96px;
+  }
+
+  .footer-latest-news h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .footer-newsletter-form p {
+    opacity: 0.9;
+    margin-bottom: 24px;
+  }
+
+  .footer-newsletter-form p {
+    opacity: 0.9;
+    margin-bottom: 31px;
+  }
+
+  .footer-social-links {
+    display: none;
+  }
+
+  .footer-social-links-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 56px;
+    margin-bottom: 0px;
+  }
+
+  .footer-social-links-small ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-social-links-small ul li {
+    display: inline-flex;
+  }
+
+  .footer-social-links-small h3 {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--inter);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .footer-social-links-small ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EBAD42;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer-social-links-small ul li a i {
+    color: #FFF;
+    font-family: "Font Awesome 5 Brands";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 @media (max-width: 414px) {
@@ -2102,6 +2235,15 @@ span.counter {
     border-radius: 50%;
   }
 
+  /*footer-991px */
+  .footer-logo img {
+    max-width: 300px;
+    max-height: 120px;
+  }
+
+  .footer-social-links {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2231,5 +2373,12 @@ span.counter {
 
   .testimonial-content p {
     font-size: 16px;
+  }
+
+  /*footer-1366px */
+  .footer-main-links {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 20px;
+    padding: 50px 0px;
   }
 }
