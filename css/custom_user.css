@@ -1618,16 +1618,20 @@ span.counter {
     line-height: 21.073px;
   }
 
-  /* H1,H2,H3,H4,P--rlated elements design(section-title) */
+  /* H1,H2,H3,H4,P--rlated elements design(section-title)--767*/
   /*COMMON BTN FOR ALL */
   .btn-common-block {
     margin: 0 16px;
   }
 
   .btn-common {
-    width: 100%;
     max-width: 100%;
     margin-bottom: 80px;
+  }
+
+  .btn-common a {
+    font-size: 16px;
+    letter-spacing: 0.16px;
   }
 
   /*COMMON BTN FOR ALL */
@@ -1848,6 +1852,11 @@ span.counter {
 
   .post-item-btn {
     margin-bottom: 48px;
+  }
+
+  .post-item-btn a {
+    font-size: 16px;
+    letter-spacing: 0.18px;
   }
 
   /* .last-post-btn {

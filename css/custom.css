@@ -185,16 +185,15 @@ h2 {
 	font-weight: 200;
 }
 
-h3 {
+/* Sub-section headings */
+/* h3 {
 	font-size: 14px;
-	/* Sub-section headings */
 	font-weight: 600;
 	color: #5a4635;
-	/* Medium brown tone */
 	margin-bottom: 10px;
 	font-family: 'Carmen Sans', sans-serif;
 	font-weight: 200;
-}
+} */
 
 h4,
 h5,
@@ -324,7 +323,7 @@ body {
 }
 
 .btn-common a {
-	color: var(--color-text-bw-white, #FFF);
+	color: #FFF;
 	font-family: var(--montserrat);
 	font-size: 18px;
 	font-style: normal;
@@ -1910,14 +1909,11 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .post-item-content h3 {
-	color: var(--primary-color);
-	font-size: 20px;
-	line-height: 1.4em;
+	margin-bottom: 0px;
 }
 
 .post-item-content h3 a {
-	color: var(--Color-Primary-primary---800, #382213);
-	/* here font Helvatica */
+	color: #382213;
 	font-family: var(--inter);
 	font-size: 20px;
 	font-style: normal;
@@ -1926,8 +1922,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .post-item-btn a {
-	position: relative;
-	color: var(--Color-Primary-primary---500, #756458);
+	color: #756458;
 	font-family: var(--montserrat);
 	font-size: 18px;
 	font-style: normal;
@@ -1936,18 +1931,12 @@ header.main-header .header-sticky.active .navbar {
 	text-transform: capitalize;
 }
 
-.post-item-btn a::after {
-	/* content: "\f04b"; */
-	display: inline-block;
-	content: "\f054";
-	font-family: "Font Awesome 5 Free";
-	font-size: 12px;
-	color: #756458;
-	font-weight: 900;
-	border-radius: 50%;
-	margin-left: 10px;
-	width: 20px;
-	height: 20px;
+.post-item-btn {
+	display: flex;
+	padding: 4px 0px;
+	justify-content: start;
+	align-items: center;
+	gap: 8px;
 }
 
 /* .post-item-btn a:hover::after {
