@@ -1226,17 +1226,10 @@ header.main-header .header-sticky.active .navbar {
 /************************************/
 /***     06. Why Choose Us css    ***/
 /************************************/
-.why-choose-item {
-	display: flex;
-	/* border-bottom: 1px solid var(--divider-color); */
-	/* margin-bottom: 20px; */
-	/* padding-bottom: 20px; */
-}
 
 .only-small-device {
 	display: none !important;
 }
-
 
 .why-choose-item:last-child {
 	border-bottom: none;
@@ -1248,7 +1241,7 @@ header.main-header .header-sticky.active .navbar {
 	position: relative;
 	width: 40px;
 	height: 40px;
-	background-color: #796f65 !important;
+	background: #717170;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -1284,6 +1277,7 @@ header.main-header .header-sticky.active .navbar {
 .why-choose-item .icon-box img {
 	filter: brightness(0) invert(1);
 	max-width: 20px;
+	max-height: 20px;
 	z-index: 1;
 	transition: all 0.3s ease-in-out;
 }
@@ -1294,12 +1288,6 @@ header.main-header .header-sticky.active .navbar {
 
 .why-choose-item-content {
 	width: calc(100% - 80px);
-}
-
-
-.why-choose-item-content p {
-	color: var(--primary-color);
-	margin-bottom: 0;
 }
 
 .why-choose-images {
@@ -3801,10 +3789,6 @@ header.main-header .header-sticky.active .navbar {
 		margin-bottom: 30px;
 	}
 
-	.why-choose-item .icon-box {
-		margin-right: 10px;
-	}
-
 	.why-choose-item-content {
 		width: calc(100% - 70px);
 	}
@@ -4408,13 +4392,6 @@ header.main-header .header-sticky.active .navbar {
 
 	.about-contact-content h3 {
 		font-size: 18px;
-	}
-
-	.why-choose-item-content h3 {
-		font-size: 16px !important;
-		text-transform: capitalize;
-		margin-bottom: 15px !important;
-		font-weight: 600 !important;
 	}
 
 	.why-choose-img-2 img {
