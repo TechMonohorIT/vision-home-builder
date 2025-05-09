@@ -201,7 +201,7 @@
 
     /* Remove margin-top so the hero sits at the very top behind the header */
     .hero.hero-video {
-      margin-top: 0 !important;
+      margin-top: 0;
     }
 
     /* 
@@ -488,23 +488,6 @@
       z-index: 1;
     }
 
-    .video-play-button {
-      z-index: 3;
-      background: transparent;
-      border: 1p;
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      font-size: 32px;
-      color: #000;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .video-play-button:hover {
-      background: #fff;
-    }
-
     /* Ensure video is behind everything */
     .hero-bg-video video {
       width: 100%;
@@ -595,7 +578,6 @@
   <!-- START of your Inspaire content (Hero, etc.) -->
   <!--hero-section-start-1-->
   <div class="hero hero-video">
-
     <div class="video-poster" id="videoPoster">
       <img src="images/view-luxurious-hotel-interior-space.jpg" alt="Preview" class="video-thumbnail">
       <button id="playVideoBtn" class="video-play-button" style="color: transparent;">
@@ -632,78 +614,70 @@
   </div>
   <!-- hero-section-end -->
   <!--about-us-start-2---->
-  <div class="about-us main-container">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="about-us-images">
-            <div class="about-img-1">
-              <figure class="image-anime reveal">
-                <img src="images/wooden-decor-furnishings-section-2.jpg" alt="">
-              </figure>
-            </div>
-            <div class="about-img-2">
-              <figure class="image-anime reveal">
-                <img src="images/afternoon-shadows-wooden-wall-section-2.jpg" alt="">
-              </figure>
-              <div class="experience-counter">
-                <div class="counter-overlay">
-                  <h3><span class="counter">15</span>+</h3>
-                  <p>Years of experience</p>
-                </div>
+  <div class="about-us">
+    <div>
+      <div class="about-us-box">
+        <div class="about-us-images">
+          <div class="about-img-1">
+            <figure class="image-anime reveal">
+              <img src="images/wooden-decor-furnishings-section-2.jpg" alt="">
+            </figure>
+          </div>
+          <div class="about-img-2">
+            <figure class="image-anime reveal">
+              <img src="images/afternoon-shadows-wooden-wall-section-2.jpg" alt="">
+            </figure>
+            <div class="experience-counter">
+              <div class="counter-overlay">
+                <h3><span class="counter">15</span>+</h3>
+                <p>Years of experience</p>
               </div>
-            </div>
-            <div class="feedback-counter">
-              <p><span class="counter"> 95 </span>%</p>
-              <h3>positive feedback</h3>
             </div>
           </div>
+          <div class="feedback-counter">
+            <p><span class="counter"> 95 </span>%</p>
+            <h3>positive feedback</h3>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <div class="about-content-cotainer">
-            <div class="about-us-content">
-              <div class="section-title">
-                <h3 class="wow fadeInUp">about us</h3>
-                <h2 class="text-anime-style-2" data-cursor="-opaque">
-                  PIONEERING THE EVOLUTION OF CONTEMPORARY LUXURY</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.2s">
-                  At Vision Smart Homes, we craft extraordinary, tailor-made residences that redefine modern living. Our
-                  visionary architecture and bespoke interiors seamlessly merge elegance, comfort, and avant-garde
-                  design to create spaces that inspire and elevate your lifestyle.
-                </p>
-              </div>
-              <div class="about-us-content-body">
-                <div class="about-us-content-info">
-                  <div class="about-us-content-list wow fadeInUp" data-wow-delay="0.4s">
-                    <ul>
-                      <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path
-                            d="M7.2493 11.3262C9.02171 9.31123 10.7328 7.94435 12.8821 6.00864C13.5254 5.42924 13.6248 4.41365 13.1201 3.69412C12.5838 2.9294 11.5646 2.77655 10.8748 3.3845C8.90601 5.11955 7.3743 6.79016 5.92136 8.57573C5.84511 8.66941 5.80699 8.71629 5.76743 8.74266C5.66708 8.80954 5.5417 8.81023 5.44071 8.74448C5.40089 8.71854 5.3627 8.6726 5.28631 8.58073L4.51209 7.64935C3.80566 6.79948 2.53859 6.8936 1.94877 7.83966C1.53601 8.50173 1.59718 9.3791 2.09717 9.96841L3.31124 11.3994C4.21933 12.4696 4.67337 13.0048 5.21845 13.01C5.76353 13.0152 6.25879 12.4522 7.2493 11.3262Z"
-                            fill="white" />
-                        </svg>
-                        <span>creative and technical expertise</span>
-                      </li>
-                      <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path
-                            d="M7.2493 11.3262C9.02171 9.31123 10.7328 7.94435 12.8821 6.00864C13.5254 5.42924 13.6248 4.41365 13.1201 3.69412C12.5838 2.9294 11.5646 2.77655 10.8748 3.3845C8.90601 5.11955 7.3743 6.79016 5.92136 8.57573C5.84511 8.66941 5.80699 8.71629 5.76743 8.74266C5.66708 8.80954 5.5417 8.81023 5.44071 8.74448C5.40089 8.71854 5.3627 8.6726 5.28631 8.58073L4.51209 7.64935C3.80566 6.79948 2.53859 6.8936 1.94877 7.83966C1.53601 8.50173 1.59718 9.3791 2.09717 9.96841L3.31124 11.3994C4.21933 12.4696 4.67337 13.0048 5.21845 13.01C5.76353 13.0152 6.25879 12.4522 7.2493 11.3262Z"
-                            fill="white" />
-                        </svg>
-                        <span>Transparent and Client centered approach</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="explore-btn-container wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="about-us-content-btn">
-                      <a href="about.html">read more</a>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M7.50004 5L12.5 10L7.5 15" stroke="#756458" stroke-width="1.5" stroke-miterlimit="16"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+        <div class="about-us-content">
+          <div class="section-title">
+            <h3 class="wow fadeInUp">about us</h3>
+            <h2 class="text-anime-style-2" data-cursor="-opaque">
+              PIONEERING THE EVOLUTION OF CONTEMPORARY LUXURY</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">
+              At Vision Smart Homes, we craft extraordinary, tailor-made residences that redefine modern living. Our
+              visionary architecture and bespoke interiors seamlessly merge elegance, comfort, and avant-garde
+              design to create spaces that inspire and elevate your lifestyle.
+            </p>
+          </div>
+          <div class="about-us-content-body">
+            <div class="about-us-content-list wow fadeInUp" data-wow-delay="0.4s">
+              <ul>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M7.2493 11.3262C9.02171 9.31123 10.7328 7.94435 12.8821 6.00864C13.5254 5.42924 13.6248 4.41365 13.1201 3.69412C12.5838 2.9294 11.5646 2.77655 10.8748 3.3845C8.90601 5.11955 7.3743 6.79016 5.92136 8.57573C5.84511 8.66941 5.80699 8.71629 5.76743 8.74266C5.66708 8.80954 5.5417 8.81023 5.44071 8.74448C5.40089 8.71854 5.3627 8.6726 5.28631 8.58073L4.51209 7.64935C3.80566 6.79948 2.53859 6.8936 1.94877 7.83966C1.53601 8.50173 1.59718 9.3791 2.09717 9.96841L3.31124 11.3994C4.21933 12.4696 4.67337 13.0048 5.21845 13.01C5.76353 13.0152 6.25879 12.4522 7.2493 11.3262Z"
+                      fill="white" />
+                  </svg>
+                  <span>creative and technical expertise</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M7.2493 11.3262C9.02171 9.31123 10.7328 7.94435 12.8821 6.00864C13.5254 5.42924 13.6248 4.41365 13.1201 3.69412C12.5838 2.9294 11.5646 2.77655 10.8748 3.3845C8.90601 5.11955 7.3743 6.79016 5.92136 8.57573C5.84511 8.66941 5.80699 8.71629 5.76743 8.74266C5.66708 8.80954 5.5417 8.81023 5.44071 8.74448C5.40089 8.71854 5.3627 8.6726 5.28631 8.58073L4.51209 7.64935C3.80566 6.79948 2.53859 6.8936 1.94877 7.83966C1.53601 8.50173 1.59718 9.3791 2.09717 9.96841L3.31124 11.3994C4.21933 12.4696 4.67337 13.0048 5.21845 13.01C5.76353 13.0152 6.25879 12.4522 7.2493 11.3262Z"
+                      fill="white" />
+                  </svg>
+                  <span>Transparent and Client centered approach</span>
+                </li>
+              </ul>
+            </div>
+            <div class="explore-btn-container wow fadeInUp" data-wow-delay="0.6s">
+              <div class="about-us-content-btn">
+                <a href="about.html">read more</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M7.50004 5L12.5 10L7.5 15" stroke="#756458" stroke-width="1.5" stroke-miterlimit="16"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
             </div>
           </div>
@@ -715,10 +689,10 @@
 
   <!--why-choose-start-3-->
   <div class="custom-why-choose-us">
-    <div class="why-choose-us container">
+    <div class="why-choose-us main-container">
       <div class="why-choose-content ">
         <div class="section-title">
-          <h3 class="no-before wow fadeInUp">Experience the Vision difference
+          <h3 class="wow fadeInUp">Experience the Vision difference
           </h3>
           <h2 class="text-anime-style-2">
             INSIDE OUR EXCLUSIVE<br>DESIGN ATELIER
@@ -732,7 +706,7 @@
         <div class="why-choose-item-list">
           <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
             <div class="icon-box">
-              <img src="images/icon-why-choose-1.svg" alt="">
+              <img src="images/why-section-icon-1.svg" alt="">
             </div>
             <div class="why-choose-item-content">
               <h3>Exquisite Tailored Home Designs</h3>
@@ -758,7 +732,7 @@
             <div class="why-choose-item-content">
               <h3>Customer
                 at heart</h3>
-              <p style="margin-bottom: 0px;">Your vision remains at the heart of every step, with your input
+              <p>Your vision remains at the heart of every step, with your input
                 meticulously woven into the process to create a masterpiece tailored exclusively for you.</p>
             </div>
           </div>
@@ -793,10 +767,7 @@
           </div>
         </div>
       </div>
-
     </div>
-
-
   </div>
   <!--why-choose-end-->
 
@@ -1378,109 +1349,108 @@
 
   <!--footer-start-10-->
   <footer class="main-footer">
-    <div>
-      <div class=" footer-container main-container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="footer-header">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <div class="footer-logo">
-                    <img height="120px" src="images/vision-logo.svg" alt="">
-                  </div>
+    <div class="main-container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-header">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="footer-logo">
+                  <img height="120px" src="images/vision-logo.svg" alt="">
                 </div>
-                <div class="col-md-6">
-                  <div class="footer-social-links">
-                    <div class="footer-social-link-title">
-                      <h3>follow our socials</h3>
-                    </div>
-                    <ul>
-                      <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="footer-social-links">
+                  <div class="footer-social-link-title">
+                    <h3>follow our socials</h3>
                   </div>
+                  <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row footer-main-links">
-          <div class="col-md-6 col-xxl-3">
-            <div class="footer-links">
-              <h3>information</h3>
-              <ul>
-                <li><a href="about.html">about our company</a></li>
-                <li><a href="services.html">view our service</a></li>
-                <li><a href="#">careers at company</a></li>
-                <li><a href="blog.html">read our blog</a></li>
-                <li><a href="projects.html">our latest projects</a></li>
-              </ul>
+      </div>
+      <div class="footer-main-links">
+        <div class="footer-links">
+          <h3>information</h3>
+          <ul>
+            <li><a href="about.html">about our company</a></li>
+            <li><a href="services.html">view our service</a></li>
+            <li><a href="#">careers at company</a></li>
+            <li><a href="blog.html">read our blog</a></li>
+            <li><a href="projects.html">our latest projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>portfolio</h3>
+          <ul>
+            <li><a href="project-single.html">luxury home design</a></li>
+            <li><a href="project-single.html">residential interior design</a></li>
+            <li><a href="project-single.html">commercial space design</a></li>
+            <li><a href="project-single.html">residential interior design</a></li>
+            <li><a href="project-single.html">renovation and restoration design</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-box footer-links">
+          <h3>contact us</h3>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>1300 56 55 56</p>
             </div>
           </div>
-          <div class="col-md-6 col-xxl-3">
-            <div class="footer-links">
-              <h3>portfolio</h3>
-              <ul>
-                <li><a href="project-single.html">luxury home design</a></li>
-                <li><a href="project-single.html">residential interior design</a></li>
-                <li><a href="project-single.html">commercial space design</a></li>
-                <li><a href="project-single.html">residential interior design</a></li>
-                <li><a href="project-single.html">renovation and restoration design</a></li>
-              </ul>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>info@visionsmarthomes.com.au</p>
             </div>
           </div>
-          <div class="col-md-6 col-xxl-3">
-            <div class="footer-contact-box footer-links">
-              <h3>contact us</h3>
-              <div class="footer-contact-item">
-                <div class="icon-box">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="footer-contact-content">
-                  <p>1300 56 55 56</p>
-                </div>
-              </div>
-              <div class="footer-contact-item">
-                <div class="icon-box">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="footer-contact-content">
-                  <p>info@visionsmarthomes.com.au</p>
-                </div>
-              </div>
-              <div class="footer-contact-item">
-                <div class="icon-box">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div class="footer-contact-content">
-                  <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
-                </div>
-              </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-location-dot"></i>
             </div>
-          </div>
-          <div class="col-md-6 col-xxl-3">
-            <div class="footer-latest-news footer-links">
-              <h3>get the latest trending news</h3>
-              <div class="footer-newsletter-form">
-                <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
-                <form id="newslettersForm" action="#" method="POST">
-                  <div class="form-group">
-                    <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email"
-                      required>
-                    <button type="submit">
-                      <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
+            <div class="footer-contact-content">
+              <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
             </div>
           </div>
         </div>
+        <div class="footer-latest-news footer-links">
+          <h3>get the latest trending news</h3>
+          <div class="footer-newsletter-form">
+            <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+            <form id="newslettersForm" action="#" method="POST">
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email" required>
+                <button type="submit">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="copyright-home-footer">
-        <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+    </div>
+    <div class="copyright-home-footer main-container">
+      <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+    </div>
+    <div class="footer-social-links-small">
+      <div class="footer-social-link-title">
+        <h3>follow our socials</h3>
       </div>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
     </div>
   </footer>
   <!--footer-end-->
