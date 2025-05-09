@@ -82,8 +82,11 @@
   background-size: cover;
   padding: 566px 0px 151px;
   height: auto;
-  max-height: 100vh;
   margin: 0 auto;
+}
+
+.hero-content-small {
+  display: none;
 }
 
 .hero-content {
@@ -1665,28 +1668,30 @@ span.counter {
 
   /*hero-767*/
   .hero {
-    padding: 200px 0 151px;
+    position: relative;
+    padding: 0px 0 0px;
+    height: 100vh;
   }
 
-  .hero-box {
-    padding-left: 0px;
+  .hero-content {
+    display: none;
+  }
+
+  .hero-content-small {
+    position: absolute;
+    bottom: 63px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    align-items: center;
+    z-index: 500;
   }
 
   .hero-box {
     padding: 0px 0px;
   }
 
-  .hero-content {
-    width: 100%;
-    border: none;
-    margin: auto;
-  }
-
-  .hero-content .section-title {
+  .hero-content-small .section-title {
     margin-bottom: 32px;
   }
 
@@ -1696,28 +1701,33 @@ span.counter {
     transform: translate(-50%, -40%);
   }
 
-  .hero-content .section-title h1 {
+  .hero-content-small .section-title h1 {
+    color: #fff;
+    font-family: var(--montserrat);
     font-size: 23px;
     font-style: normal;
     font-weight: 600;
+    line-height: normal;
     letter-spacing: 0.23px;
-    margin-bottom: 0px;
-    padding: 0px 0px 16px 0px;
+    text-transform: uppercase;
   }
 
-  .hero-content .section-title p {
-    color: var(--color-text-bw-white, #FFF);
+  .hero-content-small .section-title p {
+    color: #FFF;
     font-family: var(--montserrat);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 18.458px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px 0px 0px 0px;
   }
 
-  .hero-btn .btn-default {
+  .hero-content-small .hero-btn {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .hero-content-small .hero-btn .btn-default {
     max-width: 100%;
     justify-content: center;
     padding: 16px 24px;

@@ -850,7 +850,7 @@ header.main-header .header-sticky.active .navbar {
 	background: linear-gradient(180deg, rgba(25, 35, 36, 0) 0%, rgba(25, 35, 36, 0.4) 80.94%);
 	height: 100%;
 	width: 100%;
-	max-height: 100vh;
+	/* max-height: 100vh; */
 	z-index: 1;
 }
 
