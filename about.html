@@ -45,6 +45,22 @@
 
     <!-- Extra custom CSS for side-menu toggle -->
     <style>
+          :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      /* New Font Updated */
+      --body-font: 'Carmen Sans', sans-serif;
+      /*New Google Font */
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
+    }
         /****************************************************
  * SIDEMENU STYLES
  ****************************************************/
@@ -75,100 +91,136 @@
       background: none !important;
       backdrop-filter: none !important;
     } */
-        .header-sidemenu {
-            margin: 0 auto;
-            position: fixed;
-            top: 0%;
-            left: 0px;
-            right: 0;
-            z-index: 999;
-            padding: 32px 0px;
-        }
 
-        /* Hamburger icon */
-        .hamburger span {
-            display: block;
-            height: 2.5px;
-            background: #fff;
-            margin-bottom: 9px;
-            transition: 0.3s;
-        }
 
-        .hamburger span:last-child {
-            margin-bottom: 0px;
-        }
+    .header-sidemenu {
+      margin: 0 auto;
+      position: fixed;
+      padding: 16px 0px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      background: transparent;
+    }
 
-        /* The side menu overlay (dark transparent background) */
-        .side-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0;
-            /* start closed */
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            z-index: 998;
-        }
+    /* Hamburger icon */
+    .hamburger span {
+      display: block;
+      height: 2.5px;
+      background: #fff;
+      margin-bottom: 9px;
+      transition: 0.3s;
+    }
 
-        .side-menu-overlay.open {
-            width: 100%;
-            opacity: 1;
-        }
+    @media (max-width: 767px) {
+      .hamburger span {
+        margin-bottom: 7px;
+      }
+    }
 
-        /* The side drawer itself */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -300px;
-            /* hidden offscreen initially */
-            width: 300px;
-            height: 100%;
-            background-color: #1F1F1F;
-            transition: left 0.3s ease-in-out;
-            padding: 2rem;
-            z-index: 999;
-        }
+    .hamburger span:last-child {
+      margin-bottom: 0px;
+    }
 
-        .side-menu.open {
-            left: 0;
-            /* slide in */
-        }
+    /* The side menu overlay (dark transparent background) */
+    .side-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      /* start closed */
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 998;
+    }
 
-        /* Close button (X) inside side menu */
-        .side-menu .close-btn {
-            font-size: 28px;
-            color: #9c1212;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 1rem;
-        }
+    .side-menu-overlay.open {
+      width: 100%;
+      opacity: 1;
+    }
 
-        /* Menu items in side menu */
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 2rem;
-        }
+    /* The side drawer itself */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      /* hidden offscreen initially */
+      width: 300px;
+      height: 100%;
+      background-image: url("/images/modern-entryway-hamburger-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 72% center;
+      transition: left 0.3s ease-in-out;
+      padding-top: 33px;
+      padding-left: 40px;
+      padding-right: 84px;
+      z-index: 999;
+    }
 
-        .side-menu ul li {
-            margin-bottom: 1rem;
-        }
+    .side-menu::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
+      z-index: -99;
+    }
 
-        .side-menu ul li a {
-            color: #fff;
-            font-size: 18px;
-            text-transform: capitalize;
-            transition: color 0.3s;
-        }
+    .side-menu.open {
+      left: 0;
+      /* slide in */
+    }
 
-        .side-menu ul li a:hover {
-            color: #ffd900ab;
-            /* accent color on hover */
-        }
+    /* Close button (X) inside side menu */
+    .side-menu .close-btn {
+      font-size: 28px;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 53px;
+    }
+
+    /* Menu items in side menu */
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .side-menu ul li {
+      margin-bottom: 1rem;
+    }
+
+    .side-menu ul li a {
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 23px;
+      text-transform: capitalize;
+      transition: color 0.3s;
+    }
+
+    .side-menu ul li a:hover {
+      color: #ffd900ab;
+      /* accent color on hover */
+    }
+      
     </style>
 </head>
 
@@ -185,37 +237,36 @@
     </div>
     <!-- Preloader End -->
 
-    <!-- SIMPLE FIXED HEADER with HAMBURGER -->
     <header class="header-sidemenu">
         <div class="header-content main-container">
-            <div class="logo" id="siteLogo">
-                <a href="./">
-                    <img src="images/vision-logo.svg" alt="Vision Smart Homes Logo">
-                </a>
-            </div>
-            <div class="hamburger" onclick="toggleSideMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+          <div class="logo" id="siteLogo">
+            <a href="./">
+              <img src="images/vision-logo.svg" alt="Vision Smart Homes Logo">
+            </a>
+          </div>
+          <div class="hamburger" onclick="toggleSideMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-    </header>
-
-    <!-- The dark overlay for the side menu -->
-    <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
-
-    <!-- The side drawer menu -->
-    <div class="side-menu" id="sideMenu">
+      </header>
+    
+      <!-- The dark overlay for the side menu -->
+      <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
+    
+      <!-- The side drawer menu -->
+      <div class="side-menu" id="sideMenu">
         <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
         <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="./">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
-    </div>
+      </div>
     <!-- Begin: About Page -->
     <section id="about" class="about-section">
         <div class="about-container">
@@ -349,111 +400,110 @@
 
     <!--footer-start-10-->
     <footer class="main-footer">
-        <div>
-            <div class="main-container footer-container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-header">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <div class="footer-logo">
-                                        <img height="120px" src="images/vision_logo_main.svg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="footer-social-links">
-                                        <div class="footer-social-link-title">
-                                            <h3>follow our socials</h3>
-                                        </div>
-                                        <ul>
-                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="main-container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-header">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <div class="footer-logo">
+                      <img height="120px" src="images/vision-logo.svg" alt="">
                     </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="footer-social-links">
+                      <div class="footer-social-link-title">
+                        <h3>follow our socials</h3>
+                      </div>
+                      <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="row footer-main-links">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-links">
-                            <h3>information</h3>
-                            <ul>
-                                <li><a href="about.html">about our company</a></li>
-                                <li><a href="services.html">view our service</a></li>
-                                <li><a href="#">careers at company</a></li>
-                                <li><a href="blog.html">read our blog</a></li>
-                                <li><a href="projects.html">our latest projects</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-links">
-                            <h3>portfolio</h3>
-                            <ul>
-                                <li><a href="project-single.html">luxury home design</a></li>
-                                <li><a href="project-single.html">residential interior design</a></li>
-                                <li><a href="project-single.html">commercial space design</a></li>
-                                <li><a href="project-single.html">residential interior design</a></li>
-                                <li><a href="project-single.html">renovation and restoration design</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-contact-box footer-links">
-                            <h3>contact us</h3>
-                            <div class="footer-contact-item">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p>1300 56 55 56</p>
-                                </div>
-                            </div>
-                            <div class="footer-contact-item">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p>info@visionsmarthomes.com.au</p>
-                                </div>
-                            </div>
-                            <div class="footer-contact-item">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="footer-contact-content">
-                                    <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-latest-news footer-links">
-                            <h3>get the latest trending news</h3>
-                            <div class="footer-newsletter-form">
-                                <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
-                                <form id="newslettersForm" action="#" method="POST">
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="form-control" id="mail"
-                                            placeholder="Enter your email" required>
-                                        <button type="submit">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-main-links">
+            <div class="footer-links">
+              <h3>information</h3>
+              <ul>
+                <li><a href="about.html">about our company</a></li>
+                <li><a href="services.html">view our service</a></li>
+                <li><a href="#">careers at company</a></li>
+                <li><a href="blog.html">read our blog</a></li>
+                <li><a href="projects.html">our latest projects</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>portfolio</h3>
+              <ul>
+                <li><a href="project-single.html">luxury home design</a></li>
+                <li><a href="project-single.html">residential interior design</a></li>
+                <li><a href="project-single.html">commercial space design</a></li>
+                <li><a href="project-single.html">residential interior design</a></li>
+                <li><a href="project-single.html">renovation and restoration design</a></li>
+              </ul>
+            </div>
+            <div class="footer-contact-box footer-links">
+              <h3>contact us</h3>
+              <div class="footer-contact-item">
+                <div class="icon-box">
+                  <i class="fa-solid fa-phone"></i>
                 </div>
+                <div class="footer-contact-content">
+                  <p>1300 56 55 56</p>
+                </div>
+              </div>
+              <div class="footer-contact-item">
+                <div class="icon-box">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="footer-contact-content">
+                  <p>info@visionsmarthomes.com.au</p>
+                </div>
+              </div>
+              <div class="footer-contact-item">
+                <div class="icon-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="footer-contact-content">
+                  <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+                </div>
+              </div>
             </div>
-            <div class="copyright-home-footer">
-                <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+            <div class="footer-latest-news footer-links">
+              <h3>get the latest trending news</h3>
+              <div class="footer-newsletter-form">
+                <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+                <form id="newslettersForm" action="#" method="POST">
+                  <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email" required>
+                    <button type="submit">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+        <div class="copyright-home-footer main-container">
+          <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+        </div>
+        <div class="footer-social-links-small">
+          <div class="footer-social-link-title">
+            <h3>follow our socials</h3>
+          </div>
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </footer>
     <!--footer-end-->
 
     <!-- JS Files -->
