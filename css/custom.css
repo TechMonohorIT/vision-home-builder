@@ -958,7 +958,7 @@ header.main-header .header-sticky.active .navbar {
 .about-us {
 	background-image:
 		url('/images/sec-2-light-shade.png'),
-		url('/images/section-bg-shape-1.svg');
+		url('/images/home-sketch-bg.png');
 	background-repeat: no-repeat, no-repeat;
 	background-size: auto, auto;
 	background-position: right top, left -246px bottom -94px;
@@ -3739,11 +3739,7 @@ header.main-header .header-sticky.active .navbar {
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.hero {
-		padding: 472px 0px 70px !important;
-	}
-}
+@media only screen and (max-width: 768px) {}
 
 
 
@@ -3799,7 +3795,7 @@ header.main-header .header-sticky.active .navbar {
 	} */
 
 	.section-title h1 {
-		font-size: 24px !important;
+		font-size: 24px;
 	}
 
 	/* .section-title h2 {

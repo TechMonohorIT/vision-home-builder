@@ -84,6 +84,10 @@
   max-width: 658.975px;
 }
 
+.hero-content .section-title {
+  margin-bottom: 40px;
+}
+
 .hero-content .section-title h3,
 .hero-content .section-title h1 {
   color: var(--color-text-bw-white, #FFF);
@@ -94,7 +98,6 @@
   line-height: normal;
   letter-spacing: 0.36px;
   text-transform: uppercase;
-  text-transform: capitalize !important;
   margin-bottom: 24px;
 }
 
@@ -107,7 +110,7 @@
   font-weight: 500;
   line-height: 28.8px;
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .hero-btn .btn-default {
@@ -116,8 +119,8 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border: 1px solid var(--color-bw-opac-white-15, rgba(255, 255, 255, 0.15));
-  background: var(--color-bw-opac-black-30, rgba(0, 0, 0, 0.30));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.30);
 }
 
 .btn-default i {
@@ -1651,6 +1654,7 @@ span.counter {
     padding: 15px 0px !important;
   }
 
+  /*hero-767*/
   .hero {
     padding: 200px 0 151px;
   }
@@ -1661,7 +1665,6 @@ span.counter {
     justify-content: center;
     width: 100%;
     height: auto;
-    margin-left: 5%;
   }
 
   .hero-box {
@@ -1674,6 +1677,10 @@ span.counter {
     margin: auto;
   }
 
+  .hero-content .section-title {
+    margin-bottom: 32px;
+  }
+
   .video-play-button {
     top: 40%;
     left: 50%;
@@ -1681,39 +1688,41 @@ span.counter {
   }
 
   .hero-content .section-title h1 {
-    font-size: 23px !important;
+    font-size: 23px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0.23px;
     margin-bottom: 0px;
-    text-transform: capitalize !important;
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 16px 0px;
   }
 
   .hero-content .section-title p {
-    font-size: 1rem;
-    padding: 0px 0px 0px 0px;
-    margin-bottom: 0px;
-    line-height: 1.6em;
-    font-weight: 400;
+    color: var(--color-text-bw-white, #FFF);
+    font-family: var(--montserrat);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.458px;
     margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
   }
 
   .hero-btn .btn-default {
     max-width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 16px 24px;
   }
 
   .hero-btn {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 16px;
     padding-left: 0px;
     padding-bottom: 0px;
   }
 
-  /*about-us-css-767 */
-
+  /*about-us-767 */
   .about-us-content .section-title h3 {
     color: #B3ACA6;
     line-height: 18.732px;
@@ -2182,23 +2191,23 @@ span.counter {
 }
 
 @media (max-width: 414px) {
-  .hero-content .section-title h1 {
+  /* .hero-content .section-title h1 {
     font-size: 16px !important;
     letter-spacing: 0.16px;
     padding: 13px 0px 13px 0px !important;
-  }
+  } */
 
-  .hero {
-    padding: 377px 0px 70px !important;
-  }
+  /* .hero {
+    padding: 377px 0px 70px;
+  } */
 
-  .section-title {
+  /* .section-title {
     margin-bottom: 17px !important;
-  }
+  } */
 
-  .hero-btn {
+  /* .hero-btn {
     gap: 16px !important;
-  }
+  } */
 }
 
 /*************************************/
