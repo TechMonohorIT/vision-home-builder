@@ -41,6 +41,27 @@
   <link href="css/custom_user.css" rel="stylesheet">
 
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      /* New Font Updated */
+      --body-font: 'Carmen Sans', sans-serif;
+      /*New Google Font */
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
+    }
     body {
       font-family: 'Montserrat', 'Inter' !important;
     }
@@ -499,30 +520,16 @@ margin-bottom: 40px;
       margin-bottom: 5px;
       font-size: 17px !important;
       font-weight: 600;
+      font-weight: 500;
     }
     .info p {
       color: #6A5C4E;
+      font-size: 16px !important;
       line-height: 28.8px;
       font-weight: 500;
 
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 60px;
-      }
-      .hero-text h2 {
-
-        font-size: 30px;
-      }
-      .contact-container {
-        flex-direction: column;
-      }
-      .form-row {
-        flex-direction: column;
-      }
-    }
 
     #siteLogo {
   transition: all 0.5s ease-in-out;
@@ -584,33 +591,81 @@ text-transform: uppercase;
 color: #6A5C4E;
 }
 
-@media (max-width: 1440px) {
-  .main-container {
-    padding-left: 20px;
-    padding-right: 20px;
+
+
+
+
+
+.header-right .header-right-image-1 {
+    max-width: 600px;
+    width: 820px;
+    width: 100%;
   }
+  .header-right .header-right-image-2 {
+    max-width: 600px;
+    width: 820px;
+    width: 100%;
+    position: absolute;
+    bottom: -419px;
+    right: 56px;
+    z-index: 10;
+    
+  }
+
+  .contact-section-main {
+    position: absolute;
+    top: 81%;
+    width: 100%;
+  }
+  .contact-section-main-dummy {
+    height: 656.48px;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+  }
+  .header-right-image-position-left {
+    height: 100%;
+    background-color: #DFC0AC;
+    width: 100%;
+    position: absolute;
+    left: -76px;
+    top: 66px;
+    z-index: -10;
+  }
+  .plant-image {
+    top: -409px;
+    left: -446px;
+  }
+  .plant-image img {
+    height: 500px;
+  }
+  .contact-form h5 {
+    color:white; 
+    font-size: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .footer-newsletter-form .form-group .form-control {
+    margin-top: 19px !important;
+  }
+  .footer-newsletter-form .form-group{
+    height: 50px !important;
+  }
+
+   
+    
+    
+@media (max-width: 1440px) {
   .header-section {
+    max-height: 600px;
+   
     background-size: cover;
     background-position: left;
   width: 100% !important;
   max-width: 100% !important;
-}
-}
-/* header  */
-@media (max-width: 1440px) {
-  .header-section {
-    max-height: 600px;
-    min-height: 600px;
   }
-}
-
-
-/* ————————————————  
-   Responsive overrides for <1920px 
-   ———————————————— */
-
-/* Up to 1440px */
-@media (max-width: 1440px) {
   .main-container {
     padding: 0 40px;
   }
@@ -625,10 +680,7 @@ color: #6A5C4E;
   .header-left h6 {
     font-size: 28px;
   }
-  .header-right img {
-    max-width: 600px;
-    width: 100%;
-  }
+
   .decorative-plant-top-left,
   .decorative-plant-bottom-right,
   .decorative-chair-image {
@@ -636,83 +688,121 @@ color: #6A5C4E;
   }
 }
 
+
 /* Up to 1024px */
 @media (max-width: 1024px) {
+
+  .contact-form h5{
+    font-family: var(--montserrat);
+    font-size: 16px;
+  }
+  .contact-form h3{
+    font-family: var(--montserrat);
+    line-height: 38.048px; /* 146.34% */
+letter-spacing: -0.527px;
+    font-size: 26px;
+  }
+  .contact-form p{
+    font-family: var(--montserrat);
+    font-size: 16px;
+  }
+  .contact-info{
+    gap: 32px;
+  }
+    
+
+  .contact-section h2 {
+      color: #8B7355;
+      
+      font-family: var(--montserrat);
+      font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: 62.4px; /* 130% */
+text-transform: uppercase;
+text-align: center;
+width: 100%;
+margin:0 ;
+    }
+    .breadcrumb {
+      font-family: Inter;
+      font-size: 17px;
+      color: #8b7355;
+    margin-bottom: 40px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    }
+  .header-right-image-position-left {
+    left: -50px;
+    top: 49px;
+  }
+  .contact-section-main-dummy {
+   display: none;
+  }
+  .contact-section-main {
+    position: relative;
+    margin-top: 340px;
+    margin-top: 546px;
+  }
+  .header-section {
+    max-height: 100%;
+ 
+  }
   .main-container {
-    padding: 0 20px;
+    padding: 0 0 !important;
   }
   .header-container {
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
+    gap: 32px;
   }
   .header-left {
     text-align: center;
   }
   .header-left h1 {
-    font-size: 60px;
+    font-size: 90px;
   }
   .header-left h6 {
     font-size: 24px;
   }
   .header-right {
-    display: none;
+   height: 100%;
+   width: auto;
+   margin-left:50px
   }
   .contact-container {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 0 !important;
+    gap: 64px;
   }
   .contact-form {
     padding: 20px;
   }
-}
-
-/* Up to 768px */
-@media (max-width: 768px) {
-  .header-container {
-    padding-top: 40px;
-  }
-  .header-left h1 {
-    font-size: 40px;
-  }
-  .header-left h6 {
-    font-size: 20px;
-  }
-  .contact-section h2 {
-    font-size: 32px;
-  }
-  .contact-form h3 {
-    font-size: 20px;
-  }
-  .form-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* Up to 576px (mobile) */
-@media (max-width: 576px) {
-  .main-container {
-    padding: 0 10px;
-  }
-  .header-left h1 {
-    font-size: 32px;
-  }
-  .header-left h6 {
-    font-size: 18px;
-  }
-  .contact-section h2 {
-    font-size: 28px;
-  }
-  .contact-form {
-    padding: 15px;
-  }
-  button {
+  .header-right .header-right-image-1 {
+    /* max-width: 600px; */
+    height: 100%;
     width: 100%;
-    padding: 12px 0;
   }
+  .header-right .header-right-image-2 {
+    width: auto !important;
+    position: absolute;
+    bottom: -155px;
+    right: 69px;
+    z-index: 10;
+    height: 100%;
+}
+.plant-image {
+  top: -627px;
+  left: -446px;
+}
+.plant-image img {
+  height: 100%;
 }
 
+}
   </style>
 
 </head>
@@ -771,13 +861,10 @@ color: #6A5C4E;
     <h6>ALWAYS UP FOR TALK!</h6>
   </div>
   <div class="header-right" style="position: relative;">
-    <img height="100%" width="820px"  src="images/contact-page/Cozy_interior.png" alt="">
-    <div style="height: 100%; background-color: #DFC0AC; width: 100%; position: absolute; left: -76px; top: 66px; z-index: -10;" ></div>
+    <img class="header-right-image-1" height="100%" width="820px"  src="images/contact-page/Cozy_interior.png" alt="">
+    <div class="header-right-image-position-left" ></div>
     <div>
-      <img src="images/contact-page/chair 1.png" style="position: absolute;
-      bottom: -296px;
-      right: 229px;
-      z-index: 10;" alt="">
+      <img class="header-right-image-2" src="images/contact-page/chair 1.png"  alt="">
     </div>
    
   </div>
@@ -787,7 +874,7 @@ color: #6A5C4E;
 
 
      <!-- Contact Section -->
-  <div style="position: absolute; top: 81%; width: 100%;">
+  <div class="contact-section-main">
     <div class="contact-section main-container position-relative">
      
   
@@ -797,14 +884,10 @@ color: #6A5C4E;
       <div class="contact-container">
         <!-- Left side: Contact Form -->
         <div class="contact-form position-relative">
-          <div class="position-absolute" style="top: -409px; left: -446px;">
-            <img style="height:500px;; " src="images/contact-page/plant.png" class="" />
+          <div class="position-absolute  plant-image" >
+            <img  src="images/contact-page/plant.png" class="" />
           </div>
-          <h5 style="color:white; margin-bottom: 14px; font-size: 20px;
-          font-family: Inter;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px;">Contact Form</h5>
+          <h5 >Contact Form</h5>
           <h3>WE WOULD LOVE TO HEAR FROM YOU</h3>
           <p>Your email address will not be published. Required fields are marked *</p>
           <form>
@@ -834,8 +917,8 @@ color: #6A5C4E;
                 </svg>
             </div>
             <div class="info">
-              <h4 style="color:#b39887; font-weight: 500;">Phone Number</h4>
-              <p style="font-size: 20px; color: #67564a;">1300 56 55 56</p>
+              <h4 >Phone Number</h4>
+              <p >1300 56 55 56</p>
             </div>
           </div>
           <div class="info-item">
@@ -845,8 +928,8 @@ color: #6A5C4E;
                 </svg>
             </div>
             <div class="info">
-              <h4 style="color:#b39887; font-weight: 500;">E-Mail Support</h4>
-              <p style="font-size: 20px; color: #67564a;">info@visionsmarthomes.com.au</p>
+              <h4 >E-Mail Support</h4>
+              <p >info@visionsmarthomes.com.au</p>
             </div>
           </div>
           <div class="info-item">
@@ -854,8 +937,8 @@ color: #6A5C4E;
               <img style="height: 64px; width: 64px;" src="images/contact-page/headquaters icon.svg" alt="Building" />
             </div>
             <div class="info">
-              <h4 style="color:#b39887; font-weight: 500;">Headquarter</h4>
-              <p style="font-size: 20px; color: #67564a;">Unit 30/275 Annangrove Rd<br/>NSW 2155</p>
+              <h4 >Headquarter</h4>
+              <p >Unit 30/275 Annangrove Rd<br/>NSW 2155</p>
             </div>
           </div>
         </div>
@@ -866,7 +949,7 @@ color: #6A5C4E;
 
 
     </div>
-    <div style="height: 656.48px; width: 100%; background-color: transparent; position: relative; ;">
+    <div class="contact-section-main-dummy">
       <div class="position-absolute" style="bottom: -142px;right: -445px;">
         <img style="height:500px; " src="images/contact-page/plant_blur.png" class="" />
       </div>
@@ -875,120 +958,118 @@ color: #6A5C4E;
 
 
 
-    <!--footer-start-10-->
-    <footer  class="main-footer">
-
-     
-      <div>
-          <div class="main-container footer-container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <div class="footer-header">
-                          <div class="row align-items-center">
-                              <div class="col-md-6">
-                                  <div class="footer-logo">
-                                      <img height="120px" src="images/vision_logo_main.svg" alt="">
-                                  </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <div class="footer-social-links">
-                                      <div class="footer-social-link-title">
-                                          <h3>follow our socials</h3>
-                                      </div>
-                                      <ul>
-                                          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                          <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row footer-main-links">
-                  <div class="col-lg-3 col-md-6">
-                      <div class="footer-links">
-                          <h3>information</h3>
-                          <ul>
-                              <li><a href="about.html">about our company</a></li>
-                              <li><a href="services.html">view our service</a></li>
-                              <li><a href="#">careers at company</a></li>
-                              <li><a href="blog.html">read our blog</a></li>
-                              <li><a href="projects.html">our latest projects</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                      <div class="footer-links">
-                          <h3>portfolio</h3>
-                          <ul>
-                              <li><a href="project-single.html">luxury home design</a></li>
-                              <li><a href="project-single.html">residential interior design</a></li>
-                              <li><a href="project-single.html">commercial space design</a></li>
-                              <li><a href="project-single.html">residential interior design</a></li>
-                              <li><a href="project-single.html">renovation and restoration design</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                      <div class="footer-contact-box footer-links">
-                          <h3>contact us</h3>
-                          <div class="footer-contact-item">
-                              <div class="icon-box">
-                                  <i class="fa-solid fa-phone"></i>
-                              </div>
-                              <div class="footer-contact-content">
-                                  <p>1300 56 55 56</p>
-                              </div>
-                          </div>
-                          <div class="footer-contact-item">
-                              <div class="icon-box">
-                                  <i class="fa-solid fa-envelope"></i>
-                              </div>
-                              <div class="footer-contact-content">
-                                  <p>info@visionsmarthomes.com.au</p>
-                              </div>
-                          </div>
-                          <div class="footer-contact-item">
-                              <div class="icon-box">
-                                  <i class="fa-solid fa-location-dot"></i>
-                              </div>
-                              <div class="footer-contact-content">
-                                  <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                      <div class="footer-latest-news footer-links">
-                          <h3>get the latest trending news</h3>
-                          <div class="footer-newsletter-form">
-                              <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
-                              <form id="newslettersForm" action="#" method="POST">
-                                  <div class="form-group">
-                                      <input type="email" name="email" class="form-control" id="mail"
-                                          placeholder="Enter your email" required>
-                                      <button type="submit">
-                                          <i class="fa-solid fa-chevron-right"></i>
-                                      </button>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="copyright-home-footer">
-              <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
-          </div>
-      </div>
-  </footer>
     
   
     
   
   </div>
+
+
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-header">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="footer-logo">
+                  <img height="120px" src="images/vision-logo.svg" alt="">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="footer-social-links">
+                  <div class="footer-social-link-title">
+                    <h3>follow our socials</h3>
+                  </div>
+                  <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main-links">
+        <div class="footer-links">
+          <h3>information</h3>
+          <ul>
+            <li><a href="about.html">about our company</a></li>
+            <li><a href="services.html">view our service</a></li>
+            <li><a href="#">careers at company</a></li>
+            <li><a href="blog.html">read our blog</a></li>
+            <li><a href="projects.html">our latest projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>portfolio</h3>
+          <ul>
+            <li><a href="project-single.html">luxury home design</a></li>
+            <li><a href="project-single.html">residential interior design</a></li>
+            <li><a href="project-single.html">commercial space design</a></li>
+            <li><a href="project-single.html">residential interior design</a></li>
+            <li><a href="project-single.html">renovation and restoration design</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-box footer-links">
+          <h3>contact us</h3>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>1300 56 55 56</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>info@visionsmarthomes.com.au</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-latest-news footer-links">
+          <h3>get the latest trending news</h3>
+          <div class="footer-newsletter-form">
+            <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+            <form id="newslettersForm" action="#" method="POST">
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email" required>
+                <button type="submit">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-home-footer main-container">
+      <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+    </div>
+    <div class="footer-social-links-small">
+      <div class="footer-social-link-title">
+        <h3>follow our socials</h3>
+      </div>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
 
 
