@@ -1922,10 +1922,10 @@ header.main-header .header-sticky.active .navbar {
 .our-blog {
 	padding-top: 240px;
 	padding-bottom: 240px;
-	/* background: url('../images/SECTION\ 10\ LIGHT\ SHADE.png');
+	background: url('../images/SECTION\ 10\ LIGHT\ SHADE.png');
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover; */
+	background-size: cover;
 }
 
 .post-item {

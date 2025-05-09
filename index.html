@@ -101,7 +101,7 @@
     .header-sidemenu {
       margin: 0 auto;
       position: fixed;
-      padding: 32px 0px;
+      padding: 16px 0px;
       position: fixed;
       width: 100%;
       top: 0;
@@ -1545,10 +1545,8 @@
       video.play();
     });
   </script> -->
-
   <script>
     const logo = document.getElementById('siteLogo');
-
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY || window.pageYOffset;
 
@@ -1560,7 +1558,8 @@
       }
     });
   </script>
-  <!-- <script>
+  <!-- These code for header-side-menu -->
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       const header = document.querySelector('.header-sidemenu');
       const hero = document.querySelector('.hero');
@@ -1583,10 +1582,10 @@
         observer.observe(hero);
       }
     });
-  </script> -->
+  </script>
 
 
-  <script>
+  <!-- <script>
     (function () {
       const nav = document.querySelector('.header-sidemenu');
       let lastY = window.pageYOffset;
@@ -1618,7 +1617,7 @@
         }
       });
     })();
-  </script>
+  </script> -->
 </body>
 
 </html>

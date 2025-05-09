@@ -386,7 +386,7 @@
 
 @media (max-width: 778px) {
   .about-container {
-    min-height: 61vh;
+    min-height: 100vh;
   }
   .mission_vision {
     height: 100%;
@@ -406,24 +406,12 @@
     background: unset;
   }
   .mission_vision_text {
-    padding: 20px;
+    padding: 80px 16px;
     width: 100%;
     flex-direction: column;
     align-items: start;
   }
-  .mission_vision_text h2 {
-    color: black;
-    font-size: 32px;
-    line-height: 43px;
-    width: 100%;
-  }
-  .mission_vision_text p {
-    color: black;
-    font-size: 14px;
-    line-height: 21.8px;
-    margin-bottom: 0px;
-    width: 100%;
-  }
+
   .mission_vision_content {
     padding: 20px !important;
     background-color: white;
@@ -434,7 +422,18 @@
     column-gap: 0px;
     flex-direction: column;
   }
+  .our_leadership_image img {
+    width: 100%;
+    height: 458px;
+    object-fit: cover;
+  }
+  .our_leadership_image {
+    position: absolute;
+    right: -45px !important;
+    bottom: -47px !important;
+  }
 }
+
 @media (max-width: 376px) {
   .about-banner-content h3 {
     font-size: 22px;
@@ -446,15 +445,129 @@
   }
 }
 @media (max-width: 576px) {
+  .about {
+    padding: 80px 0px;
+  }
   .about-text-box {
     right: 0px;
-    padding: 18px;
+    padding: 24px;
     max-width: 100%;
     margin: 0px 10px;
+    top: 90%;
   }
   .about-text-box p {
+    color: var(--Color-Neutral-neutral---100, #cbc5be);
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 176.471% */
+  }
+  .our_leadership_container .right_side p {
+    color: #cbc5be !important;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    margin: 0;
+    padding: 50px 20px 0px 20px;
+  }
+
+  .about-banner-content h3 {
+    font-size: 18px;
+    line-height: 33px;
+  }
+  .about-banner-content h2 {
+    font-size: 26px !important;
+    line-height: 33px !important;
+  }
+  .about {
+    margin-top: 57px;
+  }
+  .about-content h4 {
+    color: #927d6b;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17.473px;
+    text-transform: capitalize;
+  }
+  .about-content p {
+    color: #7a695f;
+    font-family: Montserrat;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.073px;
+  }
+  .about-content img {
+    width: 44px;
+    height: 44px;
+  }
+  .about-content-main {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  .mission_vision_text_container {
+    background: url("../images/3d-modern-lighting-lamp-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .mission_vision_text_container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(58, 33, 19, 0) 20.84%,
+      #3a2113 106.32%
+    );
+    z-index: 0;
+    height: 100%;
+  }
+  .mission_vision_text h2 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38.048px;
+    letter-spacing: -0.527px;
+    text-transform: uppercase;
+    width: unset;
+  }
+  .mission_vision_text p {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.073px;
+    width: unset;
+  }
+  .mission_vision_content {
+    margin-top: 0px !important;
+  }
+  .mission_vision_content_container {
+    background: url("../images/Background_mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 24px;
+  }
+  .mission_vision_content h2 {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .mission_vision_content p {
+    font-size: 16px;
     line-height: 24px;
+  }
+  .mission_vision_content {
+    row-gap: 20px;
   }
 }
 
@@ -469,7 +582,7 @@
     display: flex;
     align-items: center;
     column-gap: 0px;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     margin: 0px 10px;
     row-gap: 30px;
@@ -492,19 +605,18 @@
     grid-template-columns: 1fr;
   }
   .our_leadership_container .left_side {
-    padding: 80px 0px 40px 0px;
+    width: 100%;
+    padding: 80px 10px 40px 20px;
   }
   .our_leadership_container .left_side img {
     margin-top: 5px;
   }
-}
-@media (max-width: 700px) {
-  .about-banner-content h3 {
-    font-size: 24px;
-    line-height: 27px;
+  .our_leadership_image {
+    position: absolute;
+    right: -45px;
+    bottom: -57px;
   }
-  .about-banner-content h2 {
-    font-size: 40px;
-    line-height: 57px;
+  .our_leadership_container .right_side {
+    width: 100%;
   }
 }
