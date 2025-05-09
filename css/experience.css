@@ -160,9 +160,6 @@ p {
   text-transform: uppercase;
 }
 
-.timeline-section {
-  padding: 168px 0;
-}
 .timeline-section-container {
   position: relative;
   background: url("../images/our_skills_bg.png") center center / cover no-repeat,
@@ -172,6 +169,7 @@ p {
   background-size: cover;
   height: 100%;
   width: 100%;
+  padding: 168px 0;
 }
 
 .timeline-section-container::before {
@@ -298,11 +296,58 @@ p {
   transform: scale(1);
 }
 
+.cta-container {
+  background: white;
+  padding: 72px 0px;
+  text-align: center;
+  max-width: 1196px;
+  margin: auto;
+  border-radius: 24px;
+  background: var(--color-bw-white, #fff);
+  box-shadow: 12px 12px 56px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cta-container h2 {
+  color: #756458;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.cta-container .btn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(58, 33, 19, 0.7);
+  color: white;
+  padding: 16px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s ease;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.18px;
+}
+
+.cta-container .btn:hover {
+  background-color: #5a4b43;
+}
+
 @media (max-width: 768px) {
   .nav {
     display: none;
   }
-  .timeline-section {
+  .timeline-section-container {
     padding: 80px 0;
   }
   .timeline-item {
