@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.experience-page {
+  margin-top: 100px;
+  border-top: 1.5px solid #e5e5e5;
+}
+p {
+  margin-bottom: 0px;
+}
+.section_container {
+  max-width: calc(100% - 320px) !important;
+  margin: 0 auto;
+  padding: 15px;
+}
+.main-section {
+  padding: 88px 0px;
+}
+.main-section h2 {
+  color: #756458;
+  text-align: start;
+  font-family: Montserrat;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 77px;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+}
+.main-section p {
+  color: #7a695f;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+}
+.design_development_phase {
+  background: linear-gradient(
+      180deg,
+      rgba(58, 33, 19, 0.81) 3.94%,
+      #3a2113 100%
+    ),
+    url("../images/development_phase_bg.png");
+  background-position: center;
+  background-size: cover;
+}
+.design_development_phase .content_area {
+  padding: 120px 0px;
+}
+.design_development_phase .content_area h4 {
+  color: #fff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+.design_development_phase .tabs_area {
+  margin-top: 104px;
+}
+.design_development_phase .tabs_area .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #644f43;
+  margin-top: 2rem;
+}
+
+.design_development_phase .tabs_area .tab {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1.25rem;
+  margin-right: 1rem;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #78716c;
+}
+
+.design_development_phase .tabs_area .tab:hover {
+  color: #1c1917;
+  border-bottom-color: #d6d3d1;
+}
+
+.design_development_phase .tabs_area .tab.active {
+  border-bottom-color: white;
+  font-weight: 700;
+}
+
+.design_development_phase .tabs_area .tab-number {
+  margin-right: 0.5rem;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.8px;
+}
+
+.design_development_phase .tabs_area .tab-title {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.8px;
+}
+
+.design_development_phase .tabs_area .tab-content {
+  display: none;
+  padding: 2rem 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.design_development_phase .tabs_area .tab-content p {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.8px;
+}
+
+.design_development_phase .tabs_area .tab-content.active {
+  display: block;
+}
+
+.construction_phase {
+  background: rgba(10, 4, 0, 0.81) url("../images/construction_bg.png");
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.construction_phase::before {
+  content: "";
+  position: absolute;
+  top: 227px;
+  left: 0;
+  width: 565.333px;
+  height: 318px;
+  background: url("../images/about/wall_board.png") bottom left / contain
+    no-repeat;
+  z-index: 1;
+}
+
+.construction_phase .content_area {
+  padding: 189px 0px;
+  text-align: center;
+}
+.construction_phase .content_area h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 77px;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+}
+
+.timeline-section {
+  padding: 168px 0;
+}
+.timeline-section-container {
+  position: relative;
+  background: url("../images/our_skills_bg.png") center center / cover no-repeat,
+    #fff;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.timeline-section-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url("../images/about/stand.png") bottom right / contain no-repeat;
+  width: 300px;
+  height: 412px;
+  aspect-ratio: 413.89/412;
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-progress {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0;
+  background-color: #7a695f;
+  transition: height 0.5s ease-out;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 90%;
+  background-color: #d6d3d1;
+}
+
+.timeline-item {
+  display: flex;
+  /* align-items: center; */
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+  transform: translateX(50px);
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-content {
+  width: 45%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-content .description {
+  margin-top: 36px;
+}
+
+.timeline-content h3 {
+  color: #756458;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.timeline-content h4 {
+  color: #7a695f;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+}
+.timeline-content p {
+  color: #86796f;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  width: 80px;
+  height: 80px;
+  background-color: #7a695f;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+  margin: 0px;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) !important;
+  transition: all 0.5s ease;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+}
+
+.timeline-marker.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-progress {
+    left: 24px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 48px);
+    margin-left: 48px;
+    text-align: start !important;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 24px;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .section_container {
+    width: 1600px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1024px) {
+  .section_container {
+    max-width: 100% !important;
+    margin: 0 auto;
+    padding: 40px 20px !important;
+  }
+}
+@media (max-width: 480px) {
+  .main-section h2 {
+    font-size: 23px;
+    line-height: 38px;
+  }
+  .main-section p {
+    font-size: 14px;
+    line-height: 21.073px;
+  }
+
+  .design_development_phase .content_area h4 {
+    font-size: 26px;
+    line-height: 38.048px;
+    letter-spacing: -0.527px;
+  }
+
+  .design_development_phase .content_area {
+    padding: 80px 20px !important;
+  }
+
+  .design_development_phase .tabs_area {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .design_development_phase .tabs_area .tab-title {
+    font-size: 15px;
+    line-height: 20.8px;
+  }
+
+  .design_development_phase .tabs_area .tab-number {
+    font-size: 15px;
+    line-height: 20.8px;
+  }
+  .design_development_phase .tabs_area .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: none;
+    margin-top: 2rem;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .design_development_phase .tabs_area .tab {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .design_development_phase
+    .tabs_area
+    .tab-content-container
+    .tab-content
+    .tab-number {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 17.473px;
+    text-transform: capitalize;
+  }
+  .design_development_phase
+    .tabs_area
+    .tab-content-container
+    .tab-content
+    .tab-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 17.473px;
+    text-transform: capitalize;
+  }
+  .design_development_phase .tabs_area .tab-content p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21.073px;
+  }
+  .design_development_phase .tabs_area .tab-content {
+    margin-top: 26px;
+    padding: 0px !important;
+  }
+  .construction_phase .content_area h3 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 38.048px;
+    letter-spacing: -0.527px;
+  }
+  .construction_phase .content_area {
+    padding: 75px 0px;
+    text-align: center;
+  }
+}
