@@ -13,15 +13,10 @@
   <!-- Favicon Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
-  <!-- Google Fonts Css -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
 
   <!--Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
-  <!--I could import Helvetica Font in google> It is paid font -->
+  <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -53,7 +48,6 @@
     /****************************************************
  * SIDEMENU STYLES
  ****************************************************/
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -72,32 +66,18 @@
       --default-font: 'CarmenSans-UltraLight', sans-serif;
       /* New Font Updated */
       --body-font: 'Carmen Sans', sans-serif;
-      /*New Google Font */
+      /*New Google Fonts */
       --inter: "Inter", sans-serif;
       --montserrat: "Montserrat", sans-serif;
     }
 
     body {
       /* Ensure your chosen font is applied */
-      /* font-family: "Hanken Grotesk", sans-serif; */
       /* This was old font family*/
       font-family: var(--body-font);
     }
 
     /* A custom fixed top bar to hold logo + hamburger */
-    /* .header-sidemenu {
-      position: fixed;
-      top: 0%;
-      left: 0px;
-      right: 0;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 70px 20px 0px;
-      background: none !important;
-      backdrop-filter: none !important;
-    } */
     .header-sidemenu {
       margin: 0 auto;
       position: fixed;
@@ -108,6 +88,15 @@
       transition: background-color 0.3s ease;
       z-index: 1000;
       background: transparent;
+      /* background: none !important; */
+      /* backdrop-filter: none !important; */
+    }
+
+    /* header sidemenu conditional background with js+css class */
+    .header-sidemenu.scrolling {
+      background-color: rgba(109, 93, 78, 0.5);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     /* Hamburger icon */
@@ -117,12 +106,6 @@
       background: #fff;
       margin-bottom: 9px;
       transition: 0.3s;
-    }
-
-    @media (max-width: 767px) {
-      .hamburger span {
-        margin-bottom: 7px;
-      }
     }
 
     .hamburger span:last-child {
@@ -180,8 +163,8 @@
     }
 
     .side-menu.open {
-      left: 0;
       /* slide in */
+      left: 0;
     }
 
     /* Close button (X) inside side menu */
@@ -195,7 +178,9 @@
       background: none;
       border: none;
       cursor: pointer;
-      margin-bottom: 53px;
+      /* margin-bottom: 53px; as per figma */
+      margin-bottom: 40px;
+      margin-top: 75px;
     }
 
     /* Menu items in side menu */
@@ -207,7 +192,7 @@
     }
 
     .side-menu ul li {
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
 
     .side-menu ul li a {
@@ -222,8 +207,8 @@
     }
 
     .side-menu ul li a:hover {
-      color: #ffd900ab;
       /* accent color on hover */
+      color: #ffd900ab;
     }
 
     /* Remove margin-top so the hero sits at the very top behind the header */
@@ -231,55 +216,12 @@
       margin-top: 0;
     }
 
-    /* 
-  OPTIONAL: If your hero text gets hidden under the header, 
-  you can add top padding to .hero-content or .hero .container instead:
-    .hero-content {
-      padding-top: 80px;
-    }
-*/
-
-    /* our service */
-    .our-services .section-title h3::before {
-      content: none;
-      margin-left: 0px;
-      padding-left: 0px;
-    }
-
-    .service-btn {
-      position: absolute;
-      top: 40px;
-      right: 40px;
-      z-index: 1;
-    }
-
-    .service-btn a {
-      background-color: var(--accent-color);
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.4s ease-in-out;
-    }
-
-    .service-btn a:hover {
+    /*Btn-common-layout*/
+    .btn-common:hover {
       background-color: var(--primary-color);
     }
 
-    .service-btn a img {
-      max-width: 20px;
-      transform: rotate(-45deg);
-      transition: all 0.4s ease-in-out;
-    }
-
-    .service-btn a:hover img {
-      transform: rotate(0)
-    }
-
     /* Our project section start to here */
-
     .our-latest-project::before {
       content: "";
       position: absolute;
@@ -296,8 +238,8 @@
       /* min-height: 100vh !important; */
       background-attachment: fixed !important;
       background: rgba(0, 0, 0, 0.5);
-      filter: blur(5px);
       /* Black overlay with 50% transparency */
+      filter: blur(5px);
     }
 
     .our-latest-project::after {
@@ -309,7 +251,6 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
       opacity: 0.9;
-      /* Adjust opacity to control color intensity */
       z-index: -1;
       inset: 0;
     }
@@ -359,17 +300,9 @@
       background-size: contain;
     }
 
-    .our-skill .section-title h3::before {
-      content: none;
-      margin: 0px;
-      padding: 0px;
-    }
-
     .our-skill .section-title span {
       color: #746359;
     }
-
-
 
     .skills-progress-bar {
       margin-bottom: 48px;
@@ -416,8 +349,6 @@
 
     .inspiration-design .swiper {
       width: 100%;
-      /* max-width: 1400px; */
-      /* height: 500px; */
     }
 
     .inspiration-design .swiper .swiper-wrapper {
@@ -485,14 +416,7 @@
         padding-left: 50px;
         padding-right: 50px;
       }
-
-      /* .our-services {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      } */
-
     }
-
 
     .video-poster {
       position: absolute;
@@ -558,7 +482,6 @@
 </head>
 
 <body>
-
   <!-- Preloader Start -->
   <div class="preloader">
     <div class="loading-container">
@@ -585,6 +508,7 @@
       </div>
     </div>
   </header>
+  <!-- SIMPLE FIXED HEADER with HAMBURGER-End -->
 
   <!-- The dark overlay for the side menu -->
   <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
@@ -603,7 +527,7 @@
   </div>
 
   <!-- START of your Inspaire content (Hero, etc.) -->
-  <!--hero-section-start-1-->
+  <!--hero-start-1-->
   <div class="hero hero-video">
     <!-- <div class="video-poster" id="videoPoster">
       <img src="images/view-luxurious-hotel-interior-space.jpg" alt="Preview" class="video-thumbnail">
@@ -656,7 +580,7 @@
 
     </div>
   </div>
-  <!-- hero-section-end -->
+  <!-- hero-end -->
   <!--about-us-start-2---->
   <div class="about-us">
     <div>
@@ -741,11 +665,6 @@
           <h2 class="text-anime-style-2">
             INSIDE OUR EXCLUSIVE<br>DESIGN ATELIER
           </h2>
-          <!-- <p>
-            From concept to completion, experience the seamless fusion of artistry and innovation as we bring your
-            vision
-            to life with impeccable craftsmanship and unparalleled sophistication.
-          </p> -->
         </div>
         <div class="why-choose-item-list">
           <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
@@ -878,14 +797,12 @@
   <div class="our-project-user">
     <div class="project-user-container">
       <div class="heading-contents main-container">
-        <!-- class="col-lg-6" -->
         <div class="section-title">
           <h3 class="wow fadeInUp">Latest Project</h3>
           <h2 class="text-anime-style-2" data-cursor="-opaque">
             Inspiring Designs That<span> Reflect Our Vision</span>
           </h2>
         </div>
-        <!-- class="col-lg-6" -->
         <div class="section-title-content">
           <p class="wow fadeInUp" data-wow-delay="0.2s">
             Our portfolio presents a refined selection of home designs, featuring stunning transformations that blend
@@ -1178,7 +1095,7 @@
             </div>
           </div>
         </div>
-        <!-- right image below -->
+        <!-- right-side-img -->
         <div class="our-skill-img-1">
           <figure class="image-anime reveal">
             <img src="images/cozy-lively-home-interior-design.jpg" alt="Cozy-img-wonderful">
@@ -1553,7 +1470,7 @@
       overlay.classList.toggle('open');
     }
   </script>
-  <!--Commented cause it but not needed and video will be autoplay -->
+  <!--Commented cause it. It is not needed and video will be autoplay -->
   <!-- <script>
     document.getElementById('playVideoBtn').addEventListener('click', function () {
       const poster = document.getElementById('videoPoster');
@@ -1575,7 +1492,8 @@
       }
     });
   </script>
-  <!-- These code for header-side-menu -->
+
+  <!-- These code for header-side-menu add conditional background scrooling a sections -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const header = document.querySelector('.header-sidemenu');
@@ -1600,41 +1518,6 @@
       }
     });
   </script>
-
-
-  <!-- <script>
-    (function () {
-      const nav = document.querySelector('.header-sidemenu');
-      let lastY = window.pageYOffset;
-      const threshold = 10;    // ignore tiny scrolls
-      let ticking = false;
-
-      function onScroll() {
-        const currentY = window.pageYOffset;
-        const delta = currentY - lastY;
-
-        // only act if scrolled more than threshold
-        if (Math.abs(delta) > threshold) {
-          if (delta > 0) {
-            // scrolled down
-            nav.classList.add('hidden');
-          } else {
-            // scrolled up
-            nav.classList.remove('hidden');
-          }
-          lastY = currentY;
-        }
-        ticking = false;
-      }
-
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          window.requestAnimationFrame(onScroll);
-          ticking = true;
-        }
-      });
-    })();
-  </script> -->
 </body>
 
 </html>
