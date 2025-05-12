@@ -1027,25 +1027,6 @@
 
 .our-skill .section-title h3 {
   color: #86796F;
-  font-family: var(--montserrat);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 25.6px;
-  text-transform: capitalize;
-  margin-bottom: 16px;
-}
-
-.our-skill .section-title h2 {
-  color: #756458;
-  font-family: var(--montserrat);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 52px;
-  letter-spacing: -0.72px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
 }
 
 .our-skill .section-title p {
@@ -1311,7 +1292,7 @@
 
 span.counter {
   color: var(--Color-Primary-primary---400, #77665F);
-  font-family: Inter;
+  font-family: var(--inter);
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -1343,6 +1324,10 @@ span.counter {
 
 .our-blog .section-title h3::before {
   content: none;
+}
+
+.our-blog .section-title h3 {
+  color: #807064;
 }
 
 /*************************************/
@@ -2351,7 +2336,20 @@ span.counter {
     max-width: calc(100% - 240px);
   }
 
+  .section-title h2 {
+    color: #6A5C4E;
+    font-family: var(--montserrat);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
   .section-title h3 {
+    color: #86796F;
     font-size: 14px;
     margin-bottom: 12px;
   }
@@ -2362,12 +2360,13 @@ span.counter {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
+    line-height: 23px;
     margin-top: 12px;
     margin-bottom: 0px;
-    line-height: 23px;
   }
 
   .btn-common {
+    margin-top: 36px;
     padding: 12px 13.5px;
     gap: 6px;
   }
@@ -2562,5 +2561,257 @@ span.counter {
 
   .services-image-section {
     margin-bottom: 36px;
+  }
+
+  /*our-project-user*/
+  .our-project-user {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  .our-project-user .heading-contents {
+    margin-bottom: 90px;
+  }
+
+  .our-Project-nav {
+    padding: 12px;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .our-Project-nav ul {
+    gap: 24px;
+  }
+
+  .inspiration-design {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+
+  .inspiration-design .swiper-slide-active h3 {
+    text-shadow: 1.812px 1.812px 3.623px rgba(0, 0, 0, 0.50);
+    font-size: 14px;
+  }
+
+  /* our-latest-project */
+  .our-latest-project {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    min-height: 803px;
+  }
+
+  .our-latest-project .heading-contents {
+    gap: 80px;
+    margin-bottom: 96px;
+  }
+
+  .vision {
+    gap: 36px;
+    padding: 64px 120px;
+  }
+
+  .vision-img-wrapper {
+    /* width: 30px;
+    height: 24px; */
+    margin: 0 auto 16px;
+  }
+
+  .vision h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .vision p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  /*our-skills-1367 */
+  .our-skill {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .our-skill .section-title p {
+    color: #565656;
+    font-family: var(--montserrat);
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: 0px;
+    margin-bottom: 119px;
+  }
+
+  .skills-progress-bar {
+    margin-bottom: 36px;
+  }
+
+  .skillbar .skill-data {
+    margin-bottom: 12px;
+  }
+
+  .skill-data .skill-title {
+    color: #837168;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .skill-progress .count-bar {
+    height: 14px;
+  }
+
+  /* testimonial-1367 */
+  .testimonial-left-box::before {
+    width: 209.375px;
+    height: 209.375px;
+    padding: 31.436px 0px;
+  }
+
+  .testimonial-title h3 {
+    font-size: 14px;
+    line-height: 19.2px;
+    margin-bottom: 12px;
+  }
+
+  .testimonial-title h2 {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.54px;
+    margin-bottom: 18px;
+  }
+
+  .testimonial-title p {
+    color: #565656;
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .testimonial-rating {
+    margin-bottom: 18px;
+  }
+
+  .testimonial-content p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+
+  span.counter {
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  .testimonial-rating-content {
+    margin-top: 15px;
+  }
+
+  /* our-blog */
+  .our-blog {
+    padding-top: 181px;
+    padding-bottom: 181px;
+  }
+
+  .our-blog .heading-contents {
+    margin-bottom: 66px;
+  }
+
+  .our-blog .heading-contents p {
+    color: #807064;
+  }
+
+  .post-item-content {
+    margin-top: 15px;
+    margin-bottom: 9px;
+  }
+
+  .post-item-content h3 a {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .post-item-btn a {
+    font-size: 14px;
+    letter-spacing: 0.135px;
+  }
+
+  /* footer-1367*/
+  .main-footer {
+    padding: 92px 0px;
+  }
+
+  .footer-logo img {
+    max-width: 310.943px;
+    max-height: 86.651px;
+  }
+
+  .footer-social-link-title h3 {
+    font-size: 18px;
+    line-height: 21.8px;
+  }
+
+  .footer-social-links ul li a {
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+  }
+
+  .footer-social-links ul li a i {
+    font-size: 13.5px;
+    line-height: 13.5px;
+  }
+
+  .main-footer .footer-header {
+    padding-bottom: 96px;
+  }
+
+  .footer-main-links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px 28px;
+    padding: 36px 0px;
+  }
+
+  .footer-links h3 {
+    font-size: 18px;
+    line-height: 21.8px;
+    margin-bottom: 16px;
+  }
+
+  .footer-links ul li a {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 12px;
+  }
+
+  .footer-contact-content p {
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .footer-newsletter-form p {
+    opacity: var(--opacity-80, 0.8);
+    color: #FFF;
+    font-family: var(--inter);
+    font-size: 14px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 23px;
+  }
+
+  .copyright-home-footer p {
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    opacity: 0.9;
   }
 }

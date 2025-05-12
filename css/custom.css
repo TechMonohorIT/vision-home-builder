@@ -131,17 +131,6 @@
 /************************************/
 /*** 	   02. General css		  ***/
 /************************************/
-
-body {
-	font-family: var(--body-font);
-	/* previously was default font changed it to new font*/
-	font-size: 13px;
-	font-weight: 500;
-	line-height: 1.6em;
-	background-color: var(--white-color);
-	color: #8B5E3B;
-}
-
 /* container for above 1366px-screen */
 .main-container {
 	width: 100%;
@@ -528,7 +517,7 @@ body {
 	line-height: 52px;
 	letter-spacing: -0.72px;
 	text-transform: uppercase;
-	margin-bottom: 0px;
+	margin-bottom: 24px;
 }
 
 .section-title p {
@@ -2143,7 +2132,7 @@ header.main-header .header-sticky.active .navbar {
 .footer-newsletter-form p {
 	opacity: var(--opacity-80, 0.8);
 	color: var(--color-text-bw-white, #FFF);
-	font-family: Inter;
+	font-family: var(--inter);
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
