@@ -2398,7 +2398,7 @@ span.counter {
 
   .about-us-box {
     gap: 80px;
-    max-width: calc(100% - 440px);
+    /* max-width: calc(100% - 440px); */
     padding-top: 160px;
     padding-bottom: 160px;
   }
@@ -2813,5 +2813,11 @@ span.counter {
     line-height: 20px;
     margin-bottom: 0px;
     opacity: 0.9;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+  .about-us-images {
+    max-width: 480px;
   }
 }

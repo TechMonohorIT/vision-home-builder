@@ -968,6 +968,7 @@ header.main-header .header-sticky.active .navbar {
 
 @media (max-width: 991px) {
 	.about-us-box {
+		align-items: center;
 		flex-direction: column;
 		gap: 20px;
 		max-width: calc(100% - 70px);
