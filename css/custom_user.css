@@ -2821,3 +2821,25 @@ span.counter {
     max-width: 480px;
   }
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .hero-content .section-title h1{
+    font-size: 28px !important;
+  
+  }
+  .hero-content .section-title p{
+    font-size: 14px !important;
+    
+    
+  .hero.hero-video {
+    max-height: 810px !important;
+  }
+  .hero{
+    padding: 460px 0px 151px;
+
+  }
+  
+  .hero::before {
+    max-height: 810px !important;
+  }
+}
+  
