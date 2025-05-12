@@ -131,17 +131,6 @@
 /************************************/
 /*** 	   02. General css		  ***/
 /************************************/
-
-body {
-	font-family: var(--body-font);
-	/* previously was default font changed it to new font*/
-	font-size: 13px;
-	font-weight: 500;
-	line-height: 1.6em;
-	background-color: var(--white-color);
-	color: #8B5E3B;
-}
-
 /* container for above 1366px-screen */
 .main-container {
 	width: 100%;
@@ -150,7 +139,6 @@ body {
 }
 
 /* our custom csss */
-
 .why-choose-images-1 {
 	width: 100%;
 	background-color: red;
@@ -303,6 +291,7 @@ body {
 	z-index: 0;
 }
 
+/*a common button design for some sections */
 .btn-common-block {
 	display: flex;
 	justify-content: center;
@@ -331,6 +320,7 @@ body {
 	letter-spacing: 0.18px;
 }
 
+/* btn common end */
 .btn-default:hover {
 	background: transparent;
 	color: var(--white-color);
@@ -465,11 +455,6 @@ body {
 	margin-bottom: 88px;
 }
 
-.section-row .section-title {
-	/* margin-bottom: 0; */
-	/* margin-right: 30px; */
-}
-
 .section-btn {
 	text-align: end;
 }
@@ -479,7 +464,7 @@ body {
 }
 
 .section-title-content p {
-	color: #807064;
+	color: #565656;
 	font-family: var(--montserrat);
 	font-size: 18px;
 	font-style: normal;
@@ -489,12 +474,8 @@ body {
 	line-height: 28.8px;
 }
 
-.section-title {
-	/* margin-bottom: 20px; */
-}
-
 .section-title h3 {
-	color: #807064;
+	color: #B3ACA6;
 	display: inline-block;
 	font-family: var(--montserrat);
 	font-size: 16px;
@@ -536,13 +517,8 @@ body {
 	line-height: 52px;
 	letter-spacing: -0.72px;
 	text-transform: uppercase;
-	margin-bottom: 0px;
+	margin-bottom: 24px;
 }
-
-/* .section-title h1 span,
-.section-title h2 span{
-	color: var(--accent-color);
-} */
 
 .section-title p {
 	margin-top: 30px;
@@ -934,12 +910,6 @@ header.main-header .header-sticky.active .navbar {
 	z-index: 2;
 }
 
-/* .hero-content .section-title h3,
-.hero-content .section-title h1 {
-	color: var(--white-color);
-	font-size: 28px
-} */
-
 .hero-content .section-title p {
 	font-size: 16px;
 	color: var(--white-color);
@@ -975,13 +945,6 @@ header.main-header .header-sticky.active .navbar {
 	margin: 0 auto;
 }
 
-@media (min-width: 1367px) and (max-width: 1590px) {
-	.about-us-box {
-		gap: 40px;
-		max-width: calc(100% - 320px);
-	}
-}
-
 @media (min-width: 992px) and (max-width: 1366px) {
 	.about-us-box {
 		gap: 30px;
@@ -1005,6 +968,7 @@ header.main-header .header-sticky.active .navbar {
 
 @media (max-width: 991px) {
 	.about-us-box {
+		align-items: center;
 		flex-direction: column;
 		gap: 20px;
 		max-width: calc(100% - 70px);
@@ -1086,8 +1050,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .about-img-1 img {
-	max-width: 25vw;
+	width: 480.621px;
 	height: 474.86px;
+	max-width: 594.115px;
 	vertical-align: baseline;
 }
 
@@ -1099,8 +1064,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .about-img-2 img {
-	max-width: 20vw;
+	width: 383.5px;
 	height: 328.678px;
+	max-width: 383.5px;
 	vertical-align: baseline;
 }
 
@@ -1235,19 +1201,6 @@ header.main-header .header-sticky.active .navbar {
 .about-us-content-list ul li:last-child {
 	margin-bottom: 0;
 }
-
-/* .about-us-content-list ul li::before {
-	content: '\f058';
-	position: absolute;
-	font-family: 'FontAwesome';
-	font-size: 20px;
-	font-weight: 900;
-	line-height: normal;
-	color: var(--accent-color);
-	display: inline-block;
-	top: 2px;
-	left: 0;
-} */
 
 .about-us-contact-list {
 	width: calc(50% - 40px);
@@ -1928,10 +1881,6 @@ header.main-header .header-sticky.active .navbar {
 	background-size: cover;
 }
 
-.post-item {
-	/* height: calc(100% - 30px);
-	margin-bottom: 30px; */
-}
 
 .post-featured-image {
 	margin-bottom: 20px;
@@ -2184,13 +2133,11 @@ header.main-header .header-sticky.active .navbar {
 .footer-newsletter-form p {
 	opacity: var(--opacity-80, 0.8);
 	color: var(--color-text-bw-white, #FFF);
-	/* Typography/Body/body-lg-ff2 */
-	font-family: Inter;
+	font-family: var(--inter);
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 26px;
-	/* 144.444% */
 	margin-bottom: 31px;
 }
 
@@ -2212,7 +2159,6 @@ header.main-header .header-sticky.active .navbar {
 	padding: 0px;
 	box-shadow: none;
 	color: #FFF;
-	/* Helvetica */
 	font-family: var(--inter);
 	font-size: 16px;
 	font-style: normal;
@@ -3826,13 +3772,6 @@ header.main-header .header-sticky.active .navbar {
 		font-size: 20px;
 	}
 
-	/* .experience-counter {
-		height: 137px;
-		width: 137px;
-	} */
-
-
-
 	.about-us-content-list {
 		margin-bottom: 30px;
 	}
@@ -3847,10 +3786,6 @@ header.main-header .header-sticky.active .navbar {
 
 	.why-choose-images {
 		margin-left: 0;
-	}
-
-	.our-services {
-		/* padding: 50px 0; */
 	}
 
 	.service-image img {
@@ -4355,11 +4290,6 @@ header.main-header .header-sticky.active .navbar {
 	.hero-content .section-title p {
 		font-size: 18px;
 	}
-
-	/* .hero-content .btn-default {
-		margin-right: 40px;
-		margin-bottom: 10px;
-	} */
 
 	.hero-content .btn-default.btn-highlighted {
 		margin: 0;
