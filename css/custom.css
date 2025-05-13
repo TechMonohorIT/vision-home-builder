@@ -403,7 +403,7 @@ body {
 	right: 0;
 	bottom: 0;
 	z-index: 1000;
-	background-color: var(--accent-color);
+	background-color: rgba(109, 93, 78, 1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
