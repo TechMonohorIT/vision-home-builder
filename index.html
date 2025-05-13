@@ -12,6 +12,7 @@
   <title>Vision-Smart-Home</title>
   <!-- Favicon Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="images/vision_logo_white.png"> -->
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
 
@@ -83,24 +84,22 @@
 
     /* A custom fixed top bar to hold logo + hamburger */
     .header-sidemenu {
-      margin: 0 auto;
       position: fixed;
-      padding: 16px 0px;
-      position: fixed;
-      width: 100%;
       top: 0;
+      padding: 16px 0px;
+      margin: 0 auto;
+      width: 100%;
+      background-color: transparent;
       transition: background-color 0.3s ease;
       z-index: 1000;
-      background: transparent;
-      /* background: none !important; */
       /* backdrop-filter: none !important; */
     }
 
     /* header sidemenu conditional background with js+css class */
-    .header-sidemenu.scrolling {
+    .header-sidemenu.scrolled {
       background-color: rgba(109, 93, 78, 0.5);
-      backdrop-filter: blur(6px);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
     }
 
     /* Hamburger icon */
@@ -491,7 +490,7 @@
     <div class="loading-container">
       <div class="loading"></div>
       <div id="loading-icon">
-        <img src="images/loader.svg" alt="">
+        <img src="images/vision_logo_white.png" alt="vision-loader-logo">
       </div>
     </div>
   </div>
@@ -523,9 +522,9 @@
     <ul>
       <li><a href="./">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="./">Services</a></li>
+      <li><a href="./">Projects</a></li>
+      <li><a href="./">Blog</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </div>
@@ -1499,29 +1498,15 @@
       }
     });
   </script>
-
-  <!-- These code for header-side-menu add conditional background scrooling a sections -->
+  <!-- This js codes for header-side-menu add conditional background scrooling a sections -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('scroll', () => {
       const header = document.querySelector('.header-sidemenu');
-      const hero = document.querySelector('.hero');
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            header.classList.remove('scrolling');
-          }
-          else {
-            header.classList.add('scrolling');
-          }
-        },
-        {
-          threshold: 0,
-        }
-      );
-
-      if (hero) {
-        observer.observe(hero);
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
       }
     });
   </script>
