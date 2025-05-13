@@ -992,7 +992,7 @@ header.main-header .header-sticky.active .navbar {
 @media (max-width: 767px) {
 	.about-us-box {
 		max-width: calc(100% - 32px);
-		align-items: self-start;
+		align-items: center;
 		gap: 56px;
 		padding-top: 80px;
 		padding-bottom: 80px;
@@ -4616,6 +4616,4 @@ header.main-header .header-sticky.active .navbar {
 	.error-page-image img {
 		max-width: 100%;
 	}
-
-
 }
