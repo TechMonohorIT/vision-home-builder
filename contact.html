@@ -74,19 +74,24 @@
       font-family: 'Montserrat', 'Inter' !important;
     }
 
+    /* A custom fixed top bar to hold logo + hamburger */
     .header-sidemenu {
       position: fixed;
-      top: 8%;
-      transform: translate(0px, -8%);
-      left: 0px;
-      right: 0;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 70px 20px 0px;
-      background: none !important;
-      backdrop-filter: none !important;
+      top: 0;
+      padding: 16px 0px;
+      margin: 0 auto;
+      width: 100%;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      /* backdrop-filter: none !important; */
+    }
+
+    /* header sidemenu conditional background with js+css class */
+    .header-sidemenu.scrolled {
+      background-color: rgba(109, 93, 78, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
     }
 
     .header-sidemenu .logo img {
@@ -103,8 +108,6 @@
     }
 
     /* The side menu overlay (dark transparent background) */
-
-
     .side-menu-overlay.open {
       width: 100%;
       opacity: 1;
@@ -209,26 +212,9 @@
       font-family: var(--body-font);
     }
 
-    /* A custom fixed top bar to hold logo + hamburger */
-    .header-sidemenu {
-      position: fixed;
-      top: 0%;
-      left: 0px;
-      right: 0;
-      z-index: 9999999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 70px 20px 0px;
-      background: none !important;
-      backdrop-filter: none !important;
-    }
-
     .header-sidemenu .logo img {
       max-height: 50px;
     }
-
-
 
     /* The side menu overlay (dark transparent background) */
     .side-menu-overlay {
@@ -350,8 +336,6 @@
     }
 
     .top-section {
-
-
       background-image: url('/images/contact-page/shadow.png');
       background-size: contain;
       background-position: top left;
@@ -544,7 +528,6 @@
       display: flex;
       flex-direction: column;
       align-items: start;
-
       gap: 64px;
       /* flex: 1; */
 
@@ -604,8 +587,6 @@
       pointer-events: none;
     }
 
-
-
     .main-container {
       width: 100%;
       max-width: 1920px;
@@ -659,11 +640,6 @@
       color: #6A5C4E;
     }
 
-
-
-
-
-
     .header-right .header-right-image-1 {
       max-width: 600px;
       width: 820px;
@@ -716,7 +692,7 @@
     .contact-form h5 {
       color: white;
       font-size: 20px;
-      font-family: Inter;
+      font-family: var(--inter);
       font-style: normal;
       font-weight: 400;
       line-height: 22px;
@@ -780,7 +756,6 @@
       .contact-form h3 {
         font-family: var(--montserrat);
         line-height: 38.048px;
-        /* 146.34% */
         letter-spacing: -0.527px;
         font-size: 26px;
       }
@@ -797,13 +772,11 @@
 
       .contact-section h2 {
         color: #8B7355;
-
         font-family: var(--montserrat);
         font-size: 26px;
         font-style: normal;
         font-weight: 400;
         line-height: 62.4px;
-        /* 130% */
         text-transform: uppercase;
         text-align: center;
         width: 100%;
@@ -923,16 +896,18 @@
   <!-- Preloader End -->
 
   <!-- SIMPLE FIXED HEADER with HAMBURGER -->
-  <header class="header-sidemenu main-container">
-    <div class="logo" id="siteLogo">
-      <a href="./">
-        <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
-      </a>
-    </div>
-    <div class="hamburger" onclick="toggleSideMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+  <header class="header-sidemenu">
+    <div class="header-content main-container">
+      <div class="logo" id="siteLogo">
+        <a href="./">
+          <img src="images/logo-about-us.svg" alt="Vision Smart Homes Logo">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleSideMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -1211,6 +1186,8 @@
   <script src="js/wow.min.js"></script>
   <!-- Main Custom js file -->
   <script src="js/function.js"></script>
+  <!-- index.js is our custom js -->
+  <script src="js/index.js"></script>
   <script>
     function toggleSideMenu() {
       const sideMenu = document.getElementById('sideMenu');

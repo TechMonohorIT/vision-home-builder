@@ -99,14 +99,24 @@
       background: none !important;
       backdrop-filter: none !important;
     } */
+        /* A custom fixed top bar to hold logo + hamburger */
         .header-sidemenu {
-            margin: 0 auto;
             position: fixed;
-            top: 0%;
-            left: 0px;
-            right: 0;
-            z-index: 999;
-            padding: 32px 0px;
+            top: 0;
+            padding: 16px 0px;
+            margin: 0 auto;
+            width: 100%;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            /* backdrop-filter: none !important; */
+        }
+
+        /* header sidemenu conditional background with js+css class */
+        .header-sidemenu.scrolled {
+            background-color: rgba(109, 93, 78, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(6px);
         }
 
         /* Hamburger icon */
@@ -622,6 +632,8 @@
     <script src="js/wow.min.js"></script>
     <script src="js/function.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- index.js is our custom js -->
+    <script src="js/index.js"></script>
 
     <script>
         const swiper = new Swiper('.inspiration-design .swiper', {

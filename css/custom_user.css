@@ -1941,7 +1941,7 @@ span.counter {
     align-items: center;
     flex-direction: column;
     gap: 24px;
-    margin-top: 56px;
+    margin-top: 0px;
     margin-bottom: 0px;
   }
 
@@ -2076,6 +2076,11 @@ span.counter {
   .left-box-1,
   .left-box-2 {
     background: none;
+  }
+
+  .footer-main-links {
+    grid-template-columns: 1fr 1fr;
+    /* gap: 48px 28px; */
   }
 }
 
@@ -2567,8 +2572,7 @@ span.counter {
   }
 
   .footer-main-links {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px 28px;
+    gap: 0px 28px;
     padding: 36px 0px;
   }
 

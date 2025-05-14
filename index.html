@@ -515,7 +515,6 @@
 
   <!-- The dark overlay for the side menu -->
   <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
-
   <!-- The side drawer menu -->
   <div class="side-menu" id="sideMenu">
     <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
@@ -1545,6 +1544,8 @@
   <script src="js/wow.min.js"></script>
   <script src="js/function.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- index.js is our custom js -->
+  <script src="js/index.js"></script>
 
   <script>
     const swiper = new Swiper('.inspiration-design .swiper', {
@@ -1602,7 +1603,7 @@
     });
   </script>
   <!-- This js codes for header-side-menu add conditional background scrooling a sections -->
-  <script>
+  <!-- <script>
     document.addEventListener('scroll', () => {
       const header = document.querySelector('.header-sidemenu');
 
@@ -1612,7 +1613,7 @@
         header.classList.remove('scrolled');
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
