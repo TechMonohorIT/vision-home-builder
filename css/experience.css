@@ -7,9 +7,8 @@ p {
   margin-bottom: 0px;
 }
 .section_container {
-  max-width: calc(100% - 320px) !important;
+  max-width: calc(100% - 240px);
   margin: 0 auto;
-  padding: 15px;
 }
 .main-section {
   padding: 88px 0px;
@@ -418,7 +417,7 @@ p {
   }
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1920px) {
   .section_container {
     width: 1600px;
     margin: 0 auto;

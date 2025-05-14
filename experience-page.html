@@ -21,13 +21,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
 
 
-    <!-- New Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
-    <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
 
     <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -66,23 +59,6 @@
             /* font-family: "Hanken Grotesk", sans-serif; */
             /* This was old font family*/
             font-family: var(--body-font);
-        }
-
-        :root {
-            --primary-color: #192324;
-            --secondery-color: #F8F8F8;
-            --text-color: #283132;
-            --accent-color: #7C877F;
-            --white-color: #FFFFFF;
-            --divider-color: #EAF0EC;
-            --dark-divider-color: #FFFFFF1A;
-            --error-color: rgb(230, 87, 87);
-            --default-font: 'CarmenSans-UltraLight', sans-serif;
-            /* New Font Updated */
-            --body-font: 'Carmen Sans', sans-serif;
-            /*New Google Fonts for figma */
-            --inter: "Inter", sans-serif;
-            --montserrat: "Montserrat", sans-serif;
         }
 
         /* A custom fixed top bar to hold logo + hamburger */
@@ -160,26 +136,10 @@
             /* hidden offscreen initially */
             width: 300px;
             height: 100%;
-            background-image: url("/images/modern-entryway-hamburger-bg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 72% center;
+            background-color: #1F1F1F;
             transition: left 0.3s ease-in-out;
-            padding-top: 33px;
-            padding-left: 40px;
-            padding-right: 84px;
+            padding: 2rem;
             z-index: 999;
-        }
-
-        .side-menu::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
-            z-index: -99;
         }
 
         .side-menu.open {
@@ -190,45 +150,34 @@
         /* Close button (X) inside side menu */
         .side-menu .close-btn {
             font-size: 28px;
-            color: #FFF;
-            font-family: var(--montserrat);
-            font-style: normal;
-            font-weight: 400;
-            line-height: 20.8px;
+            color: #9c1212;
             background: none;
             border: none;
             cursor: pointer;
-            /* margin-bottom: 53px; as per figma */
-            margin-bottom: 40px;
-            margin-top: 75px;
+            margin-bottom: 1rem;
         }
 
         /* Menu items in side menu */
         .side-menu ul {
             list-style: none;
             padding: 0;
-            margin-top: 0;
-            margin-bottom: 0;
+            margin-top: 2rem;
         }
 
         .side-menu ul li {
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
 
         .side-menu ul li a {
-            color: #FFF;
-            font-family: var(--montserrat);
-            font-size: 17px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 23px;
+            color: #fff;
+            font-size: 18px;
             text-transform: capitalize;
             transition: color 0.3s;
         }
 
         .side-menu ul li a:hover {
-            /* accent color on hover */
             color: #ffd900ab;
+            /* accent color on hover */
         }
 
         @media(max-width: 480px) {
@@ -254,7 +203,7 @@
 
     <!-- SIMPLE FIXED HEADER with HAMBURGER -->
     <header class="header-sidemenu">
-        <div class="header-content main-container">
+        <div class="header-content section_container">
             <div class="logo" id="siteLogo">
                 <a href="./">
                     <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
@@ -277,10 +226,9 @@
         <ul>
             <li><a href="./">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="./">Services</a></li>
-            <li><a href="./">Projects</a></li>
-            <li><a href="./">Blog</a></li>
-            <li><a href="experience-page.html">Experience</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </div>

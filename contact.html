@@ -19,15 +19,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
   <!-- Bootstrap Css -->
 
-
-  <!--New Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
-  <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
@@ -77,7 +75,7 @@
     /* A custom fixed top bar to hold logo + hamburger */
     .header-sidemenu {
       position: fixed;
-      top: 0;
+      <<<<<<< HEAD top: 0;
       padding: 16px 0px;
       margin: 0 auto;
       width: 100%;
@@ -96,19 +94,53 @@
 
     .header-sidemenu .logo img {
       max-height: 50px;
+      =======padding: 16px 0px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      background: transparent;
+      >>>>>>>814f56e3b8f86b3838ed671dd8e37b63eeaf8a69
     }
 
     /* Hamburger icon */
     .hamburger span {
       display: block;
-      height: 3px;
-      background: black;
-      margin: 4px 0;
+      height: 2.5px;
+      background: #fff;
+      margin-bottom: 9px;
       transition: 0.3s;
     }
 
+    <<<<<<< HEAD
     /* The side menu overlay (dark transparent background) */
-    .side-menu-overlay.open {
+    =======@media (max-width: 767px) {
+      .hamburger span {
+        margin-bottom: 7px;
+      }
+    }
+
+    .hamburger span:last-child {
+      margin-bottom: 0px;
+    }
+
+    /* The side menu overlay (dark transparent background) */
+    .side-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      /* start closed */
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 998;
+    }
+
+    >>>>>>>814f56e3b8f86b3838ed671dd8e37b63eeaf8a69 .side-menu-overlay.open {
       width: 100%;
       opacity: 1;
     }
@@ -159,9 +191,7 @@
       background: none;
       border: none;
       cursor: pointer;
-      /* margin-bottom: 53px; as per figma */
-      margin-bottom: 40px;
-      margin-top: 75px;
+      margin-bottom: 53px;
     }
 
     /* Menu items in side menu */
@@ -173,7 +203,7 @@
     }
 
     .side-menu ul li {
-      margin-bottom: 16px;
+      margin-bottom: 1rem;
     }
 
     .side-menu ul li a {
@@ -188,9 +218,13 @@
     }
 
     .side-menu ul li a:hover {
-      /* accent color on hover */
       color: #ffd900ab;
+      /* accent color on hover */
     }
+
+
+    /* Hamburger icon */
+
 
     /* Remove margin-top so the hero sits at the very top behind the header */
     .hero.hero-video {
@@ -212,7 +246,28 @@
       font-family: var(--body-font);
     }
 
-    .header-sidemenu .logo img {
+    <<<<<<< HEAD=======
+
+    /* A custom fixed top bar to hold logo + hamburger */
+    .header-sidemenu {
+      position: fixed;
+      top: 0%;
+      left: 0px;
+      right: 0;
+      z-index: 9999999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 70px 20px 0px;
+
+
+      background-color: rgba(109, 93, 78, 0.5);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    }
+
+    >>>>>>>814f56e3b8f86b3838ed671dd8e37b63eeaf8a69 .header-sidemenu .logo img {
       max-height: 50px;
     }
 
@@ -258,18 +313,11 @@
     /* Close button (X) inside side menu */
     .side-menu .close-btn {
       font-size: 28px;
-      color: #FFF;
-      font-family: var(--montserrat);
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20.8px;
+      color: #fff;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 0px;
-      /* margin-bottom: 53px; as per figma */
-      margin-bottom: 40px;
-      margin-top: 75px;
+      margin-bottom: 1rem;
     }
 
     /* Menu items in side menu */
@@ -606,7 +654,7 @@
     }
 
     .header-container {
-      margin-top: 100px;
+      margin-top: 90px;
       display: flex;
       align-items: start;
       justify-content: center;
@@ -705,6 +753,15 @@
     .footer-newsletter-form .form-group {
       height: 50px !important;
     }
+
+    @media (max-width: 767px) {
+      .header-container {
+        margin-top: 60px !important;
+      }
+
+    }
+
+
 
 
 
@@ -822,11 +879,13 @@
         flex-direction: column;
         align-items: center;
         padding-top: 60px;
+        margin-top: 60px;
         gap: 32px;
       }
 
       .header-left {
         text-align: center;
+        padding-top: 58px;
       }
 
       .header-left h1 {
@@ -889,7 +948,7 @@
     <div class="loading-container">
       <div class="loading"></div>
       <div id="loading-icon">
-        <img src="images/vision_logo_white.png" alt="vision-loader-logo">
+        <img src="images/loader.svg" alt="">
       </div>
     </div>
   </div>
@@ -920,15 +979,12 @@
     <ul>
       <li><a href="./">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="./">Services</a></li>
-      <li><a href="./">Projects</a></li>
-      <li><a href="./">Blog</a></li>
-      <li><a href="experience-page.html">Experience</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </div>
-
-
 
 
   <div class="">
@@ -1197,8 +1253,8 @@
     }
   </script>
 
-  <script>
-    const logo = document.getElementById('siteLogo');
+  <!-- <script>
+  const logo = document.getElementById('siteLogo');
 
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY || window.pageYOffset;

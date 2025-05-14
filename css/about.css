@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-.custom_container {
-  max-width: 1600px;
-  margin: auto;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 .about-container {
   position: relative;
   background: url("../images/about/about-bg.png") lightgray 50% / cover
@@ -30,23 +32,24 @@
   z-index: 1;
   color: white;
 }
+
 .about-banner-content h3 {
   color: white;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
-  line-height: 77px;
+  line-height: 56px;
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
 .about-banner-content h2 {
   color: white;
   font-family: Montserrat;
-  font-size: 64px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 600;
-  line-height: 77px;
+  line-height: 56px;
   letter-spacing: 0.64px;
   text-transform: uppercase;
 }
@@ -67,7 +70,7 @@
 .about-text-box p {
   color: #cbc5be;
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
@@ -85,7 +88,7 @@
   object-fit: contain;
 }
 .custom_container {
-  max-width: calc(100% - 320px);
+  max-width: calc(100% - 120px);
   margin: auto;
 }
 .about-content-main {
@@ -99,28 +102,26 @@
   align-items: start;
   column-gap: 24px;
 }
+
 .about-content h4 {
   color: #6a5c4e;
   font-family: Helvetica;
-  font-size: 28px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28.8px;
+  line-height: 22px;
 }
 .about-content p {
   color: #86796f;
-  margin-bottom: 0px;
-  max-width: 556px;
-  margin-top: 16px;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28.8px;
+  line-height: 22px;
 }
 .about-content img {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
 .mission_vision {
@@ -174,33 +175,34 @@
 
 .mission_vision_content h2 {
   color: #6a5c4e;
-  font-family: Montserrat;
-  font-size: 40px;
-  font-style: normal;
   margin: 24px 0px !important;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
   font-weight: 500;
-  line-height: 48px;
+  line-height: 36px;
 }
 .mission_vision_content p {
   color: #86796f;
   font-family: Montserrat;
-  font-size: 17px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 22px;
   margin: 0px !important;
+  width: 383px;
 }
 
 .mission_vision_text h2 {
   color: #fff;
   font-family: Montserrat;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 52px;
-  letter-spacing: -0.72px;
+  line-height: 40px;
+  letter-spacing: -0.54px;
   text-transform: uppercase;
-  width: 494px;
+  width: 336px;
 }
 .mission_vision_text p {
   color: #fff;
@@ -209,8 +211,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 28.8px;
-  margin-bottom: 0px;
-  width: 500px;
+  width: 634px;
 }
 
 .our_leadership_container {
@@ -222,16 +223,16 @@
 
 .our_leadership_container .left_side {
   padding: 127px 0px;
-  width: calc(100% - 320px);
+  width: calc(100% - 120px);
 }
 .our_leadership_container .left_side h3 {
   color: #6a5c4e !important;
   font-family: Montserrat;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 52px;
-  letter-spacing: -0.72px;
+  line-height: 40px;
+  letter-spacing: -0.54px;
   text-transform: uppercase;
 }
 .our_leadership_container .left_side h5 {
@@ -265,10 +266,10 @@
 .our_leadership_container .right_side p {
   color: #cbc5be !important;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 38px;
+  line-height: 28px;
   margin: 0;
   padding: 100px 50px 0px 50px;
 }
@@ -277,11 +278,111 @@
   width: 700px;
   height: 556px;
 }
+
 @media (min-width: 1920px) {
   .custom_container {
     max-width: 1600px;
     margin: auto;
   }
+  .our_leadership_container .left_side {
+    padding: 127px 0px;
+    width: calc(100% - 320px);
+  }
+  .about-banner-content h3 {
+    color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 77px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+  }
+  .about-banner-content h2 {
+    color: white;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 77px;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+  }
+  .our_leadership_container .left_side h3 {
+    color: #6a5c4e !important;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+  }
+  .mission_vision_content h2 {
+    color: #6a5c4e;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    margin: 24px 0px !important;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .mission_vision_content p {
+    color: #86796f;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0px !important;
+  }
+
+  .mission_vision_text h2 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+    width: 494px;
+  }
+  .mission_vision_text p {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    width: 500px;
+  }
+
+  .about-content h4 {
+    color: #6a5c4e;
+    font-family: Helvetica;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.8px;
+  }
+  .about-content p {
+    color: #86796f;
+    margin-bottom: 0px;
+    max-width: 556px;
+    margin-top: 16px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.8px;
+  }
+  .about-content img {
+    width: 64px;
+    height: 64px;
+  }
+
   .about-image img {
     width: 836px;
     height: 824px;
@@ -386,7 +487,7 @@
 
 @media (max-width: 778px) {
   .about-container {
-    min-height: 100vh;
+    min-height: 849px;
   }
   .mission_vision {
     height: 100%;
@@ -446,7 +547,8 @@
 }
 @media (max-width: 576px) {
   .about {
-    padding: 80px 0px;
+    padding-top: 194px !important;
+    padding-bottom: 80px;
   }
   .about-text-box {
     right: 0px;
@@ -482,9 +584,7 @@
     font-size: 26px !important;
     line-height: 33px !important;
   }
-  .about {
-    margin-top: 57px;
-  }
+
   .about-content h4 {
     color: #927d6b;
     font-family: Montserrat;
@@ -584,8 +684,9 @@
     column-gap: 0px;
     flex-direction: column;
     justify-content: center;
-    margin: 0px 10px;
+    margin: 0px 16px;
     row-gap: 30px;
+    padding-top: 250px;
   }
   .about-image img {
     height: 100%;
