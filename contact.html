@@ -75,7 +75,7 @@
     /* A custom fixed top bar to hold logo + hamburger */
     .header-sidemenu {
       position: fixed;
-      <<<<<<< HEAD top: 0;
+      top: 0;
       padding: 16px 0px;
       margin: 0 auto;
       width: 100%;
@@ -92,30 +92,25 @@
       backdrop-filter: blur(6px);
     }
 
+    .header-sidemenu.scrolled .hamburger span {
+      color: #fff;
+      background-color: #fff;
+    }
+
     .header-sidemenu .logo img {
       max-height: 50px;
-      =======padding: 16px 0px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      transition: background-color 0.3s ease;
-      z-index: 1000;
-      background: transparent;
-      >>>>>>>814f56e3b8f86b3838ed671dd8e37b63eeaf8a69
     }
 
     /* Hamburger icon */
     .hamburger span {
       display: block;
       height: 2.5px;
-      background: #fff;
-      margin-bottom: 9px;
+      background: #8B5E3B;
+      margin-bottom: 7px;
       transition: 0.3s;
     }
 
-    <<<<<<< HEAD
-    /* The side menu overlay (dark transparent background) */
-    =======@media (max-width: 767px) {
+    @media (max-width: 767px) {
       .hamburger span {
         margin-bottom: 7px;
       }
@@ -140,7 +135,7 @@
       z-index: 998;
     }
 
-    >>>>>>>814f56e3b8f86b3838ed671dd8e37b63eeaf8a69 .side-menu-overlay.open {
+    .side-menu-overlay.open {
       width: 100%;
       opacity: 1;
     }
@@ -222,131 +217,9 @@
       /* accent color on hover */
     }
 
-
-    /* Hamburger icon */
-
-
     /* Remove margin-top so the hero sits at the very top behind the header */
     .hero.hero-video {
       margin-top: 0 !important;
-    }
-
-    /* Basic resets and fonts */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-
-    }
-
-    body {
-      /* Ensure your chosen font is applied */
-      /* font-family: "Hanken Grotesk", sans-serif; */
-      /* This was old font family*/
-      font-family: var(--body-font);
-    }
-
-    <<<<<<< HEAD=======
-
-    /* A custom fixed top bar to hold logo + hamburger */
-    .header-sidemenu {
-      position: fixed;
-      top: 0%;
-      left: 0px;
-      right: 0;
-      z-index: 9999999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 70px 20px 0px;
-
-
-      background-color: rgba(109, 93, 78, 0.5);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-
-    }
-
-    >>>>>>>814f56e3b8f86b3838ed671dd8e37b63eeaf8a69 .header-sidemenu .logo img {
-      max-height: 50px;
-    }
-
-    /* The side menu overlay (dark transparent background) */
-    .side-menu-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0;
-      /* start closed */
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-      z-index: 998;
-    }
-
-    .side-menu-overlay.open {
-      width: 100%;
-      opacity: 1;
-    }
-
-    /* The side drawer itself */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: -300px;
-      /* hidden offscreen initially */
-      width: 300px;
-      height: 100%;
-      background-color: #1F1F1F;
-      transition: left 0.3s ease-in-out;
-      padding: 2rem;
-      z-index: 999;
-    }
-
-    .side-menu.open {
-      left: 0;
-      /* slide in */
-    }
-
-    /* Close button (X) inside side menu */
-    .side-menu .close-btn {
-      font-size: 28px;
-      color: #fff;
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
-
-    /* Menu items in side menu */
-    .side-menu ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-    }
-
-    .side-menu ul li {
-      margin-bottom: 1rem;
-    }
-
-    .side-menu ul li a {
-      color: #fff;
-      font-size: 18px;
-      text-transform: capitalize;
-      transition: color 0.3s;
-    }
-
-    .side-menu ul li a:hover {
-      color: #ffd900ab;
-      /* accent color on hover */
-    }
-
-    body {
-      background-color: #ffffff;
-      color: #4a4a4a;
-      font-family: var(--body-font);
     }
 
     .container {
@@ -761,11 +634,6 @@
 
     }
 
-
-
-
-
-
     @media (max-width: 1440px) {
       .header-section {
         max-height: 600px;
@@ -979,9 +847,10 @@
     <ul>
       <li><a href="./">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="./">Services</a></li>
+      <li><a href="./">Projects</a></li>
+      <li><a href="experience-page.html">Our Experience</a></li>
+      <li><a href="./">Blog</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </div>
