@@ -21,14 +21,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
 
 
-    <!-- New Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
-    <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
 
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -86,25 +78,8 @@
       font-family: var(--body-font);
     }
 
-        :root {
-            --primary-color: #192324;
-            --secondery-color: #F8F8F8;
-            --text-color: #283132;
-            --accent-color: #7C877F;
-            --white-color: #FFFFFF;
-            --divider-color: #EAF0EC;
-            --dark-divider-color: #FFFFFF1A;
-            --error-color: rgb(230, 87, 87);
-            --default-font: 'CarmenSans-UltraLight', sans-serif;
-            /* New Font Updated */
-            --body-font: 'Carmen Sans', sans-serif;
-            /*New Google Fonts for figma */
-            --inter: "Inter", sans-serif;
-            --montserrat: "Montserrat", sans-serif;
-        }
-
-        /* A custom fixed top bar to hold logo + hamburger */
-        /* .header-sidemenu {
+    /* A custom fixed top bar to hold logo + hamburger */
+    /* .header-sidemenu {
       position: fixed;
       top: 0%;
       left: 0px;
@@ -146,83 +121,107 @@
       }
     }
 
-        /* The side drawer itself */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -300px;
-            width: 300px;
-            height: 100%;
-            background-image: url("/images/modern-entryway-hamburger-bg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 72% center;
-            transition: left 0.3s ease-in-out;
-            padding-top: 33px;
-            padding-left: 40px;
-            padding-right: 84px;
-            z-index: 999;
-        }
+    .hamburger span:last-child {
+      margin-bottom: 0px;
+    }
 
-        .side-menu::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
-            z-index: -99;
-        }
+    /* The side menu overlay (dark transparent background) */
+    .side-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      /* start closed */
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 998;
+    }
 
-        .side-menu.open {
-            left: 0;
-            /* slide in */
-        }
+    .side-menu-overlay.open {
+      width: 100%;
+      opacity: 1;
+    }
 
-        /* Close button (X) inside side menu */
-        .side-menu .close-btn {
-            font-size: 28px;
-            color: #FFF;
-            font-family: var(--montserrat);
-            font-style: normal;
-            font-weight: 400;
-            line-height: 20.8px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 40px;
-            margin-top: 75px;
-        }
+    /* The side drawer itself */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      /* hidden offscreen initially */
+      width: 300px;
+      height: 100%;
+      background-image: url("/images/modern-entryway-hamburger-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 72% center;
+      transition: left 0.3s ease-in-out;
+      padding-top: 33px;
+      padding-left: 40px;
+      padding-right: 84px;
+      z-index: 999;
+    }
 
-        /* Menu items in side menu */
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+    .side-menu::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
+      z-index: -99;
+    }
 
-        .side-menu ul li {
-            margin-bottom: 16px;
-        }
+    .side-menu.open {
+      left: 0;
+      /* slide in */
+    }
 
-        .side-menu ul li a {
-            color: #FFF;
-            font-family: var(--montserrat);
-            font-size: 17px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 23px;
-            text-transform: capitalize;
-            transition: color 0.3s;
-        }
+    /* Close button (X) inside side menu */
+    .side-menu .close-btn {
+      font-size: 28px;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 53px;
+    }
 
-        .side-menu ul li a:hover {
-            /* accent color on hover */
-            color: #ffd900ab;
-        }
-    </style>
+    /* Menu items in side menu */
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .side-menu ul li {
+      margin-bottom: 1rem;
+    }
+
+    .side-menu ul li a {
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 23px;
+      text-transform: capitalize;
+      transition: color 0.3s;
+    }
+
+    .side-menu ul li a:hover {
+      color: #ffd900ab;
+      /* accent color on hover */
+    }
+  </style>
 </head>
 
 <body>

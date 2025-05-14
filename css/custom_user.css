@@ -1380,7 +1380,7 @@ span.counter {
 /*************************************/
 /***11.MOBILE-RESPONSIVE-WEB-DESIGN****/
 /*************************************/
-@media (min-width: 240px)and (max-width: 450px) {
+@media (min-width: 192px)and (max-width: 450px) {
   .testimonial-left-box {
     height: 192px;
   }
@@ -2139,15 +2139,15 @@ span.counter {
 
 /**********MIN-MAX-WIDTH-TYPE********/
 /************* LAST-PHASE *************/
-@media (min-width: 768px) and (max-width: 1919px) {
+@media (min-width: 768px) and (max-width: 1440px) {
 
   /* common-headings */
   .heading-contents {
-    gap: 48px;
+    gap: 50px;
   }
 
   .heading-contents .section-title-content {
-    max-width: 600px;
+    max-width: 500px;
   }
 
   .section-title h2 {
@@ -2613,7 +2613,7 @@ span.counter {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media (min-width: 1441px) and (max-width: 1919px) {
   .main-container {
     max-width: calc(100% - 240px);
   }
@@ -2633,6 +2633,7 @@ span.counter {
 
   .about-us-box {
     gap: 80px;
+    /* max-width: calc(100% - 440px); */
     padding-top: 160px;
     padding-bottom: 160px;
   }
