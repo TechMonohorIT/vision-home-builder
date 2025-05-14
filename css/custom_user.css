@@ -1274,7 +1274,7 @@ span.counter {
   padding: 48px 0px;
 }
 
-.footer-main-links::after {
+/* .footer-main-links::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1282,7 +1282,7 @@ span.counter {
   height: 2px;
   opacity: 0.8;
   background: #FFF;
-}
+} */
 
 .main-footer::before {
   content: "";
