@@ -106,7 +106,9 @@
             left: 0px;
             right: 0;
             z-index: 999;
-            padding: 32px 0px;
+            padding: 24px 0px;
+            border-bottom: 1.5px solid #e5e5e5;
+            height: 96px;
         }
 
         /* Hamburger icon */
@@ -220,12 +222,6 @@
             /* accent color on hover */
             color: #ffd900ab;
         }
-
-        @media(max-width: 480px) {
-            .header-sidemenu {
-                top: -26px;
-            }
-        }
     </style>
 </head>
 
@@ -244,7 +240,7 @@
 
     <!-- SIMPLE FIXED HEADER with HAMBURGER -->
     <header class="header-sidemenu">
-        <div class="header-content section_container">
+        <div class="header-content header_container_ex">
             <div class="logo" id="siteLogo">
                 <a href="./">
                     <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
@@ -301,11 +297,11 @@
                         <!-- Tab content -->
                         <div class="tab-content-container">
                             <div class="tab-content active" data-content="1">
-                                <div class="mb-5">
+                                <div class="mb-md-5">
                                     <span class="tab-number">1.</span>
                                     <span class="tab-title">Preliminary Process</span>
                                 </div>
-                                <div>
+                                <div class="description_tab_content">
                                     <p>Your dream home begins with a seamless, refined process tailored to your
                                         lifestyle and aspirations.</p>
                                     <p>Through in-depth discussions, we gain a deep understanding of your vision,
@@ -373,7 +369,7 @@
             </div>
 
             <div class="construction_phase">
-                <div class="content_area section_container">
+                <div class="content_area">
                     <h3 data-cursor="-opaque" class="text-anime-style-2 about-banner-content">construction Phase</h3>
                 </div>
             </div>
@@ -485,7 +481,11 @@
                     <div class="cta-container">
                         <h2 data-cursor="-opaque" class="text-anime-style-2 about-banner-content">BUILD YOUR LUXURY HOME
                             WITH US</h2>
-                        <a href="#" class="btn">Contact Us &rsaquo;</a>
+                        <a href="#" class="btn">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6.12503 4L9.875 7.75L6.125 11.5" stroke="white" stroke-width="1.125"
+                                    stroke-miterlimit="16" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></a>
                     </div </div>
 
 

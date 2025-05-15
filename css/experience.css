@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .experience-page {
   margin-top: 100px;
-  border-top: 1.5px solid #e5e5e5;
 }
 p {
   margin-bottom: 0px;
 }
 .section_container {
-  max-width: calc(100% - 240px);
+  max-width: calc(100% - 120px);
+  margin: 0 auto;
+}
+.header_container_ex {
+  max-width: calc(100% - 120px);
   margin: 0 auto;
 }
 .main-section {
@@ -17,20 +20,20 @@ p {
   color: #756458;
   text-align: start;
   font-family: Montserrat;
-  font-size: 64px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 600;
-  line-height: 77px;
+  line-height: 56px;
   letter-spacing: 0.64px;
   text-transform: uppercase;
 }
 .main-section p {
   color: #7a695f;
   font-family: Montserrat;
-  font-size: 28px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 500;
-  line-height: 44px;
+  line-height: 36px;
 }
 .design_development_phase {
   background: linear-gradient(
@@ -47,15 +50,15 @@ p {
 }
 .design_development_phase .content_area h4 {
   color: #fff;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 52px;
+  line-height: 40px;
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
 .design_development_phase .tabs_area {
-  margin-top: 104px;
+  margin-top: 78px;
 }
 .design_development_phase .tabs_area .tabs {
   display: flex;
@@ -76,6 +79,11 @@ p {
   transition: all 0.3s ease;
   color: #78716c;
 }
+.description_tab_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
 
 .design_development_phase .tabs_area .tab:hover {
   color: #1c1917;
@@ -87,20 +95,24 @@ p {
   font-weight: 700;
 }
 
+.design_development_phase .tabs_area .tab.active span {
+  font-weight: 700;
+}
+
 .design_development_phase .tabs_area .tab-number {
   margin-right: 0.5rem;
   color: #fff;
   font-family: Montserrat;
-  font-size: 28px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28.8px;
+  line-height: 22px;
 }
 
 .design_development_phase .tabs_area .tab-title {
   color: #fff;
   font-family: Montserrat;
-  font-size: 28px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 500;
   line-height: 28.8px;
@@ -130,13 +142,17 @@ p {
   background-position: center;
   background-size: cover;
   position: relative;
+  height: 341px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .construction_phase::before {
   content: "";
   position: absolute;
-  top: 227px;
+  bottom: -72px;
   left: 0;
-  width: 565.333px;
+  width: 424px;
   height: 318px;
   background: url("../images/about/wall_board.png") bottom left / contain
     no-repeat;
@@ -144,17 +160,16 @@ p {
 }
 
 .construction_phase .content_area {
-  padding: 189px 0px;
   text-align: center;
 }
 .construction_phase .content_area h3 {
   color: #fff;
   text-align: center;
   font-family: Montserrat;
-  font-size: 88px;
+  font-size: 66px;
   font-style: normal;
   font-weight: 400;
-  line-height: 77px;
+  line-height: 56px;
   letter-spacing: 0.88px;
   text-transform: uppercase;
 }
@@ -238,10 +253,10 @@ p {
 .timeline-content h3 {
   color: #756458;
   font-family: Montserrat;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 52px;
+  line-height: 40px;
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
@@ -249,18 +264,18 @@ p {
 .timeline-content h4 {
   color: #7a695f;
   font-family: Montserrat;
-  font-size: 28px;
+  font-size: 21px;
   font-style: normal;
   font-weight: 500;
-  line-height: 44px;
+  line-height: 33px;
 }
 .timeline-content p {
   color: #86796f;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 22px;
   margin-bottom: 0;
 }
 
@@ -312,10 +327,10 @@ p {
   color: #756458;
   text-align: center;
   font-family: Montserrat;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 52px;
+  line-height: 40px;
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
@@ -333,7 +348,7 @@ p {
   gap: 5px;
   transition: background 0.3s ease;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -345,6 +360,11 @@ p {
 }
 
 @media (max-width: 768px) {
+  .header-sidemenu .logo img {
+    max-width: 128px !important;
+    object-fit: cover !important;
+    height: 35px !important;
+  }
   .nav {
     display: none;
   }
@@ -422,8 +442,165 @@ p {
     width: 1600px;
     margin: 0 auto;
   }
+  .header_container_ex {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .main-section h2 {
+    color: #756458;
+    text-align: start;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 77px;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+  }
+  .main-section p {
+    color: #7a695f;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px;
+  }
+  .design_development_phase .content_area h4 {
+    color: #fff;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+  }
+
+  .design_development_phase .tabs_area .tab-title {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.8px;
+  }
+
+  .design_development_phase .tabs_area .tab-number {
+    margin-right: 0.5rem;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.8px;
+  }
+  .design_development_phase .tabs_area {
+    margin-top: 104px;
+  }
+
+  .construction_phase .content_area h3 {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 88px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 77px;
+    letter-spacing: 0.88px;
+    text-transform: uppercase;
+  }
+  .timeline-content h3 {
+    color: #756458;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+  }
+  .timeline-content h4 {
+    color: #7a695f;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px;
+  }
+  .timeline-content p {
+    color: #86796f;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+
+  .cta-container h2 {
+    color: #756458;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+    letter-spacing: -0.72px;
+    text-transform: uppercase;
+  }
+  .cta-container .btn {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(58, 33, 19, 0.7);
+    color: white;
+    padding: 16px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s ease;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+  }
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 768px) {
+  .construction_phase::before {
+    bottom: -27px;
+  }
+  .header_container_ex {
+    max-width: 100%;
+    padding: 0px 20px;
+    margin: 0 auto;
+  }
+  .experience-page {
+    margin-top: 67px;
+  }
+  .construction_phase::before {
+    /* top: 189px; */
+    width: 164px;
+    height: 92px;
+  }
+  .design_development_phase .tabs_area .tab-title {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .design_development_phase .tabs_area .tab-number {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .design_development_phase .tabs_area .tab {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 1025px) {
   .section_container {
     max-width: 100% !important;
     margin: 0 auto;
@@ -435,9 +612,14 @@ p {
     font-size: 23px;
     line-height: 38px;
   }
+
   .main-section p {
     font-size: 14px;
     line-height: 21.073px;
+  }
+
+  .description_tab_content {
+    margin-top: 26px;
   }
 
   .design_development_phase .content_area h4 {
@@ -447,7 +629,7 @@ p {
   }
 
   .design_development_phase .content_area {
-    padding: 80px 20px !important;
+    padding: 80px 16px !important;
   }
 
   .design_development_phase .tabs_area {
@@ -498,13 +680,14 @@ p {
     line-height: 17.473px;
     text-transform: capitalize;
   }
+
   .design_development_phase .tabs_area .tab-content p {
     font-size: 14px;
     font-weight: 500;
     line-height: 21.073px;
   }
   .design_development_phase .tabs_area .tab-content {
-    margin-top: 26px;
+    margin-top: 34px;
     padding: 0px !important;
   }
   .construction_phase .content_area h3 {
@@ -512,7 +695,7 @@ p {
     font-weight: 600;
     line-height: 38.048px;
     letter-spacing: -0.527px;
-    width: 200px;
+    width: 300px;
     margin: auto;
     text-align: center;
   }
@@ -522,9 +705,9 @@ p {
   }
 
   .construction_phase::before {
-    top: 88px;
     width: 164px;
     height: 92px;
+    bottom: -27px;
   }
   .cta-container {
     padding: 28px 0px;
@@ -535,4 +718,11 @@ p {
     line-height: 36px;
     letter-spacing: -0.527px;
   }
+
+  .construction_phase {
+    height: 226px;
+  }
+}
+
+@media (min-width: 480px) {
 }
