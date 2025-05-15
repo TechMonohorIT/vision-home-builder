@@ -575,6 +575,9 @@ p {
   .construction_phase::before {
     bottom: -27px;
   }
+  .header-sidemenu {
+    height: auto !important;
+  }
   .header_container_ex {
     max-width: 100%;
     padding: 0px 20px;

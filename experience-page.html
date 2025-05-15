@@ -109,6 +109,14 @@
             padding: 24px 0px;
             border-bottom: 1.5px solid #e5e5e5;
             height: 96px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-sidemenu.scrolled {
+            background-color: rgba(109, 93, 78, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(6px);
         }
 
         /* Hamburger icon */
@@ -750,6 +758,14 @@
     </script>
 
     <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header-sidemenu');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
         const logo = document.getElementById('siteLogo');
 
         window.addEventListener('scroll', () => {
