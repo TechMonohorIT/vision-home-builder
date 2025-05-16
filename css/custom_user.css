@@ -658,7 +658,7 @@
 }
 
 .services-image-section {
-  background: url("../images/photorealistic-timber-house-interior-with-wooden-decor-furnishings.jpg") no-repeat;
+  background: url("../images/photorealistic-timber-house-interior-with-wooden-decor-furnishings-optimize.jpg") no-repeat;
   background-position: left bottom;
   background-size: cover;
   width: 100%;
@@ -831,7 +831,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/empty-modern-apartment-illuminated-by-sunlight-shadows-generated-by-ai.jpg");
+  background-image: url("../images/empty-modern-apartment-illuminated-by-sunlight-shadows-generated-by-ai-optimize.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1306,7 +1306,7 @@ span.counter {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/photorealistic.jpg");
+  background-image: url("../images/photorealistic-timber-house-interior-with-wooden-decor-furnishings-optimize.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
