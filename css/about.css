@@ -8,8 +8,7 @@ body {
 
 .about-container {
   position: relative;
-  background: url("../images/about/about-bg.png") lightgray 50% / cover
-    no-repeat;
+  background: url("../images/about-bg.jpg") lightgray 50% / cover no-repeat;
   min-height: 100vh;
   z-index: 1;
 
@@ -125,7 +124,7 @@ body {
 }
 
 .mission_vision {
-  background: url("../images/about/image_bg.png") lightgray;
+  background: url("../images/about/image_bg.jpg") lightgray;
   height: 100%;
   align-self: stretch;
   background-position: center;

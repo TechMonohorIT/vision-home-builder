@@ -41,7 +41,7 @@ p {
       rgba(58, 33, 19, 0.81) 3.94%,
       #3a2113 100%
     ),
-    url("../images/development_phase_bg.png");
+    url("../images/development_phase_bg.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -137,7 +137,7 @@ p {
 }
 
 .construction_phase {
-  background: rgba(10, 4, 0, 0.81) url("../images/construction_bg.png");
+  background: rgba(10, 4, 0, 0.81) url("../images/construction_bg.jpg");
   background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
@@ -176,7 +176,7 @@ p {
 
 .timeline-section-container {
   position: relative;
-  background: url("../images/our_skills_bg.png") center center / cover no-repeat,
+  background: url("../images/our_skills_bg.jpg") center center / cover no-repeat,
     #fff;
 
   background-repeat: no-repeat;
