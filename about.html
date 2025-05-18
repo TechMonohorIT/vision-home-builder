@@ -782,6 +782,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/function.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
 
   <script>
     const swiper = new Swiper('.inspiration-design .swiper', {
@@ -815,15 +816,6 @@
       sideMenu.classList.toggle('open');
       overlay.classList.toggle('open');
     }
-
-    window.addEventListener('scroll', function () {
-      const header = document.querySelector('.header-sidemenu');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
   </script>
 
   <script>
