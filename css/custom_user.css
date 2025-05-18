@@ -1007,6 +1007,7 @@
 /************************************/
 .testimonials-container {
   display: grid;
+  background-color: #FAFAFA !important;
   grid-template-columns: 50% 50%;
 }
 
@@ -1021,8 +1022,10 @@
   background: #6A5C4E;
 }
 
+
 .left-box-2 {
-  background: white;
+
+  background: #FAFAFA;
 }
 
 .testimonial-left-box::before {
@@ -1048,6 +1051,7 @@
   margin-top: 80px;
   padding-right: 50px;
   margin-bottom: 80px;
+  background-color: #FAFAFA;
 }
 
 .testimonial-slider {
@@ -1772,6 +1776,7 @@ span.counter {
     flex-direction: column !important;
     margin-left: 16px !important;
     margin-right: 16px !important;
+   
   }
 
   .our-testimonial-content {
