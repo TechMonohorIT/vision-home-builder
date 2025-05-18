@@ -245,20 +245,20 @@ body {
 }
 
 .our_leadership_container .left_side img {
-  margin-top: 165px;
-  width: 555.676px;
-  height: 509.6px;
+  margin-top: 122px;
+  width: 416.757px;
+  height: 382.2px;
 }
 .our_leadership_image {
   position: absolute;
-  right: 0;
-  bottom: 94px;
+  right: 108px;
+  bottom: 153px;
 }
 
 .our_leadership_container .right_side {
   background-color: #382213;
-  height: 694px;
-  width: 500px;
+  width: 756.75px;
+  height: 557.25px;
   margin-left: auto;
 }
 
@@ -269,13 +269,14 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
+  width: 603px;
   margin: 0;
   padding: 100px 50px 0px 50px;
 }
 
 .our_leadership_image img {
   width: 700px;
-  height: 556px;
+  height: 417px;
 }
 
 @media (min-width: 1920px) {
@@ -459,7 +460,7 @@ body {
   }
   .our_leadership_image {
     position: absolute;
-    right: 230px;
+    right: 144px;
     bottom: 94px;
   }
   .our_leadership_container .right_side p {
@@ -470,17 +471,21 @@ body {
     font-weight: 500;
     line-height: 38px;
     margin: 0;
-    padding: 162px 160px 0px 116px;
+    padding: 100px 50px 0px 50px;
   }
   .our_leadership_container .right_side {
     background-color: #382213;
     height: 743px;
-    width: 700px;
+    width: 1009px;
     margin-left: auto;
   }
   .our_leadership_image img {
     width: 936px;
     height: 556px;
+  }
+  .our_leadership_container .left_side img {
+    width: 555.676px;
+    height: 509.6px;
   }
 }
 
@@ -524,13 +529,8 @@ body {
   }
   .our_leadership_image img {
     width: 100%;
-    height: 458px;
+    height: 458px !important;
     object-fit: cover;
-  }
-  .our_leadership_image {
-    position: absolute;
-    right: -45px !important;
-    bottom: -47px !important;
   }
 }
 
@@ -563,16 +563,6 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 30px; /* 176.471% */
-  }
-  .our_leadership_container .right_side p {
-    color: #cbc5be !important;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 38px;
-    margin: 0;
-    padding: 50px 20px 0px 20px;
   }
 
   .about-banner-content h3 {
@@ -668,6 +658,45 @@ body {
   .mission_vision_content {
     row-gap: 20px;
   }
+
+  .our_leadership_container .left_side h3 {
+    width: 321px;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38.048px;
+    letter-spacing: -0.527px;
+  }
+  .our_leadership_container .right_side p {
+    color: #cbc5be !important;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    max-width: 374px;
+    line-height: 24px;
+    margin: 0;
+    padding: 20px;
+  }
+  .our_leadership_container .right_side {
+    height: 430px;
+  }
+  .our_leadership_image img {
+    height: 512px !important;
+    object-fit: cover !important;
+  }
+
+  .our_leadership_image {
+    bottom: -50% !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 398px;
+  }
+  .mobile_team_img img {
+    margin-top: 220px;
+    width: 355px;
+    height: 325.566px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -713,10 +742,32 @@ body {
   }
   .our_leadership_image {
     position: absolute;
-    right: -45px;
-    bottom: -57px;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
   }
   .our_leadership_container .right_side {
     width: 100%;
+    position: relative;
+  }
+  .our_leadership_image img {
+    width: 558px;
+    height: 334px;
+    object-fit: contain;
+  }
+  .mobile_team_img {
+    display: block;
+    padding: 32px;
+  }
+}
+.desktop_team_img {
+  display: none !important;
+}
+@media (min-width: 1025px) {
+  .desktop_team_img {
+    display: block !important;
+  }
+  .mobile_team_img {
+    display: none;
   }
 }

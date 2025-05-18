@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 40px;
+            position: relative;
+            background: linear-gradient(to bottom left, #ffffff 50%, #4a2f1e 50%);
+            color: #333;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .text-content small {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .text-content h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 30px;
+            color: #555;
+        }
+
+        .big-text {
+            font-size: 100px;
+            font-weight: 900;
+            color: #6b3b1f;
+            line-height: 0.9;
+            letter-spacing: 5px;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-content {
+            flex: 1;
+            position: relative;
+            max-width: 600px;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: #4a2f1e;
+            color: #fff;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .image-box {
+            margin-top: 100px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .team-section {
+                flex-direction: column;
+            }
+
+            .text-content,
+            .image-content {
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            .big-text {
+                font-size: 60px;
+            }
+
+            .overlay-text {
+                position: static;
+                background: none;
+                color: #333;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="team-section">
+        <div class="text-content">
+            <small>Our Leadership</small>
+            <h2>VISIONARIES BUILD TOMORROW</h2>
+            <div class="big-text">TE<br>AM</div>
+        </div>
+
+        <div class="image-content">
+            <div class="overlay-text">
+                With our ingenious leaders in-charge of your dreamy home, you can be assured that your aspirations will
+                be realised with technical brilliance and creative flare.
+            </div>
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Room with furniture">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
