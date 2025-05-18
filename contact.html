@@ -237,7 +237,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 70px 20px 0px;
+      padding: 21px 0px;
+      /* padding: 20px 70px 20px 0px; */
 
 
       background-color: rgba(109, 93, 78, 0.5);
@@ -636,7 +637,35 @@
       padding-right: 160px;
 
     }
+    .top-container {
+      width: 100%;
+      max-width: calc(100% - 240px);
+      margin: 0 auto;
 
+    }
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .top-container {
+
+      width: 100%;
+        max-width: calc(100% - 240px);
+        margin: 0 auto;
+}
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .top-container {
+      width: 100%;
+        max-width: calc(100% - 70px);
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px) {
+    .top-container {
+      width: 100%;
+        max-width: calc(100% - 32px) !important;
+        margin: 0 auto;
+    }
+}
     .header-section {
       background-image: url('/images/contact-page/shadow.png');
       background-size: cover;
@@ -880,7 +909,7 @@
         flex-direction: column;
         align-items: center;
         padding-top: 60px;
-        margin-top: 60px;
+        margin-top: 89px;
         gap: 32px;
       }
 
@@ -1068,7 +1097,7 @@
   <!-- Preloader End -->
 
   <header class="header-sidemenu">
-    <div class="header-content main-container">
+    <div class="header-content top-container">
       <div class="logo" id="siteLogo">
         <a href="./">
           <img src="images/vision-logo.svg" alt="Vision Smart Homes Logo">
@@ -1159,20 +1188,21 @@
                   <h3>information</h3>
                   <ul>
                     <li><a href="about.html">about our company</a></li>
-                    <li><a href="services.html">view our service</a></li>
-                    <li><a href="#">careers at company</a></li>
-                    <li><a href="blog.html">read our blog</a></li>
-                    <li><a href="projects.html">our latest projects</a></li>
+                    <li><a href="contact.html">contact with us</a></li>
+                    <li><a href="experience-page.html">view our experience</a></li>
+                    <li><a href="./">our services</a></li>
+                    <li><a href="./">our projects</a></li>
+                    <li><a href="./">our blogs</a></li>
                   </ul>
                 </div>
                 <div class="footer-links">
                   <h3>portfolio</h3>
                   <ul>
-                    <li><a href="project-single.html">luxury home design</a></li>
-                    <li><a href="project-single.html">residential interior design</a></li>
-                    <li><a href="project-single.html">commercial space design</a></li>
-                    <li><a href="project-single.html">residential interior design</a></li>
-                    <li><a href="project-single.html">renovation and restoration design</a></li>
+                    <li><a href="./">luxury home design</a></li>
+                    <li><a href="./">residential interior design</a></li>
+                    <li><a href="./">commercial space design</a></li>
+                    <li><a href="./">residential interior design</a></li>
+                    <li><a href="./">renovation and restoration design</a></li>
                   </ul>
                 </div>
                 <div class="footer-contact-box footer-links">
@@ -1345,19 +1375,11 @@
         <img style="height:500px; " src="images/contact-page/plant_blur.png" class="" />
       </div>
     </div>
-
-
-
-
-
-
-
-
   </div>
 
 
   <footer class="main-footer">
-    <div class="main-container">
+    <div class="top-container">
       <div class="row">
         <div class="col-lg-12">
           <div class="footer-header">
@@ -1388,20 +1410,21 @@
           <h3>information</h3>
           <ul>
             <li><a href="about.html">about our company</a></li>
-            <li><a href="services.html">view our service</a></li>
-            <li><a href="#">careers at company</a></li>
-            <li><a href="blog.html">read our blog</a></li>
-            <li><a href="projects.html">our latest projects</a></li>
+            <li><a href="contact.html">contact with us</a></li>
+            <li><a href="experience-page.html">view our experience</a></li>
+            <li><a href="./">our services</a></li>
+            <li><a href="./">our projects</a></li>
+            <li><a href="./">our blogs</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h3>portfolio</h3>
           <ul>
-            <li><a href="project-single.html">luxury home design</a></li>
-            <li><a href="project-single.html">residential interior design</a></li>
-            <li><a href="project-single.html">commercial space design</a></li>
-            <li><a href="project-single.html">residential interior design</a></li>
-            <li><a href="project-single.html">renovation and restoration design</a></li>
+            <li><a href="./">luxury home design</a></li>
+            <li><a href="./">residential interior design</a></li>
+            <li><a href="./">commercial space design</a></li>
+            <li><a href="./">residential interior design</a></li>
+            <li><a href="./">renovation and restoration design</a></li>
           </ul>
         </div>
         <div class="footer-contact-box footer-links">
@@ -1492,6 +1515,7 @@
   <script src="js/wow.min.js"></script>
   <!-- Main Custom js file -->
   <script src="js/function.js"></script>
+  <script src="js/index.js"></script>
   <script>
     function toggleSideMenu() {
       const sideMenu = document.getElementById('sideMenu');
@@ -1514,7 +1538,7 @@
         logo.classList.remove('hide');
       }
     });
-  </script>
+  </script>-->
 
 </body>
 

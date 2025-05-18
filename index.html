@@ -644,9 +644,9 @@
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="experience-page.html">Our Experience</a></li>
-      <li><a href="/">Services</a></li>
-      <li><a href="/">Projects</a></li>
-      <li><a href="/">Blog</a></li>
+      <li><a href="./">Services</a></li>
+      <li><a href="./">Projects</a></li>
+      <li><a href="./">Blog</a></li>
     </ul>
   </div>
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -700,20 +700,21 @@
                   <h3>information</h3>
                   <ul>
                     <li><a href="about.html">about our company</a></li>
-                    <li><a href="services.html">view our service</a></li>
-                    <li><a href="#">careers at company</a></li>
-                    <li><a href="blog.html">read our blog</a></li>
-                    <li><a href="projects.html">our latest projects</a></li>
+                    <li><a href="contact.html">contact with us</a></li>
+                    <li><a href="experience-page.html">view our experience</a></li>
+                    <li><a href="./">our services</a></li>
+                    <li><a href="./">our projects</a></li>
+                    <li><a href="./">our blogs</a></li>
                   </ul>
                 </div>
                 <div class="footer-links">
                   <h3>portfolio</h3>
                   <ul>
-                    <li><a href="project-single.html">luxury home design</a></li>
-                    <li><a href="project-single.html">residential interior design</a></li>
-                    <li><a href="project-single.html">commercial space design</a></li>
-                    <li><a href="project-single.html">residential interior design</a></li>
-                    <li><a href="project-single.html">renovation and restoration design</a></li>
+                    <li><a href="./">luxury home design</a></li>
+                    <li><a href="./">residential interior design</a></li>
+                    <li><a href="./">commercial space design</a></li>
+                    <li><a href="./">residential interior design</a></li>
+                    <li><a href="./">renovation and restoration design</a></li>
                   </ul>
                 </div>
                 <div class="footer-contact-box footer-links">
@@ -1565,8 +1566,8 @@
   </div>
   <!--our-testimonial-end-->
 
-  <!--our-blog-start-9-->
-  <div class="our-blog">
+  <!--our-blog-start-9 ---commented as required -->
+  <!-- <div class="our-blog">
     <div class="heading-contents main-container">
       <div class="section-title">
         <h3 class="wow fadeInUp">latest news</h3>
@@ -1663,7 +1664,7 @@
         </svg>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--our-blog-end-->
 
   <!--footer-start-10-->
@@ -1699,20 +1700,21 @@
           <h3>information</h3>
           <ul>
             <li><a href="about.html">about our company</a></li>
-            <li><a href="services.html">view our service</a></li>
-            <li><a href="#">careers at company</a></li>
-            <li><a href="blog.html">read our blog</a></li>
-            <li><a href="projects.html">our latest projects</a></li>
+            <li><a href="contact.html">contact with us</a></li>
+            <li><a href="experience-page.html">view our experience</a></li>
+            <li><a href="./">our services</a></li>
+            <li><a href="./">our projects</a></li>
+            <li><a href="./">our blogs</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h3>portfolio</h3>
           <ul>
-            <li><a href="project-single.html">luxury home design</a></li>
-            <li><a href="project-single.html">residential interior design</a></li>
-            <li><a href="project-single.html">commercial space design</a></li>
-            <li><a href="project-single.html">residential interior design</a></li>
-            <li><a href="project-single.html">renovation and restoration design</a></li>
+            <li><a href="./">luxury home design</a></li>
+            <li><a href="./">residential interior design</a></li>
+            <li><a href="./">commercial space design</a></li>
+            <li><a href="./">residential interior design</a></li>
+            <li><a href="./">renovation and restoration design</a></li>
           </ul>
         </div>
         <div class="footer-contact-box footer-links">
@@ -1791,6 +1793,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/function.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
 
   <script>
     const swiper = new Swiper('.inspiration-design .swiper', {
@@ -1844,18 +1847,6 @@
         logo.classList.add('hide');
       } else {
         logo.classList.remove('hide');
-      }
-    });
-  </script>
-  <!-- This js codes for header-side-menu add conditional background scrooling a sections -->
-  <script>
-    document.addEventListener('scroll', () => {
-      const header = document.querySelector('.header-sidemenu');
-
-      if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
       }
     });
   </script>
