@@ -26,7 +26,8 @@
         "titleBar.border": "#9de3f5",
         "titleBar.inactiveBackground": "#9de3f599",
         "titleBar.inactiveForeground": "#112a4699"
-    }
+    },
+    "liveServer.settings.port": 5501
 } // {
 //     "workbench.colorCustomizations": {
 //         "activityBar.activeBackground": "#cbf0fa",
