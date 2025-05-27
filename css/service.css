@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.service-page {
+  margin-top: 100px;
+}
+
+.section_container {
+  max-width: calc(100% - 120px);
+  margin: 0 auto;
+}
+.service_main_container {
+  position: relative;
+  background: url("../images/service-hero-bg.png");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.service_main_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(122, 91, 65, 0.84);
+  z-index: -1;
+}
+.service_banner_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 1049px;
+  width: 100%;
+  height: 728px;
+  z-index: 2;
+}
+.service_banner_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.service_content {
+  padding-top: 72px !important;
+}
+.service_content h4 {
+  color: var(--color-bw-white, #fff);
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-transform: capitalize;
+}
+.service_content h2 {
+  margin-top: 40px;
+  color: var(--color-bw-white, #fff);
+  font-family: Montserrat;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 68px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  width: 535px;
+}
+.service_content span {
+  font-weight: 300;
+}
+
+.residential_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url("../images/residential-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 810px;
+  height: 100%;
+}
+.residential_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 247, 247, 0.8);
+  z-index: -1;
+}
+.residential_container .residential_img {
+  width: 770.569px;
+  height: 721px;
+  flex-shrink: 0;
+  position: absolute;
+  top: -19px;
+  left: 0;
+}
+
+.residential_container .residential_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.residential_container .residential_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+}
+
+.residential_container .residential_content h2 {
+  color: #756458;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: uppercase;
+  position: relative;
+  max-width: 546px;
+}
+.residential_container .residential_content h2::after {
+  content: "";
+  position: absolute;
+  width: 424px;
+  height: 3px;
+  background: #a79c93;
+  bottom: -10px;
+  left: 0;
+}
+.residential_container .residential_content p {
+  margin-top: 32px;
+  color: #7a695f;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.48px;
+  max-width: 546px;
+}
+
+.commercial_design_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url("../images/commercial_design_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 810px;
+  height: 100%;
+}
+.commercial_design_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.84;
+  background: #7a5b41;
+  z-index: -1;
+}
+.commercial_design_content {
+  position: absolute;
+  left: 120px;
+}
+.commercial_design_container .commercial_design_img {
+  max-width: 1028px;
+  width: 100%;
+  height: 814px;
+  flex-shrink: 0;
+  position: absolute;
+  top: -53px;
+  right: 0;
+  aspect-ratio: 514/407;
+}
+.commercial_design_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.commercial_design_container .commercial_design_content h2 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: uppercase;
+  position: relative;
+  max-width: 546px;
+}
+.commercial_design_container .commercial_design_content h2::after {
+  content: "";
+  position: absolute;
+  width: 424px;
+  height: 3px;
+  background: #fff;
+  bottom: -10px;
+  left: 0;
+}
+.commercial_design_container .commercial_design_content p {
+  margin-top: 32px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.48px;
+  max-width: 546px;
+}
+
+.furniture_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url("../images/furniture-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 810px;
+  height: 100%;
+}
+.furniture_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    67deg,
+    #fff 26.9%,
+    rgba(233, 233, 233, 0.86) 120.9%
+  );
+  z-index: -1;
+}
+.color_consultation_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url("../images/color_consultation_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 810px;
+  height: 100%;
+}
+.color_consultation_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    67deg,
+    #fff 26.9%,
+    rgba(233, 233, 233, 0.86) 120.9%
+  );
+  z-index: -1;
+}
+
+.lighting_design_img {
+  max-width: 811.708px;
+  width: 100%;
+  height: 805px;
+  flex-shrink: 0;
+  position: absolute;
+  top: -53px;
+  right: 0;
+  aspect-ratio: 514/407;
+}
+.lighting_design_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media (min-width: 1441px) {
+  .service_banner_img {
+    max-width: 74vw;
+  }
+  .residential_container .residential_img {
+    max-width: 52vw;
+    width: 100%;
+  }
+  .commercial_design_container .commercial_design_img {
+    max-width: 74vw;
+    width: 100%;
+  }
+  .lighting_design_img {
+    max-width: 60vw;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1394px) {
+  .commercial_design_container .commercial_design_img {
+    max-width: 847px;
+    width: 100%;
+  }
+  .lighting_design_img {
+    max-width: 650px;
+    width: 100%;
+  }
+  .commercial_design_container .commercial_design_content h2 {
+    max-width: 447px;
+  }
+  .commercial_design_container .commercial_design_content p {
+    max-width: 465px;
+  }
+}
+
+@media (max-width: 1222px) {
+  .commercial_design_container .commercial_design_img {
+    max-width: 610px;
+    width: 100%;
+  }
+  .lighting_design_img {
+    max-width: 610px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .service_content h2 {
+    margin-top: 40px;
+    color: var(--color-bw-white, #fff);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    width: 535px;
+  }
+
+  .residential_container .residential_img {
+    width: 552.569px;
+    height: 684px;
+    flex-shrink: 0;
+    position: absolute;
+    top: -19px;
+    left: 0;
+  }
+  .residential_container .residential_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    left: 41%;
+    top: 41px;
+  }
+  .residential_container .residential_content h2 {
+    color: #756458;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    text-transform: uppercase;
+    position: relative;
+    max-width: 455px;
+  }
+  .residential_container .residential_content p {
+    margin-top: 32px;
+    color: #7a695f;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.48px;
+    max-width: 433px;
+    width: 100%;
+  }
+
+  .commercial_design_container .commercial_design_img {
+    max-width: 610px;
+    width: 100%;
+    height: 500px;
+    top: 277px;
+  }
+  .commercial_design_content {
+    position: absolute;
+    left: 120px;
+    top: 59px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section_container {
+    max-width: calc(100% - 64px);
+    margin: 0 auto;
+  }
+  .service-page {
+    margin-top: 67px;
+  }
+  .residential_container .residential_img {
+    width: 401.87px;
+    height: 376.019px;
+    flex-shrink: 0;
+    aspect-ratio: 401.87/376.02;
+    top: 194px;
+  }
+  .residential_container {
+    min-height: 642px;
+    height: 100%;
+  }
+  .residential_container .residential_content h2 {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 228px;
+  }
+  .residential_container .residential_content h2::after {
+    width: 169.6px;
+    height: 1.2px;
+  }
+  .residential_container .residential_content p {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 320px;
+    width: 100%;
+  }
+  .residential_container .residential_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    left: 80px;
+    top: 32px;
+  }
+  .commercial_design_content {
+    left: 32px;
+  }
+}
+
+@media (max-width: 668px) {
+  .service_content h2 {
+    font-size: 28px;
+    line-height: 32px;
+    width: 228px;
+  }
+
+  .service_banner_img {
+    position: absolute;
+    top: 145px;
+    right: 0;
+    max-width: 401px;
+    width: 100%;
+    height: 280px;
+    z-index: 2;
+  }
+  .service_main_container {
+    min-height: 481px;
+    height: 100%;
+  }
+  .commercial_design_container .commercial_design_content h2 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    position: relative;
+    max-width: 228px;
+  }
+  .commercial_design_container .commercial_design_content p {
+    color: var(--color-bw-white, #fff);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+    max-width: 320px;
+  }
+  .commercial_design_container .commercial_design_content h2::after {
+    width: 169.6px;
+    height: 1.2px;
+  }
+  .commercial_design_container .commercial_design_img {
+    max-width: 400px;
+    height: 277px;
+  }
+  .commercial_design_container {
+    min-height: 584px;
+    height: 100%;
+  }
+}
