@@ -260,6 +260,115 @@ div img {
     z-index: 3;
 }
 
+/* ********************** */
+/* 5.lighting */
+.lighting {
+    position: relative;
+    background-image: url("/images/lighting-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.lighting .box-of-content {
+    padding-top: 256px;
+    z-index: 4;
+}
+
+.lighting .box-of-content h2,
+.lighting .box-of-content p {
+    color: var(--white-color);
+}
+
+.lighting .box-of-content h2::after {
+    background-color: var(--white-color);
+}
+
+.lighting-image-box {
+    width: 100%;
+    max-width: 811.71px;
+    aspect-ratio: 811.71/805.00;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+/* ********************** */
+/* 6.colour */
+.colour {
+    position: relative;
+    background-image: url("/images/colour-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.colour-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(67deg, #FFF 26.9%, rgba(233, 233, 233, 0.86) 120.9%);
+    z-index: 2;
+}
+
+.colour .box-of-content {
+    padding-top: 192px;
+    z-index: 4;
+}
+
+.colour-image-box {
+    width: 100%;
+    max-width: 778px;
+    aspect-ratio: 389/373;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* ********************** */
+/* 7.visual */
+.visual {
+    position: relative;
+    background-image: url("/images/visual-merged-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.visual .box-of-content {
+    padding-top: 256px;
+    z-index: 4;
+}
+
+.visual .box-of-content h2,
+.visual .box-of-content p {
+    color: var(--white-color);
+}
+
+.visual .box-of-content h2::after {
+    background-color: var(--white-color);
+}
+
+.visual-image-box {
+    width: 100%;
+    max-width: 773px;
+    aspect-ratio: 773/752;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
 /****************************************/
 /****************************************/
 @media(max-width: 430px) {
@@ -386,6 +495,57 @@ div img {
         top: auto;
         left: 0;
         bottom: -90px;
+        z-index: 3;
+    }
+
+    /* lighting */
+    .lighting .box-of-content {
+        padding-top: 72px;
+        z-index: 4;
+    }
+
+    .lighting-image-box {
+        width: 100%;
+        max-width: 811.71px;
+        aspect-ratio: 811.71/805.00;
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    /* colour */
+    .colour .box-of-content {
+        padding-top: 72px;
+        z-index: 4;
+    }
+
+    .colour-image-box {
+        width: 100%;
+        max-width: 811.71px;
+        aspect-ratio: 811.71/805.00;
+        position: absolute;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    /* visual */
+    .visual .box-of-content {
+        padding-top: 72px;
+        z-index: 4;
+    }
+
+    .visual-image-box {
+        width: 100%;
+        max-width: 811.71px;
+        aspect-ratio: 811.71/805.00;
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
         z-index: 3;
     }
 }
