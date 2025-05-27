@@ -5,7 +5,7 @@
 }
 
 .section_container {
-  max-width: calc(100% - 120px);
+  max-width: calc(100% - 320px);
   margin: 0 auto;
 }
 .service_main_container {
@@ -174,7 +174,7 @@
 }
 .commercial_design_content {
   position: absolute;
-  left: 120px;
+  left: 163px;
 }
 .commercial_design_container .commercial_design_img {
   max-width: 1028px;
@@ -295,6 +295,47 @@
   object-fit: fill;
 }
 
+.visualization_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url("../images/visualization_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  min-height: 810px;
+  height: 100%;
+}
+.visualization_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.84;
+  background: #7a5b41;
+  z-index: -1;
+}
+
+.visualization_section_img {
+  max-width: 796px;
+  width: 100%;
+  height: 817px;
+  flex-shrink: 0;
+  position: absolute;
+  top: -53px;
+  right: 0;
+  aspect-ratio: 514/407;
+}
+.visualization_section_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
 @media (min-width: 1441px) {
   .service_banner_img {
     max-width: 74vw;
@@ -311,6 +352,10 @@
     max-width: 60vw;
     width: 100%;
   }
+  .visualization_section_img {
+    max-width: 60vw;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1394px) {
@@ -319,7 +364,11 @@
     width: 100%;
   }
   .lighting_design_img {
-    max-width: 650px;
+    max-width: 550px;
+    width: 100%;
+  }
+  .visualization_section_img {
+    max-width: 500px;
     width: 100%;
   }
   .commercial_design_container .commercial_design_content h2 {
@@ -336,7 +385,7 @@
     width: 100%;
   }
   .lighting_design_img {
-    max-width: 610px;
+    max-width: 550px;
     width: 100%;
   }
 }
@@ -414,7 +463,7 @@
     margin: 0 auto;
   }
   .service-page {
-    margin-top: 67px;
+    margin-top: 96px;
   }
   .residential_container .residential_img {
     width: 401.87px;
@@ -454,9 +503,19 @@
   .commercial_design_content {
     left: 32px;
   }
-}
+  .visualization_section_img {
+    max-width: 400px;
+    height: 389px;
+    width: 100%;
+    top: 191px;
+  }
+  .lighting_design_img {
+    max-width: 400px;
+    height: 372px;
+    width: 100%;
+    top: 159px;
+  }
 
-@media (max-width: 668px) {
   .service_content h2 {
     font-size: 28px;
     line-height: 32px;
@@ -509,4 +568,7 @@
     min-height: 584px;
     height: 100%;
   }
+}
+
+@media (max-width: 668px) {
 }

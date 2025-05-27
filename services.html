@@ -9,22 +9,35 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Awaiken">
-  <!-- Page Title -->
-  <title>Vision Smart Homes - Modern Custom Homes Builder | Sydney Australia</title>
+  <title>Vision-Smart-Home || Building experience</title>
   <!-- Favicon Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-  <!-- Google Fonts Css-->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+  <!-- Google Fonts Css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+
+
+  <!-- New Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
+  <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
   <link href="css/slicknav.min.css" rel="stylesheet">
   <!-- Swiper Css -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <!-- Font Awesome Icon Css-->
+  <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <!-- Font Awesome Icon Css -->
   <link href="css/all.min.css" rel="stylesheet" media="screen">
   <!-- Animated Css -->
   <link href="css/animate.css" rel="stylesheet">
@@ -32,61 +45,91 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <!-- Mouse Cursor Css File -->
   <link rel="stylesheet" href="css/mousecursor.css">
-  <!-- Main Custom Css -->
+  <!-- Main Custom Css (from Inspaire) -->
   <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="css/custom_user.css" rel="stylesheet">
+  <link href="css/service.css" rel="stylesheet">
 
   <!-- Extra custom CSS for side-menu toggle -->
   <style>
     /****************************************************
-  * SIDEMENU STYLES
-  ****************************************************/
+ * SIDEMENU STYLES
+ ****************************************************/
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       /* Ensure your chosen font is applied */
       /* font-family: "Hanken Grotesk", sans-serif; */
       /* This was old font family*/
-
-
       font-family: var(--body-font);
+    }
 
-
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      /* New Font Updated */
+      --body-font: 'Carmen Sans', sans-serif;
+      /*New Google Fonts for figma */
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
     }
 
     /* A custom fixed top bar to hold logo + hamburger */
-    .header-sidemenu {
+    /* .header-sidemenu {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0%;
+      left: 0px;
       right: 0;
       z-index: 999;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 30px;
-
-      /* Fully transparent, no blur */
+      padding: 20px 70px 20px 0px;
       background: none !important;
       backdrop-filter: none !important;
+    } */
+    .header-sidemenu {
+      margin: 0 auto;
+      position: fixed;
+      top: 0%;
+      left: 0px;
+      right: 0;
+      z-index: 999;
+      padding: 24px 0px;
+      /* height: 96px; */
+      background-color: transparent;
+      transition: background-color 0.3s ease;
     }
 
-    .header-sidemenu .logo img {
-      max-height: 50px;
+    .header-sidemenu.scrolled {
+      background-color: rgba(109, 93, 78, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
+      border: none !important;
     }
 
     /* Hamburger icon */
-    .hamburger {
-      width: 30px;
-      height: 20px;
-      cursor: pointer;
-      position: relative;
-    }
-
     .hamburger span {
       display: block;
-      height: 3px;
-      background: #fff;
-      margin: 4px 0;
+      height: 2.5px;
+      background: #8B5E3B;
+      margin-bottom: 9px;
       transition: 0.3s;
+    }
+
+    .hamburger span:last-child {
+      margin-bottom: 0px;
     }
 
     /* The side menu overlay (dark transparent background) */
@@ -117,10 +160,26 @@
       /* hidden offscreen initially */
       width: 300px;
       height: 100%;
-      background-color: #1F1F1F;
+      background-image: url("/images/modern-entryway-hamburger-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 72% center;
       transition: left 0.3s ease-in-out;
-      padding: 2rem;
+      padding-top: 33px;
+      padding-left: 40px;
+      padding-right: 84px;
       z-index: 999;
+    }
+
+    .side-menu::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
+      z-index: -99;
     }
 
     .side-menu.open {
@@ -131,58 +190,165 @@
     /* Close button (X) inside side menu */
     .side-menu .close-btn {
       font-size: 28px;
-      color: #fff;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.8px;
       background: none;
       border: none;
       cursor: pointer;
-      margin-bottom: 1rem;
+      /* margin-bottom: 53px; as per figma */
+      margin-bottom: 40px;
+      margin-top: 75px;
     }
 
     /* Menu items in side menu */
     .side-menu ul {
       list-style: none;
       padding: 0;
-      margin-top: 2rem;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .side-menu ul li {
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
 
     .side-menu ul li a {
-      color: #fff;
-      font-size: 18px;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 23px;
       text-transform: capitalize;
       transition: color 0.3s;
     }
 
     .side-menu ul li a:hover {
-      color: #ffd900ab;
       /* accent color on hover */
+      color: #ffd900ab;
     }
 
-    /* Remove margin-top so the hero sits at the very top behind the header */
-    .hero.hero-video {
-      margin-top: 0;
+    #offcanvasExample {
+      width: 100%;
+    }
+
+    .offcanvas-body {
+      padding: 0px !important;
+      margin-left: 284px;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 57px;
+      top: 30px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .canvas-main-footer {
+      min-height: 100vh !important;
+    }
+
+    .btn-close {
+      --bs-btn-close-color: #000;
+      --bs-btn-close-bg: url("./images/close.svg");
+      --bs-btn-close-opacity: 0.5;
+      --bs-btn-close-hover-opacity: 0.75;
+      --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      --bs-btn-close-focus-opacity: 1;
+      --bs-btn-close-disabled-opacity: 0.25;
+      --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
+      box-sizing: content-box;
+      width: 1em;
+      height: 1em;
+      z-index: 99;
+      padding: 0.25em 0.25em;
+      color: var(--bs-btn-close-color);
+      background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+      border: 0;
+      border-radius: 0.375rem;
+      opacity: var(--bs-btn-close-opacity);
+    }
+
+    .canvas-main-footer .footer-header {
+      padding-bottom: 35px !important;
+    }
+
+
+
+    @media (max-width: 1023.98px) {
+      .offcanvas-start {
+        display: none;
+      }
+
+      .hamburger-mobile {
+        display: inline-block;
+      }
+
+      .hamburger-desktop {
+        display: none;
+      }
+
+      .canvas-main-footer .footer-main-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 28px;
+        padding: 36px 0px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hamburger-desktop {
+        display: inline-block;
+      }
+
+      .hamburger-mobile {
+        display: none;
+      }
+
+      .side-menu-mobile {
+        display: none;
+      }
+
+      .side-menu-overlay {
+        display: none;
+      }
+
+      .side-menu {
+        left: 0;
+      }
+    }
+
+
+    @media(max-width:768px) {
+      .canvas-main-footer .footer-main-links {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+    }
+
+    @media(max-width:576px) {
+      .hamburger {
+        max-width: 26px;
+        max-height: 26px;
+      }
+
+      .hamburger span {
+        margin-bottom: 7px;
+      }
     }
 
     .header-sidemenu .logo img {
-      width: 150px;
-      height: auto;
-      /* for instance, if you know the height you want */
       object-fit: cover;
-      /* ensures the image doesn't distort, 
-                         though it may crop if aspect ratio is different */
+      max-width: 229px;
+      height: 49px !important;
     }
 
-
-    /* 
-   OPTIONAL: If your hero text gets hidden under the header, 
-   you can add top padding to .hero-content or .hero .container instead:
-     .hero-content {
-       padding-top: 80px;
-     }
- */
+    .main-container {
+      max-width: calc(100% - 320px);
+    }
   </style>
 </head>
 
@@ -193,7 +359,7 @@
     <div class="loading-container">
       <div class="loading"></div>
       <div id="loading-icon">
-        <img src="images/loader.svg" alt="">
+        <img src="images/vision_logo_white.png" alt="vision-loader-logo">
       </div>
     </div>
   </div>
@@ -201,473 +367,296 @@
 
   <!-- SIMPLE FIXED HEADER with HAMBURGER -->
   <header class="header-sidemenu">
-    <div class="logo">
-      <a href="./">
-        <img src="images/transparent_logo.png" alt="Vision Smart Homes Logo">
-      </a>
-    </div>
-    <div class="hamburger" onclick="toggleSideMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="header-content section_container">
+      <div class="logo" id="siteLogo">
+        <a href="./">
+          <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
+        </a>
+      </div>
+
+      <!-- for big device -->
+      <div class="hamburger hamburger-desktop" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- for mobile device -->
+      <div class="hamburger hamburger-mobile" onclick="toggleSideMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
   </header>
+  <!-- SIMPLE FIXED HEADER with HAMBURGER-End -->
 
   <!-- The dark overlay for the side menu -->
   <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
 
   <!-- The side drawer menu -->
-  <div class="side-menu" id="sideMenu">
+  <div class="side-menu side-menu-mobile" id="sideMenu">
     <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
     <ul>
       <li><a href="./">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="experience-page.html">Our Experience</a></li>
-      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="experience-page.html">Our Experience</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="./">Projects</a></li>
+      <li><a href="./">Blog</a></li>
     </ul>
   </div>
-  <!-- Header end -->
-
-  <!-- Page Header Start -->
-  <div class="page-header parallaxie">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <!-- Page Header Box Start -->
-          <div class="page-header-box">
-            <h1 class="text-anime-style-2" data-cursor="-opaque">Services</h1>
-            <nav class="wow fadeInUp">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">services</li>
-              </ol>
-            </nav>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body">
+      <div class="canvas-container">
+        <aside class="sidebar-area">
+          <div class="side-menu" id="sideMenu">
+            <ul>
+              <li><a href="./">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="experience-page.html">Our Experience</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/">Projects</a></li>
+              <li><a href="/">Blog</a></li>
+            </ul>
           </div>
-          <!-- Page Header Box End -->
+        </aside>
+        <div class="canvas-content-area">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <!--footer-start-10-->
+          <footer class="main-footer canvas-main-footer">
+            <div class="main-container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="footer-header">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <div class="footer-logo">
+                          <img height="120px" src="images/vision-logo.svg" loading="lazy" alt="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="footer-social-links">
+                          <div class="footer-social-link-title">
+                            <h3>follow our socials</h3>
+                          </div>
+                          <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-main-links">
+                <div class="footer-links">
+                  <h3>information</h3>
+                  <ul>
+                    <li><a href="about.html">about our company</a></li>
+                    <li><a href="contact.html">contact with us</a></li>
+                    <li><a href="experience-page.html">view our experience</a></li>
+                    <li><a href="./">our services</a></li>
+                    <li><a href="./">our projects</a></li>
+                    <li><a href="./">our blogs</a></li>
+                  </ul>
+                </div>
+                <div class="footer-links">
+                  <h3>portfolio</h3>
+                  <ul>
+                    <li><a href="./">luxury home design</a></li>
+                    <li><a href="./">residential interior design</a></li>
+                    <li><a href="./">commercial space design</a></li>
+                    <li><a href="./">residential interior design</a></li>
+                    <li><a href="./">renovation and restoration design</a></li>
+                  </ul>
+                </div>
+                <div class="footer-contact-box footer-links">
+                  <h3>contact us</h3>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>1300 56 55 56</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>info@visionsmarthomes.com.au</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-latest-news footer-links">
+                  <h3>get the latest trending news</h3>
+                  <div class="footer-newsletter-form">
+                    <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+                    <form id="newslettersForm" action="#" method="POST">
+                      <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email"
+                          required>
+                        <button type="submit">
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-social-links-small">
+              <div class="footer-social-link-title">
+                <h3>follow our socials</h3>
+              </div>
+              <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+          <!--footer-end-->
         </div>
       </div>
     </div>
   </div>
-  <!-- Page Header End -->
 
-  <!-- Our Services Section Start -->
-  <div class="page-services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item wow fadeInUp">
-            <!-- Service Image Start -->
-            <div class="service-image">
-              <a href="service-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/service-1.jpg" alt="">
-                </figure>
-              </a>
-            </div>
-            <!-- Service Image End -->
-
-            <!-- Service Button Start -->
-            <div class="service-btn">
-              <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-            </div>
-            <!-- Service Button End -->
-
-            <!-- Service Content Start -->
-            <div class="service-content">
-              <h3><a href="service-single.html">residential interior design</a></h3>
-              <p>We create personalized living spaces that reflect your style and functional needs.</p>
-            </div>
-            <!-- Service Content End -->
-          </div>
-          <!-- Service Item End -->
+  <main>
+    <!-- Begin: service-page -->
+    <div class="service-page">
+      <!-- begin: service banner section -->
+      <section class="service_main_container">
+        <div class="service_banner_img">
+          <img src="../images/service-banner1.png" alt="Banner" />
         </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item wow fadeInUp">
-            <!-- Service Image Start -->
-            <div class="service-image">
-              <a href="service-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/service-2.jpg" alt="">
-                </figure>
-              </a>
-            </div>
-            <!-- Service Image End -->
-
-            <!-- Service Button Start -->
-            <div class="service-btn">
-              <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-            </div>
-            <!-- Service Button End -->
-
-            <!-- Service Content Start -->
-            <div class="service-content">
-              <h3><a href="service-single.html">commercial interior design</a></h3>
-              <p>Enhancing business environments with professional, functional, and aesthetically.</p>
-            </div>
-            <!-- Service Content End -->
-          </div>
-          <!-- Service Item End -->
+        <div class="service_content section_container">
+          <h4 class="text-anime-style-2" data-cursor="-opaque">Services</h4>
+          <h2 class="wow fadeInUp" data-wow-delay="0.2s">DELIVERING <span>EXCELLENCE</span>, EXCEEDING
+            <span>EXPECTATIONS</span>.
+          </h2>
         </div>
+      </section>
+      <!-- end: service banner section -->
 
-        <div class="col-lg-4 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Service Image Start -->
-            <div class="service-image">
-              <a href="service-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/service-3.jpg" alt="">
-                </figure>
-              </a>
-            </div>
-            <!-- Service Image End -->
-
-            <!-- Service Button Start -->
-            <div class="service-btn">
-              <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-            </div>
-            <!-- Service Button End -->
-
-            <!-- Service Content Start -->
-            <div class="service-content">
-              <h3><a href="service-single.html">furniture and decor selection</a></h3>
-              <p>Our experts help you choose the perfect furniture and decor complement your style.</p>
-            </div>
-            <!-- Service Content End -->
-          </div>
-          <!-- Service Item End -->
+      <!-- begin: residential section -->
+      <section class="residential_container">
+        <div class="residential_img">
+          <img src="../images/residential-img.png" alt="Banner" />
         </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-            <!-- Service Image Start -->
-            <div class="service-image">
-              <a href="service-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/service-4.jpg" alt="">
-                </figure>
-              </a>
-            </div>
-            <!-- Service Image End -->
-
-            <!-- Service Button Start -->
-            <div class="service-btn">
-              <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-            </div>
-            <!-- Service Button End -->
-
-            <!-- Service Content Start -->
-            <div class="service-content">
-              <h3><a href="service-single.html">lighting design</a></h3>
-              <p>Enhancing ambiance and functionality with thoughtfully designed lighting solutions.</p>
-            </div>
-            <!-- Service Content End -->
-          </div>
-          <!-- Service Item End -->
+        <div class="residential_content section_container">
+          <h2 class="wow fadeInUp">RESIDENTIAL INTERIOR DESIGN</h2>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">We craft elegant, tailor-made living spaces that embody your
+            individuality and elevate everyday living to
+            an art form.</p>
         </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
-            <!-- Service Image Start -->
-            <div class="service-image">
-              <a href="service-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/service-5.jpg" alt="">
-                </figure>
-              </a>
-            </div>
-            <!-- Service Image End -->
-
-            <!-- Service Button Start -->
-            <div class="service-btn">
-              <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-            </div>
-            <!-- Service Button End -->
-
-            <!-- Service Content Start -->
-            <div class="service-content">
-              <h3><a href="service-single.html">color consultation</a></h3>
-              <p>Choosing palettes that evoke warmth, energy, or calm to match your vision.</p>
-            </div>
-            <!-- Service Content End -->
-          </div>
-          <!-- Service Item End -->
+      </section>
+      <!-- begin: commercial_design section -->
+      <section class="commercial_design_container">
+        <div class="commercial_design_content section_container">
+          <h2 class="text-anime-style-2" data-cursor="-opaque">COMMERCIAL INTERIOR DESIGN</h2>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">We design refined, brand-aligned environments that enhance your
+            business presence with intention and style.
+          </p>
         </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item wow fadeInUp" data-wow-delay="0.8s">
-            <!-- Service Image Start -->
-            <div class="service-image">
-              <a href="service-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/service-6.jpg" alt="">
-                </figure>
-              </a>
-            </div>
-            <!-- Service Image End -->
-
-            <!-- Service Button Start -->
-            <div class="service-btn">
-              <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
-            </div>
-            <!-- Service Button End -->
-
-            <!-- Service Content Start -->
-            <div class="service-content">
-              <h3><a href="service-single.html">3D visualization</a></h3>
-              <p>Bringing design ideas to life with realistic 3D models before the work begins.</p>
-            </div>
-            <!-- Service Content End -->
-          </div>
-          <!-- Service Item End -->
+        <div class="commercial_design_img">
+          <img src="../images/commercial_design_img.png" alt="Banner" />
         </div>
-      </div>
+      </section>
+      <!-- end: commercial_design section -->
+
+      <!-- begin: furniture section -->
+      <section class="residential_container furniture_section">
+        <div class="residential_img">
+          <img src="../images/furniture-img.png" alt="Banner" />
+        </div>
+        <div class="residential_content section_container">
+          <h2 class="text-anime-style-2" data-cursor="-opaque">FURNITURE &
+            DÉCOR CURATION</h2>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">We curate timeless pieces and statement furnishings that speak
+            of taste, comfort, and elevated design
+            sensibility.</p>
+        </div>
+      </section>
+      <!-- begin: furniture section -->
+
+      <!-- begin: LIGHTING DESIGN section -->
+      <section class="commercial_design_container">
+        <div class="commercial_design_content section_container">
+          <h2 class="text-anime-style-2" data-cursor="-opaque">LIGHTING DESIGN</h2>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">We sculpt atmospheres with layered lighting plans, integrating
+            beauty and functionality to enhance both
+            mood and
+            architecture.
+          </p>
+        </div>
+        <div class="lighting_design_img">
+          <img src="../images/lighting_design_img.png" alt="Banner" />
+        </div>
+      </section>
+      <!-- begin: LIGHTING DESIGN section -->
+
+      <!-- begin: color_consultation section -->
+      <section class="residential_container color_consultation_section">
+        <div class="residential_img">
+          <img src="../images/color_consultation_img.png" alt="Banner" />
+        </div>
+        <div class="residential_content section_container">
+          <h2 class="text-anime-style-2" data-cursor="-opaque">COLOUR CONSULTATION</h2>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">We compose refined colour palettes that evoke emotion, create
+            depth, and align seamlessly with your design
+            vision.</p>
+        </div>
+      </section>
+      <!-- begin: color_consultation section -->
+
+      <!-- begin: VISUALIZATION DESIGN section -->
+      <section class="commercial_design_container visualization_section">
+        <div class="commercial_design_content section_container">
+          <h2 class="text-anime-style-2" data-cursor="-opaque">3D VISUALIZATION</h2>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">We present immersive, photo-realistic renderings so you can
+            preview the opulence of your space before a
+            single element
+            is installed.
+          </p>
+        </div>
+        <div class="visualization_section_img">
+          <img src="../images/visualisation_img.png" alt="Banner" />
+        </div>
+      </section>
+      <!-- begin: VISUALIZATION DESIGN section -->
     </div>
-  </div>
-  <!-- Our Services Section End -->
+    <!-- Begin: service-page -->
 
-  <!-- Why Choose Us Section Start -->
-  <div class="why-choose-us">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5">
-          <!-- Why Choose Content Start -->
-          <div class="why-choose-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">why choose us</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque">A behind the scenes look at <span>our agency</span>
-              </h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">From concept to completion, discover how we bring your
-                vision to life with innovation, collaboration, and expert craftsmanship.</p>
-            </div>
-            <!-- Section Title End -->
 
-            <!-- Why Choose Item List Start -->
-            <div class="why-choose-item-list">
-              <!-- Why Choose Item Start -->
-              <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
-                <!-- Icon Box Start -->
-                <div class="icon-box">
-                  <img src="images/icon-why-choose-1.svg" alt="">
-                </div>
-                <!-- Icon Box End -->
+  </main>
 
-                <!-- Why Choose Item Content Start -->
-                <div class="why-choose-item-content">
-                  <h3>tailored design solutions</h3>
-                  <p>We provide personalized interior design services that reflect your unique vision and lifestyle.</p>
-                </div>
-                <!-- Why Choose Item Content End -->
-              </div>
-              <!-- Why Choose Item End -->
-
-              <!-- Why Choose Item Start -->
-              <div class="why-choose-item wow fadeInUp" data-wow-delay="0.6s">
-                <!-- Icon Box Start -->
-                <div class="icon-box">
-                  <img src="images/icon-why-choose-2.svg" alt="">
-                </div>
-                <!-- Icon Box End -->
-
-                <!-- Why Choose Item Content Start -->
-                <div class="why-choose-item-content">
-                  <h3>Seamless Project Management</h3>
-                  <p>We handle the entire design process, from concept to completion, with flawless execution.</p>
-                </div>
-                <!-- Why Choose Item Content End -->
-              </div>
-              <!-- Why Choose Item End -->
-
-              <!-- Why Choose Item Start -->
-              <div class="why-choose-item wow fadeInUp" data-wow-delay="0.8s">
-                <!-- Icon Box Start -->
-                <div class="icon-box">
-                  <img src="images/icon-why-choose-3.svg" alt="">
-                </div>
-                <!-- Icon Box End -->
-
-                <!-- Why Choose Item Content Start -->
-                <div class="why-choose-item-content">
-                  <h3>Client-Centered Collaboration</h3>
-                  <p>Your input is valued throughout the entire process, ensuring your vision is fully realized.</p>
-                </div>
-                <!-- Why Choose Item Content End -->
-              </div>
-              <!-- Why Choose Item End -->
-            </div>
-            <!-- Why Choose Item List End -->
-          </div>
-          <!-- Why Choose Content End -->
-        </div>
-
-        <div class="col-lg-7">
-          <!-- Why Choose Images Images Start -->
-          <div class="why-choose-images">
-            <!-- Why Choose Box 1 Start -->
-            <div class="why-choose-img-box-1">
-              <!-- Why Choose img 1 Start -->
-              <div class="why-choose-img-1">
-                <figure class="image-anime reveal">
-                  <img src="images/why-choose-img-1.jpg" alt="">
-                </figure>
-              </div>
-              <!-- Why Choose img 1 End -->
-
-              <!-- Why Choose img 2 Start -->
-              <div class="why-choose-img-2">
-                <figure class="image-anime reveal">
-                  <img src="images/why-choose-img-2.jpg" alt="">
-                </figure>
-              </div>
-              <!-- Why Choose img 2 End -->
-            </div>
-            <!-- Why Choose Box 1 End -->
-
-            <!-- Why Choose Box 2 Start -->
-            <div class="why-choose-img-box-2">
-              <!-- Why Choose img 3 Start -->
-              <div class="why-choose-img-3">
-                <figure class="image-anime reveal">
-                  <img src="images/why-choose-img-3.jpg" alt="">
-                </figure>
-              </div>
-              <!-- Why Choose img 3 End -->
-
-              <!-- Why Choose img 4 Start -->
-              <div class="why-choose-img-4">
-                <figure class="image-anime reveal">
-                  <img src="images/why-choose-img-4.jpg" alt="">
-                </figure>
-              </div>
-              <!-- Why Choose img 4 End -->
-            </div>
-            <!-- Why Choose Box 2 End -->
-          </div>
-          <!-- Why Choose Images Images End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Why Choose Us Section End -->
-
-  <!-- Our Skill Start -->
-  <div class="our-skill">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <!-- Our Skill Content Start -->
-          <div class="our-skill-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">our skills</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque">Skills that shape your<span> dream home</span></h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">Our dedicated team of designers works closely with you to
-                understand your vision and bring it to life with thoughtful attention to detail.</p>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- About SkillBar Start -->
-            <div class="our-skillbar">
-              <!-- Skills Progress Bar Start -->
-              <div class="skills-progress-bar">
-                <!-- Skill Item Start -->
-                <div class="skillbar" data-percent="95%">
-                  <div class="skill-data">
-                    <div class="skill-title">space planning and layout</div>
-                    <div class="skill-no">95%</div>
-                  </div>
-                  <div class="skill-progress">
-                    <div class="count-bar"></div>
-                  </div>
-                </div>
-                <!-- Skill Item End -->
-              </div>
-              <!-- Skills Progress Bar End -->
-
-              <!-- Skills Progress Bar Start -->
-              <div class="skills-progress-bar">
-                <!-- Skill Item Start -->
-                <div class="skillbar" data-percent="85%">
-                  <div class="skill-data">
-                    <div class="skill-title">project challenges and solutions</div>
-                    <div class="skill-no">85%</div>
-                  </div>
-                  <div class="skill-progress">
-                    <div class="count-bar"></div>
-                  </div>
-                </div>
-                <!-- Skill Item End -->
-              </div>
-              <!-- Skills Progress Bar End -->
-
-              <!-- Skills Progress Bar Start -->
-              <div class="skills-progress-bar">
-                <!-- Skill Item Start -->
-                <div class="skillbar" data-percent="75%">
-                  <div class="skill-data">
-                    <div class="skill-title">sustainability and eco-friendly features</div>
-                    <div class="skill-no">75%</div>
-                  </div>
-                  <div class="skill-progress">
-                    <div class="count-bar"></div>
-                  </div>
-                </div>
-                <!-- Skill Item End -->
-              </div>
-              <!-- Skills Progress Bar End -->
-            </div>
-            <!-- About SkillBar End -->
-          </div>
-          <!-- Our Skill Content End -->
-        </div>
-
-        <div class="col-lg-6">
-          <!-- Our Skill Image Start -->
-          <div class="our-skill-image">
-            <div class="our-skill-img-1">
-              <figure class="image-anime reveal">
-                <img src="images/our-skill-img-1.jpg" alt="">
-              </figure>
-            </div>
-
-            <div class="our-skill-img-2">
-              <figure class="image-anime reveal">
-                <img src="images/our-skill-img-2.jpg" alt="">
-              </figure>
-            </div>
-
-            <div class="our-skill-img-3">
-              <figure class="image-anime reveal">
-                <img src="images/our-skill-img-3.jpg" alt="">
-              </figure>
-            </div>
-          </div>
-          <!-- Our Skill Image End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Our Skill End -->
-  <!-- Footer Start -->
+  <!--footer-start-10-->
   <footer class="main-footer">
-    <div class="container">
+    <div class="main-container">
       <div class="row">
         <div class="col-lg-12">
           <div class="footer-header">
             <div class="row align-items-center">
               <div class="col-md-6">
                 <div class="footer-logo">
-                  <img src="images/transparent_logo.png" alt="">
+                  <img height="120px" src="images/vision-logo.svg" alt="">
                 </div>
               </div>
               <div class="col-md-6">
@@ -685,126 +674,215 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-links">
-            <h3>information</h3>
-            <ul>
-              <li><a href="about.html">about our company</a></li>
-              <li><a href="services.html">view our service</a></li>
-              <li><a href="#">careers at company</a></li>
-              <li><a href="blog.html">read our blog</a></li>
-              <li><a href="projects.html">our latest projects</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-links">
-            <h3>portfolio</h3>
-            <ul>
-              <li><a href="project-single.html">luxury home design</a></li>
-              <li><a href="project-single.html">residential interior design</a></li>
-              <li><a href="project-single.html">commercial space design</a></li>
-              <li><a href="project-single.html">residential interior design</a></li>
-              <li><a href="project-single.html">renovation and restoration design</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-contact-box footer-links">
-            <h3>contact us</h3>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>1300 56 55 56</p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>info@visionsmarthomes.com.au</p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>Unit 30/275 Annangrove Rd Rouse Hill NSW 2155</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-latest-news footer-links">
-            <h3>get the latest trending news</h3>
-            <div class="footer-newsletter-form">
-              <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
-              <form id="newslettersForm" action="#" method="POST">
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email"
-                    required>
-                  <button type="submit">
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div class="footer-copyright">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-copyright-text">
-              <p>Copyright Ichelon © 2024 All Rights Reserved.</p>
+      <div class="footer-main-links">
+        <div class="footer-links">
+          <h3>information</h3>
+          <ul>
+            <li><a href="about.html">about our company</a></li>
+            <li><a href="contact.html">contact with us</a></li>
+            <li><a href="experience-page.html">view our experience</a></li>
+            <li><a href="./">our services</a></li>
+            <li><a href="./">our projects</a></li>
+            <li><a href="./">our blogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>portfolio</h3>
+          <ul>
+            <li><a href="./">luxury home design</a></li>
+            <li><a href="./">residential interior design</a></li>
+            <li><a href="./">commercial space design</a></li>
+            <li><a href="./">residential interior design</a></li>
+            <li><a href="./">renovation and restoration design</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-box footer-links">
+          <h3>contact us</h3>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone"></i>
             </div>
+            <div class="footer-contact-content">
+              <p>1300 56 55 56</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>info@visionsmarthomes.com.au</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-latest-news footer-links">
+          <h3>get the latest trending news</h3>
+          <div class="footer-newsletter-form">
+            <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+            <form id="newslettersForm" action="#" method="POST">
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email" required>
+                <button type="submit">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer-social-links-small">
+      <div class="footer-social-link-title">
+        <h3>follow our socials</h3>
+      </div>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
   </footer>
-  <!-- Footer End -->
+  <!--footer-end-->
 
-  <!-- Jquery Library File -->
+  <!-- JS Files -->
   <script src="js/jquery-3.7.1.min.js"></script>
-  <!-- Bootstrap js file -->
   <script src="js/bootstrap.min.js"></script>
-  <!-- Validator js file -->
   <script src="js/validator.min.js"></script>
-  <!-- SlickNav js file -->
   <script src="js/jquery.slicknav.js"></script>
-  <!-- Swiper js file -->
   <script src="js/swiper-bundle.min.js"></script>
-  <!-- Counter js file -->
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.counterup.min.js"></script>
-  <!-- Isotop js file -->
   <script src="js/isotope.min.js"></script>
-  <!-- Magnific js file -->
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- SmoothScroll -->
   <script src="js/SmoothScroll.js"></script>
-  <!-- Parallax js -->
   <script src="js/parallaxie.js"></script>
-  <!-- MagicCursor js file -->
   <script src="js/gsap.min.js"></script>
   <script src="js/magiccursor.js"></script>
-  <!-- Text Effect js file -->
   <script src="js/SplitText.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
-  <!-- YTPlayer js File -->
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <!-- Wow js file -->
   <script src="js/wow.min.js"></script>
-  <!-- Main Custom js file -->
   <script src="js/function.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="module" src="js/index.js"></script>
 
+  <script>
+    const swiper = new Swiper('.inspiration-design .swiper', {
+      slidesPerView: 1, // Let the width control number of visible slides
+      centeredSlides: true,
+      initialSlide: 1,
+      spaceBetween: 10,
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // (optional) responsive breakpoints
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+
+      function switchTab(e) {
+        const clickedTab = e.target.closest('.tab');
+        if (!clickedTab) return;
+
+        const tabNumber = clickedTab.dataset.tab;
+
+        // Update active states
+        tabs.forEach(tab => tab.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        clickedTab.classList.add('active');
+        document.querySelector(`[data-content="${tabNumber}"]`).classList.add('active');
+      }
+
+      // Add click handlers
+      tabs.forEach(tab => {
+        tab.addEventListener('click', switchTab);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector(".section-header");
+      const timelineItems = document.querySelectorAll(".timeline-item");
+      const timelineMarkers = document.querySelectorAll(".timeline-marker");
+      const timelineProgress = document.querySelector(".timeline-progress");
+
+      // Intersection Observer for the header
+      const headerObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      headerObserver.observe(header);
+
+      // Intersection Observer for timeline items
+      const itemObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              entry.target
+                .querySelector(".timeline-marker")
+                .classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      timelineItems.forEach((item) => itemObserver.observe(item));
+
+      // Update timeline progress on scroll
+      function updateProgress() {
+        const timeline = document.querySelector(".timeline");
+        const timelineRect = timeline.getBoundingClientRect();
+        const timelineStart = timelineRect.top;
+        const timelineEnd = timelineRect.bottom;
+        const windowHeight = window.innerHeight;
+
+        if (timelineStart < windowHeight && timelineEnd > 0) {
+          const total = timelineEnd - timelineStart;
+          const current = windowHeight - timelineStart;
+          const progress = (current / total) * 90;
+          const clampedProgress = Math.min(90, Math.max(20, progress)); // Start at 20%
+
+          timelineProgress.style.height = `${clampedProgress}%`;
+        }
+      }
+
+      window.addEventListener("scroll", updateProgress);
+      updateProgress(); // Initial call
+    });
+
+  </script>
+
+  <!-- Toggle side menu script -->
   <script>
     function toggleSideMenu() {
       const sideMenu = document.getElementById('sideMenu');
@@ -812,6 +890,31 @@
       sideMenu.classList.toggle('open');
       overlay.classList.toggle('open');
     }
+  </script>
+
+  <script>
+    document.getElementById('playVideoBtn').addEventListener('click', function () {
+      const poster = document.getElementById('videoPoster');
+      const video = document.getElementById('myVideo');
+      poster.style.display = 'none';
+      video.play();
+    });
+  </script>
+
+  <script>
+    // Hide the logo when scrolled beyond the first section
+    const logo = document.getElementById('siteLogo');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // If scrolled beyond the first section (adjust threshold if needed)
+      if (scrollY > window.innerHeight - 50) {
+        logo.classList.add('hide');
+      } else {
+        logo.classList.remove('hide');
+      }
+    });
   </script>
 </body>
 
