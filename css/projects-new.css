@@ -215,4 +215,37 @@
 }
 
 /**********************************/
-/*  */
+/* 4.card-slider */
+.card-slider-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.card-box {
+    display: flex;
+    max-width: 580px;
+}
+
+.card-box img {
+    display: block;
+    width: 326px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-box p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--p-tag-color);
+    font-family: var(--montserrat);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 0px;
+}
