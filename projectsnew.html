@@ -37,8 +37,8 @@
     <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
-    <!-- <link href="css/custom.css" rel="stylesheet" media="screen">
-    <link href="css/custom_user.css" rel="stylesheet" media="screen"> -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <link href="css/custom_user.css" rel="stylesheet" media="screen">
     <link href="css/projects-new.css" rel="stylesheet" media="screen">
 
     <style>
@@ -54,9 +54,10 @@
 
         :root {
             --primary-color: #756458;
-            --p-tag-color: #7A695F;
+            --secondary-color: #6A5C4E;
+            --third-color: #7A695F;
+            --p-tag-color: #86796F;
             --white-color: #FFF;
-            --bg-overlay: rgba(122, 91, 65, 0.8);
             --accent-color: #7C877F;
             --error-color: rgb(230, 87, 87);
             /*New Google Font */
@@ -89,11 +90,68 @@
         </div>
     </section>
     <!-- projects-hero-end-1 -->
+    <!--projecst-slider-start-2 -->
+    <section class="projects-container">
+        <div class="image-slider">
+            <!-- 👇 Move buttons inside .slider -->
+            <div class="image-slider-controls">
+                <button class="nav-btn prev">&#8592;</button>
+                <button class="nav-btn next">&#8594;</button>
+            </div>
+            <!-- Main slides -->
+            <img src="images/projects-slider-one.png" class="slide active" />
+            <img src="images/projects-slider-two.png" class="slide" />
+            <img src="images/projects-slider-three.png" class="slide" />
+            <img src="images/projects-slider-four.png" class="slide" />
+        </div>
 
+        <!-- Thumbnails -->
+        <div class="thumbnails">
+            <img src="images/projects-slider-one.png" class="thumb active" />
+            <img src="images/projects-slider-two.png" class="thumb" />
+            <img src="images/projects-slider-three.png" class="thumb" />
+            <img src="images/projects-slider-four.png" class="thumb" />
+        </div>
+    </section>
+    <!-- projecst-slider-end-2 -->
+    <!-- about-project-start    -->
+    <section class="projects-container about-project">
+        <div class="about-project-content-left">
+            <h1>ABOUT THIS PROJECT</h1>
+            <p>Crafted for a client who valued design-forward thinking, this Melonba residence is as functional as it is
+                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
+                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
+                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
+                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
+                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
+                living.</p>
+        </div>
+        <div class="about-project-content-right">
+            <h1>MODERN INTERIOR DESIGN</h1>
+            <p>Crafted for a client who valued design-forward thinking, this Melonba residence is as functional as it is
+                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
+                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
+                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
+                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
+                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
+                living.</p>
+        </div>
+    </section>
+    <!-- about-project-end -->
+    <!-- projecst-card-slider-start -->
+    <section>
+        <div class="projects-container card-slider-container">
+            <div class="image-slider-controls">
+                <!-- <button class="nav-btn prev">&#8592;</button>
+                <button class="nav-btn next">&#8594;</button> -->
+            </div>
+            <div class="card-slider righty-card">
 
-
-
-
+            </div>
+            <div class="card-slider lefty-card"></div>
+        </div>
+    </section>
+    <!-- projecst-card-slider-end -->
 
     <!-- Alll sections ended here-->
     <!-- Jquery Library File -->
@@ -129,6 +187,7 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+    <script src="js/index.js"></script>
 
     <script>
         function toggleSideMenu() {
