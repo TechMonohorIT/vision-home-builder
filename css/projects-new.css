@@ -1,3 +1,5 @@
+/* this is for small screen visibility hidden in large screen */
+/* ----------------------------------------------------------- */
 .image-slider-section-small {
     display: none;
 }
@@ -91,7 +93,7 @@
     margin-top: 143px;
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1200 / 810;
     overflow: hidden;
 }
 
@@ -114,7 +116,6 @@
     z-index: 1;
 }
 
-/* Navigation buttons */
 .image-slider-controls {
     position: absolute;
     top: 50%;
@@ -380,8 +381,13 @@
         display: none;
     }
 
+    .about-project-small {
+        display: block;
+    }
 
-    /* small one */
+
+    /* image-slider-section-small(for small screen)--(in large screen display:none) */
+    /* about + thumbnails(for small screen)--(in large screen display:none) */
     .image-slider-section-small {
         display: flex;
         flex-direction: column;
@@ -403,9 +409,6 @@
         margin-bottom: 0;
     }
 
-
-
-    /* small two */
     .about-project-content-left {
         max-width: 730px;
     }
@@ -426,37 +429,14 @@
         margin-bottom: 24px;
     }
 
-
-
-
     .image-slider {
         margin-top: 24px;
         position: relative;
         width: 100%;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 356 / 240;
         overflow: hidden;
     }
 
-    .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 1s ease-in-out, visibility 5s ease-in-out;
-        z-index: 0;
-    }
-
-    .slide.active {
-        opacity: 1;
-        visibility: visible;
-        z-index: 1;
-    }
-
-    /* Navigation buttons */
     .image-slider-controls {
         position: absolute;
         top: 50%;
@@ -498,37 +478,8 @@
         grid-gap: 16px 16px;
     }
 
-    .thumb {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 279 / 283;
-        object-fit: cover;
-        display: block;
-        /* justify-self: center; */
-        align-self: stretch;
-        cursor: pointer;
-        border: 3px solid transparent;
-        transition: border 0.7s;
-    }
-
-
     .thumb.active {
-        border-color: #927D6B;
-    }
-
-
-
-
-
-
-
-
-
-
-    /* start-2 */
-    .about-project-small {
-        display: block;
+        border-color: transparent;
     }
 
 
