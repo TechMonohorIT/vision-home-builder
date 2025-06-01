@@ -66,7 +66,7 @@ const btnPrev = document.getElementById('prevBtn');
 let sliderIndex = 0;
 
 function getCardsPerView() {
-    return window.innerWidth <= 768 ? 1 : 2;
+    return window.innerWidth <= 767 ? 1 : 2;
 }
 
 function updateSlider() {
