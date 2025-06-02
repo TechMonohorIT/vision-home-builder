@@ -2,132 +2,127 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Team Section</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Projects</title>
     <style>
-        * {
+        body {
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f5f5f5;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: white;
-        }
-
-        .team-section {
+        .featured-projects-section-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 60px 40px;
-            position: relative;
-            background: linear-gradient(to bottom left, #ffffff 50%, #4a2f1e 50%);
-            color: #333;
+            flex-direction: row;
+            padding: 40px;
+            gap: 20px;
         }
 
-        .text-content {
-            flex: 1;
-            padding-right: 40px;
-        }
-
-        .text-content small {
-            font-size: 12px;
-            color: #888;
-        }
-
-        .text-content h2 {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px 0 30px;
-            color: #555;
-        }
-
-        .big-text {
-            font-size: 100px;
-            font-weight: 900;
-            color: #6b3b1f;
-            line-height: 0.9;
-            letter-spacing: 5px;
-            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .image-content {
-            flex: 1;
-            position: relative;
-            max-width: 600px;
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            background: #4a2f1e;
-            color: #fff;
+        .featured-projects-section-container .details-panel {
+            width: 40%;
+            background-color: #fff;
             padding: 20px;
-            font-size: 14px;
-            line-height: 1.6;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .image-box {
-            margin-top: 100px;
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+        .featured-projects-section-container .projects-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex-grow: 1;
+            min-height: 736px;
+        }
+
+        .featured-projects-section-container .project {
+            flex: 1;
+            cursor: pointer;
+            transition: all 0.3s ease;
             overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            width: 166px;
         }
 
-        .image-box img {
+        .featured-projects-section-container .project img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            border-radius: 8px;
         }
 
-        @media (max-width: 900px) {
-            .team-section {
-                flex-direction: column;
-            }
+        .featured-projects-section-container .project.active {
+            flex: 2.5;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 422px;
+        }
 
-            .text-content,
-            .image-content {
-                padding: 20px 0;
-                text-align: center;
-            }
-
-            .big-text {
-                font-size: 60px;
-            }
-
-            .overlay-text {
-                position: static;
-                background: none;
-                color: #333;
-                padding: 0;
-            }
+        .featured-projects-section-container .project-number {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 5px 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-
-    <section class="team-section">
-        <div class="text-content">
-            <small>Our Leadership</small>
-            <h2>VISIONARIES BUILD TOMORROW</h2>
-            <div class="big-text">TE<br>AM</div>
+    <div class="featured-projects-section-container">
+        <div class="details-panel" id="details">
+            <h2>1 - PROJECT NAME</h2>
+            <p>
+                In the evolving suburb of Melonba, this bespoke home is a standout example of contemporary suburban
+                luxury. Featuring a bold mix of concrete render and matte finishes, the facade offers instant street
+                appeal. Internally, the home is equally striking, with soaring ceilings and an open-concept layout that
+                promotes natural flow.
+            </p>
+            <p>
+                Every space is finished with premium textures, from oak timber floors to custom stonework in the
+                bathrooms. The kitchen features dual ovens, a walk-in pantry, and pendant lighting that elevates the
+                entire room. With landscaped surrounds and a peaceful neighbourhood setting, this property is both
+                modern and timeless.
+            </p>
         </div>
-
-        <div class="image-content">
-            <div class="overlay-text">
-                With our ingenious leaders in-charge of your dreamy home, you can be assured that your aspirations will
-                be realised with technical brilliance and creative flare.
+        <div class="projects-container">
+            <div class="project active" onclick="showDetails(1)">
+                <img src="./images/about-us-image1.jpg" alt="Project 1" />
+                <div class="project-number">1</div>
             </div>
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Room with furniture">
+            <div class="project" onclick="showDetails(2)">
+                <img src="./images/about-img-2.jpg" alt="Project 2" />
+                <div class="project-number">2</div>
+            </div>
+            <div class="project" onclick="showDetails(3)">
+                <img src="./images/about-bg.jpg" alt="Project 3" />
+                <div class="project-number">3</div>
             </div>
         </div>
-    </section>
+    </div>
 
+    <script>
+        const projects = document.querySelectorAll('.project');
+        const details = document.getElementById('details');
+
+        const projectTexts = {
+            1: `<h2>1 - PROJECT NAME</h2><p>In the evolving suburb of Melonba... (same content as default)</p>` +
+                `<p>Every space is finished with premium textures... (same content)</p>`,
+            2: `<h2>2 - PROJECT NAME</h2><p>This is Project 2's description. Urban vibes, sleek design, and next-level comfort. Welcome to your future dream space.</p>`,
+            3: `<h2>3 - PROJECT NAME</h2><p>Project 3 says hello with elegance and a touch of mystery. Think smart living, cozy corners, and ultimate sophistication.</p>`
+        };
+
+        function showDetails(index) {
+            projects.forEach(p => p.classList.remove('active'));
+            projects[index - 1].classList.add('active');
+            details.innerHTML = projectTexts[index];
+        }
+    </script>
 </body>
 
 </html>
