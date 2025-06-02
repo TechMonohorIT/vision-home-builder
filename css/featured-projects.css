@@ -19,6 +19,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0px auto;
+  padding: 0px 50px;
 }
 
 .featured-projects-banner-section h1 {
@@ -134,7 +135,7 @@
 .featured-projects-section-container {
   display: flex;
   overflow: hidden;
-  padding: 40px 0px;
+  padding: 40px 50px;
   max-width: 1440px;
   width: 100%;
   margin: auto;
@@ -538,7 +539,8 @@
   .featured-projects-section-container {
     display: flex;
     overflow: hidden;
-    padding: 40px 120px;
+    max-width: calc(100% - 240px);
+    margin: 0 auto;
   }
   .section_container_featured_projects {
     max-width: calc(100% - 240px);
@@ -548,9 +550,7 @@
     max-width: calc(100% - 240px);
     margin: 0 auto;
   }
-  .featured-projects-banner-section .banner-content {
-    padding: 120px;
-  }
+
   .featured-projects-banner-section h1 {
     border: 1px solid #fff;
     padding: 16px 24px;
@@ -561,9 +561,16 @@
     font-weight: 500;
     line-height: 68px;
     letter-spacing: 0.6px;
-    position: unset;
+    left: 193px;
+    bottom: 293px;
     text-transform: uppercase;
     margin: 0px;
+  }
+  .featured-projects-banner-section .banner-content {
+    padding: 16px 24px;
+    max-width: 526px;
+    width: 100%;
+    margin: unset;
   }
 }
 @media (max-width: 1400px) {
@@ -598,21 +605,33 @@
   }
   .featured-projects-banner-section .banner-content {
     padding: 60px;
+    max-width: 526px;
+    width: 100%;
+    margin: unset;
   }
 }
 
 @media (max-width: 768px) {
+  .featured-projects-banner-section h1 {
+    position: unset;
+  }
   .featured-projects-page {
     margin-top: 96px;
   }
   .main-container-featured-projects {
-    max-width: calc(100% - 64px) !important;
+    max-width: calc(100% - 32px) !important;
     margin: 0 auto;
   }
 
   .section_container_featured_projects {
-    max-width: calc(100% - 64px) !important;
+    max-width: calc(100% - 32px) !important;
     margin: 0 auto;
+  }
+  .main-container-featured-projects {
+    padding: 0px 10px !important;
+  }
+  .section_container_featured_projects {
+    padding: 0px 10px !important;
   }
   .featured-section-container-mobile .single-project {
     width: 100%;
@@ -642,6 +661,9 @@
   }
   .featured-projects-banner-section .banner-content {
     padding: 0px;
+    max-width: 366px;
+    width: 100%;
+    text-align: center;
   }
   .featured-projects-banner-section .banner-content h1 {
     font-size: 28px;
