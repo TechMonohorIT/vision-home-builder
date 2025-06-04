@@ -42,7 +42,14 @@
     <link href="css/projects-new.css" rel="stylesheet" media="screen">
     <!-- Swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             box-sizing: border-box;
@@ -635,37 +642,90 @@
     </section>
 
     <!--card-slider-section  -->
-    <section class="card-slider-section">
-        <div class="card-slider-control projects-container">
-            <button class="prevBtn" type="button">&#8592; Prev</button>
-            <button class="nextBtn" type="button">Next &#8594;</button>
-        </div>
-        <div class="card-slider-track projects-container ">
-            <div class="card-box">
-                <img src="images/projects-card-slider-1.jpg" alt="slider-1" />
-                <p>This Leppington residence is a testament to timeless design, blending sophistication with
-                    family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
-                    home is both impressive and inviting. </p>
+    <section class="slider-section-container">
+        <div class="projects-container">
+            <div class="testimonial_box">
+                <div class="slider_area responsive">
+                    <!-- single card box -->
+                    <div class="slick_card_container">
+                        <div class="image-section">
+                            <img src="images/cozy-lively-home-interior-design-optimize.jpg" alt="Leppington Home" />
+                        </div>
+                        <div class="text-section">
+                            <p>
+                                This Leppington residence is a testament to timeless design, blending sophistication
+                                with family-centric
+                                functionality.
+                                Featuring a grand entryway and expansive open-plan living, the home is both impressive
+                                and inviting.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- single card box -->
+                    <div class="slick_card_container slick_card_container_mobile">
+                        <div class="text-section">
+                            <p>
+                                This Marsden Park residence is a striking example of custom design done right. A
+                                commanding street presence
+                                gives way to
+                                interiors that are warm, inviting, and layered with texture. The living spaces are
+                                defined by open sightlines
+                            </p>
+                        </div>
+                        <div class="image-section">
+                            <img src="images/projects-card-slider-2.png" alt="Leppington Home" />
+                        </div>
+                    </div>
+                    <!-- single card box -->
+                    <div class="slick_card_container">
+                        <div class="image-section">
+                            <img src="images/cozy-lively-home-interior-design-optimize.jpg" alt="Leppington Home" />
+                        </div>
+                        <div class="text-section">
+                            <p>
+                                This Leppington residence is a testament to timeless design, blending sophistication
+                                with family-centric
+                                functionality.
+                                Featuring a grand entryway and expansive open-plan living, the home is both impressive
+                                and inviting.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- single card box -->
+                    <div class="slick_card_container slick_card_container_mobile">
+                        <div class="text-section">
+                            <p>
+                                This Marsden Park residence is a striking example of custom design done right. A
+                                commanding street presence
+                                gives way to
+                                interiors that are warm, inviting, and layered with texture. The living spaces are
+                                defined by open sightlines
+                            </p>
+                        </div>
+                        <div class="image-section">
+                            <img src="images/projects-card-slider-2.png" alt="Leppington Home" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="center_button">
+                    <button class="custom-prev-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                            <path d="M23.3307 14.4998L5.18142 14.4996M10.4973 20.3331L4.66406 14.4996L10.4974 8.66638"
+                                stroke="white" stroke-width="1.5" />
+                        </svg>
+                        Prev
+                    </button>
+                    <button class="custom-next-arrow">
+                        <span>Next</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                            <path d="M4.66927 14.5002L22.8186 14.5004M17.5027 8.6669L23.3359 14.5004L17.5026 20.3336"
+                                stroke="white" stroke-width="1.5" />
+                        </svg>
+
+                    </button>
+                </div>
             </div>
-            <div class="card-box">
-                <img src="images/projects-card-slider-2.png" alt="slider-2" />
-                <p>This Marsden Park residence is a striking example of custom design done right. A commanding
-                    street presence gives way to interiors that are warm, inviting, and layered with texture.
-                    The living spaces are defined by open sightlines</p>
-            </div>
-            <div class="card-box">
-                <img src="images/interior-design-section-2.jpg" alt="slider-3" />
-                <p>This Leppington residence is a testament to timeless design, blending sophistication with
-                    family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
-                    home is both impressive and inviting.</p>
-            </div>
-            <div class="card-box">
-                <img src="images/cozy-lively-home-interior-design-optimize.jpg" alt="slider-4" />
-                <p>This Marsden Park residence is a striking example of custom design done right. A commanding
-                    street presence gives way to interiors that are warm, inviting, and layered with texture.
-                    The living spaces are defined by open sightlines</p>
-            </div>
-        </div>
     </section>
 
     <!--footer-start-10-->
@@ -830,6 +890,50 @@
             } else {
                 logo.classList.remove('hide');
             }
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+        integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".responsive").slick({
+
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            prevArrow: $(".custom-prev-arrow"),
+            nextArrow: $(".custom-next-arrow"),
+            responsive: [
+                {
+                    breakpoint: 1236,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3,
+                        infinite: true,
+
+                    },
+                },
+                {
+                    breakpoint: 862,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
+                },
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ],
         });
     </script>
 </body>
