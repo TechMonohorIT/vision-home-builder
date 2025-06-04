@@ -1,7 +1,6 @@
-    
-    //This js codes for header-side-menu add conditional background scrooling a sections
+//This js codes for header-side-menu add conditional background scrooling a sections
     document.addEventListener('scroll', toggleHeaderScrolled);
-    window.addEventListener('load', toggleHeaderScrolled); // Apply style on reload if scrolled
+    window.addEventListener('load', toggleHeaderScrolled); 
 
     function toggleHeaderScrolled() {
       const header = document.querySelector('.header-sidemenu');
@@ -16,7 +15,7 @@
 
 
 
-
+// image slider related js codes
 document.querySelectorAll('.image-slider').forEach((slider) => {
   const section = slider.closest('.projects-container'); // Get parent section
   const slides = slider.querySelectorAll('.slide');
@@ -58,42 +57,16 @@ document.querySelectorAll('.image-slider').forEach((slider) => {
 
 
 
-
-
-
-
-
-// Projects Page card slider_Last-section==js
-const track = document.querySelector('.card-slider-track');
-const cards = document.querySelectorAll('.card-box');
-const btnNext = document.getElementById('nextBtn');
-const btnPrev = document.getElementById('prevBtn');
-
-let sliderIndex = 0;
-
-function getCardsPerView() {
-    return window.innerWidth <= 767 ? 1 : 2;
-}
-
-function updateSlider() {
-    const cardWidth = cards[0].offsetWidth + 40; // include gap
-    track.style.transform = `translateX(-${sliderIndex * cardWidth}px)`;
-}
-
-btnNext.addEventListener('click', () => {
-    const cardsPerView = getCardsPerView();
-    if (sliderIndex < cards.length - cardsPerView) {
-        sliderIndex += 1;
-        updateSlider();
-    }
+// card slider
+new Swiper('.swiper', {
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.nextBtn',
+    prevEl: '.prevBtn',
+    clickableClass: 'swiper-button-clickable',
+  },
 });
 
-btnPrev.addEventListener('click', () => {
-    if (sliderIndex > 0) {
-        sliderIndex -= 1;
-        updateSlider();
-    }
-});
 
-// window.addEventListener('resize', updateSlider);
 
