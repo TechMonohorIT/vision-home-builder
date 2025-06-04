@@ -252,141 +252,117 @@
 
 .card-slider-section {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
     padding-top: 82px;
     padding-bottom: 197px;
-    width: 100%;
-    height: 100%;
-    background-image: url("/images/projects-card-slider-bg.jpg");
-    background-repeat: no-repeat;
+    background-image: url("images/projects-card-slider-bg.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .card-slider-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(122, 91, 65, 0.8);
-    z-index: 2;
+    z-index: 1;
 }
 
+.projects-container {
+    position: relative;
+    max-width: 1440px;
+    padding: 0 120px;
+    margin: 0 auto;
+    z-index: 2;
+}
 
 .card-slider-control {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 72px !important;
-    z-index: 3;
+    margin-bottom: 72px;
 }
 
 .prevBtn,
 .nextBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px;
-    border: none;
-    background-color: transparent;
-    gap: 8px;
     color: var(--white-color);
-    font-family: var(--montserrat);
+    background: transparent;
+    border: none;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 36.484px;
     border-bottom: 2px solid var(--white-color);
+    cursor: pointer;
+    font-family: var(--montserrat);
 }
 
-.card-slider-track {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+.swiper {
     width: 100%;
-    z-index: 3;
+    z-index: 2;
 }
 
-.card-box {
-    width: 100%;
-    height: 100%;
-    background: #FFF;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+.swiper-slide-prev,
+.swiper-slide-next {
+    opacity: 1;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    padding-bottom: 20px;
+}
+
+.swiper-slide {
+    min-height: 331px;
+    background: #fff;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     align-items: center;
+    height: 100% !important;
+    overflow: hidden;
 }
 
-.card-box img {
+.swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     aspect-ratio: 326 / 331;
 }
 
-.card-box p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.swiper-slide p {
     padding: 28px;
     color: #382213;
-    font-family: var(--montserrat);
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 25px;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .projects-container {
-        padding-left: 80px !important;
-        padding-right: 80px !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .card-box {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-items: center;
-        align-items: center;
+        padding: 0 40px;
     }
 
-    .card-box img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+    .swiper-slide {
+        min-height: 331px;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        overflow: hidden;
+    }
+
+    .swiper-slide img {
         aspect-ratio: 356 / 203;
     }
 
-    .card-box p {
-        padding: 17.186px;
+    .swiper-slide p {
+        padding: 17px;
         font-size: 14px;
-        font-weight: 400;
         line-height: 20px;
         letter-spacing: 0.28px;
     }
 
-    .card-slider-section {
-        padding-top: 56px;
-        padding-bottom: 72px;
-    }
-
     .card-slider-control {
-        margin-bottom: 36px !important;
+        margin-bottom: 36px;
     }
 
     .prevBtn,
@@ -395,6 +371,11 @@
         border-bottom: 1px solid var(--white-color);
     }
 }
+
+
+
+
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inspiring Designs That Reflect Our Vision</title>
+  <!-- Swiper CSS from CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  <style>
+    /* ======== Basic Reset & Body Styling ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #2c2a29;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #fff;
+    }
+
+    /* ======== Section Container ======== */
+    .portfolio-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .portfolio-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .portfolio-section p {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+      color: #e2e2e2;
+    }
+
+    /* ======== Filter Tabs ======== */
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      margin-bottom: 50px;
+    }
+
+    .portfolio-filters li {
+      cursor: pointer;
+      padding: 8px 15px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .portfolio-filters li:hover,
+    .portfolio-filters li.active {
+      background: #fff;
+      color: #2c2a29;
+    }
+
+    /* ======== Swiper Container ======== */
+    .swiper-container {
+      width: 100%;
+      position: relative;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      /* Center slides content horizontally/vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    /* Each slide content container */
+    .slide-content {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .slide-content img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Slide caption at the bottom-left corner */
+    .slide-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .slide-caption h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* The active (center) slide will appear larger */
+    .swiper-slide.swiper-slide-active {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+
+    /* ======== Swiper Navigation Buttons ======== */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      color: #aaa;
+    }
+
+    /* ======== Swiper Pagination Dots ======== */
+    .swiper-pagination-bullet {
+      background: #fff;
+      opacity: 0.6;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: #d3d3d3;
+    }
+  </style>
+</head>
+<body>
+  <section class="portfolio-section">
+    <h2>Inspiring Designs That Reflect Our Vision</h2>
+    <p>
+      Our portfolio presents a refined selection of home designs, featuring
+      stunning transformations that blend architectural elegance with
+      personalized comfort, creating spaces that inspire and elevate everyday
+      living.
+    </p>
+
+    <!-- Filter Tabs -->
+    <ul class="portfolio-filters">
+      <li class="active">All</li>
+      <li>Architecture</li>
+      <li>Interior</li>
+      <li>Bedroom</li>
+      <li>Furniture Kitchen</li>
+    </ul>
+
+    <!-- Swiper Container -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Modern Living Room" />
+              <h3>MODERN LIVING SPACE</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea" alt="Luxurious Interior" />
+              <h3>LUXURIOUS LOFT: INDUSTRIAL CHIC FOR LIVING</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" alt="Contemporary Design" />
+              <h3>CONTEMPORARY COMFORT</h3>
+            </div>
+          </div>
+
+      <!-- Pagination & Navigation (optional) -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper-container', {
+      modules: [EffectCoverflow],
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 2,
+      initialSlide: 1,
+      loop: false,
+      spaceBetween: 30,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      },
+      speed: 1000,
+    });
+
+    // Add active class to navigation items
+    const navLinks = document.querySelectorAll('.navigation a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

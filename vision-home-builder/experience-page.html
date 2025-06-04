@@ -9,12 +9,19 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
-    <!-- Page Title -->
-    <title>Vision Smart Homes</title>
+    <title>Vision-Smart-Home || Building experience</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
-    <!--Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
+    <!-- Google Fonts Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+
+
+    <!-- New Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
     <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +34,10 @@
     <!-- SlickNav Css -->
     <link href="css/slicknav.min.css" rel="stylesheet">
     <!-- Swiper Css -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <!-- Font Awesome Icon Css-->
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <!-- Font Awesome Icon Css -->
     <link href="css/all.min.css" rel="stylesheet" media="screen">
     <!-- Animated Css -->
     <link href="css/animate.css" rel="stylesheet">
@@ -36,68 +45,78 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css">
-    <!-- Main Custom Css -->
+    <!-- Main Custom Css (from Inspaire) -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
-    <link href="css/custom_user.css" rel="stylesheet" media="screen">
-    <link href="css/projects-new.css" rel="stylesheet" media="screen">
-    <!-- Swiper js -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="css/custom_user.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/experience.css">
 
+    <!-- Extra custom CSS for side-menu toggle -->
     <style>
+        /****************************************************
+ * SIDEMENU STYLES
+ ****************************************************/
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        .body {
-            font-family: var(--montserrat);
+        body {
+            /* Ensure your chosen font is applied */
+            /* font-family: "Hanken Grotesk", sans-serif; */
+            /* This was old font family*/
+            font-family: var(--body-font);
         }
 
         :root {
-            --primary-color: #756458;
-            --secondary-color: #6A5C4E;
-            --third-color: #7A695F;
-            --p-tag-color: #86796F;
-            --white-color: #FFF;
+            --primary-color: #192324;
+            --secondery-color: #F8F8F8;
+            --text-color: #283132;
             --accent-color: #7C877F;
+            --white-color: #FFFFFF;
+            --divider-color: #EAF0EC;
+            --dark-divider-color: #FFFFFF1A;
             --error-color: rgb(230, 87, 87);
-            /*New Google Font */
+            --default-font: 'CarmenSans-UltraLight', sans-serif;
+            /* New Font Updated */
+            --body-font: 'Carmen Sans', sans-serif;
+            /*New Google Fonts for figma */
             --inter: "Inter", sans-serif;
             --montserrat: "Montserrat", sans-serif;
         }
 
-        .projects-container {
-            max-width: 1440px;
-            padding-left: 120px;
-            padding-right: 120px;
-            margin: 0 auto;
-            z-index: 3;
-        }
-
-        /********************************** */
-        /* Header+Side-menu-Related-Styles */
         /* A custom fixed top bar to hold logo + hamburger */
+        /* .header-sidemenu {
+      position: fixed;
+      top: 0%;
+      left: 0px;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 70px 20px 0px;
+      background: none !important;
+      backdrop-filter: none !important;
+    } */
         .header-sidemenu {
-            position: sticky;
-            top: 0;
-            padding: 24px 0px;
             margin: 0 auto;
-            width: 100%;
+            position: fixed;
+            top: 0%;
+            left: 0px;
+            right: 0;
+            z-index: 999;
+            padding: 24px 0px;
+            border-bottom: 1.5px solid #e5e5e5;
+            height: 96px;
             background-color: transparent;
             transition: background-color 0.3s ease;
-            z-index: 1000;
         }
 
-        /* header sidemenu conditional background with js+css class */
         .header-sidemenu.scrolled {
             background-color: rgba(109, 93, 78, 0.5);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(6px);
-        }
-
-        .header-sidemenu.scrolled .hamburger span {
-            background: var(--white-color);
         }
 
         /* Hamburger icon */
@@ -105,7 +124,7 @@
             display: block;
             height: 2.5px;
             background: #8B5E3B;
-            margin-bottom: 7px;
+            margin-bottom: 9px;
             transition: 0.3s;
         }
 
@@ -164,8 +183,8 @@
         }
 
         .side-menu.open {
-            /* slide in */
             left: 0;
+            /* slide in */
         }
 
         /* Close button (X) inside side menu */
@@ -210,10 +229,6 @@
         .side-menu ul li a:hover {
             /* accent color on hover */
             color: #ffd900ab;
-        }
-
-        #siteLogo {
-            transition: all 0.5s ease-in-out;
         }
 
         #offcanvasExample {
@@ -265,20 +280,6 @@
 
 
         @media (max-width: 1023.98px) {
-            .header-sidemenu {
-                position: sticky;
-                top: 0;
-                padding: 16px 0px;
-            }
-
-            .hamburger span {
-                display: block;
-                height: 2.5px;
-                background: #8B5E3B;
-                margin-bottom: 6px;
-                transition: 0.3s;
-            }
-
             .offcanvas-start {
                 display: none;
             }
@@ -326,20 +327,23 @@
                 grid-template-columns: 1fr;
                 padding: 20px;
             }
+        }
 
+        @media(max-width:576px) {
             .hamburger {
-                max-width: 24px !important;
-                max-height: 24px !important;
+                max-width: 26px;
+                max-height: 26px;
             }
 
             .hamburger span {
-                margin-bottom: 6px;
+                margin-bottom: 7px;
             }
         }
     </style>
 </head>
 
 <body>
+
     <!-- Preloader Start -->
     <div class="preloader">
         <div class="loading-container">
@@ -353,13 +357,12 @@
 
     <!-- SIMPLE FIXED HEADER with HAMBURGER -->
     <header class="header-sidemenu">
-        <div class="header-content projects-container">
+        <div class="header-content header_container_ex">
             <div class="logo" id="siteLogo">
                 <a href="./">
-                    <img src="images/vision-iron-logo.png" alt="Vision Smart Homes Logo">
+                    <img height="200px" width="200px" src="images/vision logo 01-01.svg" alt="Vision Smart Homes Logo">
                 </a>
             </div>
-
             <!-- for big device -->
             <div class="hamburger hamburger-desktop" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
@@ -374,10 +377,8 @@
                 <span></span>
                 <span></span>
             </div>
-
         </div>
     </header>
-    <!-- SIMPLE FIXED HEADER with HAMBURGER-End -->
 
     <!-- The dark overlay for the side menu -->
     <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
@@ -390,11 +391,12 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="experience-page.html">Our Experience</a></li>
-            <li><a href="./">Services</a></li>
-            <li><a href="./projectsnew.html">Projects</a></li>
-            <li><a href="./">Blog</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Blog</a></li>
         </ul>
     </div>
+
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-body">
             <div class="canvas-container">
@@ -423,8 +425,7 @@
                                         <div class="row align-items-center">
                                             <div class="col-md-6">
                                                 <div class="footer-logo">
-                                                    <img height="120px" src="images/vision-logo.svg" loading="lazy"
-                                                        alt="">
+                                                    <img height="120px" src="images/vision-logo.svg" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -526,165 +527,241 @@
         </div>
     </div>
 
-
-    <!-- header+overlay+sidmenu+sidemenu-canvas end -->
-
-    <!-- projects-hero-start-1 -->
-    <section class="projects-hero-section">
-        <div class="project-hero projects-container">
-            <div class="projects-hero-content">
-                <h1>OUR PROJECTS</h1>
-            </div>
-            <div class="projects-hero-frame">
-                <img src="images/projects-hero-frame.png" alt="">
-            </div>
-        </div>
-    </section>
-    <!--projecst-slider-start-2 -->
-    <section class="projects-container image-slider-section">
-        <div class="image-slider">
-            <!-- 👇 Move buttons inside .slider -->
-            <div class="image-slider-controls">
-                <button class="nav-btn prev">&#8592;</button>
-                <button class="nav-btn next">&#8594;</button>
-            </div>
-            <!-- Main slides -->
-            <img src="images/projects-slider-one.png" class="slide active" />
-            <img src="images/projects-slider-two.png" class="slide" />
-            <img src="images/projects-slider-three.png" class="slide" />
-            <img src="images/projects-slider-four.png" class="slide" />
-        </div>
-
-        <!-- Thumbnails -->
-        <div class="thumbnails">
-            <img src="images/projects-slider-one.png" class="thumb active" />
-            <img src="images/projects-slider-two.png" class="thumb" />
-            <img src="images/projects-slider-three.png" class="thumb" />
-            <img src="images/projects-slider-four.png" class="thumb" />
-        </div>
-    </section>
-
-    <!-- (projects-slider+ mordern) for small screen -->
-    <section class="projects-container image-slider-section-small">
-        <div class="about-project-content-right">
-            <h1>MODERN INTERIOR DESIGN</h1>
-            <p>Crafted for a client who valued design-forward thinking, this Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
-        </div>
-        <div class="image-slider">
-            <div class="image-slider-controls">
-                <button class="nav-btn prev">&#8592;</button>
-                <button class="nav-btn next">&#8594;</button>
-            </div>
-            <img src="images/projects-slider-one.png" class="slide active" />
-            <img src="images/projects-slider-two.png" class="slide" />
-            <img src="images/projects-slider-three.png" class="slide" />
-            <img src="images/projects-slider-four.png" class="slide" />
-        </div>
-    </section>
-
-    <!-- (about-project+thumnails) for small device -->
-    <section class="projects-container about-project-small">
-        <div class="about-project-content-left">
-            <h1>ABOUT THIS PROJECT</h1>
-            <p>Crafted for a client who valued design-forward thinking, this Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
-        </div>
-        <!-- Thumbnails -->
-        <div class="thumbnails">
-            <img src="images/projects-slider-one.png" class="thumb active" />
-            <img src="images/projects-slider-two.png" class="thumb" />
-            <img src="images/projects-slider-three.png" class="thumb" />
-            <img src="images/projects-slider-four.png" class="thumb" />
-        </div>
-    </section>
-
-
-    <!-- about-project-start    -->
-    <section class="projects-container about-project">
-        <div class="about-project-content-left">
-            <h1>ABOUT THIS PROJECT</h1>
-            <p>Crafted for a client who valued design-forward thinking, this Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
-        </div>
-        <div class="about-project-content-right">
-            <h1>MODERN INTERIOR DESIGN</h1>
-            <p>Crafted for a client who valued design-forward thinking, this Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
-        </div>
-    </section>
-
-    <!--card-slider-section  -->
-    <section class="card-slider-section">
-        <div class="projects-container">
-            <div class="card-slider-control">
-                <button class="prevBtn">&#8592; Prev</button>
-                <button class="nextBtn">Next &#8594;</button>
+    <main>
+        <!-- Begin: experience-page -->
+        <section class="experience-page">
+            <div class="main-section section_container">
+                <h2 data-cursor="-opaque" class="text-anime-style-2 about-banner-content">VISION’S BUILDING EXPERIENCE
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay="0.2s">An exclusive, hands-on journey ensuring your home is a
+                    true reflection of sophistication and
+                    elegance.
+                </p>
+                <p class="wow fadeInUp" data-wow-delay="0.2s">Experience a seamless journey where your vision is
+                    meticulously crafted into an architectural
+                    masterpiece, blending
+                    sophistication with timeless elegance. Our bespoke approach ensures every detail reflects your
+                    distinctive taste,
+                    creating a home that is truly unparalleled.
+                </p>
             </div>
 
-            <!-- Swiper Container -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="images/projects-card-slider-1.jpg" alt="slider-1" />
-                        <p>This Leppington residence is a testament to timeless design, blending sophistication with
-                            family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
-                            home is both impressive and inviting. </p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/projects-card-slider-2.png" alt="slider-2" />
-                        <p>This Marsden Park residence is a striking example of custom design done right. A commanding
-                            street presence gives way to interiors that are warm, inviting, and layered with texture.
-                            The living spaces are defined by open sightlines</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/interior-design-section-2.jpg" alt="slider-3" />
-                        <p>This Leppington residence is a testament to timeless design, blending sophistication with
-                            family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
-                            home is both impressive and inviting.</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/cozy-lively-home-interior-design-optimize.jpg" alt="slider-4" />
-                        <p>This Marsden Park residence is a striking example of custom design done right. A commanding
-                            street presence gives way to interiors that are warm, inviting, and layered with texture.
-                            The living spaces are defined by open sightlines</p>
+            <div class="design_development_phase">
+                <div class="content_area section_container">
+                    <h4 class="text-anime-style-2">Design & Development Phase</h4>
+
+                    <div class="tabs_area">
+                        <!-- Tab content -->
+                        <div class="tab-content-container">
+                            <div class="tab-content active" data-content="1">
+                                <div class="mb-md-5">
+                                    <span class="tab-number">1.</span>
+                                    <span class="tab-title">Preliminary Process</span>
+                                </div>
+                                <div class="description_tab_content">
+                                    <p>Your dream home begins with a seamless, refined process tailored to your
+                                        lifestyle and aspirations.</p>
+                                    <p>Through in-depth discussions, we gain a deep understanding of your vision,
+                                        preferences, and unique design sensibilities.</p>
+                                </div>
+                            </div>
+                            <div class="tab-content" data-content="2">
+                                <div class="mb-5">
+                                    <span class="tab-number">2.</span>
+                                    <span class="tab-title">Investigation & Enquiry</span>
+                                </div>
+                                <div>
+                                    <p>Your dream home begins with a seamless, refined process tailored to your
+                                        lifestyle and aspirations.</p>
+                                    <p>Through in-depth discussions, we gain a deep understanding of your vision,
+                                        preferences, and unique design sensibilities.</p>
+                                </div>
+                            </div>
+                            <div class="tab-content" data-content="3">
+                                <div class="mb-5">
+                                    <span class="tab-number">3.</span>
+                                    <span class="tab-title">Interior Design Talks</span>
+                                </div>
+                                <div>
+                                    <p>Your dream home begins with a seamless, refined process tailored to your
+                                        lifestyle and aspirations.</p>
+                                    <p>Through in-depth discussions, we gain a deep understanding of your vision,
+                                        preferences, and unique design sensibilities.</p>
+                                </div>
+                            </div>
+                            <div class="tab-content" data-content="4">
+                                <div class="mb-5">
+                                    <span class="tab-number">4.</span>
+                                    <span class="tab-title">Contact</span>
+                                </div>
+                                <div>
+                                    <p>Your dream home begins with a seamless, refined process tailored to your
+                                        lifestyle and aspirations.</p>
+                                    <p>Through in-depth discussions, we gain a deep understanding of your vision,
+                                        preferences, and unique design sensibilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tabs -->
+                        <div class="tabs">
+                            <button class="tab active" data-tab="1">
+                                <span class="tab-number">1.</span>
+                                <span class="tab-title">Preliminary Process</span>
+                            </button>
+                            <button class="tab" data-tab="2">
+                                <span class="tab-number">2.</span>
+                                <span class="tab-title">Investigation & Enquiry</span>
+                            </button>
+                            <button class="tab" data-tab="3">
+                                <span class="tab-number">3.</span>
+                                <span class="tab-title">Interior Design Talks</span>
+                            </button>
+                            <button class="tab" data-tab="4">
+                                <span class="tab-number">4.</span>
+                                <span class="tab-title">Contract</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="construction_phase">
+                <div class="content_area">
+                    <h3 data-cursor="-opaque" class="text-anime-style-2 about-banner-content">construction Phase</h3>
+                </div>
+            </div>
+            <div class="timeline-section-container">
+                <div class="section_container">
+                    <div class="timeline-section">
+                        <div class="section-header">
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-progress"></div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3>A LUXURIOUS BEGINNING</h3>
+                                    <h4>Starting with Your Pool Construction</h4>
+                                    <div class="description">
+                                        <p class="text-start">Your dedicated site supervisor will guide you through the
+                                            bespoke
+                                            build process, ensuring clarity at every stage.</p>
+                                        <p class="text-start mt-3">If a pool is part of your vision, we’ll commence
+                                            construction
+                                            early to maintain seamless access and efficiency.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-marker">01</div>
+                            </div>
+
+                            <div class="timeline-item justify-content-start align-items-start">
+                                <div class="timeline-content text-end">
+                                    <h3>BUILDING STRONG</h3>
+                                    <h4>Laying the Perfect Foundation & Structure</h4>
+                                    <div class="description">
+                                        <p class="text-start">Every masterpiece begins with a strong foundation—your
+                                            custom
+                                            home's
+                                            base
+                                            is meticulously
+                                            laid to perfection.</p>
+                                        <p class="text-start mt-3">With the groundwork set, we craft the structural
+                                            framework,
+                                            shaping
+                                            the foundation of your exquisite residence</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-marker">02</div>
+                            </div>
+
+                            <div class="timeline-item justify-content-start">
+                                <div class="timeline-content">
+                                    <h3>ARCHITECTURAL MASTERY</h3>
+                                    <h4>Elevating the Roof & Exterior Aesthetic</h4>
+                                    <div class="description">
+                                        <p class="text-start">The architectural form takes shape as we install the roof,
+                                            pre-wire
+                                            electricals, and complete essential plumbing.</p>
+                                        <p class="text-start mt-3">Enclosing your home from the elements, we refine the
+                                            exterior
+                                            with impeccable craftsmanship and precision.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-marker">03</div>
+                            </div>
+
+                            <div class="timeline-item justify-content-start">
+                                <div class="timeline-content text-end">
+                                    <h3>INTERIOR REFINEMENT</h3>
+                                    <h4>Designing a Space You'll Love</h4>
+                                    <div class="description">
+                                        <p class="text-start">With your home now secure, we elevate the
+                                            interiors—installing
+                                            cabinetry, bespoke doors, and luxurious bathrooms.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-marker">04</div>
+                            </div>
+
+                            <div class="timeline-item justify-content-start">
+                                <div class="timeline-content">
+                                    <h3>FLAWLESS EXECUTION</h3>
+                                    <h4>Ensuring Every Detail Meets the Highest Standards</h4>
+                                    <div class="description">
+                                        <p class="text-start">Adhering to the highest standards, we conduct a meticulous
+                                            compliance
+                                            check to ensure flawless execution.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-marker">05</div>
+                            </div>
+
+                            <div class="timeline-item justify-content-start align-items-end">
+                                <div class="timeline-content text-end">
+                                    <h3>THE GRAND REVEAL</h3>
+                                    <h4>Your Keys to an Exquisite New Home</h4>
+                                    <div class="description">
+                                        <p class="text-start">The moment you've been waiting for—your luxury home is
+                                            complete, and
+                                            the keys are now yours to unlock a new era of
+                                            opulent living.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-marker timeline-marker-last-one">06</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-container">
+                        <h2 data-cursor="-opaque" class="text-anime-style-2 about-banner-content">BUILD YOUR LUXURY HOME
+                            WITH US</h2>
+                        <a href="#" class="btn">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6.12503 4L9.875 7.75L6.125 11.5" stroke="white" stroke-width="1.125"
+                                    stroke-miterlimit="16" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></a>
+                    </div </div>
+
+
+        </section>
+        <!-- Begin: experience-page -->
+
+
+    </main>
 
     <!--footer-start-10-->
     <footer class="main-footer">
-        <div class="projects-container">
+        <div class="main-container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-header">
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="footer-logo">
-                                    <img height="120px" src="images/vision-logo.svg" loading="lazy" alt="">
+                                    <img height="120px" src="images/vision-logo.svg" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -780,54 +857,160 @@
             </ul>
         </div>
     </footer>
+    <!--footer-end-->
 
-
-    <!-- Alll sections ended here-->
-    <!-- Jquery Library File -->
+    <!-- JS Files -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
     <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
     <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    <!-- Isotop js file -->
     <script src="js/isotope.min.js"></script>
-    <!-- Magnific js file -->
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- SmoothScroll -->
     <script src="js/SmoothScroll.js"></script>
-    <!-- Parallax js -->
     <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
     <script src="js/gsap.min.js"></script>
     <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
     <script src="js/SplitText.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
     <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-    <script src="js/index.js"></script>
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
+    <script type="module" src="js/index.js"></script>
 
+    <script>
+        const swiper = new Swiper('.inspiration-design .swiper', {
+            slidesPerView: 1, // Let the width control number of visible slides
+            centeredSlides: true,
+            initialSlide: 1,
+            spaceBetween: 10,
+            loop: true,
+            speed: 1000,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // (optional) responsive breakpoints
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            function switchTab(e) {
+                const clickedTab = e.target.closest('.tab');
+                if (!clickedTab) return;
+
+                const tabNumber = clickedTab.dataset.tab;
+
+                // Update active states
+                tabs.forEach(tab => tab.classList.remove('active'));
+                contents.forEach(content => content.classList.remove('active'));
+
+                clickedTab.classList.add('active');
+                document.querySelector(`[data-content="${tabNumber}"]`).classList.add('active');
+            }
+
+            // Add click handlers
+            tabs.forEach(tab => {
+                tab.addEventListener('click', switchTab);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.querySelector(".section-header");
+            const timelineItems = document.querySelectorAll(".timeline-item");
+            const timelineMarkers = document.querySelectorAll(".timeline-marker");
+            const timelineProgress = document.querySelector(".timeline-progress");
+
+            // Intersection Observer for the header
+            const headerObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+
+            headerObserver.observe(header);
+
+            // Intersection Observer for timeline items
+            const itemObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            entry.target
+                                .querySelector(".timeline-marker")
+                                .classList.add("visible");
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            timelineItems.forEach((item) => itemObserver.observe(item));
+
+            // Update timeline progress on scroll
+            function updateProgress() {
+                const timeline = document.querySelector(".timeline");
+                const timelineRect = timeline.getBoundingClientRect();
+                const timelineStart = timelineRect.top;
+                const timelineEnd = timelineRect.bottom;
+                const windowHeight = window.innerHeight;
+
+                if (timelineStart < windowHeight && timelineEnd > 0) {
+                    const total = timelineEnd - timelineStart;
+                    const current = windowHeight - timelineStart;
+                    const progress = (current / total) * 90;
+                    const clampedProgress = Math.min(90, Math.max(20, progress)); // Start at 20%
+
+                    timelineProgress.style.height = `${clampedProgress}%`;
+                }
+            }
+
+            window.addEventListener("scroll", updateProgress);
+            updateProgress(); // Initial call
+        });
+
+    </script>
+
+    <!-- Toggle side menu script -->
+    <script>
         function toggleSideMenu() {
             const sideMenu = document.getElementById('sideMenu');
             const overlay = document.getElementById('overlay');
             sideMenu.classList.toggle('open');
             overlay.classList.toggle('open');
         }
+    </script>
+
+    <script>
+        document.getElementById('playVideoBtn').addEventListener('click', function () {
+            const poster = document.getElementById('videoPoster');
+            const video = document.getElementById('myVideo');
+            poster.style.display = 'none';
+            video.play();
+        });
+    </script>
+
+    <script>
+        // Hide the logo when scrolled beyond the first section
         const logo = document.getElementById('siteLogo');
+
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY || window.pageYOffset;
 
@@ -836,24 +1019,6 @@
                 logo.classList.add('hide');
             } else {
                 logo.classList.remove('hide');
-            }
-        });
-    </script>
-    <script>
-        const swiper = new Swiper('.mySwiper', {
-            slidesPerView: 1,
-            spaceBetween: 40,
-            speed: 600,
-            loop: false,
-            navigation: {
-                nextEl: '.nextBtn',
-                prevEl: '.prevBtn',
-            },
-            breakpoints: {
-                993: {
-                    slidesPerView: 2,
-                    spaceBetween: 40
-                }
             }
         });
     </script>

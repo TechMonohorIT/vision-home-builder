@@ -636,41 +636,34 @@
 
     <!--card-slider-section  -->
     <section class="card-slider-section">
-        <div class="projects-container">
-            <div class="card-slider-control">
-                <button class="prevBtn">&#8592; Prev</button>
-                <button class="nextBtn">Next &#8594;</button>
+        <div class="card-slider-control projects-container">
+            <button class="prevBtn" type="button">&#8592; Prev</button>
+            <button class="nextBtn" type="button">Next &#8594;</button>
+        </div>
+        <div class="card-slider-track projects-container ">
+            <div class="card-box">
+                <img src="images/projects-card-slider-1.jpg" alt="slider-1" />
+                <p>This Leppington residence is a testament to timeless design, blending sophistication with
+                    family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
+                    home is both impressive and inviting. </p>
             </div>
-
-            <!-- Swiper Container -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="images/projects-card-slider-1.jpg" alt="slider-1" />
-                        <p>This Leppington residence is a testament to timeless design, blending sophistication with
-                            family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
-                            home is both impressive and inviting. </p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/projects-card-slider-2.png" alt="slider-2" />
-                        <p>This Marsden Park residence is a striking example of custom design done right. A commanding
-                            street presence gives way to interiors that are warm, inviting, and layered with texture.
-                            The living spaces are defined by open sightlines</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/interior-design-section-2.jpg" alt="slider-3" />
-                        <p>This Leppington residence is a testament to timeless design, blending sophistication with
-                            family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
-                            home is both impressive and inviting.</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/cozy-lively-home-interior-design-optimize.jpg" alt="slider-4" />
-                        <p>This Marsden Park residence is a striking example of custom design done right. A commanding
-                            street presence gives way to interiors that are warm, inviting, and layered with texture.
-                            The living spaces are defined by open sightlines</p>
-                    </div>
-                </div>
+            <div class="card-box">
+                <img src="images/projects-card-slider-2.png" alt="slider-2" />
+                <p>This Marsden Park residence is a striking example of custom design done right. A commanding
+                    street presence gives way to interiors that are warm, inviting, and layered with texture.
+                    The living spaces are defined by open sightlines</p>
+            </div>
+            <div class="card-box">
+                <img src="images/interior-design-section-2.jpg" alt="slider-3" />
+                <p>This Leppington residence is a testament to timeless design, blending sophistication with
+                    family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
+                    home is both impressive and inviting.</p>
+            </div>
+            <div class="card-box">
+                <img src="images/cozy-lively-home-interior-design-optimize.jpg" alt="slider-4" />
+                <p>This Marsden Park residence is a striking example of custom design done right. A commanding
+                    street presence gives way to interiors that are warm, inviting, and layered with texture.
+                    The living spaces are defined by open sightlines</p>
             </div>
         </div>
     </section>
@@ -818,7 +811,7 @@
     <script src="js/function.js"></script>
     <script src="js/index.js"></script>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 
         function toggleSideMenu() {
@@ -836,24 +829,6 @@
                 logo.classList.add('hide');
             } else {
                 logo.classList.remove('hide');
-            }
-        });
-    </script>
-    <script>
-        const swiper = new Swiper('.mySwiper', {
-            slidesPerView: 1,
-            spaceBetween: 40,
-            speed: 600,
-            loop: false,
-            navigation: {
-                nextEl: '.nextBtn',
-                prevEl: '.prevBtn',
-            },
-            breakpoints: {
-                993: {
-                    slidesPerView: 2,
-                    spaceBetween: 40
-                }
             }
         });
     </script>
