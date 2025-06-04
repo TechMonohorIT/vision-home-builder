@@ -1,4 +1,4 @@
-/* this is for small screen visibility hidden in large screen */
+/* These sections for small screen. visibility hidden in large screen */
 /* ----------------------------------------------------------- */
 .image-slider-section-small {
     display: none;
@@ -362,12 +362,6 @@
         padding-right: 80px !important;
     }
 }
-
-/* @media (max-width: 1200px) {
-    .card-slider-track {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-} */
 
 @media screen and (max-width: 768px) {
     .card-box {

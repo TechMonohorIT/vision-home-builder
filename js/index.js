@@ -60,7 +60,6 @@ document.querySelectorAll('.image-slider').forEach((slider) => {
 // card slider
 new Swiper('.swiper', {
   loop: true,
-  // Navigation arrows
   navigation: {
     nextEl: '.nextBtn',
     prevEl: '.prevBtn',
