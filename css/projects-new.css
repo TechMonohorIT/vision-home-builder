@@ -241,6 +241,7 @@
 /*------------------------------------------------ */
 /* 3.card-slider */
 /*------------------------------------------------ */
+
 .projects-container {
     max-width: 1440px;
     padding-left: 120px;
@@ -259,7 +260,6 @@
     padding-bottom: 197px;
     width: 100%;
     height: 100%;
-    /* bg */
     background-image: url("/images/projects-card-slider-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -304,13 +304,6 @@
     line-height: 36.484px;
     border-bottom: 2px solid var(--white-color);
 }
-
-/* .card-slider-track {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px;
-    width: 100%;
-} */
 
 .card-slider-track {
     display: flex;
@@ -402,8 +395,6 @@
         border-bottom: 1px solid var(--white-color);
     }
 }
-
-
 
 /* Responsive */
 @media screen and (max-width: 768px) {

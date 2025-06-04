@@ -56,16 +56,3 @@ document.querySelectorAll('.image-slider').forEach((slider) => {
 
 
 
-
-// card slider
-new Swiper('.swiper', {
-  loop: true,
-  navigation: {
-    nextEl: '.nextBtn',
-    prevEl: '.prevBtn',
-    clickableClass: 'swiper-button-clickable',
-  },
-});
-
-
-
