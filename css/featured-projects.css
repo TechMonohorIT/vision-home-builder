@@ -227,13 +227,22 @@
   left: 11px;
   height: 40px;
   width: 276px;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(50px);
   transform-origin: left;
   color: #382213;
   font-size: 28px;
   font-weight: 600;
   line-height: 36.484px;
   text-transform: uppercase;
+  opacity: 0;
+  animation: slideFadeIn 1.2s ease forwards;
+}
+
+@keyframes slideFadeIn {
+  to {
+    transform: rotate(-90deg) translateY(0);
+    opacity: 1;
+  }
 }
 
 .description-content {
