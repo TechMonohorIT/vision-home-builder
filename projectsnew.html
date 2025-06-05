@@ -5,7 +5,8 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
@@ -13,7 +14,6 @@
     <title>Vision Smart Homes</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-
     <!--Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
     <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -208,7 +208,6 @@
         }
 
         .side-menu ul li a:hover {
-            /* accent color on hover */
             color: #ffd900ab;
         }
 
@@ -525,10 +524,7 @@
             </div>
         </div>
     </div>
-
-
     <!-- header+overlay+sidmenu+sidemenu-canvas end -->
-
     <!-- projects-hero-start-1 -->
     <section class="projects-hero-section">
         <div class="project-hero projects-container">
@@ -537,6 +533,18 @@
             </div>
             <div class="projects-hero-frame">
                 <img src="images/projects-hero-frame.png" alt="">
+            </div>
+        </div>
+        <!-- this duplicate contents for small screen. display none in large screen -->
+        <div class="project-hero-small projects-container">
+            <div class="project-hero-box">
+                <div class="projects-hero-content-small">
+                    <h1>OUR PROJECTS</h1>
+                </div>
+                <img src="images/white-logo.png" alt="">
+            </div>
+            <div class="frame-small">
+                <img src="images/frame-for-small.png" alt="">
             </div>
         </div>
     </section>
@@ -670,6 +678,15 @@
                             street presence gives way to interiors that are warm, inviting, and layered with texture.
                             The living spaces are defined by open sightlines</p>
                     </div>
+                </div>
+            </div>
+            <!-- extra just for small screen .hide on large screen -->
+            <div class="small-card-box">
+                <div class="card-item">
+                    <img src="images/projects-card-slider-1.jpg" alt="slider-1" />
+                    <p>This Leppington residence is a testament to timeless design, blending sophistication with
+                        family-centric functionality. Featuring a grand entryway and expansive open-plan living, the
+                        home is both impressive and inviting. </p>
                 </div>
             </div>
         </div>
@@ -849,13 +866,18 @@
                 nextEl: '.nextBtn',
                 prevEl: '.prevBtn',
             },
+            // Dynamically set initial slide based on screen width
+            initialSlide: window.innerWidth < 768 ? 1 : 0,
+
             breakpoints: {
                 993: {
                     slidesPerView: 2,
-                    spaceBetween: 40
+                    spaceBetween: 40,
+                    initialSlide: 0, // For larger devices
                 }
             }
         });
+
     </script>
 </body>
 
