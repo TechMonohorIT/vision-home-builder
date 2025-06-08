@@ -8,6 +8,7 @@
   max-width: calc(100% - 320px);
   margin: 0 auto;
 }
+
 .service_main_container {
   position: relative;
   background: url("../images/service-hero-bg.jpg");
@@ -28,6 +29,7 @@
   background: rgba(122, 91, 65, 0.84);
   z-index: -1;
 }
+
 .service_banner_img {
   position: absolute;
   top: 0;
@@ -37,6 +39,7 @@
   height: 728px;
   z-index: 2;
 }
+
 .service_banner_img img {
   width: 100%;
   height: 100%;
@@ -46,6 +49,7 @@
 .service_content {
   padding-top: 72px !important;
 }
+
 .service_content h4 {
   color: var(--color-bw-white, #fff);
   font-family: Montserrat;
@@ -55,11 +59,12 @@
   line-height: 19.2px;
   text-transform: capitalize;
 }
+
 .service_content h2 {
   margin-top: 40px;
   color: var(--color-bw-white, #fff);
   font-family: Montserrat;
-  font-size: 60px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 500;
   line-height: 68px;
@@ -67,6 +72,7 @@
   text-transform: uppercase;
   width: 535px;
 }
+
 .service_content span {
   font-weight: 300;
 }
@@ -84,6 +90,7 @@
   min-height: 810px;
   height: 100%;
 }
+
 .residential_container::before {
   content: "";
   position: absolute;
@@ -94,6 +101,7 @@
   background: rgba(247, 247, 247, 0.8);
   z-index: -1;
 }
+
 .residential_container .residential_img {
   width: 770.569px;
   height: 721px;
@@ -108,6 +116,7 @@
   height: 100%;
   object-fit: fill;
 }
+
 .residential_container .residential_content {
   display: flex;
   flex-direction: column;
@@ -119,14 +128,15 @@
 .residential_container .residential_content h2 {
   color: #756458;
   font-family: Montserrat;
-  font-size: 48px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 60px;
+  line-height: 52px;
   text-transform: uppercase;
   position: relative;
   max-width: 546px;
 }
+
 .residential_container .residential_content h2::after {
   content: "";
   position: absolute;
@@ -136,15 +146,16 @@
   bottom: -10px;
   left: 0;
 }
+
 .residential_container .residential_content p {
   margin-top: 32px;
   color: #7a695f;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.4px;
   max-width: 546px;
 }
 
@@ -161,6 +172,7 @@
   min-height: 810px;
   height: 100%;
 }
+
 .commercial_design_container::before {
   content: "";
   position: absolute;
@@ -172,10 +184,12 @@
   background: #7a5b41;
   z-index: -1;
 }
+
 .commercial_design_content {
   position: absolute;
   left: 163px;
 }
+
 .commercial_design_container .commercial_design_img {
   max-width: 1028px;
   width: 100%;
@@ -186,6 +200,7 @@
   right: 0;
   aspect-ratio: 514/407;
 }
+
 .commercial_design_img img {
   width: 100%;
   height: 100%;
@@ -195,14 +210,15 @@
 .commercial_design_container .commercial_design_content h2 {
   color: #fff;
   font-family: Montserrat;
-  font-size: 48px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 60px;
+  line-height: 52px;
   text-transform: uppercase;
   position: relative;
   max-width: 546px;
 }
+
 .commercial_design_container .commercial_design_content h2::after {
   content: "";
   position: absolute;
@@ -212,15 +228,16 @@
   bottom: -10px;
   left: 0;
 }
+
 .commercial_design_container .commercial_design_content p {
   margin-top: 32px;
   color: #fff;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.4px;
   max-width: 546px;
 }
 
@@ -237,6 +254,7 @@
   min-height: 810px;
   height: 100%;
 }
+
 .furniture_section::before {
   content: "";
   position: absolute;
@@ -244,13 +262,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    67deg,
-    #fff 26.9%,
-    rgba(233, 233, 233, 0.86) 120.9%
-  );
+  background: linear-gradient(67deg,
+      #fff 26.9%,
+      rgba(233, 233, 233, 0.86) 120.9%);
   z-index: -1;
 }
+
 .color_consultation_section {
   display: flex;
   align-items: center;
@@ -264,6 +281,7 @@
   min-height: 810px;
   height: 100%;
 }
+
 .color_consultation_section::before {
   content: "";
   position: absolute;
@@ -271,11 +289,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    67deg,
-    #fff 26.9%,
-    rgba(233, 233, 233, 0.86) 120.9%
-  );
+  background: linear-gradient(67deg,
+      #fff 26.9%,
+      rgba(233, 233, 233, 0.86) 120.9%);
   z-index: -1;
 }
 
@@ -289,6 +305,7 @@
   right: 0;
   aspect-ratio: 514/407;
 }
+
 .lighting_design_img img {
   width: 100%;
   height: 100%;
@@ -308,6 +325,7 @@
   min-height: 810px;
   height: 100%;
 }
+
 .visualization_section::before {
   content: "";
   position: absolute;
@@ -330,6 +348,7 @@
   right: 0;
   aspect-ratio: 514/407;
 }
+
 .visualization_section_img img {
   width: 100%;
   height: 100%;
@@ -340,18 +359,22 @@
   .service_banner_img {
     max-width: 74vw;
   }
+
   .residential_container .residential_img {
     max-width: 52vw;
     width: 100%;
   }
+
   .commercial_design_container .commercial_design_img {
     max-width: 74vw;
     width: 100%;
   }
+
   .lighting_design_img {
     max-width: 60vw;
     width: 100%;
   }
+
   .visualization_section_img {
     max-width: 60vw;
     width: 100%;
@@ -363,17 +386,21 @@
     max-width: 847px;
     width: 100%;
   }
+
   .lighting_design_img {
     max-width: 550px;
     width: 100%;
   }
+
   .visualization_section_img {
     max-width: 500px;
     width: 100%;
   }
+
   .commercial_design_container .commercial_design_content h2 {
     max-width: 447px;
   }
+
   .commercial_design_container .commercial_design_content p {
     max-width: 465px;
   }
@@ -384,10 +411,12 @@
     max-width: 610px;
     width: 100%;
   }
+
   .lighting_design_img {
     max-width: 550px;
     width: 100%;
   }
+
   .service_content h2 {
     margin-top: 40px;
     color: var(--color-bw-white, #fff);
@@ -411,6 +440,7 @@
     top: -19px;
     left: 0;
   }
+
   .residential_container .residential_content {
     display: flex;
     flex-direction: column;
@@ -419,6 +449,7 @@
     left: 41%;
     top: 41px;
   }
+
   .residential_container .residential_content h2 {
     color: #756458;
     font-family: Montserrat;
@@ -430,6 +461,7 @@
     position: relative;
     max-width: 455px;
   }
+
   .residential_container .residential_content p {
     margin-top: 32px;
     color: #7a695f;
@@ -449,6 +481,7 @@
     height: 500px;
     top: 277px;
   }
+
   .commercial_design_content {
     position: absolute;
     left: 120px;
@@ -461,9 +494,11 @@
     max-width: calc(100% - 64px);
     margin: 0 auto;
   }
+
   .service-page {
     margin-top: 96px;
   }
+
   .residential_container .residential_img {
     width: 401.87px;
     height: 376.019px;
@@ -471,19 +506,23 @@
     aspect-ratio: 401.87/376.02;
     top: 194px;
   }
+
   .residential_container {
     min-height: 642px;
     height: 100%;
   }
+
   .residential_container .residential_content h2 {
     font-size: 20px;
     line-height: 24px;
     max-width: 228px;
   }
+
   .residential_container .residential_content h2::after {
     width: 169.6px;
     height: 1.2px;
   }
+
   .residential_container .residential_content p {
     margin-top: 14px;
     font-size: 14px;
@@ -491,6 +530,7 @@
     max-width: 320px;
     width: 100%;
   }
+
   .residential_container .residential_content {
     display: flex;
     flex-direction: column;
@@ -499,15 +539,18 @@
     left: 80px;
     top: 32px;
   }
+
   .commercial_design_content {
     left: 32px;
   }
+
   .visualization_section_img {
     max-width: 400px;
     height: 389px;
     width: 100%;
     top: 191px;
   }
+
   .lighting_design_img {
     max-width: 400px;
     height: 372px;
@@ -530,10 +573,12 @@
     height: 280px;
     z-index: 2;
   }
+
   .service_main_container {
     min-height: 481px;
     height: 100%;
   }
+
   .commercial_design_container .commercial_design_content h2 {
     color: #fff;
     font-family: Montserrat;
@@ -545,6 +590,7 @@
     position: relative;
     max-width: 228px;
   }
+
   .commercial_design_container .commercial_design_content p {
     color: var(--color-bw-white, #fff);
     font-family: Montserrat;
@@ -555,19 +601,21 @@
     letter-spacing: 0.28px;
     max-width: 320px;
   }
+
   .commercial_design_container .commercial_design_content h2::after {
     width: 169.6px;
     height: 1.2px;
   }
+
   .commercial_design_container .commercial_design_img {
     max-width: 400px;
     height: 277px;
   }
+
   .commercial_design_container {
     min-height: 584px;
     height: 100%;
   }
 }
 
-@media (max-width: 668px) {
-}
+@media (max-width: 668px) {}
