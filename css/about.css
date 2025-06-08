@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 html,
 body {
   height: 100%;
@@ -42,6 +43,7 @@ body {
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
+
 .about-banner-content h2 {
   color: white;
   font-family: Montserrat;
@@ -75,27 +77,32 @@ body {
   line-height: 32px;
   margin-bottom: 0;
 }
+
 .about {
   padding: 128px 0px;
   display: flex;
   align-items: center;
   column-gap: 120px;
 }
+
 .about-image img {
   width: 600px;
   height: 600px;
   object-fit: contain;
 }
+
 .custom_container {
   max-width: calc(100% - 120px);
   margin: auto;
 }
+
 .about-content-main {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
+
 .about-content {
   display: flex;
   align-items: start;
@@ -109,7 +116,9 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
+  margin-bottom: 16px;
 }
+
 .about-content p {
   color: #86796f;
   font-family: Montserrat;
@@ -118,6 +127,7 @@ body {
   font-weight: 500;
   line-height: 22px;
 }
+
 .about-content img {
   width: 48px;
   height: 48px;
@@ -153,18 +163,18 @@ body {
   justify-content: center;
   padding: 164px 0px;
 }
+
 .mission_vision::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(58, 33, 19, 0) 20.84%,
-    #3a2113 57.32%
-  );
+  background: linear-gradient(90deg,
+      rgba(58, 33, 19, 0) 20.84%,
+      #3a2113 57.32%);
   z-index: 0;
   height: 50%;
 }
+
 .mission_vision_text {
   width: 100%;
   display: flex;
@@ -182,6 +192,7 @@ body {
   justify-content: space-between;
   column-gap: 43px;
 }
+
 .mission_vision_content .hr {
   background: rgba(143, 105, 80, 0.4);
   width: 1px;
@@ -197,6 +208,7 @@ body {
   font-weight: 500;
   line-height: 36px;
 }
+
 .mission_vision_content p {
   color: #86796f;
   font-family: Montserrat;
@@ -207,9 +219,11 @@ body {
   margin: 0px !important;
   width: 383px;
 }
+
 .mission_vision_text_header {
   width: 566px;
 }
+
 .mission_vision_text h2 {
   color: #fff;
   font-family: Montserrat;
@@ -221,6 +235,7 @@ body {
   text-transform: uppercase;
   width: 336px;
 }
+
 .mission_vision_text p {
   color: #fff;
   font-family: Montserrat;
@@ -242,6 +257,7 @@ body {
   padding: 127px 0px;
   width: calc(100% - 120px);
 }
+
 .our_leadership_container .left_side h3 {
   color: #6a5c4e !important;
   font-family: Montserrat;
@@ -252,6 +268,7 @@ body {
   letter-spacing: -0.54px;
   text-transform: uppercase;
 }
+
 .our_leadership_container .left_side h5 {
   color: #86796f !important;
   font-family: Montserrat;
@@ -267,6 +284,7 @@ body {
   width: 416.757px;
   height: 382.2px;
 }
+
 .our_leadership_image {
   position: absolute;
   right: 108px;
@@ -302,10 +320,12 @@ body {
     max-width: 1600px;
     margin: auto;
   }
+
   .our_leadership_container .left_side {
     padding: 127px 0px;
     width: calc(100% - 320px);
   }
+
   .about-banner-content h3 {
     color: white;
     text-align: center;
@@ -316,6 +336,7 @@ body {
     letter-spacing: -0.72px;
     text-transform: uppercase;
   }
+
   .about-banner-content h2 {
     color: white;
     font-family: Montserrat;
@@ -326,6 +347,7 @@ body {
     letter-spacing: 0.64px;
     text-transform: uppercase;
   }
+
   .our_leadership_container .left_side h3 {
     color: #6a5c4e !important;
     font-family: Montserrat;
@@ -336,6 +358,7 @@ body {
     letter-spacing: -0.72px;
     text-transform: uppercase;
   }
+
   .mission_vision_content h2 {
     color: #6a5c4e;
     font-family: Montserrat;
@@ -345,6 +368,7 @@ body {
     font-weight: 500;
     line-height: 48px;
   }
+
   .mission_vision_content p {
     color: #86796f;
     font-family: Montserrat;
@@ -366,6 +390,7 @@ body {
     text-transform: uppercase;
     width: 494px;
   }
+
   .mission_vision_text p {
     color: #fff;
     font-family: Montserrat;
@@ -385,6 +410,7 @@ body {
     font-weight: 700;
     line-height: 28.8px;
   }
+
   .about-content p {
     color: #86796f;
     margin-bottom: 0px;
@@ -396,6 +422,7 @@ body {
     font-weight: 500;
     line-height: 28.8px;
   }
+
   .about-content img {
     width: 64px;
     height: 64px;
@@ -406,6 +433,7 @@ body {
     height: 824px;
     object-fit: contain;
   }
+
   .about-text-box p {
     color: #cbc5be;
     font-family: Montserrat;
@@ -415,12 +443,14 @@ body {
     line-height: 38px;
     margin-bottom: 0px;
   }
+
   .about-content-main {
     margin-top: 222px;
     display: flex;
     flex-direction: column;
     row-gap: 64px;
   }
+
   .about-text-box {
     background: #382213;
     position: absolute;
@@ -433,6 +463,7 @@ body {
     max-width: 609px;
     text-align: start;
   }
+
   .mission_vision_content {
     padding: 128px 160px;
     background-color: white;
@@ -442,6 +473,7 @@ body {
     justify-content: space-between;
     column-gap: 128px;
   }
+
   .mission_vision_text {
     width: 100%;
     display: flex;
@@ -449,6 +481,7 @@ body {
     justify-content: space-between;
     position: relative;
   }
+
   .mission_vision_text h2 {
     color: #fff;
     font-family: Montserrat;
@@ -460,6 +493,7 @@ body {
     text-transform: uppercase;
     width: 494px;
   }
+
   .mission_vision_text p {
     color: #fff;
     font-family: Montserrat;
@@ -470,17 +504,20 @@ body {
     margin-bottom: 0px;
     width: 800px;
   }
+
   .our_leadership_container .right_side {
     background-color: #382213;
     height: 743px;
     width: 1020px;
     margin-left: auto;
   }
+
   .our_leadership_image {
     position: absolute;
     right: 144px;
     bottom: 94px;
   }
+
   .our_leadership_container .right_side p {
     color: #cbc5be !important;
     font-family: Montserrat;
@@ -491,16 +528,19 @@ body {
     margin: 0;
     padding: 100px 50px 0px 50px;
   }
+
   .our_leadership_container .right_side {
     background-color: #382213;
     height: 743px;
     width: 1009px;
     margin-left: auto;
   }
+
   .our_leadership_image img {
     width: 936px;
     height: 556px;
   }
+
   .our_leadership_container .left_side img {
     width: 555.676px;
     height: 509.6px;
@@ -529,6 +569,7 @@ body {
     column-gap: 0px;
     flex-direction: column;
   }
+
   .our_leadership_image img {
     width: 100%;
     height: 458px !important;
@@ -541,11 +582,13 @@ body {
     font-size: 22px;
     line-height: 40px;
   }
+
   .about-banner-content h2 {
     font-size: 39px;
     line-height: 44px;
   }
 }
+
 @media (max-width: 576px) {
   .mission_vision {
     height: 100%;
@@ -561,19 +604,24 @@ body {
     padding: 0;
     background: unset;
   }
+
   .mission_vision::before {
     background: unset;
   }
+
   .about {
     padding-top: 194px !important;
     padding-bottom: 80px;
   }
+
   .mission_vision_text {
     padding: 40px 20px !important;
   }
+
   .mission_vision_content {
     margin: 0px !important;
   }
+
   .about-text-box {
     right: 0px;
     padding: 24px;
@@ -581,19 +629,22 @@ body {
     margin: 0px 10px;
     top: 90%;
   }
+
   .about-text-box p {
     color: var(--Color-Neutral-neutral---100, #cbc5be);
     font-family: Montserrat;
     font-size: 17px;
     font-style: normal;
     font-weight: 500;
-    line-height: 30px; /* 176.471% */
+    line-height: 30px;
+    /* 176.471% */
   }
 
   .about-banner-content h3 {
     font-size: 18px;
     line-height: 33px;
   }
+
   .about-banner-content h2 {
     font-size: 26px !important;
     line-height: 33px !important;
@@ -608,6 +659,7 @@ body {
     line-height: 17.473px;
     text-transform: capitalize;
   }
+
   .about-content p {
     color: #7a695f;
     font-family: Montserrat;
@@ -616,10 +668,12 @@ body {
     font-weight: 500;
     line-height: 21.073px;
   }
+
   .about-content img {
     width: 44px;
     height: 44px;
   }
+
   .about-content-main {
     margin-top: 40px;
     display: flex;
@@ -630,18 +684,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .mission_vision_text_container::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(58, 33, 19, 0) 20.84%,
-      #3a2113 106.32%
-    );
+    background: linear-gradient(90deg,
+        rgba(58, 33, 19, 0) 20.84%,
+        #3a2113 106.32%);
     z-index: 0;
     height: 100%;
   }
+
   .mission_vision_text h2 {
     color: #fff;
     font-family: Montserrat;
@@ -653,6 +707,7 @@ body {
     text-transform: uppercase;
     width: unset;
   }
+
   .mission_vision_text p {
     color: #fff;
     font-family: Montserrat;
@@ -662,9 +717,11 @@ body {
     line-height: 21.073px;
     width: unset;
   }
+
   .mission_vision_content {
     margin-top: 0px !important;
   }
+
   .mission_vision_content_container {
     background: url("../images/Background_mobile.png");
     background-repeat: no-repeat;
@@ -672,15 +729,18 @@ body {
     background-position: center;
     padding: 24px;
   }
+
   .mission_vision_content h2 {
     font-size: 26px;
     line-height: 38px;
   }
+
   .mission_vision_content p {
     font-size: 16px;
     line-height: 24px;
     display: initial;
   }
+
   .mission_vision_content {
     row-gap: 20px;
   }
@@ -693,6 +753,7 @@ body {
     line-height: 38.048px;
     letter-spacing: -0.527px;
   }
+
   .our_leadership_container .right_side p {
     color: #cbc5be !important;
     font-family: Montserrat;
@@ -704,9 +765,11 @@ body {
     margin: 0;
     padding: 20px;
   }
+
   .our_leadership_container .right_side {
     height: 430px;
   }
+
   .our_leadership_image img {
     height: 512px !important;
     object-fit: cover !important;
@@ -718,6 +781,7 @@ body {
     transform: translateX(-50%);
     width: 398px;
   }
+
   .mobile_team_img img {
     margin-top: 220px;
     width: 355px;
@@ -729,18 +793,23 @@ body {
   .about-text-box {
     right: unset;
   }
+
   .mission_vision_text_header {
     width: unset;
   }
+
   .mission_vision_text {
     padding: 0px 20px;
   }
+
   .mission_vision_text h2 {
     width: 316px;
   }
+
   .custom_container {
     max-width: 100%;
   }
+
   .about {
     display: flex;
     align-items: center;
@@ -751,9 +820,11 @@ body {
     row-gap: 30px;
     padding-top: 250px;
   }
+
   .about-image img {
     height: 100%;
   }
+
   .mission_vision_content {
     margin: 20px;
     padding: 70px;
@@ -765,44 +836,54 @@ body {
     column-gap: 0px;
     flex-direction: column;
   }
+
   .our_leadership_container {
     display: grid;
     grid-template-columns: 1fr;
   }
+
   .our_leadership_container .left_side {
     width: 100%;
     padding: 80px 10px 40px 20px;
   }
+
   .our_leadership_container .left_side img {
     margin-top: 5px;
   }
+
   .our_leadership_image {
     position: absolute;
     right: 0;
     bottom: 0;
     object-fit: cover;
   }
+
   .our_leadership_container .right_side {
     width: 100%;
     position: relative;
   }
+
   .our_leadership_image img {
     width: 558px;
     height: 334px;
     object-fit: contain;
   }
+
   .mobile_team_img {
     display: block;
     padding: 32px;
   }
 }
+
 .desktop_team_img {
   display: none !important;
 }
+
 @media (min-width: 1025px) {
   .desktop_team_img {
     display: block !important;
   }
+
   .mobile_team_img {
     display: none;
   }

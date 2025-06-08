@@ -230,10 +230,16 @@
   align-items: center;
   gap: 8px;
   border: 1px solid #756458;
+  color: #756458;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-.about-us-content-btn a {
-  color: #756458;
+.about-us-content-btn:hover {
+  background: #756458;
+  color: #fff;
+}
+
+.about-us-content-btn p {
   font-family: var(--montserrat);
   font-size: 18px;
   font-style: normal;
@@ -241,6 +247,7 @@
   line-height: normal;
   letter-spacing: 0.18px;
   text-transform: capitalize;
+  margin-bottom: 0;
 }
 
 /************************************/
@@ -1009,7 +1016,6 @@
   display: grid;
   background-color: #FAFAFA !important;
   grid-template-columns: 50% 50%;
-  padding-bottom: 200px;
 }
 
 .testimonial-left-box {
@@ -1250,7 +1256,7 @@ span.counter {
 .testimonial-rating i {
   color: var(--Color-Primary-Accent-primary---100, #E7AE3D);
   font-family: "Font Awesome 5 Free";
-  font-size: 27px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 900;
   line-height: 24px;
@@ -1580,7 +1586,7 @@ span.counter {
     gap: 6px;
   }
 
-  .about-us-content-btn a {
+  .about-us-content-btn p {
     font-size: 16px;
     letter-spacing: 0.16px;
   }
@@ -1751,6 +1757,10 @@ span.counter {
   }
 
   .skill-progress .count-bar {
+    height: 14px !important;
+  }
+
+  .skill-progress {
     height: 14px !important;
   }
 
@@ -2252,7 +2262,7 @@ span.counter {
     left: 0;
     width: 154px;
     height: 154px;
-    padding: 28.89px 0px 29.846px 0px;
+    /* padding: 28.89px 0px 29.846px 0px; */
   }
 
   .feedback-counter h3 {
@@ -2305,7 +2315,7 @@ span.counter {
     gap: 6px;
   }
 
-  .about-us-content-btn a {
+  .about-us-content-btn p {
     font-size: 13.5px;
   }
 
