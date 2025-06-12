@@ -130,6 +130,8 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: 28.8px;
+  max-width: 777px;
+  width: 100%;
 }
 
 .design_development_phase .tabs_area .tab-content.active {
