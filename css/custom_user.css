@@ -1291,7 +1291,7 @@ span.counter {
 .footer-main-links {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0px 37px;
   padding: 48px 0px;
 }
@@ -2600,7 +2600,7 @@ span.counter {
   }
 
   .footer-main-links {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 48px 28px;
     padding: 36px 0px;
   }
