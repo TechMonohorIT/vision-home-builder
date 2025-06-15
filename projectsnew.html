@@ -525,12 +525,17 @@
     <!-- header+overlay+sidmenu+sidemenu-canvas end -->
     <!-- projects-hero-start-1 -->
     <section class="projects-hero-section">
+        <video autoplay muted loop id="projectVideo">
+            <source id="projectVideoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="project-hero projects-container">
             <div class="projects-hero-content">
                 <h1 class="text-anime-style-2" data-cursor="-opaque">OUR PROJECTS</h1>
             </div>
             <div class="projects-hero-frame">
                 <img class="image-anime reveal" src="images/projects-hero-frame.png" alt="">
+
             </div>
         </div>
         <!-- this duplicate contents for small screen. display none in large screen -->
@@ -550,26 +555,18 @@
     <!--projecst-slider-start-2 -->
     <section class="projects-container image-slider-section">
         <div class="image-slider">
-            <!-- 👇 Move buttons inside .slider -->
             <div class="image-slider-controls">
                 <button class="nav-btn prev">&#8592;</button>
                 <button class="nav-btn next">&#8594;</button>
             </div>
-            <!-- Main slides -->
-            <img src="images/projects-slider-one.png" class="slide active" />
-            <img src="images/projects-slider-two.png" class="slide" />
-            <img src="images/projects-slider-three.png" class="slide" />
-            <img src="images/projects-slider-four.png" class="slide" />
+            <!-- Slides will be inserted here -->
         </div>
 
-        <!-- Thumbnails -->
         <div class="thumbnails">
-            <img class="wow fadeInUp" src="images/projects-slider-one.png" class="thumb active" />
-            <img class="wow fadeInUp" src="images/projects-slider-two.png" class="thumb" />
-            <img class="wow fadeInUp" src="images/projects-slider-three.png" class="thumb" />
-            <img class="wow fadeInUp" src="images/projects-slider-four.png" class="thumb" />
+            <!-- Thumbnails will be inserted here -->
         </div>
     </section>
+
 
     <!-- (projects-slider+ mordern) for small screen -->
     <section class="projects-container image-slider-section-small">
@@ -600,29 +597,33 @@
     <section class="projects-container about-project-small">
         <div class="about-project-content-left">
             <h1 class="text-anime-style-2" data-cursor="-opaque">ABOUT THIS PROJECT</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward thinking, this
+            <p id="aboutText" class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward
+                thinking, this
                 Melonba residence is as functional as it is
                 beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
                 thoughtfully separated private zones. A statement staircase and expansive windows define the main living
                 area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
                 thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
                 areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
+                living.</pid>
         </div>
         <!-- Thumbnails -->
-        <div class="thumbnails">
+        <!-- Thumbnails Container -->
+        <div class="thumbnails" id="thumbnails-container"></div>
+        <!-- <div class="thumbnails">
             <img class="image-anime reveal" src="images/projects-slider-one.png" class="thumb active" />
             <img class="image-anime reveal" src="images/projects-slider-two.png" class="thumb" />
             <img class="image-anime reveal" src="images/projects-slider-three.png" class="thumb" />
             <img class="image-anime reveal" src="images/projects-slider-four.png" class="thumb" />
-        </div>
+        </div> -->
     </section>
 
     <!-- about-project-start    -->
     <section class="projects-container about-project">
         <div class="about-project-content-left">
             <h1 class="text-anime-style-2" data-cursor="-opaque">ABOUT THIS PROJECT</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward thinking, this
+            <p id="aboutText" class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward
+                thinking, this
                 Melonba residence is as functional as it is
                 beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
                 thoughtfully separated private zones. A statement staircase and expansive windows define the main living
@@ -632,8 +633,9 @@
                 living.</p>
         </div>
         <div class="about-project-content-right">
-            <h1 class="text-anime-style-2" data-cursor="-opaque">MODERN INTERIOR DESIGN</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward thinking, this
+            <h1 id="title" class="text-anime-style-2" data-cursor="-opaque">MODERN INTERIOR DESIGN</h1>
+            <p id="description2" class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued
+                design-forward thinking, this
                 Melonba residence is as functional as it is
                 beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
                 thoughtfully separated private zones. A statement staircase and expansive windows define the main living
@@ -886,6 +888,128 @@
                 }
             }
         });
+
+    </script>
+
+    <script>
+        const projects = {
+            1: {
+                title: "Melonba Modern Villa",
+                aboutText: "Designed for a young family, this stylish Melonba home features dramatic interiors, sustainable elements, and seamless indoor- outdoor living.",
+                description: "In the evolving suburb of Melonba, this bespoke home is a standout example of contemporary suburban luxury.Featuring a bold mix of concrete render and matte finishes, the facade offers instant street appeal.Internally, the home is equally striking, with soaring ceilings and an open- concept layout that promotes natural flow.Every space is finished with premium textures, from oak timber floors to custom stonework in the bathrooms.The kitchen features dual ovens, a walk-in pantry, and pendant lighting that elevates the entire room.With landscaped surrounds and a peaceful neighbourhood setting, this property is both modern and timeless.",
+                images: ["./images/projects/web/Project 1/DSC00949-Enhanced-NR.jpg", "./images/projects/web/Project 1/DSC00953-Enhanced-NR.jpg", "./images/projects/web/Project 1/DSC00955-Enhanced-NR.jpg", "./images/projects/web/Project 1/DSC00962-Enhanced-NR.jpg"],
+                video: "./images/projects/web/Project 1/House 04A Vision.mp4"
+            },
+            2: {
+                title: "Kellyville Ridge , kellyville",
+                aboutText: "This Kellyville  home uses light wells and vertical space to feel open and luxurious, with smart design and premium finishes throughout.",
+                description: "On a challenging narrow block in Kellyville, this home stands out with its smart use of vertical space and natural light.Bright, open living areas contrast with private, cozy bedrooms, all tied together by a striking central staircase.Premium textures and subtle tones create an elegant, functional home that feels much larger than its size.",
+                images: ["./images/projects/web/Project 2/03.jpg", "./images/projects/web/Project 2/11.jpg", "./images/projects/web/Project 2/013.jpg", "./images/projects/web/Project 2/16.jpg"],
+                video: "./images/projects/web/Project 2/House 05A Vision.mp4"
+            },
+            3: {
+                title: "White Aspen Street, Leppington",
+                aboutText: "This Leppington home blends bold design with smart, family-friendly features, sunlit spaces, and sustainable touches throughout",
+                description: "This Leppington build delivers a refined suburban lifestyle through clever design and meticulous craftsmanship.A double- height foyer makes a lasting first impression, leading into a carefully considered floor plan that balances privacy with openness.The alfresco area connects seamlessly to the interior living space, making indoor- outdoor entertaining effortless.Quality is evident in every corner, from the textured feature walls to the high - spec kitchen fittings. Thoughtful placement of bedrooms, including a ground - floor guest suite, caters to multigenerational living.This is a home built to exceed expectations for years to come.",
+                images: ["./images/projects/web/Project 3/DSC00531.JPG", "./images/projects/web/Project 3/DSC00534.JPG", "./images/projects/web/Project 3/DSC00535.JPG", "./images/projects/web/Project 3/DSC00544.JPG",],
+                video: "./images/projects/web/Project 3/House 03A Vision.mp4"
+            },
+            4: {
+                title: "Dolphin Street, Marsden Park ",
+                aboutText: "This Marsden Park home blends family comfort with sleek design, featuring flexible spaces, smart storage, and a stylish outdoor entertaining area.",
+                description: "Every corner of this Marsden Park home reflects tailored luxury, from the oversized pivot door entry to the soft- close cabinetry in every room.The facade was designed to create visual interest, with a mix of horizontal and vertical cladding and recessed lighting.Inside, the home opens up to a flowing layout where form meets function.Zoned living areas provide flexibility, while high ceilings enhance the sense of grandeur.Passive design principles and smart automation contribute to efficiency and comfort.It’s a high- performing home with designer flair.",
+                images: ["./images/projects/web/Project 4/3dd.jpg", "./images/projects/web/Project 4/DSC01251-Enhanced-NR.jpg", "./images/projects/web/Project 4/DSC01253-Enhanced-NR.jpg", "./images/projects/web/Project 4/DSC01261-Enhanced-NR.jpg",],
+                video: "./images/projects/web/Project 4/House 01 A Vision.mp4"
+            },
+            5: {
+                title: "Saphire street,  Austral",
+                aboutText: "A spacious two-story family home with multiple zones for living, working, and relaxing—designed for both privacy and togetherness.",
+                description: "Designed for a large family, this grand two-story residence offers distinct living areas that cater to every need.From quiet study nooks to lively entertainment spaces, the home balances openness with private retreats.Expansive windows and soaring ceilings enhance the sense of space, while quality finishes and thoughtful layouts ensure lasting comfort and style throughout.",
+                images: ["./images/projects/web/Project 5/IMG_8276-Enhanced-NR.JPG", "./images/projects/web/Project 5/IMG_8278-Enhanced-NR.JPG", "./images/projects/web/Project 5/IMG_8304-Enhanced-NR.JPG", "./images/projects/web/Project 5/IMG_8300-Enhanced-NR.JPG",],
+                video: "./images/projects/web/Project 5/House 06A Vision.mp4"
+            },
+            6: {
+                title: "Abell Street,Marsden Parkl",
+                aboutText: "A large, spacious family home with multiple zones designed for comfort, privacy, and togetherness..",
+                description: "Built for a big family, this impressive two-story house features expansive living areas, private retreats, and flexible spaces for every lifestyle need.Bright interiors and thoughtful design ensure comfort and functionality for all ages.",
+                images: ["./images/projects/web/Project 6/IMG_1942-Enhanced-NR.jpg", "./images/projects/web/Project 6/IMG_1946.jpg", "./images/projects/web/Project 6/IMG_1948.jpg", "./images/projects/web/Project 6/IMG_1965-Enhanced-NR.jpg",],
+                video: "./images/projects/web/Project 6/House 02 A Vision.mp4"
+            },
+        };
+        const videoSource = document.getElementById("projectVideoSource");
+        const sliderContainer = document.querySelector(".image-slider");
+        const thumbnailsContainer = document.querySelector(".thumbnails");
+        const description = document.querySelector("#description2");
+        const aboutText = document.querySelector("#aboutText");
+        const title = document.querySelector("#title");
+        const thumbnailsContainerMobile = document.getElementById("thumbnails-container");
+
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id");
+
+
+        const project = projects[projectId];
+
+        title.textContent = project.title;
+        aboutText.textContent = project.aboutText;
+        description.textContent = project.description;
+
+
+        // Create slides
+        project.images.forEach((src, index) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.className = "slide" + (index === 0 ? " active" : "");
+            sliderContainer.appendChild(img);
+        });
+
+
+
+        project.images.forEach((imgSrc, index) => {
+            const img = document.createElement("img");
+            img.src = imgSrc;
+            img.className = `image-anime thumb${index === 0 ? " active" : ""}`;
+            thumbnailsContainerMobile.appendChild(img);
+        });
+
+        // Create thumbnails
+        project.images.forEach((src, index) => {
+            const thumb = document.createElement("img");
+            thumb.src = src;
+            thumb.className = "thumb" + (index === 0 ? " active" : "");
+            thumb.addEventListener("click", () => showSlide(index));
+            thumbnailsContainer.appendChild(thumb);
+        });
+
+        let current = 0;
+        const slides = () => document.querySelectorAll(".slide");
+        const thumbs = () => document.querySelectorAll(".thumb");
+
+        function showSlide(index) {
+            slides().forEach(s => s.classList.remove("active"));
+            thumbs().forEach(t => t.classList.remove("active"));
+
+            slides()[index].classList.add("active");
+            thumbs()[index].classList.add("active");
+            current = index;
+        }
+
+        document.querySelector(".prev").addEventListener("click", () => {
+            const newIndex = (current - 1 + project.images.length) % project.images.length;
+            showSlide(newIndex);
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+            const newIndex = (current + 1) % project.images.length;
+            showSlide(newIndex);
+        });
+
+
+
+        videoSource.src = project.video;
+        const videoElement = document.getElementById("projectVideo");
+        videoElement.load();
+
 
     </script>
 </body>

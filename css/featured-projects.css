@@ -193,10 +193,10 @@
 
 .featured-projects-section-container-2 .rotated-title2 {
   position: absolute;
-  top: -21px;
-  right: 18px;
+  top: -53px;
+  right: 25px;
   height: 40px;
-  width: 276px;
+  width: 379px;
   transform: rotate(-90deg);
   transform-origin: right;
   color: white;
@@ -223,10 +223,10 @@
 
 .rotated-title {
   position: absolute;
-  top: 255px;
+  top: 304px;
   left: 11px;
   height: 40px;
-  width: 276px;
+  width: 333px;
   transform: rotate(-90deg) translateY(50px);
   transform-origin: left;
   color: #382213;
@@ -318,8 +318,8 @@
 
 .project-label {
   position: absolute;
-  top: 92px;
-  right: -42px;
+  top: 56px;
+  right: -28px;
   background: #8c4c2e;
   color: white;
   padding: 10px 14px;
