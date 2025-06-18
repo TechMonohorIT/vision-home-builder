@@ -48,6 +48,10 @@
   z-index: 2;
   margin-bottom: 0 !important;
 }
+.logo-small {
+  width: 127px;
+  height: 35.391px;
+}
 
 .projects-hero-section::after {
   content: "";

@@ -711,4 +711,12 @@
   .featured-projects-page .projects-hero-section {
     height: 453px;
   }
+  .frame-small img {
+    position: absolute;
+    right: -2%;
+    bottom: 30px;
+    transform: translateX(-1%);
+    display: block;
+    z-index: 3;
+  }
 }
