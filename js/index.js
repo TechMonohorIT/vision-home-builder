@@ -56,3 +56,19 @@ document.querySelectorAll('.image-slider').forEach((slider) => {
 
 
 
+
+// -------------------------------------------------------------------------------
+// all page side-menu link when active font will be bold. here add classlist active 
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Get all menu links
+  const menuLinks = document.querySelectorAll(".side-menu a");
+
+  menuLinks.forEach(link => {
+    // If href ends with the current page, add 'active'
+    if (link.getAttribute("href") === currentPage || (currentPage === "" && link.getAttribute("href") === "./")) {
+      link.classList.add("active");
+    }
+  });
+
+

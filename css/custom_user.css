@@ -12,6 +12,11 @@
   max-width: 800px;
 }
 
+.side-menu a.active {
+  color: #FFF;
+  font-weight: 700;
+}
+
 /************************************/
 /*********0.Header-css*************/
 /************************************/
@@ -1204,21 +1209,37 @@
 }
 
 .testimonial-client-rating i {
-  color: var(--color-text-bw-white, #FFF);
-  font-family: "Font Awesome 5 Free";
+  color: #E7AE3D;
   font-size: 14px;
-  font-style: normal;
+  font-weight: 900;
+  line-height: 12px;
+  position: relative;
+}
+
+/* Make last star partially filled */
+.partial-star i {
+  background: linear-gradient(to right, #E7AE3D 70%, white 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 14px;
   font-weight: 900;
   line-height: 12px;
 }
 
-.testimonial-rating-content p {
+
+.testimonial-rating-content p a {
   color: var(--Color-Primary-primary---600, #6A5C4E);
-  font-family: Inter;
+  font-family: var(--inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 23.8px;
+  margin-bottom: 0px;
+  border-bottom: 2px solid var(--Color-Primary-primary---400, #77665F);
+  padding-bottom: 2px;
 }
 
 .experience-counter span.counter {
