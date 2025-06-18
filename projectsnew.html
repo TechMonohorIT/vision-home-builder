@@ -596,15 +596,7 @@
     <section class="projects-container about-project-small">
         <div class="about-project-content-left">
             <h1 class="text-anime-style-2" data-cursor="-opaque">ABOUT THIS PROJECT</h1>
-            <p id="aboutText" class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward
-                thinking, this
-                Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</pid>
+            <p id="aboutText2" class="wow fadeInUp" data-wow-delay="0.2s"></p>
         </div>
         <!-- Thumbnails -->
         <!-- Thumbnails Container -->
@@ -621,27 +613,12 @@
     <section class="projects-container about-project">
         <div class="about-project-content-left">
             <h1 class="text-anime-style-2" data-cursor="-opaque">ABOUT THIS PROJECT</h1>
-            <p id="aboutText" class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued design-forward
-                thinking, this
-                Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
+            <p id="aboutText" class="wow fadeInUp" data-wow-delay="0.2s">
+            </p>
         </div>
         <div class="about-project-content-right">
             <h1 id="title" class="text-anime-style-2" data-cursor="-opaque">MODERN INTERIOR DESIGN</h1>
-            <p id="description2" class="wow fadeInUp" data-wow-delay="0.2s">Crafted for a client who valued
-                design-forward thinking, this
-                Melonba residence is as functional as it is
-                beautiful. The floor plan was tailored to suit a young family, with generous communal areas and
-                thoughtfully separated private zones. A statement staircase and expansive windows define the main living
-                area, bringing drama and daylight in equal measure. Sustainable features such as rainwater tanks and
-                thermal insulation are seamlessly integrated. Outside, the covered alfresco space extends the living
-                areas, perfect for weekend entertaining. It's a home where attention to detail transforms everyday
-                living.</p>
+            <p id="description2" class="wow fadeInUp" data-wow-delay="0.2s"></p>
         </div>
     </section>
 
@@ -933,12 +910,20 @@
                 images: ["./images/projects/web/Project 6/IMG_1942-Enhanced-NR.jpg", "./images/projects/web/Project 6/IMG_1946.jpg", "./images/projects/web/Project 6/IMG_1948.jpg", "./images/projects/web/Project 6/IMG_1965-Enhanced-NR.jpg",],
                 video: "./images/projects/web/Project 6/House 02 A Vision.mp4"
             },
+            7: {
+                title: "Fur Place, Rosehill",
+                aboutText: "Built on a narrow Rosehill block, this home maximizes space with vertical design and light wells. Bright living areas, private bedrooms, and refined finishes create a luxurious feel beyond its compact footprint.",
+                description: "Every inch of this Rosehill residence was planned with precision, reflecting the client’s need for both elegance and practicality.With a footprint that required smart planning, the design incorporates open- plan areas, private nooks, and generous storage.Natural light fills the space through skylights and large glazing, while cross ventilation ensures year- round comfort.The kitchen features integrated appliances, custom joinery, and a stone benchtop that doubles as a casual dining space.Bedrooms upstairs offer hotel - like comfort with luxe carpet and soft lighting.This home exemplifies how tailored design can transform constraints into strengths.",
+                images: ["./images/projects/web/Project 7/DSC05687-Enhanced-NR.jpg", "./images/projects/web/Project 7/DSC05681-Enhanced-NR.jpg", "./images/projects/web/Project 7/DSC05649-Enhanced-NR.jpg", "./images/projects/web/Project 7/DSC05648-Enhanced-NR.jpg",],
+                video: "./images/projects/web/Project 7/House 07 A Vision.mp4"
+            },
         };
         const videoSource = document.getElementById("projectVideoSource");
         const sliderContainer = document.querySelector(".image-slider");
         const thumbnailsContainer = document.querySelector(".thumbnails");
         const description = document.querySelector("#description2");
         const aboutText = document.querySelector("#aboutText");
+        const aboutText2 = document.querySelector("#aboutText2");
         const title = document.querySelector("#title");
         const thumbnailsContainerMobile = document.getElementById("thumbnails-container");
 
@@ -950,6 +935,7 @@
 
         title.textContent = project.title;
         aboutText.textContent = project.aboutText;
+        aboutText2.textContent = project.aboutText;
         description.textContent = project.description;
 
 
