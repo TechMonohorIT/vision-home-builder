@@ -285,7 +285,7 @@
   align-items: center;
   justify-content: end;
   gap: 10px;
-  min-height: 771px;
+  min-height: 643px;
   width: 100%;
   transition: all 0.3s ease;
 }
@@ -328,9 +328,9 @@
   transition: transform 0.3s ease;
 }
 
-.project-number {
+.gallery .project-number {
   position: absolute;
-  bottom: 20px;
+  bottom: 38px;
   right: -6px;
   padding: 5px 10px;
   color: #fff;
