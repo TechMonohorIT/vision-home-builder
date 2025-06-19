@@ -1,52 +1,49 @@
 //This js codes for header-side-menu add conditional background scrooling a sections
-    document.addEventListener('scroll', toggleHeaderScrolled);
-    window.addEventListener('load', toggleHeaderScrolled); 
+document.addEventListener("scroll", toggleHeaderScrolled);
+window.addEventListener("load", toggleHeaderScrolled);
 
-    function toggleHeaderScrolled() {
-      const header = document.querySelector('.header-sidemenu');
+function toggleHeaderScrolled() {
+  const header = document.querySelector(".header-sidemenu");
 
-      if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }
-
-
-
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}
 
 // image slider related js codes
-document.querySelectorAll('.image-slider').forEach((slider) => {
-  const section = slider.closest('.projects-container'); // Get parent section
-  const slides = slider.querySelectorAll('.slide');
-  const thumbs = section.querySelectorAll('.thumb');
-  const prevBtn = slider.querySelector('.prev');
-  const nextBtn = slider.querySelector('.next');
+document.querySelectorAll(".image-slider").forEach((slider) => {
+  const section = slider.closest(".projects-container"); // Get parent section
+  const slides = slider.querySelectorAll(".slide");
+  const thumbs = section.querySelectorAll(".thumb");
+  const prevBtn = slider.querySelector(".prev");
+  const nextBtn = slider.querySelector(".next");
 
   let currentIndex = 0;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+      slide.classList.toggle("active", i === index);
     });
     thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
+      thumb.classList.toggle("active", i === index);
     });
     currentIndex = index;
   }
 
-  prevBtn?.addEventListener('click', () => {
+  prevBtn?.addEventListener("click", () => {
     const newIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(newIndex);
   });
 
-  nextBtn?.addEventListener('click', () => {
+  nextBtn?.addEventListener("click", () => {
     const newIndex = (currentIndex + 1) % slides.length;
     showSlide(newIndex);
   });
 
   thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('click', () => {
+    thumb.addEventListener("click", () => {
       showSlide(i);
     });
   });
@@ -54,21 +51,19 @@ document.querySelectorAll('.image-slider').forEach((slider) => {
   showSlide(currentIndex); // Initialize
 });
 
-
-
-
 // -------------------------------------------------------------------------------
-// all page side-menu link when active font will be bold. here add classlist active 
-  const currentPage = window.location.pathname.split("/").pop();
+// all page side-menu link when active font will be bold. here add classlist active
+const currentPage = window.location.pathname.split("/").pop();
 
-  // Get all menu links
-  const menuLinks = document.querySelectorAll(".side-menu a");
+// Get all menu links
+const menuLinks = document.querySelectorAll(".side-menu a");
 
-  menuLinks.forEach(link => {
-    // If href ends with the current page, add 'active'
-    if (link.getAttribute("href") === currentPage || (currentPage === "" && link.getAttribute("href") === "./")) {
-      link.classList.add("active");
-    }
-  });
-
-
+menuLinks.forEach((link) => {
+  // If href ends with the current page, add 'active'
+  if (
+    link.getAttribute("href") === currentPage ||
+    (currentPage === "" && link.getAttribute("href") === "./")
+  ) {
+    link.classList.add("active");
+  }
+});
