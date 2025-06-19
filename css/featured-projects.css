@@ -293,6 +293,17 @@
   max-width: 358px;
   width: 100%;
 }
+.description-content1 {
+  margin-top: 350px;
+  /* color: #382213; */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  max-width: 420px;
+  width: 100%;
+}
 
 .gallery {
   display: flex;
