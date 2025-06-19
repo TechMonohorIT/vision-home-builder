@@ -243,6 +243,18 @@
   font-weight: 500;
   line-height: 28px;
 }
+.details-panel-2 {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #382213;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+}
 
 .rotated-title {
   position: absolute;
@@ -278,6 +290,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
+  max-width: 358px;
+  width: 100%;
 }
 
 .gallery {
@@ -315,7 +329,7 @@
 }
 
 .project.active {
-  width: 252px;
+  width: 422px;
 }
 .project.active::before {
   background: none;
