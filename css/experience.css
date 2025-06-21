@@ -638,7 +638,7 @@ p {
   }
 
   .design_development_phase .content_area {
-    padding: 80px 16px !important;
+    padding: 80px 0px !important;
   }
 
   .design_development_phase .tabs_area {
@@ -647,12 +647,18 @@ p {
     flex-direction: column-reverse;
   }
   .design_development_phase .tabs_area .tab-title {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20.8px;
+  }
+  .content_area h4 {
+    padding: 0px 16px;
+  }
+  .tab-content-container {
+    padding: 0px 16px;
   }
 
   .design_development_phase .tabs_area .tab-number {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20.8px;
   }
   .design_development_phase .tabs_area .tabs {
@@ -660,7 +666,8 @@ p {
     flex-wrap: wrap;
     border-bottom: none;
     margin-top: 2rem;
-    gap: 24px;
+    column-gap: 20px;
+    row-gap: 25px;
     justify-content: center;
   }
 
