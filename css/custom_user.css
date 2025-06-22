@@ -1321,16 +1321,6 @@ span.counter {
   padding: 48px 0px;
 }
 
-/* .footer-main-links::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  opacity: 0.8;
-  background: #FFF;
-} */
-
 .main-footer::before {
   content: "";
   position: absolute;
@@ -2718,17 +2708,18 @@ span.counter {
   .hero-content .section-title p {
     font-size: 14px !important;
 
-
-    .hero.hero-video {
-      max-height: 810px !important;
-    }
-
-    .hero {
-      padding: 460px 0px 151px;
-
-    }
-
-    .hero::before {
-      max-height: 810px !important;
-    }
   }
+
+  .hero.hero-video {
+    max-height: 810px !important;
+  }
+
+  .hero {
+    padding: 460px 0px 151px;
+
+  }
+
+  .hero::before {
+    max-height: 810px !important;
+  }
+}
