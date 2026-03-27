@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="description" content="Designing with Light - How natural lighting creates space, openness and harmony in your custom home.">
+  <meta name="keywords" content="">
+  <meta name="author" content="Awaiken">
+  <title>Vision Smart Homes - Designing With Light</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/vision-smart-logo-favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/slicknav.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="css/all.min.css" rel="stylesheet" media="screen">
+  <link href="css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/mousecursor.css">
+  <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="css/custom_user.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --body-font: 'Carmen Sans', sans-serif;
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
+      --gold: #C4A882;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--inter);
+      background: #fff;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .blog-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* ===== SIDEMENU ===== */
+    .header-sidemenu {
+      margin: 0 auto; position: fixed; padding: 16px 0px; width: 100%;
+      top: 0; transition: background-color 0.3s ease; z-index: 1000; background: transparent;
+    }
+    .header-sidemenu.scrolled {
+      background-color: rgba(109, 93, 78, 0.5); box-shadow: 0 2px 8px rgba(0,0,0,0.2); backdrop-filter: blur(6px);
+    }
+    .hamburger span { display: block; height: 2.5px; background: #fff; margin-bottom: 9px; transition: 0.3s; }
+    @media (max-width: 767px) { .hamburger span { margin-bottom: 7px; } }
+
+    .side-menu {
+      position: fixed; top: 0; left: -300px; width: 307px; height: 100%;
+      background-image: url("images/modern-entryway-hamburger-bg.jpg");
+      background-repeat: no-repeat; background-size: cover; background-position: 72% center;
+      transition: left 0.3s ease-in-out; padding-top: 103px; padding-left: 40px; padding-right: 84px; z-index: 999;
+    }
+    .side-menu::after {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, rgba(58,33,19,0.65) 0%, rgba(58,33,19,0.65) 100%); z-index: -99;
+    }
+    .side-menu.open { left: 0; }
+    .side-menu .close-btn {
+      font-size: 28px; color: #FFF; font-family: var(--montserrat); font-weight: 400;
+      background: none; border: none; cursor: pointer; margin-bottom: 40px; margin-top: 75px;
+    }
+    .side-menu ul { list-style: none; padding: 0; margin: 0; }
+    .side-menu ul li { margin-bottom: 16px; }
+    .side-menu ul li a {
+      color: #FFF; font-family: var(--montserrat); font-size: 17px; font-weight: 600;
+      line-height: 23px; text-transform: capitalize; transition: color 0.3s;
+    }
+    .side-menu ul li a:hover { color: #ffd900ab; }
+
+    #offcanvasExample { width: 100%; }
+    .offcanvas-body { padding: 0px !important; margin-left: 284px; }
+    .btn-close {
+      position: absolute; right: 57px; top: 30px; font-size: 20px; cursor: pointer;
+      --bs-btn-close-bg: url("./images/close.svg"); box-sizing: content-box; width: 1em; height: 1em;
+      z-index: 99; padding: 0.25em; background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+      border: 0; border-radius: 0.375rem; opacity: 0.5;
+    }
+    .canvas-main-footer { min-height: 100vh !important; }
+    .canvas-main-footer .footer-header { padding-bottom: 35px !important; }
+
+    @media (max-width: 1023.98px) {
+      .offcanvas-start { display: none; }
+      .hamburger-mobile { display: inline-block; }
+      .hamburger-desktop { display: none; }
+      .canvas-main-footer .footer-main-links { grid-template-columns: 1fr 1fr; gap: 48px 28px; padding: 36px 0px; }
+      .side-menu { left: -500px; width: 343px; padding-top: 37px; z-index: 9999; }
+      .side-menu .close-btn { margin-top: 0px; }
+    }
+    @media (min-width: 1024px) {
+      .hamburger-desktop { display: inline-block; }
+      .hamburger-mobile { display: none; }
+      .side-menu-overlay { display: none; }
+      .side-menu-mobile { display: none; }
+      .side-menu { left: 0; }
+    }
+    @media (max-width: 768px) {
+      .canvas-main-footer .footer-main-links { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .side-menu-overlay {
+      position: fixed; top: 0; left: 0; width: 0; height: 100%;
+      background-color: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+      opacity: 0; transition: all 0.3s ease-in-out; z-index: 998;
+    }
+    .side-menu-overlay.open { width: 100%; opacity: 1; }
+
+    /* ===== GOLDEN TOP BAR ===== */
+    .top-navbar {
+      background-color: var(--gold);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1001;
+    }
+    .top-navbar .nav-logo a { display: inline-block; }
+    .top-navbar .nav-logo img {
+      height: 26px;
+      filter: brightness(0) invert(1);
+    }
+    .top-navbar .nav-hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .top-navbar .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+    }
+
+    /* ===== PAGE TITLE ===== */
+    .page-title {
+      padding: 55px 0 45px;
+    }
+    .page-title h1 {
+      font-family: var(--montserrat);
+      font-size: 28px;
+      font-weight: 500;
+      color: #2a2a2a;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+    .page-title .intro p {
+      font-size: 13.5px;
+      line-height: 1.9;
+      color: #777;
+      margin-bottom: 14px;
+      max-width: 680px;
+    }
+
+    /* ===== FULL IMAGE ===== */
+    .full-img {
+      margin-bottom: 0;
+    }
+    .full-img img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* ===== ICON HEADING (>> + Title) ===== */
+    .icon-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .icon-heading .circle {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+    .icon-heading h2 {
+      font-family: var(--montserrat);
+      font-size: 20px;
+      font-weight: 500;
+      color: #2a2a2a;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* ===== PLAIN HEADING (no icon) ===== */
+    .plain-heading {
+      font-family: var(--montserrat);
+      font-size: 20px;
+      font-weight: 500;
+      color: #2a2a2a;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+
+    /* ===== TEXT BLOCK ===== */
+    .text-block p {
+      font-size: 13.5px;
+      line-height: 1.9;
+      color: #777;
+      margin-bottom: 14px;
+    }
+    .text-block h3 {
+      font-family: var(--montserrat);
+      font-size: 14px;
+      font-weight: 700;
+      color: #2a2a2a;
+      margin-bottom: 8px;
+      margin-top: 26px;
+    }
+    .text-block h3:first-child { margin-top: 0; }
+
+    .text-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px 0;
+    }
+    .text-block ul li {
+      font-size: 13.5px;
+      line-height: 1.9;
+      color: #777;
+      margin-bottom: 18px;
+      padding-left: 14px;
+      position: relative;
+    }
+    .text-block ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    .text-block ul li strong {
+      font-family: var(--montserrat);
+      font-weight: 700;
+      font-size: 13.5px;
+      color: #2a2a2a;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ===== SIDE IMAGE ===== */
+    .side-img {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 360px;
+    }
+    .side-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ===== SECTION SPACING ===== */
+    .sec { padding: 70px 0; }
+    .sec-sm { padding: 50px 0; }
+    .sec-top-0 { padding-top: 0; }
+    .sec-bot-0 { padding-bottom: 0; }
+
+    /* ===== CTA ===== */
+    .cta-section { padding: 30px 0 80px; }
+    .cta-banner {
+      position: relative; border-radius: 16px; overflow: hidden; min-height: 180px;
+      display: flex; align-items: center;
+    }
+    .cta-banner-bg {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
+    }
+    .cta-inner {
+      position: relative; z-index: 1; display: flex; align-items: center; width: 100%; padding: 25px 50px;
+    }
+    .cta-furniture { flex: 0 0 280px; max-width: 280px; margin-top: -15px; }
+    .cta-furniture img { width: 100%; height: auto; object-fit: contain; }
+    .cta-text { flex: 1; padding-left: 20px; }
+    .cta-text h2 {
+      font-family: var(--montserrat); font-size: 28px; font-weight: 700; color: #3a2113; margin-bottom: 4px;
+    }
+    .cta-text p { font-size: 14px; color: #5a3d2b; margin-bottom: 16px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px; background: #3a2113; color: #fff;
+      font-family: var(--montserrat); font-size: 12px; font-weight: 600; padding: 10px 24px;
+      border-radius: 50px; text-decoration: none; transition: all 0.3s ease;
+    }
+    .cta-btn:hover { background: #5a3d2b; color: #fff; transform: translateY(-2px); }
+    .cta-btn i { font-size: 10px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 991px) {
+      .page-title h1 { font-size: 24px; }
+      .icon-heading h2, .plain-heading { font-size: 18px; }
+      .side-img { min-height: 280px; margin-top: 30px; }
+      .cta-furniture { flex: 0 0 200px; max-width: 200px; }
+      .cta-text h2 { font-size: 22px; }
+    }
+    @media (max-width: 767px) {
+      .blog-container { padding: 0 20px; }
+      .top-navbar { padding: 14px 20px; }
+      .page-title { padding: 40px 0 30px; }
+      .page-title h1 { font-size: 20px; letter-spacing: 1.5px; }
+      .icon-heading h2, .plain-heading { font-size: 16px; }
+      .sec { padding: 45px 0; }
+      .sec-sm { padding: 35px 0; }
+      .side-img { min-height: 240px; margin-top: 25px; }
+      .cta-inner { flex-direction: column; padding: 25px 20px; text-align: center; }
+      .cta-furniture { flex: 0 0 auto; max-width: 170px; margin: 0 auto 12px; }
+      .cta-text { padding-left: 0; }
+      .cta-text h2 { font-size: 19px; }
+    }
+    @media (max-width: 575px) {
+      .page-title h1 { font-size: 17px; }
+      .icon-heading h2, .plain-heading { font-size: 14px; }
+      .icon-heading .circle { width: 28px; height: 28px; min-width: 28px; font-size: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon"><img src="images/vision_logo_white.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- Hidden sticky header -->
+  <header class="header-sidemenu" style="display:none;">
+    <div class="header-content main-container">
+      <div class="logo" id="siteLogo"><a href="./"><img src="images/vision-logo.svg" alt="Vision Smart Homes Logo"></a></div>
+      <div class="hamburger hamburger-desktop" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><span></span><span></span><span></span></div>
+      <div class="hamburger hamburger-mobile" onclick="toggleSideMenu()"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
+  <div class="side-menu side-menu-mobile" id="sideMenu">
+    <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
+    <ul>
+      <li><a href="./">home</a></li>
+      <li><a href="about.html">about us</a></li>
+      <li><a href="experience-page.html">building experience</a></li>
+      <li><a href="featured-projects.html">projects</a></li>
+      <li><a href="services.html">services</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="contact.html">contact us</a></li>
+    </ul>
+  </div>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body">
+      <div class="canvas-container">
+        <aside class="sidebar-area">
+          <div class="side-menu" id="sideMenu">
+            <ul>
+              <li><a href="./">home</a></li>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="experience-page.html">building experience</a></li>
+              <li><a href="featured-projects.html">projects</a></li>
+              <li><a href="services.html">services</a></li>
+              <li><a href="blog.html">blog</a></li>
+              <li><a href="contact.html">contact us</a></li>
+            </ul>
+          </div>
+        </aside>
+        <div class="canvas-content-area">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <footer class="main-footer canvas-main-footer">
+            <div class="main-container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="footer-header">
+                    <div class="row align-items-center">
+                      <div class="col-md-6"><div class="footer-logo"><img height="120px" src="images/vision-logo.svg" alt=""></div></div>
+                      <div class="col-md-6">
+                        <div class="footer-social-links">
+                          <div class="footer-social-link-title"><h3>follow our socials</h3></div>
+                          <ul>
+                            <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                            <li><a href="https://www.instagram.com/vision.homes/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-main-links">
+                <div class="footer-links"><h3>information</h3><ul><li><a href="about.html">about our company</a></li><li><a href="contact.html">contact with us</a></li><li><a href="experience-page.html">view your experience</a></li><li><a href="./services.html">our services</a></li><li><a href="./featured-projects.html">our projects</a></li></ul></div>
+                <div class="footer-links"><h3>portfolio</h3><ul><li><a class="text-white">luxury home design</a></li><li><a class="text-white">renovation and restoration design</a></li></ul></div>
+                <div class="footer-contact-box footer-links"><h3>contact us</h3>
+                  <div class="footer-contact-item"><div class="icon-box"><i class="fa-solid fa-phone"></i></div><div class="footer-contact-content"><p>1300 56 55 56</p></div></div>
+                  <div class="footer-contact-item"><div class="icon-box"><i class="fa-solid fa-envelope"></i></div><div class="footer-contact-content"><p>info@visionsmarthomes.com.au</p></div></div>
+                  <div class="footer-contact-item"><div class="icon-box"><i class="fa-solid fa-location-dot"></i></div><div class="footer-contact-content"><p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-social-links-small">
+              <div class="footer-social-link-title"><h3>follow our socials</h3></div>
+              <ul>
+                <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                <li><a href="https://www.instagram.com/vision.homes/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       GOLDEN TOP BAR
+       ============================================================ -->
+  <nav class="top-navbar">
+    <div class="nav-logo">
+      <a href="./"><img src="images/vision-logo.svg" alt="Vision Smart Homes"></a>
+    </div>
+    <div class="nav-hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       PAGE TITLE + INTRO
+       ============================================================ -->
+  <div class="blog-container">
+    <div class="page-title">
+      <h1>DESIGNING WITH LIGHT!<br>HOW NATURAL LIGHTING<br>CREATES SPACE, OPENNESS<br>&amp; HARMONY IN YOUR<br>CUSTOM HOME</h1>
+      <div class="intro">
+        <p>Picture spacious rooms, airy corners, and the natural light streaming in. How does it make you feel? As custom home builders, we've learned that one design element plays a bigger role in this feeling than almost anything else, natural light.</p>
+        <p>The way sunlight enters, travels through, and transforms a home can completely change the experience of living in it. Natural light doesn't just brighten a room, it expands it, elevates it, and brings it to life. Whether you're building a modern luxury home or a warm, earth-toned family haven, understanding how to maximise natural light is one of the most powerful tools in your design journey.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       IMAGE 1: Living room
+       ============================================================ -->
+  <div class="blog-container">
+    <div class="full-img">
+      <img src="images/blog/light-hero.jpg" alt="Living room with natural light">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION: WHY NATURAL LIGHTING MATTERS (text + image)
+       ============================================================ -->
+  <div class="blog-container sec">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <div class="icon-heading">
+          <div class="circle"><i class="fa-solid fa-angles-right"></i></div>
+          <h2>WHY NATURAL LIGHTING MATTERS IN CUSTOM HOME DESIGN</h2>
+        </div>
+        <div class="text-block">
+          <p>Natural light is more than an aesthetic choice; it's a functional design principle. It influences mood and energy as sunlight boosts energy, reduces stress, and increases comfort within a home. Bright spaces feel larger, cleaner, more open, and more inviting. As sun-lit rooms depend less on artificial lighting, it's more energy efficient. Light changes the way you experience the space, the materials, textures, and colours come alive.</p>
+          <p>For us as builders, natural light is one of the first elements we plan &mdash; even before materials or fixtures. It shapes the entire blueprint.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="side-img">
+          <img src="images/blog/light-interior-1.jpg" alt="Natural lighting in custom home">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION: HOW NATURAL LIGHT CREATES OPENNESS (text only)
+       ============================================================ -->
+  <div class="blog-container sec-sm sec-top-0">
+    <div class="icon-heading">
+      <div class="circle"><i class="fa-solid fa-angles-right"></i></div>
+      <h2>HOW NATURAL LIGHT CREATES OPENNESS</h2>
+    </div>
+    <div class="text-block" style="max-width: 720px;">
+      <h3>1. Expands the Visual Boundaries</h3>
+      <p>Rooms with abundant natural light appear larger because shadows are reduced and the eye can travel smoothly across the space. When sunlight bounces off ceilings, floors, and walls, it creates a seamless flow that makes even compact rooms feel expansive.</p>
+      <p>We strategically place windows, clerestories, skylights, and glass doors so that light enters from multiple directions, spreading evenly and avoiding dark pockets.</p>
+
+      <h3>2. Blurs the Line Between Indoors and Outdoors</h3>
+      <p>Picture large windows, sliding glass panels, and full-height glazing that connect the interior to the landscape outside. This connection is one of the most powerful ways to introduce openness.</p>
+      <p>A living room feels twice as big when it borrows light and adds visual depth from the garden, courtyard, or terrace outside.</p>
+
+      <h3>3. Highlights Architectural Features</h3>
+      <p>Every beam of sunlight is an opportunity to show off craftsmanship. Wood textures look richer, stone appears more sculpted, and colour palettes feel more dynamic when illuminated naturally.</p>
+      <p>As custom home builders, we design spaces not just to be seen, but to be experienced through shifting light throughout the day.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       IMAGE 2: Kitchen
+       ============================================================ -->
+  <div class="blog-container">
+    <div class="full-img">
+      <img src="images/blog/light-kitchen.jpg" alt="Modern kitchen with natural light">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION: DESIGN TECHNIQUES (text + image)
+       ============================================================ -->
+  <div class="blog-container sec">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <div class="icon-heading">
+          <div class="circle"><i class="fa-solid fa-angles-right"></i></div>
+          <h2>DESIGN TECHNIQUES WE USE TO MAXIMISE NATURAL LIGHT</h2>
+        </div>
+        <div class="text-block">
+          <ul>
+            <li>
+              <strong>Window Placement Based on the Sun's Path</strong>
+              We study how the sun travels across your site. North-facing light is soft and consistent. East gives a fresh morning glow. West brings a warm sunset tone. South offers steady brightness.<br><br>
+              By balancing these directions, we ensure every room gets the right kind of light.
+            </li>
+            <li>
+              <strong>Open Floor Plans &amp; Strategic Wall Removal</strong>
+              Fewer walls mean more light. But openness doesn't have to mean losing definition. We use partial walls, glass partitions, and double-height ceilings to allow light to move freely without compromising function.
+            </li>
+            <li>
+              <strong>High Ceilings &amp; Reflective Surfaces</strong>
+              Tall ceilings invite deeper sunlight penetration. Reflective materials like polished stone, soft white walls, light-toned wood, and metal accents help the light travel even farther.
+            </li>
+            <li>
+              <strong>Indoor-Outdoor Rooms</strong>
+              By blending patios, courtyards, verandas, and balconies with interior rooms, we create light-filled transitional spaces that feel both cosy and expansive.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="side-img">
+          <img src="images/blog/light-entryway.jpg" alt="Bright entryway with natural light">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION: NATURAL LIGHT CREATES HOMES (text only)
+       ============================================================ -->
+  <div class="blog-container sec-sm sec-top-0">
+    <div class="icon-heading">
+      <div class="circle"><i class="fa-solid fa-angles-right"></i></div>
+      <h2>NATURAL LIGHT CREATES HOMES THAT FEEL ALIVE</h2>
+    </div>
+    <div class="text-block" style="max-width: 680px;">
+      <p>A well-lit home does more than look beautiful, it enhances the way you live. You wake up gently with the morning sun, feel energised as daylight pours into the living room, and unwind in soft evening light that filters through the windows.</p>
+      <p>Every moment feels more meaningful, grounded, and connected to the world outside.</p>
+      <p>That's what natural light gives you. And as custom home builders, it's one of our greatest tools for crafting homes that don't just shelter you, they inspire you.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+  <div class="blog-container cta-section">
+    <div class="cta-banner">
+      <img src="images/blog/blog-cta-bg.png" alt="" class="cta-banner-bg">
+      <div class="cta-inner">
+        <div class="cta-furniture">
+          <img src="images/furniture-img.png" alt="Furniture">
+        </div>
+        <div class="cta-text">
+          <h2>We help you figure it out!</h2>
+          <p>Wanna talk about your custom home?</p>
+          <a href="contact.html" class="cta-btn">Contact us <i class="fa-solid fa-angles-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-header">
+            <div class="row align-items-center">
+              <div class="col-md-6"><div class="footer-logo"><img src="images/transparent_logo.png" alt=""></div></div>
+              <div class="col-md-6">
+                <div class="footer-social-links">
+                  <div class="footer-social-link-title"><h3>follow our socials</h3></div>
+                  <ul>
+                    <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                    <li><a href="https://www.instagram.com/vision.homes/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main-links">
+        <div class="footer-links"><h3>information</h3><ul><li><a href="about.html">about our company</a></li><li><a href="contact.html">contact with us</a></li><li><a href="experience-page.html">view your experience</a></li><li><a href="./services.html">our services</a></li><li><a href="./featured-projects.html">our projects</a></li></ul></div>
+        <div class="footer-links"><h3>portfolio</h3><ul><li><a class="text-white">luxury home design</a></li><li><a class="text-white">renovation and restoration design</a></li></ul></div>
+        <div class="footer-contact-box footer-links"><h3>contact us</h3>
+          <div class="footer-contact-item"><div class="icon-box"><i class="fa-solid fa-phone"></i></div><div class="footer-contact-content"><p>1300 56 55 56</p></div></div>
+          <div class="footer-contact-item"><div class="icon-box"><i class="fa-solid fa-envelope"></i></div><div class="footer-contact-content"><p>info@visionsmarthomes.com.au</p></div></div>
+          <div class="footer-contact-item"><div class="icon-box"><i class="fa-solid fa-location-dot"></i></div><div class="footer-contact-content"><p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-social-links-small">
+      <div class="footer-social-link-title"><h3>follow our socials</h3></div>
+      <ul>
+        <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+        <li><a href="https://www.instagram.com/vision.homes/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/validator.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/isotope.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/SmoothScroll.js"></script>
+  <script src="js/parallaxie.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/magiccursor.js"></script>
+  <script src="js/SplitText.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/function.js"></script>
+
+  <script>
+    function toggleSideMenu() {
+      const sideMenu = document.getElementById('sideMenu');
+      const overlay = document.getElementById('overlay');
+      sideMenu.classList.toggle('open');
+      overlay.classList.toggle('open');
+    }
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header-sidemenu');
+      if (window.scrollY > 50) { header.classList.add('scrolled'); }
+      else { header.classList.remove('scrolled'); }
+    });
+  </script>
+</body>
+
+</html>

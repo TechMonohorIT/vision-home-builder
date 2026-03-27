@@ -9,21 +9,29 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Awaiken">
-  <!-- Page Title -->
-  <title>Vision Smart Homes - Modern Custom Homes Builder | Sydney Australia</title>
+  <title>Vision Smart Homes - Blog | The Knowledge Hub</title>
   <!-- Favicon Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/vision-smart-logo-favicon.png">
-  <!-- Google Fonts Css-->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+  <!-- Google Fonts Css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
   <link href="css/slicknav.min.css" rel="stylesheet">
   <!-- Swiper Css -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <!-- Font Awesome Icon Css-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Font Awesome Icon Css -->
   <link href="css/all.min.css" rel="stylesheet" media="screen">
   <!-- Animated Css -->
   <link href="css/animate.css" rel="stylesheet">
@@ -33,66 +41,260 @@
   <link rel="stylesheet" href="css/mousecursor.css">
   <!-- Main Custom Css -->
   <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="css/custom_user.css" rel="stylesheet">
+
   <style>
-    /****************************************************
-      * SIDEMENU STYLES
-      ****************************************************/
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      --body-font: 'Carmen Sans', sans-serif;
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      /* Ensure your chosen font is applied */
-      /* font-family: "Hanken Grotesk", sans-serif; */
-      /* This was old font family*/
-
-
       font-family: var(--body-font);
-
-
     }
 
-    /* A custom fixed top bar to hold logo + hamburger */
+    /****************************************************
+     * SIDEMENU STYLES
+     ****************************************************/
     .header-sidemenu {
+      margin: 0 auto;
       position: fixed;
+      padding: 16px 0px;
+      width: 100%;
       top: 0;
-      left: 0;
-      right: 0;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 30px;
-
-      /* Fully transparent, no blur */
-      background: none !important;
-      backdrop-filter: none !important;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      background: transparent;
+      background-color: transparent;
     }
 
-    .header-sidemenu .logo img {
-      max-height: 50px;
-    }
-
-    /* Hamburger icon */
-    .hamburger {
-      width: 30px;
-      height: 20px;
-      cursor: pointer;
-      position: relative;
+    .header-sidemenu.scrolled {
+      background-color: rgba(109, 93, 78, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
     }
 
     .hamburger span {
       display: block;
-      height: 3px;
+      height: 2.5px;
       background: #fff;
-      margin: 4px 0;
+      margin-bottom: 9px;
       transition: 0.3s;
     }
 
-    /* The side menu overlay (dark transparent background) */
+    @media (max-width: 767px) {
+      .hamburger span {
+        margin-bottom: 7px;
+      }
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 307px;
+      height: 100%;
+      background-image: url("images/modern-entryway-hamburger-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 72% center;
+      transition: left 0.3s ease-in-out;
+      padding-top: 103px;
+      padding-left: 40px;
+      padding-right: 84px;
+      z-index: 999;
+    }
+
+    .side-menu::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
+      z-index: -99;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .side-menu .close-btn {
+      font-size: 28px;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 40px;
+      margin-top: 75px;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .side-menu ul li {
+      margin-bottom: 16px;
+    }
+
+    .side-menu ul li a {
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 23px;
+      text-transform: capitalize;
+      transition: color 0.3s;
+    }
+
+    .side-menu ul li a:hover {
+      color: #ffd900ab;
+    }
+
+    #offcanvasExample {
+      width: 100%;
+    }
+
+    .offcanvas-body {
+      padding: 0px !important;
+      margin-left: 284px;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 57px;
+      top: 30px;
+      font-size: 20px;
+      cursor: pointer;
+      --bs-btn-close-color: #000;
+      --bs-btn-close-bg: url("./images/close.svg");
+      --bs-btn-close-opacity: 0.5;
+      --bs-btn-close-hover-opacity: 0.75;
+      --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      --bs-btn-close-focus-opacity: 1;
+      --bs-btn-close-disabled-opacity: 0.25;
+      --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
+      box-sizing: content-box;
+      width: 1em;
+      height: 1em;
+      z-index: 99;
+      padding: 0.25em 0.25em;
+      color: var(--bs-btn-close-color);
+      background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+      border: 0;
+      border-radius: 0.375rem;
+      opacity: var(--bs-btn-close-opacity);
+    }
+
+    .canvas-main-footer {
+      min-height: 100vh !important;
+    }
+
+    .canvas-main-footer .footer-header {
+      padding-bottom: 35px !important;
+    }
+
+    @media (max-width: 1023.98px) {
+      .offcanvas-start {
+        display: none;
+      }
+
+      .hamburger-mobile {
+        display: inline-block;
+      }
+
+      .hamburger-desktop {
+        display: none;
+      }
+
+      .canvas-main-footer .footer-main-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 28px;
+        padding: 36px 0px;
+      }
+
+      .side-menu {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        width: 343px;
+        height: 100%;
+        background-image: url("images/modern-entryway-hamburger-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 72% center;
+        transition: left 0.3s ease-in-out;
+        padding-top: 37px;
+        padding-left: 40px;
+        padding-right: 84px;
+        z-index: 9999;
+      }
+
+      .side-menu .close-btn {
+        margin-top: 0px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hamburger-desktop {
+        display: inline-block;
+      }
+
+      .hamburger-mobile {
+        display: none;
+      }
+
+      .side-menu-overlay {
+        display: none;
+      }
+
+      .side-menu-mobile {
+        display: none;
+      }
+
+      .side-menu {
+        left: 0;
+      }
+    }
+
+    @media(max-width:768px) {
+      .canvas-main-footer .footer-main-links {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* The side menu overlay */
     .side-menu-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 0;
-      /* start closed */
       height: 100%;
       background-color: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(4px);
@@ -106,80 +308,317 @@
       opacity: 1;
     }
 
-    /* The side drawer itself */
-    .side-menu {
-      position: fixed;
+    /****************************************************
+     * BLOG HERO SECTION
+     ****************************************************/
+    .blog-hero-section {
+      width: 100%;
+      min-height: 100vh;
+      max-height: 810px;
+      overflow: hidden;
+    }
+
+    .blog-hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      max-height: 810px;
+      border-radius: 0;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    .blog-hero img {
+      position: absolute;
       top: 0;
-      left: -300px;
-      /* hidden offscreen initially */
-      width: 300px;
-      height: 100%;
-      background-color: #1F1F1F;
-      transition: left 0.3s ease-in-out;
-      padding: 2rem;
-      z-index: 999;
-    }
-
-    .side-menu.open {
       left: 0;
-      /* slide in */
-    }
-
-    /* Close button (X) inside side menu */
-    .side-menu .close-btn {
-      font-size: 28px;
-      color: #fff;
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
-
-    /* Menu items in side menu */
-    .side-menu ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-    }
-
-    .side-menu ul li {
-      margin-bottom: 1rem;
-    }
-
-    .side-menu ul li a {
-      color: #fff;
-      font-size: 18px;
-      text-transform: capitalize;
-      transition: color 0.3s;
-    }
-
-    .side-menu ul li a:hover {
-      color: #ffd900ab;
-      /* accent color on hover */
-    }
-
-    /* Remove margin-top so the hero sits at the very top behind the header */
-    .hero.hero-video {
-      margin-top: 0 !important;
-    }
-
-    .header-sidemenu .logo img {
-      width: 150px;
-      height: auto;
-      /* for instance, if you know the height you want */
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      /* ensures the image doesn't distort, 
-                             though it may crop if aspect ratio is different */
+      display: block;
     }
 
+    .blog-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 50px 60px;
+    }
 
-    /* 
-       OPTIONAL: If your hero text gets hidden under the header, 
-       you can add top padding to .hero-content or .hero .container instead:
-         .hero-content {
-           padding-top: 80px;
-         }
-     */
+    .blog-hero-overlay h1 {
+      font-family: var(--montserrat);
+      font-size: 42px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .blog-hero-overlay p {
+      font-family: var(--inter);
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 450px;
+      line-height: 1.6;
+    }
+
+    /****************************************************
+     * BLOG CARDS SECTION
+     ****************************************************/
+    .blog-cards-section {
+      padding: 60px 0 40px;
+    }
+
+    .blog-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-card-image {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-title {
+      background-color: #C4A882;
+      padding: 22px 20px;
+      text-align: center;
+    }
+
+    .blog-card-title h3 {
+      font-family: var(--montserrat);
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /****************************************************
+     * CTA BANNER SECTION
+     ****************************************************/
+    .blog-cta-section {
+      padding: 0 0 80px;
+    }
+
+    .blog-cta-banner {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+    }
+
+    .blog-cta-banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .blog-cta-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 30px 60px;
+    }
+
+    .blog-cta-furniture {
+      flex: 0 0 320px;
+      max-width: 320px;
+      margin-top: -20px;
+    }
+
+    .blog-cta-furniture img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .blog-cta-text {
+      flex: 1;
+      padding-left: 20px;
+    }
+
+    .blog-cta-text h2 {
+      font-family: var(--montserrat);
+      font-size: 32px;
+      font-weight: 700;
+      color: #3a2113;
+      margin-bottom: 8px;
+    }
+
+    .blog-cta-text p {
+      font-family: var(--inter);
+      font-size: 16px;
+      color: #5a3d2b;
+      margin-bottom: 20px;
+    }
+
+    .blog-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #3a2113;
+      color: #fff;
+      font-family: var(--montserrat);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .blog-cta-btn:hover {
+      background: #5a3d2b;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .blog-cta-btn i {
+      font-size: 12px;
+    }
+
+    /****************************************************
+     * RESPONSIVE
+     ****************************************************/
+    @media (max-width: 991px) {
+      .blog-hero {
+        min-height: 100vh;
+        max-height: 810px;
+        border-radius: 0;
+      }
+
+      .blog-hero-overlay {
+        padding: 35px 40px;
+      }
+
+      .blog-hero-overlay h1 {
+        font-size: 32px;
+      }
+
+      .blog-card-image {
+        height: 220px;
+      }
+
+      .blog-cta-furniture {
+        flex: 0 0 220px;
+        max-width: 220px;
+      }
+
+      .blog-cta-text h2 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .blog-hero {
+        min-height: 100vh;
+        max-height: 810px;
+        border-radius: 0;
+      }
+
+      .blog-hero-overlay {
+        padding: 25px 25px;
+      }
+
+      .blog-hero-overlay h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+
+      .blog-hero-overlay p {
+        font-size: 13px;
+      }
+
+      .blog-card-image {
+        height: 200px;
+      }
+
+      .blog-card-title {
+        padding: 18px 16px;
+      }
+
+      .blog-card-title h3 {
+        font-size: 14px;
+      }
+
+      .blog-cta-content {
+        flex-direction: column;
+        padding: 30px 25px;
+        text-align: center;
+      }
+
+      .blog-cta-furniture {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto 15px;
+      }
+
+      .blog-cta-text {
+        padding-left: 0;
+      }
+
+      .blog-cta-text h2 {
+        font-size: 22px;
+      }
+
+      .blog-cta-text p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .blog-hero {
+        min-height: 100vh;
+      }
+
+      .blog-hero-overlay h1 {
+        font-size: 20px;
+      }
+
+      .blog-cards-section {
+        padding: 40px 0 20px;
+      }
+    }
   </style>
 </head>
 
@@ -190,284 +629,262 @@
     <div class="loading-container">
       <div class="loading"></div>
       <div id="loading-icon">
-        <img src="images/loader.svg" alt="">
+        <img src="images/vision_logo_white.png" alt="vision-loader-logo">
       </div>
     </div>
   </div>
   <!-- Preloader End -->
 
-  <!-- SIMPLE FIXED HEADER with HAMBURGER -->
   <header class="header-sidemenu">
-    <div class="logo">
-      <a href="./">
-        <img src="images/transparent_logo.png" alt="Vision Smart Homes Logo">
-      </a>
-    </div>
-    <div class="hamburger" onclick="toggleSideMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="header-content main-container">
+      <div class="logo" id="siteLogo">
+        <a href="./">
+          <img src="images/vision-logo.svg" alt="Vision Smart Homes Logo">
+        </a>
+      </div>
+      <!-- for big device -->
+      <div class="hamburger hamburger-desktop" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- for mobile device -->
+      <div class="hamburger hamburger-mobile" onclick="toggleSideMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
   <!-- The dark overlay for the side menu -->
   <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
 
-  <!-- The side drawer menu -->
-  <div class="side-menu" id="sideMenu">
+  <!-- The side drawer menu (mobile) -->
+  <div class="side-menu side-menu-mobile" id="sideMenu">
     <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
     <ul>
       <li><a href="./">home</a></li>
       <li><a href="about.html">about us</a></li>
+      <li><a href="experience-page.html">building experience</a></li>
+      <li><a href="featured-projects.html">projects</a></li>
       <li><a href="services.html">services</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li><a href="experience-page.html">Our Experience</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="blog.html">blog</a></li>
       <li><a href="contact.html">contact us</a></li>
     </ul>
   </div>
 
-  <!-- Header End -->
-
-  <!-- Page Header Start -->
-  <div class="page-header parallaxie">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <!-- Page Header Box Start -->
-          <div class="page-header-box">
-            <h1 class="text-anime-style-2" data-cursor="-opaque">Our blog</h1>
-            <nav class="wow fadeInUp">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">blog</li>
-              </ol>
-            </nav>
-          </div>
-          <!-- Page Header Box End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Page Header End -->
-
-  <!-- Our Blog Section Start -->
-  <div class="page-blog">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-1.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">How Does One Go About a Buying Furniture?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-2.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">Innovative Décor Ideas Shaping Homes Today</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-3.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">Design Industry Updates You Should Know About</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.6s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-4.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">How Do You Choose the Right Lighting for Each Room?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.8s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-5.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">How Can Custom Furniture Elevate Your Home's Aesthetic?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="1s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-6.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">What Are Simple Ways to Refresh Your Interior on a Budget?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-12">
-          <!-- Page Pagination Start -->
-          <div class="page-pagination wow fadeInUp" data-wow-delay="1.2s">
-            <ul class="pagination">
-              <li><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+  <!-- Offcanvas (desktop) -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body">
+      <div class="canvas-container">
+        <aside class="sidebar-area">
+          <div class="side-menu" id="sideMenu">
+            <ul>
+              <li><a href="./">home</a></li>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="experience-page.html">building experience</a></li>
+              <li><a href="featured-projects.html">projects</a></li>
+              <li><a href="services.html">services</a></li>
+              <li><a href="blog.html">blog</a></li>
+              <li><a href="contact.html">contact us</a></li>
             </ul>
           </div>
-          <!-- Page Pagination End -->
+        </aside>
+        <div class="canvas-content-area">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <!-- Canvas Footer -->
+          <footer class="main-footer canvas-main-footer">
+            <div class="main-container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="footer-header">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <div class="footer-logo">
+                          <img height="120px" src="images/vision-logo.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="footer-social-links">
+                          <div class="footer-social-link-title">
+                            <h3>follow our socials</h3>
+                          </div>
+                          <ul>
+                            <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i
+                                  class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                            <li><a
+                                href="https://www.instagram.com/vision.homes/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+                                target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-main-links">
+                <div class="footer-links">
+                  <h3>information</h3>
+                  <ul>
+                    <li><a href="about.html">about our company</a></li>
+                    <li><a href="contact.html">contact with us</a></li>
+                    <li><a href="experience-page.html">view your experience</a></li>
+                    <li><a href="./services.html">our services</a></li>
+                    <li><a href="./featured-projects.html">our projects</a></li>
+                  </ul>
+                </div>
+                <div class="footer-links">
+                  <h3>portfolio</h3>
+                  <ul>
+                    <li><a class="text-white">luxury home design</a></li>
+                    <li><a class="text-white">renovation and restoration design</a></li>
+                  </ul>
+                </div>
+                <div class="footer-contact-box footer-links">
+                  <h3>contact us</h3>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>1300 56 55 56</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>info@visionsmarthomes.com.au</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-social-links-small">
+              <div class="footer-social-link-title">
+                <h3>follow our socials</h3>
+              </div>
+              <ul>
+                <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i
+                      class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                <li><a
+                    href="https://www.instagram.com/vision.homes/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+                    target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
   </div>
-  <!-- Our Blog Section End -->
 
-  <!-- Footer Start -->
-  <footer class="main-footer">
+  <!-- ====================================================
+       BLOG HERO SECTION
+       ==================================================== -->
+  <section class="blog-hero-section" style="padding: 0;">
+    <div class="blog-hero wow fadeIn">
+      <img src="images/blog/blog-hero.png" alt="The Knowledge Hub - Vision Smart Homes Blog">
+      <div class="blog-hero-overlay">
+        <h1 class="text-anime-style-2" data-cursor="-opaque">THE KNOWLEDGE HUB</h1>
+        <p class="wow fadeInUp" data-wow-delay="0.2s">Browse through a collection of articles crafted to give you
+          clarity, insight, and fresh perspectives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       BLOG CARDS SECTION
+       ==================================================== -->
+  <section class="blog-cards-section">
     <div class="container">
+      <div class="row">
+        <!-- Blog Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <a href="blog-single.html" class="text-decoration-none">
+            <div class="blog-card wow fadeInUp" data-cursor-text="Read">
+              <div class="blog-card-image">
+                <img src="images/blog/blog-card-1.png" alt="Custom House vs Project Homes">
+              </div>
+              <div class="blog-card-title">
+                <h3>CUSTOM HOUSE VS PROJECT HOMES</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <a href="blog-single.html" class="text-decoration-none">
+            <div class="blog-card wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="Read">
+              <div class="blog-card-image">
+                <img src="images/blog/blog-card-2.png" alt="Choosing the Right Builder">
+              </div>
+              <div class="blog-card-title">
+                <h3>CHOOSING THE RIGHT BUILDER</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <a href="blog-designing-with-light.html" class="text-decoration-none">
+            <div class="blog-card wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="Read">
+              <div class="blog-card-image">
+                <img src="images/blog/blog-card-3.png" alt="Designing with Light">
+              </div>
+              <div class="blog-card-title">
+                <h3>DESIGNING WITH LIGHT</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       CTA BANNER SECTION
+       ==================================================== -->
+  <section class="blog-cta-section">
+    <div class="container">
+      <div class="blog-cta-banner wow fadeInUp">
+        <img src="images/blog/blog-cta-bg.png" alt="" class="blog-cta-banner-bg">
+        <div class="blog-cta-content">
+          <div class="blog-cta-furniture">
+            <img src="images/furniture-img.png" alt="Furniture">
+          </div>
+          <div class="blog-cta-text">
+            <h2>We help you figure it out!</h2>
+            <p>Wanna talk about your custom home?</p>
+            <a href="contact.html" class="blog-cta-btn">
+              Contact us <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer class="main-footer">
+    <div class="main-container">
       <div class="row">
         <div class="col-lg-12">
           <div class="footer-header">
@@ -495,125 +912,90 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-links">
-            <h3>information</h3>
-            <ul>
-              <li><a href="about.html">about our company</a></li>
-              <li><a href="services.html">view our service</a></li>
-              <li><a href="#">careers at company</a></li>
-              <li><a href="blog.html">read our blog</a></li>
-              <li><a href="projects.html">our latest projects</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-links">
-            <h3>portfolio</h3>
-            <ul>
-              <li><a href="project-single.html">luxury home design</a></li>
-              <li><a href="project-single.html">residential interior design</a></li>
-              <li><a href="project-single.html">commercial space design</a></li>
-              <li><a href="project-single.html">residential interior design</a></li>
-              <li><a href="project-single.html">renovation and restoration design</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-contact-box footer-links">
-            <h3>contact us</h3>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>1300 56 55 56</p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>info@visionsmarthomes.com.au</p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>Unit 30/275 Annangrove Rd Rouse Hill NSW 2155</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-latest-news footer-links">
-            <h3>get the latest trending news</h3>
-            <div class="footer-newsletter-form">
-              <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
-              <form id="newslettersForm" action="#" method="POST">
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email"
-                    required>
-                  <button type="submit">
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div class="footer-copyright">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-copyright-text">
+      <div class="footer-main-links">
+        <div class="footer-links">
+          <h3>information</h3>
+          <ul>
+            <li><a href="about.html">about our company</a></li>
+            <li><a href="contact.html">contact with us</a></li>
+            <li><a href="experience-page.html">view your experience</a></li>
+            <li><a href="./services.html">our services</a></li>
+            <li><a href="./featured-projects.html">our projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>portfolio</h3>
+          <ul>
+            <li><a class="text-white">luxury home design</a></li>
+            <li><a class="text-white">renovation and restoration design</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-box footer-links">
+          <h3>contact us</h3>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>1300 56 55 56</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>info@visionsmarthomes.com.au</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="footer-contact-content">
+              <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer-social-links-small">
+      <div class="footer-social-link-title">
+        <h3>follow our socials</h3>
+      </div>
+      <ul>
+        <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i
+              class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+        <li><a
+            href="https://www.instagram.com/vision.homes/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+            target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
   </footer>
-  <!-- Footer End -->
 
-  <!-- Jquery Library File -->
+  <!-- JS Files -->
   <script src="js/jquery-3.7.1.min.js"></script>
-  <!-- Bootstrap js file -->
   <script src="js/bootstrap.min.js"></script>
-  <!-- Validator js file -->
   <script src="js/validator.min.js"></script>
-  <!-- SlickNav js file -->
   <script src="js/jquery.slicknav.js"></script>
-  <!-- Swiper js file -->
   <script src="js/swiper-bundle.min.js"></script>
-  <!-- Counter js file -->
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.counterup.min.js"></script>
-  <!-- Isotop js file -->
   <script src="js/isotope.min.js"></script>
-  <!-- Magnific js file -->
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- SmoothScroll -->
   <script src="js/SmoothScroll.js"></script>
-  <!-- Parallax js -->
   <script src="js/parallaxie.js"></script>
-  <!-- MagicCursor js file -->
   <script src="js/gsap.min.js"></script>
   <script src="js/magiccursor.js"></script>
-  <!-- Text Effect js file -->
   <script src="js/SplitText.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
-  <!-- YTPlayer js File -->
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <!-- Wow js file -->
   <script src="js/wow.min.js"></script>
-  <!-- Main Custom js file -->
   <script src="js/function.js"></script>
 
+  <!-- Toggle side menu script -->
   <script>
     function toggleSideMenu() {
       const sideMenu = document.getElementById('sideMenu');
@@ -621,6 +1003,18 @@
       sideMenu.classList.toggle('open');
       overlay.classList.toggle('open');
     }
+  </script>
+
+  <!-- Header scroll effect -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header-sidemenu');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
   </script>
 </body>
 
