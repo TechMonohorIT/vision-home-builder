@@ -883,6 +883,37 @@ body {
   display: none !important;
 }
 
+.builder-text-content {
+  max-width: 790px;
+  font-family: "Montserrat", sans-serif;
+  color: #4b4b4b;
+  line-height: 1.45;
+}
+
+.builder-text-content .intro,
+.builder-text-content .outro,
+.builder-text-content ul li {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.builder-text-content .intro {
+  margin-bottom: 20px;
+}
+
+.builder-text-content ul {
+  margin: 0 0 20px 24px;
+  padding: 0;
+}
+
+.builder-text-content ul li {
+  margin-bottom: 6px;
+}
+
+.builder-text-content .outro {
+  margin: 0;
+}
+
 @media (min-width: 1025px) {
   .desktop_team_img {
     display: block !important;
