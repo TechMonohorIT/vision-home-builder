@@ -9,21 +9,36 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Awaiken">
-  <!-- Page Title -->
-  <title>Vision Smart Homes - Modern Custom Homes Builder | Sydney Australia</title>
+  <title>Vision-Smart-Home || Blog</title>
   <!-- Favicon Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/vision-smart-logo-favicon.png">
-  <!-- Google Fonts Css-->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+  <!-- Google Fonts Css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+
+
+  <!-- New Google Fonts Css added by me for face some issuses=(Montserrat+Inter)-->
+  <!--I could not import Helvetica Font to google fonts> It is a  paid font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
   <link href="css/slicknav.min.css" rel="stylesheet">
   <!-- Swiper Css -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <!-- Font Awesome Icon Css-->
+  <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <!-- Font Awesome Icon Css -->
   <link href="css/all.min.css" rel="stylesheet" media="screen">
   <!-- Animated Css -->
   <link href="css/animate.css" rel="stylesheet">
@@ -31,79 +46,117 @@
   <link rel="stylesheet" href="css/magnific-popup.css">
   <!-- Mouse Cursor Css File -->
   <link rel="stylesheet" href="css/mousecursor.css">
-  <!-- Main Custom Css -->
+  <!-- Main Custom Css (from Inspaire) -->
   <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="css/custom_user.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/about.css">
+
+  <!-- Extra custom CSS for side-menu toggle -->
   <style>
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      /* New Font Updated */
+      --body-font: 'Carmen Sans', sans-serif;
+      /*New Google Font */
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
+    }
+
     /****************************************************
-      * SIDEMENU STYLES
-      ****************************************************/
+ * SIDEMENU STYLES
+ ****************************************************/
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       /* Ensure your chosen font is applied */
       /* font-family: "Hanken Grotesk", sans-serif; */
       /* This was old font family*/
-
-
       font-family: var(--body-font);
+    }
 
-
+    :root {
+      --primary-color: #192324;
+      --secondery-color: #F8F8F8;
+      --text-color: #283132;
+      --accent-color: #7C877F;
+      --white-color: #FFFFFF;
+      --divider-color: #EAF0EC;
+      --dark-divider-color: #FFFFFF1A;
+      --error-color: rgb(230, 87, 87);
+      --default-font: 'CarmenSans-UltraLight', sans-serif;
+      /* New Font Updated */
+      --body-font: 'Carmen Sans', sans-serif;
+      /*New Google Fonts for figma */
+      --inter: "Inter", sans-serif;
+      --montserrat: "Montserrat", sans-serif;
     }
 
     /* A custom fixed top bar to hold logo + hamburger */
-    .header-sidemenu {
+    /* .header-sidemenu {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0%;
+      left: 0px;
       right: 0;
       z-index: 999;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 30px;
-
-      /* Fully transparent, no blur */
+      padding: 20px 70px 20px 0px;
       background: none !important;
       backdrop-filter: none !important;
+    } */
+
+
+    .header-sidemenu {
+      margin: 0 auto;
+      position: fixed;
+      padding: 16px 0px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      background: transparent;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
     }
 
-    .header-sidemenu .logo img {
-      max-height: 50px;
+    .blog-page-header {
+      background: rgba(0, 0, 0, 0.40);
+      box-shadow: 0 5px 68px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .header-sidemenu.scrolled {
+      background-color: rgba(109, 93, 78, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
     }
 
     /* Hamburger icon */
-    .hamburger {
-      width: 30px;
-      height: 20px;
-      cursor: pointer;
-      position: relative;
-    }
-
     .hamburger span {
       display: block;
-      height: 3px;
+      height: 2.5px;
       background: #fff;
-      margin: 4px 0;
+      margin-bottom: 9px;
       transition: 0.3s;
     }
 
-    /* The side menu overlay (dark transparent background) */
-    .side-menu-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0;
-      /* start closed */
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-      z-index: 998;
-    }
-
-    .side-menu-overlay.open {
-      width: 100%;
-      opacity: 1;
+    @media (max-width: 767px) {
+      .hamburger span {
+        margin-bottom: 7px;
+      }
     }
 
     /* The side drawer itself */
@@ -111,13 +164,28 @@
       position: fixed;
       top: 0;
       left: -300px;
-      /* hidden offscreen initially */
-      width: 300px;
+      width: 307px;
       height: 100%;
-      background-color: #1F1F1F;
+      background-image: url("/images/modern-entryway-hamburger-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 72% center;
       transition: left 0.3s ease-in-out;
-      padding: 2rem;
+      padding-top: 103px;
+      padding-left: 40px;
+      padding-right: 84px;
       z-index: 999;
+    }
+
+    .side-menu::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(58, 33, 19, 0.65) 0%, rgba(58, 33, 19, 0.65) 100%);
+      z-index: -99;
     }
 
     .side-menu.open {
@@ -128,58 +196,176 @@
     /* Close button (X) inside side menu */
     .side-menu .close-btn {
       font-size: 28px;
-      color: #fff;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.8px;
       background: none;
       border: none;
       cursor: pointer;
-      margin-bottom: 1rem;
+      margin-bottom: 40px;
+      margin-top: 75px;
     }
 
     /* Menu items in side menu */
     .side-menu ul {
       list-style: none;
       padding: 0;
-      margin-top: 2rem;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .side-menu ul li {
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
 
     .side-menu ul li a {
-      color: #fff;
-      font-size: 18px;
+      color: #FFF;
+      font-family: var(--montserrat);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 23px;
       text-transform: capitalize;
       transition: color 0.3s;
     }
 
     .side-menu ul li a:hover {
-      color: #ffd900ab;
       /* accent color on hover */
-    }
-
-    /* Remove margin-top so the hero sits at the very top behind the header */
-    .hero.hero-video {
-      margin-top: 0 !important;
-    }
-
-    .header-sidemenu .logo img {
-      width: 150px;
-      height: auto;
-      /* for instance, if you know the height you want */
-      object-fit: cover;
-      /* ensures the image doesn't distort, 
-                             though it may crop if aspect ratio is different */
+      color: #ffd900ab;
     }
 
 
-    /* 
-       OPTIONAL: If your hero text gets hidden under the header, 
-       you can add top padding to .hero-content or .hero .container instead:
-         .hero-content {
-           padding-top: 80px;
-         }
-     */
+    #offcanvasExample {
+      width: 100%;
+    }
+
+    .offcanvas-body {
+      padding: 0px !important;
+      margin-left: 284px;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 57px;
+      top: 30px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .canvas-main-footer {
+      min-height: 100vh !important;
+    }
+
+    .btn-close {
+      --bs-btn-close-color: #000;
+      --bs-btn-close-bg: url("./images/close.svg");
+      --bs-btn-close-opacity: 0.5;
+      --bs-btn-close-hover-opacity: 0.75;
+      --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      --bs-btn-close-focus-opacity: 1;
+      --bs-btn-close-disabled-opacity: 0.25;
+      --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
+      box-sizing: content-box;
+      width: 1em;
+      height: 1em;
+      z-index: 99;
+      padding: 0.25em 0.25em;
+      color: var(--bs-btn-close-color);
+      background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+      border: 0;
+      border-radius: 0.375rem;
+      opacity: var(--bs-btn-close-opacity);
+    }
+
+    .canvas-main-footer .footer-header {
+      padding-bottom: 35px !important;
+    }
+
+
+
+    @media (max-width: 1023.98px) {
+      .offcanvas-start {
+        display: none;
+      }
+
+      .hamburger-mobile {
+        display: inline-block;
+      }
+
+      .hamburger-desktop {
+        display: none;
+      }
+
+      .canvas-main-footer .footer-main-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 28px;
+        padding: 36px 0px;
+      }
+
+      .side-menu {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        width: 343px;
+        height: 100%;
+        background-image: url("/images/modern-entryway-hamburger-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 72% center;
+        transition: left 0.3s ease-in-out;
+        padding-top: 37px;
+        padding-left: 40px;
+        padding-right: 84px;
+        z-index: 9999;
+      }
+
+      .side-menu .close-btn {
+        margin-top: 0px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hamburger-desktop {
+        display: inline-block;
+      }
+
+      .hamburger-mobile {
+        display: none;
+      }
+
+      .side-menu-overlay {
+        display: none;
+      }
+
+      .side-menu-mobile {
+        display: none;
+      }
+
+      .side-menu {
+        left: 0;
+      }
+    }
+
+
+    @media(max-width:768px) {
+      .canvas-main-footer .footer-main-links {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+    }
+
+    @media(max-width:576px) {
+      .hamburger {
+        max-width: 26px;
+        max-height: 26px;
+      }
+
+      .hamburger span {
+        margin-bottom: 7px;
+      }
+    }
   </style>
 </head>
 
@@ -190,23 +376,33 @@
     <div class="loading-container">
       <div class="loading"></div>
       <div id="loading-icon">
-        <img src="images/loader.svg" alt="">
+        <img src="images/vision_logo_white.png" alt="vision-loader-logo">
       </div>
     </div>
   </div>
   <!-- Preloader End -->
 
-  <!-- SIMPLE FIXED HEADER with HAMBURGER -->
-  <header class="header-sidemenu">
-    <div class="logo">
-      <a href="./">
-        <img src="images/transparent_logo.png" alt="Vision Smart Homes Logo">
-      </a>
-    </div>
-    <div class="hamburger" onclick="toggleSideMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+  <header class="header-sidemenu blog-page-header">
+    <div class="header-content main-container">
+      <div class="logo" id="siteLogo">
+        <a href="./">
+          <img src="images/logo_white.svg" alt="Vision Smart Homes Logo">
+        </a>
+      </div>
+      <!-- for big device -->
+      <div class="hamburger hamburger-desktop" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- for mobile device -->
+      <div class="hamburger hamburger-mobile" onclick="toggleSideMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -214,407 +410,255 @@
   <div class="side-menu-overlay" id="overlay" onclick="toggleSideMenu()"></div>
 
   <!-- The side drawer menu -->
-  <div class="side-menu" id="sideMenu">
+  <div class="side-menu side-menu-mobile" id="sideMenu">
     <button class="close-btn" onclick="toggleSideMenu()">&times;</button>
     <ul>
       <li><a href="./">home</a></li>
       <li><a href="about.html">about us</a></li>
+      <li><a href="experience-page.html">building experience</a></li>
+      <li><a href="featured-projects.html">projects</a></li>
       <li><a href="services.html">services</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li><a href="experience-page.html">Our Experience</a></li>
-      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">contact us</a></li>
     </ul>
   </div>
-
-  <!-- Header End -->
-
-  <!-- Page Header Start -->
-  <div class="page-header parallaxie">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <!-- Page Header Box Start -->
-          <div class="page-header-box">
-            <h1 class="text-anime-style-2" data-cursor="-opaque">Our blog</h1>
-            <nav class="wow fadeInUp">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">blog</li>
-              </ol>
-            </nav>
-          </div>
-          <!-- Page Header Box End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Page Header End -->
-
-  <!-- Our Blog Section Start -->
-  <div class="page-blog">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-1.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">How Does One Go About a Buying Furniture?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-2.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">Innovative Décor Ideas Shaping Homes Today</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-3.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">Design Industry Updates You Should Know About</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.6s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-4.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">How Do You Choose the Right Lighting for Each Room?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.8s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-5.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">How Can Custom Furniture Elevate Your Home's Aesthetic?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="1s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <figure>
-                <a href="blog-single.html" class="image-anime" data-cursor-text="View">
-                  <img src="images/post-6.jpg" alt="">
-                </a>
-              </figure>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Post Item Body Start -->
-            <div class="post-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h3><a href="blog-single.html">What Are Simple Ways to Refresh Your Interior on a Budget?</a></h3>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="post-item-btn">
-                <a href="blog-single.html" class="post-btn">read more</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Post Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-12">
-          <!-- Page Pagination Start -->
-          <div class="page-pagination wow fadeInUp" data-wow-delay="1.2s">
-            <ul class="pagination">
-              <li><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body">
+      <div class="canvas-container">
+        <aside class="sidebar-area">
+          <div class="side-menu" id="sideMenu">
+            <ul>
+              <li><a href="./">home</a></li>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="experience-page.html">building experience</a></li>
+              <li><a href="featured-projects.html">projects</a></li>
+              <li><a href="services.html">services</a></li>
+              <li><a href="contact.html">contact us</a></li>
             </ul>
           </div>
-          <!-- Page Pagination End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Our Blog Section End -->
-
-  <!-- Footer Start -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="footer-header">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="footer-logo">
-                  <img src="images/transparent_logo.png" alt="">
+        </aside>
+        <div class="canvas-content-area">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <!--footer-start-10-->
+          <footer class="main-footer canvas-main-footer">
+            <div class="main-container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="footer-header">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <div class="footer-logo">
+                          <img height="120px" src="images/vision-logo.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="footer-social-links">
+                          <div class="footer-social-link-title">
+                            <h3>follow our socials</h3>
+                          </div>
+                          <ul>
+                            <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i
+                                  class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                            <li><a
+                                href="https://www.instagram.com/vision.homes/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+                                target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="footer-social-links">
-                  <div class="footer-social-link-title">
-                    <h3>follow our socials</h3>
-                  </div>
+              <div class="footer-main-links">
+                <div class="footer-links">
+                  <h3>information</h3>
                   <ul>
-                    <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i
-                          class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                    <li><a
-                        href="https://www.instagram.com/vision.homes/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
-                        target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="about.html">about our company</a></li>
+                    <li><a href="contact.html">contact with us</a></li>
+                    <li><a href="experience-page.html">view your experience</a></li>
+                    <li><a href="./services.html">our services</a></li>
+                    <li><a href="./featured-projects.html">our projects</a></li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                <div class="footer-links">
+                  <h3>portfolio</h3>
+                  <ul>
+                    <li><a class="text-white">luxury home design</a></li>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-links">
-            <h3>information</h3>
-            <ul>
-              <li><a href="about.html">about our company</a></li>
-              <li><a href="services.html">view our service</a></li>
-              <li><a href="#">careers at company</a></li>
-              <li><a href="blog.html">read our blog</a></li>
-              <li><a href="projects.html">our latest projects</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-links">
-            <h3>portfolio</h3>
-            <ul>
-              <li><a href="project-single.html">luxury home design</a></li>
-              <li><a href="project-single.html">residential interior design</a></li>
-              <li><a href="project-single.html">commercial space design</a></li>
-              <li><a href="project-single.html">residential interior design</a></li>
-              <li><a href="project-single.html">renovation and restoration design</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-contact-box footer-links">
-            <h3>contact us</h3>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>1300 56 55 56</p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>info@visionsmarthomes.com.au</p>
-              </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="footer-contact-content">
-                <p>Unit 30/275 Annangrove Rd Rouse Hill NSW 2155</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-latest-news footer-links">
-            <h3>get the latest trending news</h3>
-            <div class="footer-newsletter-form">
-              <p>Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
-              <form id="newslettersForm" action="#" method="POST">
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control" id="mail" placeholder="Enter your email"
-                    required>
-                  <button type="submit">
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                  </button>
+
+                    <li><a class="text-white">renovation and restoration design</a></li>
+                  </ul>
                 </div>
-              </form>
+                <div class="footer-contact-box footer-links">
+                  <h3>contact us</h3>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>1300 56 55 56</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>info@visionsmarthomes.com.au</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="icon-box">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer-contact-content">
+                      <p>Unit 30/275 Annangrove Rd <br>Rouse Hill NSW 2155</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-social-links-small">
+              <div class="footer-social-link-title">
+                <h3>follow our socials</h3>
+              </div>
+              <ul>
+                <li><a href="https://www.facebook.com/Visionsmarthomes/" target="_blank"><i
+                      class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                <li><a
+                    href="https://www.instagram.com/vision.homes/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+                    target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </footer>
+          <!--footer-end-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Begin: Blog Section -->
+  <section id="blog" class="blog-section">
+    <div class="blog-container">
+      <div data-cursor="-opaque" class="text-anime-style-2 main-container blog-banner-content text-start">
+        <h2>THE KNOWLEDGE HUB</h2>
+        <p>Browse through a collection of articles crafted to give you clarity, insight, and fresh perspectives.</p>
+      </div>
+
+    </div>
+    <div class="card-section">
+
+      <div class="main-container ">
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card">
+              <div class="image-wrap">
+                <img src="./images/blogs/CUSTOM-HOUSE-PROJECT-HOMES.jpg" alt="Custom House vs Project Homes">
+              </div>
+              <div class="card-footer-box">
+                <h3>CUSTOM HOUSE VS<br>PROJECT HOMES</h3>
+              </div>
             </div>
           </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card">
+              <div class="image-wrap">
+                <img src="./images/blogs/CHOOSING-THE-RIGHT-BUILDER.jpg" alt="Choosing the Right Builder">
+              </div>
+              <div class="card-footer-box">
+                <h3>CHOOSING THE RIGHT<br>BUILDER</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card">
+              <div class="image-wrap">
+                <img src="./images/blogs/DESIGNING-WITH-LIGHT.jpg" alt="Designing with Light">
+              </div>
+              <div class="card-footer-box">
+                <h3>DESIGNING WITH LIGHT</h3>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div class="footer-copyright">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-copyright-text">
+    </div>
+
+    <div class="contact-banner">
+      <div class="container banner-content">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+          </div>
+
+          <div class="col-lg-8">
+            <div data-cursor="-opaque" class="banner-text text-lg-start text-center text-anime-style-2">
+              <h2 class="">We help you figure it out!</h2>
+              <p>Wanna talk about your custom home?</p>
+              <a href="#" class="contact-btn">
+                Contact us
+                <img src="./images/blogs/arrow-icon.svg" alt="arrow-right">
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- Footer End -->
+  </section>
+  <!-- End: Blog Section -->
 
-  <!-- Jquery Library File -->
+  <!-- JS Files -->
   <script src="js/jquery-3.7.1.min.js"></script>
-  <!-- Bootstrap js file -->
   <script src="js/bootstrap.min.js"></script>
-  <!-- Validator js file -->
   <script src="js/validator.min.js"></script>
-  <!-- SlickNav js file -->
   <script src="js/jquery.slicknav.js"></script>
-  <!-- Swiper js file -->
   <script src="js/swiper-bundle.min.js"></script>
-  <!-- Counter js file -->
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.counterup.min.js"></script>
-  <!-- Isotop js file -->
   <script src="js/isotope.min.js"></script>
-  <!-- Magnific js file -->
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- SmoothScroll -->
   <script src="js/SmoothScroll.js"></script>
-  <!-- Parallax js -->
   <script src="js/parallaxie.js"></script>
-  <!-- MagicCursor js file -->
   <script src="js/gsap.min.js"></script>
   <script src="js/magiccursor.js"></script>
-  <!-- Text Effect js file -->
   <script src="js/SplitText.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
-  <!-- YTPlayer js File -->
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <!-- Wow js file -->
   <script src="js/wow.min.js"></script>
-  <!-- Main Custom js file -->
   <script src="js/function.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
 
   <script>
+    const swiper = new Swiper('.inspiration-design .swiper', {
+      slidesPerView: 1, // Let the width control number of visible slides
+      centeredSlides: true,
+      initialSlide: 1,
+      spaceBetween: 10,
+      loop: true,
+      speed: 1000,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // (optional) responsive breakpoints
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
+
+  <!-- Toggle side menu script -->
+  <script>
+
     function toggleSideMenu() {
       const sideMenu = document.getElementById('sideMenu');
       const overlay = document.getElementById('overlay');
@@ -622,6 +666,31 @@
       overlay.classList.toggle('open');
     }
   </script>
+
+  <script>
+    document.getElementById('playVideoBtn').addEventListener('click', function () {
+      const poster = document.getElementById('videoPoster');
+      const video = document.getElementById('myVideo');
+      poster.style.display = 'none';
+      video.play();
+    });
+  </script>
+
+  <script>
+    const logo = document.getElementById('siteLogo');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // If scrolled beyond the first section (adjust threshold if needed)
+      if (scrollY > window.innerHeight - 50) {
+        logo.classList.add('hide');
+      } else {
+        logo.classList.remove('hide');
+      }
+    });
+  </script>
+
 </body>
 
 </html>
