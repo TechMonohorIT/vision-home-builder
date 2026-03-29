@@ -1229,9 +1229,9 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .blog-section .custom-card .image-wrap {
+  /* .blog-section .custom-card .image-wrap {
     height: 240px;
-  }
+  } */
 
   .blog-section .custom-card .card-footer-box h3 {
     font-size: 16px;
@@ -1442,6 +1442,9 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .blog-section .custom-card {
+    height: 375px;
+  }
   .main-container {
     padding: 0 20px;
   }
@@ -1544,19 +1547,21 @@ body {
 }
 
 .blog-custom-home-section .point-title {
-  font-size: 15px;
+  color: #3b3b3b;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
   font-weight: 700;
-  color: #2f2f2f;
-  margin-bottom: 16px;
-  line-height: 1.5;
+  line-height: 27px; /* 150% */
 }
 
 .blog-custom-home-section .point p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #4a4a4a;
-  margin-bottom: 18px;
-  max-width: 860px;
+  color: #3b3b3b;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
 }
 
 .blog-custom-home-section .point p:last-child {
@@ -1572,11 +1577,12 @@ body {
 }
 
 .blog-custom-home-section .technique-title {
-  font-size: 16px;
+  color: #3b3b3b;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
   font-weight: 700;
-  color: #2f2f2f;
-  line-height: 1.5;
-  margin-bottom: 14px;
+  line-height: 27px; /* 150% */
 }
 
 .blog-custom-home-section .technique-title::before {
@@ -1586,11 +1592,12 @@ body {
 }
 
 .blog-custom-home-section .technique-item p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #4a4a4a;
-  margin-bottom: 16px;
-  max-width: 820px;
+  color: #3b3b3b;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
 }
 
 .blog-custom-home-section .technique-item p:last-child {
